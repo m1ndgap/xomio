@@ -1,0 +1,118 @@
+.pricing {
+    padding-bottom: 0;
+    overflow: visible;
+
+    &__body {
+        position: relative;
+    }
+
+    &__intro {
+        max-width: rem(740px);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: rem(56px);
+    }
+
+    &__plans {
+        margin-bottom: rem(50px);
+    }
+
+    &__card {
+        margin-left: rem(- $gutter);
+        margin-right: rem(- $gutter);
+    }
+
+    @media (min-height:800px) and (max-width: 767px) {
+        &__card {
+            position: sticky;
+            bottom: 0;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: rem($section-offset-bottom);
+
+        &__body {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        &__plans {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        &__card {
+            margin-top: rem($spacer-4);
+            margin-left: 4%;
+            margin-right: 0;
+            max-width: rem(360px);
+            flex: 0 0 40%;
+            position: sticky;
+            top: rem($spacer-10);
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__intro {
+            margin-bottom: rem(64px);
+        }
+
+        &__card {
+            margin-left: 8%;
+        }
+
+        &__decor {
+            &--1 {
+                top: rem(140px);
+                left: rem(-64px);
+            }
+
+            &--2 {
+                left: rem(-44px);
+                bottom: rem(163px);
+            }
+
+            &--3 {
+                top: rem(79px);
+                right: rem(-21px);
+            }
+
+            &--4 {
+                left: 100%;
+                top: 50%;
+                transform: translate(-135%, 62%);
+            }
+        }
+
+        /*&__decor {
+            &--1 {
+                top: rem(140px);
+                left: 50%;
+                transform: translateX(rem(-784px));
+            }
+
+            &--2 {
+                bottom: rem(163px);
+                left: 50%;
+                transform: translateX(rem(-764px));
+            }
+
+            &--3 {
+                left: 50%;
+                top: rem(79px);
+                transform: translateX(rem(629px));
+            }
+
+            &--4 {
+                left: 50%;
+                top: 50%;
+                transform: translate(rem(508px), 62%);
+            }
+        }*/
+    }
+}

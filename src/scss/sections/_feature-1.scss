@@ -1,0 +1,36 @@
+.feature-1 {
+    .section__decor {
+        &--2 {
+            top: rem(4px);
+            right: rem(-160px);
+        }
+
+        &--3 {
+            left: rem(-35px);
+            bottom: rem(88px);
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .section__decor {
+            &--1 {
+                left: rem(-29px);
+                bottom: rem(-79px);
+            }
+
+            &--2 {
+                top: rem(-44px);
+                right: rem(-125px);
+            }
+
+            &--3 {
+                left: 50%;
+                margin-left: rem(-71px);
+                bottom: rem(121px);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+    }
+}

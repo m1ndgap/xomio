@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons.eot?k2zy2c#iefix') format('embedded-opentype'),
+       url('../fonts/icons.svg?k2zy2c') format('svg'),
+       url('../fonts/icons.woff?k2zy2c') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"],
+.panel__title:after,
+.dropdown__toggle:after,
+.dropdown__option:after,
+.custom-checkbox .custom-control__indicator:before,
+.select2-selection__arrow:before,
+.select2-search--dropdown:before,
+.select2-results__option:after,
+.list-check > li:before,
+.list-plus > li:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-attach:before {
+  content: "\e900";
+}
+.icon-cart:before {
+  content: "\e901";
+}
+.icon-check:before,
+.list-check > li:before,
+.dropdown__option:after,
+.select2-results__option:after {
+  content: "\e902";
+}
+.icon-chevron-down:before,
+.dropdown__toggle:after,
+.select2-selection__arrow:before {
+  content: "\e903";
+}
+.icon-close:before {
+  content: "\e90e";
+}
+.icon-facebook:before {
+  content: "\e904";
+}
+.icon-instagram:before {
+  content: "\e905";
+}
+.icon-linkedin:before {
+  content: "\e906";
+}
+.icon-minus:before,
+.panel__title:after {
+  content: "\e907";
+}
+.icon-plus:before,
+.list-plus > li:before,
+.panel.is-collapsed .panel__title:after {
+  content: "\e908";
+}
+.icon-rocket:before {
+  content: "\e909";
+}
+.icon-search:before,
+.select2-search--dropdown:before {
+  content: "\e90f";
+}
+.icon-star:before {
+  content: "\e90a";
+}
+.icon-trash:before {
+  content: "\e90b";
+}
+.icon-twitter:before {
+  content: "\e90c";
+}
+.icon-youtube:before {
+  content: "\e90d";
+}

@@ -1,0 +1,8 @@
+.theme {
+    @each $color-name, $color in $theme-colors {
+        &-#{$color-name} {
+            color: #{$color};
+            fill: #{$color};
+        }
+    }
+}

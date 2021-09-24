@@ -1,0 +1,158 @@
+<section class="section pricing">
+  <div class="container">
+    <div class="pricing__intro intro text-center">
+      <h2 class="intro__title">Find the perfect fit</h2>
+      <div class="intro__text text-lg">
+        <p>Xomio has a package to suit any real estate business, from future rockstar agents launching a first site, to multi-office brokerages that already own their local market.</p>
+        <p>Whether you’re solo Agent, a Team, Broker, or Company, our pricing plans give you access to the features that you need to grow your business, and to reach more clients.</p>
+      </div>
+
+      <div class="intro__action">
+        <a href="#" class="button button--primary">Sign up to see more</a>
+      </div>
+    </div>
+
+    <div class="pricing__body">
+      <div class="pricing__plans plans">
+        {% for section in plans %}
+          <div class="plans__section">
+            <div class="plans__header">
+              <h3 class="plans__title">{{ section.title }}</h3>
+              {% if loop.first %}
+                <div class="plans_option text-md">
+                  <span class="plans-option-label">Prices in</span>
+                  <div class="dropdown" data-component="dropdown">
+                    <button class="dropdown__toggle text-accent" data-element="dropdown-toggle" data-template='dropdown-content-currency'>
+                      {% for option in currency|slice(0,1) %}
+                        <span class="dropdown__toggle-text" data-element="dropdown-toggle-text">{{ option }}</span>
+                      {% endfor %}
+                    </button>
+
+                    <div style="display: none;">
+                      <div id="dropdown-content-currency">
+                        <div class="dropdown__content" data-element="dropdown-content" data-id="dropdown-content-currency">
+                          <ul class="dropdown__list">
+                            {% for option in currency %}
+                              <li class="dropdown__option {% if loop.first %}is-selected{% endif %}" data-element="dropdown-option" data-id="{{ option }}">{{ option }}</li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="plans__list">
+              {% for plan in section.list %}
+                <div class="plans__item plan">
+                  <div class="plan__body">
+                    <div class="plan__header">
+                      <h4 class="plan__title">{{ plan.title }}</h4>
+                      {% if plan.type %}
+                        <div class="plan__label label"><i class="label__icon icon-star"></i>{{ plan.type }}</div>
+                      {% endif %}
+                      <div class="plan__info">{{ plan.feature }}</div>
+                    </div>
+
+                    <div class="plan__description text-md">
+                      <p>{{ plan.text }}</p>
+                    </div>
+
+                    <div class="plan__more">
+                      <a href="#" class="link-primary-light">Learn more</a>
+                    </div>
+                  </div>
+
+                  <div class="plan__footer">
+                    <div class="plan__payment" {% if plan.payment|length > 1 %}data-component="payment-swich"{% endif %}>
+                      {% if plan.payment|length > 1 %}
+                        <div class="plan__payment-type switch">
+                          <input id="radio-a" type="radio" value="left" name="payment-switch" checked="checked" class="switch__input switch__input--left">
+                          <label for="radio-a" class="switch__label switch__label--left">{{ plan.payment[0].type }}</label>
+                          <input id="radio-b" type="radio" value="right" name="payment-switch" class="switch__input switch__input--right">
+                          <label for="radio-b" class="switch__label switch__label--right">{{ plan.payment[1].type }}</label>
+                          <span class="switch__toggle"></span>
+                        </div>
+
+                        <div class="plan__payment-price">
+                          <span class="plan__payment-value" data-left="{{ plan.payment[0].price }}" data-right="{{ plan.payment[1].price }}" data-element="payment-swich-data">{{ plan.payment[0].price }}</span>
+                          <span class="plan__payment-per" data-left="{{ plan.payment[0].per }}" data-right="{{ plan.payment[1].per }}" data-element="payment-swich-data">{{ plan.payment[0].per }}</span>
+                        </div>
+
+                        {% else %}
+                        <div class="plan__payment-type">{{ plan.payment[0].type }}</div>
+                        <div class="plan__payment-price">
+                          <span class="plan__payment-value">{{ plan.payment[0].price }}</span>
+                          {% if plan.payment[0].per %}
+                            <span class="plan__payment-per">{{ plan.payment[0].per }}</span>
+                          {% endif %}
+                        </div>
+                      {% endif %}
+                    </div>
+                    <button class="plan__button button button--md button--outline-primary-light button--block">
+                      <i class="button__icon icon-{{ plan.button.icon }}"></i>
+                      <span class="button__text">{{ plan.button.text }}</span>
+                    </button>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+
+        <p class="plans__footnote text-lg">These are approximate prices for Agent type of account only. Access for Teams, Brokers, Multi Offices and Brokers is coming soon! Please, for more information please contact us by <a href="#" class="link-primary">clicking here!</a></p>
+      </div>
+
+      <div class="pricing__card pricing-card bg-accent">
+        <div class="pricing-card__header">
+          <h4 class="pricing-card__title">Your individual plan</h4>
+          <div class="pricing-card__info hidden-md-down">600 000 potential listings</div>
+        </div>
+
+        <div class="pricing-card__content hidden-md-down">
+          <div class="pricing-card__description text-md">
+            <p>You can always customise your <span class="hidden-lg-down"><br></span>subscription in your Settings page. <span class="hidden-lg-down"><br></span>Another useful text about user’s plan and other things. For now it’s just dummy text.</p>
+          </div>
+
+          <ul class="pricing-card__list list-check text-md">
+            {% for item in pricing.list %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="pricing-card__footer">
+          <div class="pricing-card__footer-title">Cost breakdown</div>
+          <dl class="pricing-card__check check">
+            {% for item in pricing.check %}
+              <dt class="check__label">
+                <div class="check__label-name">{{ item.name }}</div>
+                <div class="check__label-info">{{ item.info }}</div>
+              </dt>
+              <dd class="check__data">{{ item.price }}</dd>
+            {% endfor %}
+          </dl>
+          <dl class="pricing-card__check check check--total">
+            <dt class="check__label">
+              <div class="check__label-name">Approximate price</div>
+              <div class="check__label-info">(you may pay now)</div>
+            </dt>
+            <dd class="check__data check__data--lg">$258</dd>
+          </dl>
+
+          <button class="pricing-card__button button button--md button--white button--block">
+            <span class="button__text">Let’s start!</span>
+            <i class="button__icon icon-rocket"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="pricing__decor pricing__decor--1 hidden-lg-down decor-lines-1"></div>
+  <div class="pricing__decor pricing__decor--2 hidden-lg-down decor-shape-1"></div>
+  <div class="pricing__decor pricing__decor--3 hidden-lg-down decor-dots-1"></div>
+  <div class="pricing__decor pricing__decor--4 hidden-lg-down decor-dots-2"></div>
+</section>

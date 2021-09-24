@@ -1,0 +1,11 @@
+.bg {
+    @each $key, $value in $bg-colors {
+        &-#{$key} {
+            @include setProperty('background-color', $value, 'bg');
+
+            @if (getValue($value, 'color')) {
+                @include setProperty('color', $value, 'color');
+            }
+         }
+    }
+}

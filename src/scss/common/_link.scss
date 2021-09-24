@@ -1,0 +1,86 @@
+//
+// Links
+//
+
+a {
+    text-decoration: $link-decoration;
+
+    @include hover-focus {
+        text-decoration: $link-hover-decoration;
+    }
+    /*text-decoration: $link-decoration;
+    color: $link-color;
+    outline: 0;
+
+    @include transition(all 0.2s ease-in-out);
+
+    @include hover-focus {
+        //color: $link-hover-color;
+        //text-decoration: $link-hover-decoration;
+    }*/
+}
+
+.link-primary {
+    color: $primary;
+    font-weight: $font-weight-semibold;
+
+    @include hover-focus {
+        color: darken($primary, 10%);
+    }
+}
+
+.link-primary-light {
+    color: $primary-light;
+    font-weight: $font-weight-semibold;
+
+    @include hover-focus {
+        color: $primary;
+    }
+}
+
+.link-inherit {
+    color: inherit;
+
+    @include hover-focus {
+        color: $link-color;
+    }
+}
+
+.link-underline {
+    text-decoration: none;
+    border-bottom: 1px solid;
+
+    @include hover-focus {
+        text-decoration: none;
+    }
+}
+
+.link-hidden {
+    color: inherit;
+    text-decoration: none;
+
+    @include hover-focus {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.link-pseudo {
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:after {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-bottom: 1px dashed;
+        opacity: .485;
+        content: '';
+    }
+
+    @include hover-focus {
+        text-decoration: none;
+    }
+}

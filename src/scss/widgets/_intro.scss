@@ -1,0 +1,14 @@
+.intro {
+    &__action {
+        margin-top: rem($spacer-8);
+    }
+
+    @include media-breakpoint-up(lg) {
+        &__action {
+            margin-top: rem(48px);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+   }
+}

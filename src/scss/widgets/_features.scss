@@ -1,0 +1,21 @@
+.features {
+    @include list-unstyled;
+
+    &__item {
+    }
+
+    &--stack & {
+        &__item {
+            @include margin-bottom(rem($spacer-10));
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+
+        &--stack & {
+            &__item {
+                margin-bottom: rem(48px);
+            }
+        }
+    }
+}

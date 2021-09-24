@@ -1,0 +1,114 @@
+// Typoghraphy
+
+@mixin em-line-height($font-size-px, $line-height-px) {
+  line-height:$line-height-px/$font-size-px;
+}
+
+@mixin font($font-size, $line-height: $font-size, $font-weight: null, $font-family: null) {
+  font-size: rem($font-size);
+  @if $line-height == "inherit" {
+    line-height: $line-height;
+  } @else {
+    @include em-line-height($font-size, $line-height);
+  }
+  @if $font-weight {
+    font-weight:$font-weight;
+  }
+  @if $font-family {
+    font-family:$font-family;
+  }
+}
+
+
+@mixin type-responsive($fs-map, $fs-breakpoints: $grid-breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-type-responsive($fs-font-size);
+    }
+    @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-type-responsive($fs-font-size);
+      }
+    }
+  }
+}
+
+// Utility function for mixin font-size
+@mixin make-type-responsive($fs-font-size) {
+    // If $fs-font-size is a list, include
+    // both font-size and line-height
+    @if type-of($fs-font-size) == "list" {
+        $font-size: nth($fs-font-size, 1);
+        $line-height: nth($fs-font-size, 2);
+        @if ($font-size != '') {
+            font-size: rem($font-size);
+        }
+        @if (length($fs-font-size) > 1) {
+            @if ($line-height != '') {
+                @include em-line-height($font-size, $line-height);
+            }
+        }
+        @if (length($fs-font-size) > 2) {
+            @if ( nth($fs-font-size, 3) != '') {
+                font-weight: nth($fs-font-size, 3);
+            }
+        }
+        @if (length($fs-font-size) > 3) {
+            margin-bottom: rem(nth($fs-font-size, 4));
+        }
+    }
+    @else {
+        @if ($fs-font-size != '') {
+            font-size: rem($fs-font-size);
+        }
+    }
+}
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+    }
+  }
+
+  @media (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+@mixin fluid-type-height($properties, $min-vw, $max-vw, $min-vh, $max-vh, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media (min-width: $min-vw) and (min-height: $min-vh) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vh - #{$min-vh}) / #{strip-unit($max-vh - $min-vh)});
+    }
+  }
+
+  @media (min-width: $max-vw) and (min-height: $max-vh) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}

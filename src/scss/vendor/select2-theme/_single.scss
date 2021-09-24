@@ -1,0 +1,115 @@
+.select2-selection--single {
+    background-color: $input-bg-color;
+    border-color: $input-border-color;
+    border-radius: $input-border-radius;
+    height: auto;
+    text-align: left;
+
+    &:focus {
+        border-color: $input-border-focus;
+        outline: 0;
+    }
+
+    &:hover {
+        .select2-selection__arrow {
+            color: $input-color;
+        }
+    }
+
+    .select2-selection__rendered {
+        color: $input-color;
+        @include font($input-font-size, $input-line-height, $input-font-weight);
+        padding: rem($input-padding-y $input-padding-x-icon $input-padding-y $input-padding-x);
+    }
+
+    .select2-selection__clear {
+        cursor: pointer;
+        float: right;
+        font-weight: bold;
+    }
+
+    .select2-selection__placeholder {
+        color: $input-color-placeholder;
+    }
+
+    .select2-selection__arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: rem($input-padding-x-icon);
+
+        transition: 0.25s ease-in-out;
+        transform: rotate(0);
+
+        color: $base-dark;
+        font-size: rem($spacer-6);
+
+        &:before {
+            //transform: rotate(90deg);
+        }
+
+        b {
+            display: none;
+        }
+    }
+
+    &.select-inline {
+        background:: none;
+        border: 0;
+        padding: 0;
+
+        .select2-selection__rendered {
+            padding: 0;
+            color: $secondary;
+         }
+    }
+}
+
+&.select2-container--focus {
+    .select2-selection--single {
+        border-color: $input-border-color;
+        outline: 0;
+    }
+}
+
+&.select2-container--disabled {
+    .select2-selection--single {
+        opacity: .5;
+        border-color: $input-bg-color;
+        background-color: $input-border-color;
+
+        .select2-selection__clear {
+            display: none;
+        }
+    }
+}
+
+&.select2-container--open {
+    &.select2-container--above {
+        .select2-selection--single {
+            border-top-left-radius: $input-border-radius;
+            border-top-right-radius: $input-border-radius;
+        }
+    }
+
+    &.select2-container--below {
+        .select2-selection--single {
+            border-bottom-left-radius: $input-border-radius;
+            border-bottom-right-radius: $input-border-radius;
+        }
+    }
+
+    .select2-selection--single {
+        .select2-selection__arrow {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .select2-dropdown {
+        z-index: 100000000;
+    }
+}

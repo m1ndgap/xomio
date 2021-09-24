@@ -1,0 +1,48 @@
+%aspect-ratio-block {
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        display: block;
+        pointer-events: none;
+    }
+}
+
+// Define block for given aspect ratio
+//
+// @param {number|string} $aspect       One of:
+//                                       - numeric value of aspect ratio
+//                                       - name of image to take aspect ratio from
+//                                       - responsive configuration key to take aspect ratio information from
+// @param {boolean|null} $responsive    Explicitly set "responsive" mode flag
+@mixin aspect-ratio-block($aspect, $responsive: null) {
+    @if (type-of($aspect) == string) {
+        //noinspection CssInvalidFunction
+        @if (function-exists(image-exists) and image-exists($aspect)) {
+            $aspect: image-width($aspect) / image-height($aspect);
+            $responsive: false;
+        } @else if ($responsive == null) {
+            $responsive: r-has($aspect, $responsive-default-id);
+        }
+        @if ($responsive == null) {
+            @error 'Either images module is not included or "#{$aspect}" image is not available';
+        }
+    } @else if (type-of($aspect) == number) {
+        @if ($responsive == null) {
+            $responsive: false;
+        }
+    } @else {
+        @error 'Image aspect information is expected to be given either as image name or explicit aspect ratio';
+    }
+    @extend %aspect-ratio-block;
+    &:after {
+        @if ($responsive) {
+            @include r-each-if($aspect) {
+                padding-top: 100% / r-get();
+            }
+        } @else {
+            padding-top: 100% / $aspect;
+        }
+    }
+}

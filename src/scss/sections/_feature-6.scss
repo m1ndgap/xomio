@@ -1,0 +1,55 @@
+.feature-6 {
+    .section__object {
+        display: flex;
+        align-items: flex-start;
+
+        &-decor {
+            transform: translateX(-47%) scale(.5);
+            left: 50%;
+            bottom: rem(-53px);
+        }
+    }
+
+    .section__img {
+        border-radius: $border-radius-sm;
+        max-width: 52%;
+
+        &:last-of-type {
+            margin-top: rem(73px);
+        }
+    }
+
+    .section__img + .section__img {
+        margin-left: rem($spacer-4);
+    }
+
+    @include media-breakpoint-up(xl) {
+        .section__object {
+            &-decor {
+                transform: translateX(-29%) scale(1);
+                left: 50%;
+                bottom: rem(34px);
+            }
+        }
+
+        .section__img {
+            border-radius: $border-radius-lg;
+            max-width: 60%;
+
+            &:last-of-type {
+                margin-top: 25%;
+            }
+        }
+
+        .section__img + .section__img {
+            margin-left: rem(44px);
+        }
+
+        .section__decor {
+            &--1 {
+                left: rem(-120px);
+                bottom: rem(-83px);
+            }
+        }
+    }
+}

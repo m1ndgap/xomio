@@ -1,0 +1,96 @@
+/// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+@mixin make-container() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin make-container-gutters($gutters: $grid-gutters, $breakpoints: $grid-breakpoints, $vertical: false) {
+    @each $breakpoint, $gutter in $gutters {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            @if ($vertical) {
+                padding-top: rem($gutter);
+                padding-bottom: rem($gutter);
+            } @else {
+                padding-left: rem($gutter);
+                padding-right: rem($gutter);
+            }
+        }
+    }
+}
+
+@mixin make-container-widths($widths: $container-widths, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint, $container-width in $widths {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            width: $container-width;
+        }
+    }
+}
+
+@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint, $container-max-width in $max-widths {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            max-width: $container-max-width;
+        }
+    }
+}
+
+@mixin make-grid-row($gutters: $grid-gutters, $breakpoints: $grid-breakpoints) {
+    display: flex;
+    flex-wrap: wrap;
+
+    @each $breakpoint, $gutter in $gutters {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            margin-left: rem(- $gutter / 2);
+            margin-right: rem(- $gutter / 2);
+        }
+    }
+}
+
+@mixin make-grid-col($gutters: $grid-gutters, $breakpoints: $grid-breakpoints) {
+    position: relative;
+    min-height: 1px;
+}
+
+@mixin make-row($gutter: $spacer-3) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: rem(- $gutter / 2);
+    margin-right: rem(- $gutter / 2);
+}
+
+@mixin make-col($gutter: $spacer-3) {
+    position: relative;
+    min-height: 1px;
+    padding-left: rem($gutter / 2);
+    padding-right: rem($gutter / 2);
+}
+
+@mixin make-row-modification($gutter) {
+    margin-left: rem(- $gutter / 2);
+    margin-right: rem(- $gutter / 2);
+
+    >.col,
+    > [class^="col-"],
+    > [class*=" col-"] {
+        padding-left: rem($gutter / 2);
+        padding-right: rem($gutter / 2);
+    }
+}
+
+
+@mixin make-col-span($size, $columns: $grid-columns) {
+    flex: 0 0 percentage($size / $columns);
+    max-width: percentage($size / $columns);
+}
+
+@mixin make-container-offset($property: 'margin-left', $max-widths: $container-max-widths, $breakpoints: $grid-breakpoints, $gutters: $grid-gutters) {
+    @each $breakpoint, $container-max-width in $max-widths {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            $offset: calc((100vw - #{$container-max-width} + #{$gutter} * 2) / 2);
+            #{$property}: $offset;
+        }
+    }
+}

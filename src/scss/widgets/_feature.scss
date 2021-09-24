@@ -1,0 +1,25 @@
+.feature {
+    &__icon {
+        display: block;
+        @include size(rem(48px));
+        margin-bottom: rem($spacer-4);
+    }
+
+    &__title {
+        margin-bottom: rem(10px);
+        @include em-line-height($font-size-h3-mobile, $line-height-lg);
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__icon {
+            display: block;
+            @include size(rem(64px));
+            margin-bottom: rem($spacer-6);
+        }
+
+        &__title {
+            margin-bottom: rem($spacer-2);
+            @include em-line-height($font-size-h3, $line-height-h3-mobile);
+        }
+    }
+}

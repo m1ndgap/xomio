@@ -1,0 +1,142 @@
+// Responsive font sizes
+// breakpoint: ($font-size, $line-height, $font-weight, $margin-bottom),
+$font-h1: (
+    xs: ($font-size-h1-mobile, $line-height-h1-mobile, $font-weight-heavy, rem($spacer-4)),
+    xl: ($font-size-h1, $line-height-h1, '', rem($spacer-8)),
+) !default;
+
+$font-h2: (
+    xs: ($font-size-h2-mobile, $line-height-h2-mobile, '', rem($spacer-4)),
+    xl: ($font-size-h2, $line-height-h2, '', rem($spacer-8)),
+) !default;
+
+$font-h3: (
+    xs: ($font-size-h3-mobile, $line-height-h3-mobile, '', rem($spacer-4)),
+    xl: ($font-size-h3, $line-height-h3, '', rem($spacer-6)),
+) !default;
+
+$font-h4: (
+    xs: ($font-size-h4, $line-height-h4, '', rem($spacer-2)),
+) !default;
+
+$font-xl: (
+    xs: ($font-size-xl, $line-height-xl),
+) !default;
+
+$font-lg: (
+    xs: ($font-size-lg, $line-height-lg),
+) !default;
+
+$font-md: (
+    xs: ($font-size-md, $line-height-md),
+) !default;
+
+$font-sm: (
+    xs: ($font-size-sm, $line-height-sm),
+) !default;
+
+//
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $headings-color;
+    font-weight: $headings-font-weight;
+
+    .bg-primary & {
+        color: inherit;
+    }
+}
+h1, .h1 {
+    @include type-responsive($font-h1);
+    letter-spacing: -0.03em;
+    color: $secondary;
+}
+h2, .h2 {
+    @include type-responsive($font-h2);
+    letter-spacing: -0.03em;
+    color: $secondary;
+}
+h3, .h3 {
+    @include type-responsive($font-h3);
+    color: $blue-500;
+}
+h4, .h4 {
+    @include type-responsive($font-h4);
+}
+.text-xl {
+    @include type-responsive($font-xl);
+}
+.text-lg {
+    @include type-responsive($font-lg);
+}
+.text-md {
+    @include type-responsive($font-md);
+}
+.text-sm {
+    @include type-responsive($font-sm);
+}
+
+p,
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p {
+    @include margin-bottom(rem($spacer-3));
+
+    @include media-breakpoint-up(xl) {
+        p {
+            margin-bottom: rem($spacer-4);
+        }
+    }
+}
+
+dd {
+    margin: 0;
+}
+
+address {
+    font-style: normal;
+    line-height: inherit;
+}
+
+ol li > ol,
+ul li > ul,
+ol li > ul,
+ul li > ol {
+    margin-bottom: 0;
+}
+
+strong,
+b {
+    font-weight: $font-weight-semibold;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+.text-nowrap {
+    white-space: nowrap;
+}
+@each $color-name, $color in $colors {
+    .text-#{$color-name} {
+        color: #{$color};
+        fill: #{$color};
+    }
+}

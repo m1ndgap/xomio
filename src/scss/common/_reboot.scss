@@ -1,0 +1,252 @@
+// Reboot
+html,
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+// Make viewport responsive
+//
+// @viewport is needed because IE 10+ doesn't honor <meta name="viewport"> in
+// some cases. See https://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/.
+// Eventually @viewport will replace <meta name="viewport">.
+//
+// However, `device-width` is broken on IE 10 on Windows (Phone) 8,
+// and the fix for that involves a snippet of JavaScript to sniff the user agent
+// and apply some conditional CSS.
+//
+// Wrap `@viewport` with `@at-root` for when folks do a nested import (e.g.,
+// `.class-name { @import "styles"; }`).
+@at-root {
+    @-ms-viewport { width: device-width; }
+}
+
+
+//
+// Reset HTML, body, and more
+//
+
+html {
+    font-size: $font-size-html;
+    //overflow-y: auto;
+    //overflow-x: hidden;
+    // As a side-effect of setting the @viewport above,
+    // IE11 & Edge make the scrollbar overlap the content and automatically hide itself when not in use.
+    // Unfortunately, the auto-showing of the scrollbar is sometimes too sensitive,
+    // thus making it hard to click on stuff near the right edge of the page.
+    // So we add this style to force IE11 & Edge to use a "normal", non-overlapping, non-auto-hiding scrollbar.
+
+    //-ms-overflow-style: scrollbar;
+    // Changes the default tap headline to be completely transparent in iOS.
+    -webkit-tap-headline-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    @include type-responsive($font-base);
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/*body {
+    color: $body-color;
+    background: $body-bg;
+    @include type-responsive($font-base);
+    font-weight: $font-weight-normal;
+    font-family: $font-family-base;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+
+    &.scroll-is-locked {
+        overflow: hidden;
+        width: 100%;
+
+        &::before {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            background: rgba($black-100, .6);
+            z-index: $navbar-z-index - 1;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        &.aside-menu-is-visible {
+            &::before {
+                z-index: $navbar-z-index + 1;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        display: flex;
+        flex-direction: column;
+    }
+}*/
+
+// Suppress the focus outline on elements that cannot be accessed via keyboard.
+// This prevents an unwanted focus outline from appearing around elements that
+// might still respond to pointer events.
+//
+// Credit: https://github.com/suitcss/base
+[tabindex="-1"]:focus {
+    outline: none !important;
+}
+
+
+//
+// Images
+//
+
+img,
+svg {
+    max-width: 100%;
+    height:auto;
+    // By default, `<img>`s are `inline-block`. This assumes that, and vertically
+    // centers them. This won't apply should you reset them to `block` level.
+    vertical-align: middle;
+    // Note: `<img>`s are deliberately not made responsive by default.
+    // For the rationale behind this, see the comments on the `.img-fluid` class.
+}
+
+svg:not(:root) {
+    overflow: visible;
+}
+
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
+[role="button"] {
+    cursor: pointer;
+}
+
+
+// Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.
+//
+// In particular, unlike most other browsers, IE11+Edge on Windows 10 on touch devices and IE Mobile 10-11
+// DON'T remove the click delay when `<meta name="viewport" content="width=device-width">` is present.
+// However, they DO support removing the click delay via `touch-action: manipulation`.
+// See:
+// * https://v4-alpha.getbootstrap.com/content/reboot/#click-delay-optimization-for-touch
+// * http://caniuse.com/#feat=css-touch-action
+// * https://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+    touch-action: manipulation;
+}
+
+//
+// Forms
+//
+
+// Work around a Firefox/IE bug where the transparent `button` background
+// results in a loss of the default `button` focus styles.
+//
+// Credit: https://github.com/suitcss/base/
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+button {
+    cursor: pointer;
+    @include hover-focus-active {
+        outline: 0;
+    }
+}
+
+input,
+button,
+select,
+textarea {
+    // Normalize includes `font: inherit;`, so `font-family`. `font-size`, etc are
+    // properly inherited. However, `line-height` isn't inherited there.
+    line-height: inherit;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    // Apply a disabled cursor for radios and checkboxes.
+    //
+    // Note: Neither radios nor checkboxes can be readonly.
+    &:disabled {
+        cursor: default;
+    }
+}
+
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+    // Remove the default appearance of temporal inputs to avoid a Mobile Safari
+    // bug where setting a custom line-height prevents text from being vertically
+    // centered within the input.
+    //
+    -webkit-appearance: listbox;
+}
+
+textarea {
+    // Textareas should really only resize vertically so they don't break their (horizontal) containers.
+    resize: vertical;
+}
+
+fieldset {
+    // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+    // so we reset that to ensure it behaves more like a standard block element.
+    min-width: 0;
+    margin: 0;
+    // Reset the default outline behavior of fieldsets so they don't affect page layout.
+    padding: 0;
+    border: 0;
+}
+
+legend {
+    // Reset the entire legend element to match the `fieldset`
+    display: block;
+    width: 100%;
+}
+
+input[type="search"] {
+    // This overrides the extra rounded corners on search inputs in iOS so that our
+    // `.form-control` class can properly style them. Note that this cannot simply
+    // be added to `.form-control` as it's not specific enough. For details, see
+    -webkit-appearance: none;
+}
+
+// Always hide an element with the `hidden` HTML attribute (from PureCSS).
+[hidden] {
+    display: none !important;
+}
+
+.hidden,
+.is-hidden {
+    display: none;
+}
+
+hr {
+    height: 0;
+    margin: 0;
+    border: 1px solid $gray-100;
+    border-width: 1px 0 0;
+}

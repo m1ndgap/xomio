@@ -1,0 +1,449 @@
+// variables
+
+// table of contents
+//
+// colors
+// grid
+// body
+// links
+// fonts
+// components
+
+
+@mixin _assert-ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+  @each $key, $num in $map {
+    @if $prev-num == null {
+      // do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "potentially invalid value for #{$map-name}: this map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    } @else if $prev-num >= $num {
+      @warn "invalid value for #{$map-name}: this map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
+
+
+// replace `$search` with `$replace` in `$string`
+// @author hugo giraudel
+// @param {string} $string - initial string
+// @param {string} $search - substring to replace
+// @param {string} $replace ('') - new value
+// @return {string} - updated string
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@mixin _assert-starts-at-zero($map) {
+  $values: map-values($map);
+  $first-value: nth($values, 1);
+  @if $first-value != 0 {
+    @warn "first breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
+  }
+}
+
+@function getValue($map, $value, $fallback: null) {
+    @if map-has-key($map, $value) {
+        @return map-get($map, $value);
+    } @else {
+        @return $fallback;
+    }
+}
+
+@mixin setProperty($property, $map, $value: $property) {
+    @if map-has-key($map, $value) {
+        #{$property}: getValue($map, $value);
+    }
+}
+
+// colors
+//
+// grayscale and brand colors
+
+$black-100:  #222525 !default;
+$black-200:  #053550 !default;
+$black-300:  #02413a !default;
+$black-400:  #000000 !default;
+
+$blue-100:   #e8f4f4 !default;
+$blue-200:   #b9dede !default;
+$blue-300:   #a9f0f6 !default;
+$blue-400:   #00a5ce !default;
+$blue-500:   #1c3f74 !default;
+
+$gray-100:   #fafbfb !default;
+$gray-200:   #f0f0f0 !default;
+$gray-300:   #e8e8e8 !default;
+$gray-400:   #7f8fa4 !default;
+$gray-500:   #6c6c72 !default;
+$gray-600:   #445a59 !default;
+
+$green-100:  #8ac7c8 !default;
+$green-200:  #388172 !default;
+$green-300:  #0a8080 !default;
+$green-400:  #1e5c5a !default;
+$green-500:  #004940 !default;
+
+$orange-100: #f68a22 !default;
+$orange-200: #f45d48 !default;
+$orange-300: #f55116 !default;
+
+$pink-100:   #e05794 !default;
+
+$purple-100: #6c84f5 !default;
+
+$red-100:    #ff0000 !default;
+$red-200:    #d40404 !default;
+
+$white:      #ffffff !default;
+
+$yellow-100: #dead00 !default;
+$yellow-200: #f0ad2c !default;
+
+$base-color:    $gray-500 !default;
+$base-dark:     $black-100 !default;
+$primary:       $orange-300 !default;
+$primary-light: $orange-200 !default;
+$secondary:     $green-400 !default;
+$accent:        $green-300 !default;
+$error:         $red-100 !default;
+
+$colors: () !default;
+$bg-colors: () !default;
+$theme-colors: () !default;
+
+$colors: map-merge(
+    (
+        "base":          $base-color,
+        "base-dark":     $base-dark,
+        "primary":       $primary,
+        "primary-light": $primary-light,
+        "secondary":     $secondary,
+        "accent":        $accent,
+        "error":         $error,
+    ),
+    $colors
+);
+
+$bg-colors: map-merge(
+    (
+        "accent": (
+            "bg": $accent,
+            "color": $white,
+        ),
+        "blue": (
+            "bg": $blue-300,
+        ),
+        "light": (
+            "bg": $gray-100
+        ),
+        "secondary": (
+            "bg": $secondary,
+            "color": $white,
+        ),
+    ),
+    $bg-colors
+);
+
+$theme-colors: map-merge(
+    (
+        "blue":       $blue-400,
+        "green":      $green-200,
+        "dark-green": $green-500,
+        "orange":     $orange-100,
+        "pink":       $pink-100,
+        "purple":     $purple-100,
+        "red":        $red-200,
+        "yellow":     $yellow-100,
+    ),
+    $theme-colors
+);
+
+$enable-gradients: true;
+
+
+// grid breakpoints
+//
+// define the minimum and maximum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  md: 768px,
+  lg: 1024px,
+  xl: 1232px,
+  2xl: 1440px
+) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+
+// grid containers
+//
+// define the maximum width of `.container` for different screen sizes.
+
+$container-widths: (
+  xs: 100%
+) !default;
+@include _assert-ascending($container-widths, "$container-widths");
+
+$container-max-widths: (
+    xl: 1232px,
+) !default;
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+$container-md-max-widths: (
+    md: 992px,
+) !default;
+@include _assert-ascending($container-max-widths, "$container-md-max-widths");
+
+// grid columns
+//
+// set the number of columns and specify the width of the gutters.
+$grid-columns: 12 !default;
+$gutter: 16px !default;
+$gutter-md: 26px !default;
+
+$grid-gutters: (
+  xs: $gutter,
+) !default;
+@include _assert-ascending($grid-gutters, "$grid-gutters");
+
+$spacer:    4px;
+$spacer-2:  $spacer * 2;  // 8px
+$spacer-3:  $spacer * 3;  // 12px
+$spacer-4:  $spacer * 4;  // 16px
+$spacer-5:  $spacer * 5;  // 20px
+$spacer-6:  $spacer * 6;  // 24px
+$spacer-7:  $spacer * 7;  // 28px
+$spacer-8:  $spacer * 8;  // 32px
+$spacer-9:  $spacer * 9;  // 36px
+$spacer-10: $spacer * 10; // 40px
+
+
+// body
+//
+// settings for the `<body>` element.
+
+$body-bg: $white !default;
+$body-color: $base-color !default;
+
+
+// links
+//
+// style anchor elements.
+
+$link-color: $primary !default;
+$link-decoration: none !default;
+$link-hover-color: darken($primary, 10%) !default;
+$link-hover-decoration: inherit !default;
+
+// typography
+//
+// font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif: 'Libre Franklin', Arial, sans-serif !default;
+$font-family-serif: 'Source Serif Pro', Arial, sans-serif !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$font-weight-light:     300 !default;
+$font-weight-normal:    400 !default;
+$font-weight-medium:    500 !default;
+$font-weight-semibold:  600 !default;
+$font-weight-bold:      700 !default;
+$font-weight-heavy:     800 !default;
+$font-weight-black:     900 !default;
+
+$font-size-html:        16px !default;
+
+$font-size-base:        16px !default;
+$font-size-xl:          24px !default;
+$font-size-lg:          18px !default;
+$font-size-md:          14px !default;
+$font-size-sm:          12px !default;
+
+$line-height-base:      26.01px !default;
+$line-height-xl:        34.01px !default;
+$line-height-lg:        28.01px !default;
+$line-height-md:        24.01px !default;
+$line-height-sm:        16.01px !default;
+
+$font-size-h1:          48px !default;
+$font-size-h2:          48px !default;
+$font-size-h3:          24px !default;
+$font-size-h4:          20px !default;
+
+$line-height-h1:        56.01px !default;
+$line-height-h2:        56.01px !default;
+$line-height-h3:        29.01px !default;
+$line-height-h4:        24.01px !default;
+
+$font-size-h1-mobile:   32px !default;
+$font-size-h2-mobile:   32px !default;
+$font-size-h3-mobile:   20px !default;
+
+$line-height-h1-mobile: 38.01px !default;
+$line-height-h2-mobile: 38.01px !default;
+$line-height-h3-mobile: 32.01px !default;
+
+$theme-fonts: () !default;
+$theme-fonts: map-merge(
+  (
+  "xl":   ( $font-size-xl,   $line-height-xl ),
+  "lg":   ( $font-size-lg,   $line-height-lg ),
+  "md":   ( $font-size-md,   $line-height-md ),
+  "sm":   ( $font-size-sm,   $line-height-sm ),
+  "base": ( $font-size-base, $line-height-base ),
+  ),
+  $theme-fonts
+);
+
+// Responsive font sizes
+// breakpoint: ($font-size, $line-height, $font-weight, $margin-bottom),
+
+
+$font-base: (
+    xs: ($font-size-base, $line-height-base)
+) !default;
+
+$headings-color:       $base-dark !default;
+$headings-font-weight: $font-weight-semibold !default;
+
+
+$small-font-size: 80% !default;
+
+$text-muted: rgba($base-color, .5) !default;
+
+// Border radius
+//
+//
+$border-radius: .25rem !default;
+$border-radius-sm: .5rem !default;
+$border-radius-md: .75rem !default;
+$border-radius-lg: 1rem !default;
+$border-radius-xl: 6.25rem !default; //100px
+
+// Buttons
+//
+//
+$btn-font-family:   $font-family-base !default;
+$btn-font-weight:   $font-weight-semibold !default;
+$btn-font-size:     $font-size-base !default;
+$btn-line-height:   $line-height-md !default;
+$btn-border-radius: $border-radius-xl !default;
+$btn-border-width:  1px !default;
+$btn-padding-x:     $spacer-8 !default;
+$btn-padding-y:     $spacer-3 !default;
+$btn-height:        48px !default;
+$btn-icon-size:     20px !default;
+$btn-icon-offset:   $spacer-2 !default;
+
+$btn-sizes: () !default;
+$btn-themes: () !default;
+
+$btn-sizes: map-merge(
+    (
+        "md": (
+            "height": $spacer-10,
+            "padding-x": $spacer-6,
+            "border-radius": $border-radius-sm,
+            "icon-size": 20px,
+            "icon-offset": $spacer-2,
+        ),
+    ),
+    $btn-sizes
+);
+
+$btn-themes: map-merge(
+    (
+        "primary": (
+            "color": $white,
+            "bg": $primary,
+            "bg-hover": darken($primary, 10%),
+            "border": $primary,
+            "border-hover": darken($primary, 10%),
+        ),
+        "outline-primary": (
+            "color": $primary,
+            "border": $primary,
+            "color-hover": $white,
+            "border-hover": $primary,
+            "bg-hover": $primary,
+        ),
+        "outline-primary-light": (
+            "color": $primary-light,
+            "border": $primary-light,
+            "color-hover": $white,
+            "border-hover": $primary-light,
+            "bg-hover": $primary-light,
+        ),
+        "white": (
+            "color": $primary,
+            "bg": $white,
+            "border": $white,
+        ),
+    ),
+    $btn-themes
+);
+
+
+// Form
+//
+//
+$input-color-placeholder: $gray-400 !default;
+
+$input-height:            $spacer-10 !default;
+$input-font-size:         $font-size-base !default;
+$input-font-weight:       $font-weight-normal !default;
+$input-font-family:       $font-family-base !default;
+$input-line-height:       $line-height-base !default;
+
+$input-color:             $base-dark !default;
+$input-bg-color:          $white !default;
+$input-border-color:      $gray-300 !default;
+$input-border-width:      1px !default;
+$input-border-radius:     $border-radius-sm !default;
+
+$input-padding-x:         $spacer-4 !default;
+$input-padding-y:         $spacer-3 !default;
+$input-padding-x-icon:    $spacer-10 !default;
+
+$input-bg-focus:          $input-bg-color !default;
+$input-border-focus:      $input-border-color !default;
+$input-color-focus:       $input-color !default;
+
+$input-disabled-color:    $input-color-placeholder !default;
+$input-disabled-bg-color: $input-bg-color !default;
+$input-disabled-border-color: $input-border-color !default;
+
+$form-group-margin-bottom: $spacer-6 !default;
+
+$cursor-disabled: not-allowed !default;
+
+
+// Navbar
+//
+//
+$navbar-height:          77px !default;
+$navbar-z-index:         100 !default;
+
+// Section
+//
+//
+$section-offset-mobile:    80px !default;
+$section-offset-lg-mobile: 140px !default;
+$section-offset:           200px !default;
+
+
+$section-offset-top-mobile:    40px !default;
+$section-offset-bottom-mobile: 40px !default;
+$section-offset-top:           80px !default;
+$section-offset-bottom:        100px !default;

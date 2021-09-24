@@ -1,0 +1,31 @@
+.contact-us {
+    &__decor {
+        &--1 {
+            left: rem(-116px);
+            bottom: rem(-11px);
+        }
+
+        &--2 {
+            right: rem(-58px);
+            bottom: rem(40px);
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding-top: rem(56px);
+        padding-bottom: rem(56px);
+
+        &--lg-bottom {
+            padding-bottom: rem(132px);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__decor {
+            &--2 {
+                right: rem(-10px);
+                bottom: rem(56px);
+            }
+        }
+    }
+}

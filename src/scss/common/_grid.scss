@@ -1,0 +1,53 @@
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+    @include make-container();
+    @include make-container-gutters();
+    @include make-container-widths();
+    @include make-container-max-widths();
+
+    &:empty {
+        display:none;
+    }
+
+    &--md {
+        @include make-container-max-widths($max-widths: $container-md-max-widths);
+    }
+
+    @include media-breakpoint-down(md) {
+        &--mobile-fixed {
+            max-width: rem(616px);
+        }
+    }
+}
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+    @include make-grid-row();
+
+    &--compact {
+        @include make-row-modification(0);
+    }
+
+    &--md {
+        @include make-row-modification($spacer-4);
+    }
+
+    &--sm {
+        @include make-row-modification($spacer-2);
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+@include make-grid-columns();

@@ -1,0 +1,18 @@
+<section class="section panels bg-blue">
+  <div class="container container--mobile-fixed container--md">
+    <h2 class="panels__title">Frequently asked questions</h2>
+    <ul class="panels__list">
+      {% for item in faq %}
+        <li class="panels__item">
+          <div class="panel {% if not loop.first %}is-collapsed{% endif %}" data-component="panel">
+            <div class="panel__title h3" data-element="panel-toggle">{{ item.title }}</div>
+            <div class="panel__content" data-element="panel-content" {% if not loop.first %}style="display:none"{% else %}style="display:block"{% endif %}>
+              {{ item.text }}
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="panels__decor decor-dots-bg hidden-md-down"></div>
+</section>

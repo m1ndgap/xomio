@@ -1,0 +1,8 @@
+@mixin link-base {
+  color: inherit;
+  text-decoration: none;
+  @include hover-focus {
+    color: $primary;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,154 @@
+/*.slick-list {
+    width: 100%;
+}
+
+.slick-track {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+
+    &:before,
+    &:after {
+        display: none;
+    }
+
+    .slick-vertical & {
+        display: block;
+    }
+}
+
+.slick-initialized .slick-slide {
+    height: auto;
+    display: flex;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+}
+
+.slick-slide {
+    outline: 0;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+/* Arrows 
+.slick-arrow {
+    transition: all 0.25s;
+    pointer-events: auto;
+    outline: none;
+    appearance: none;
+    background: none;
+    @include size(rem($spacer-8));
+    text-align: center;
+    z-index: 20;
+
+    &:before {
+        display: block;
+        color: $primary;
+        font-size: rem($spacer-8);
+        opacity: 1;
+        transition: color .25s ease-in-out;
+    }
+
+    @include hover-focus {
+        &:before {
+            color: $primary;
+        }
+    }
+
+    &.slick-disabled {
+        &:before {
+            color: $gray-200;
+            opacity: 1;
+        }
+
+        @include hover-focus {
+            &:before {
+            }
+        }
+    }
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-next {
+    right: 0;
+}*/
+
+/* Dots
+.slick-dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: static;
+    bottom: auto;
+    width: auto;
+    flex: 1;
+    margin-top: rem($spacer-9);
+    margin-bottom: rem(- $spacer);
+
+    li {
+        @include size($spacer-4);
+        margin: 0;
+
+        &:only-child {
+            display: none;
+        }
+
+        button {
+            transition: all 0.25s;
+            padding: 0;
+            position: relative;
+            @include size($spacer-4);
+            @include rounded;
+            opacity: 1;
+
+            &:before {
+                transition: all 0.25s;
+                background-color: $blue-300;
+                @include size($spacer-2);
+                @include rounded;
+                top: $spacer;
+                left: $spacer;
+                opacity: 1;
+                content: '';
+            }
+        }
+
+        &.slick-active {
+            button {
+                opacity: 1;
+
+                &:before {
+                    opacity: 1;
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+}
+
+.slick-controls {
+    display: flex;
+    justify-content: space-between;
+    width: rem(96px);
+
+    .slick-arrow {
+        position: relative;
+        top: 0 !important;
+        left: auto;
+        right: auto;
+        transform: none;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .slick-dots {
+        margin-top: rem($spacer-10);
+    }
+} */
