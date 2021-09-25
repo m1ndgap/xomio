@@ -1,6 +1,6 @@
 .feature {
     &__icon {
-        display: block;
+        display: inline-block;
         @include size(rem(48px));
         margin-bottom: rem($spacer-4);
     }
@@ -10,9 +10,14 @@
         @include em-line-height($font-size-h3-mobile, $line-height-lg);
     }
 
+    &--fixed-width {
+        max-width: rem(276px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     @include media-breakpoint-up(xl) {
         &__icon {
-            display: block;
             @include size(rem(64px));
             margin-bottom: rem($spacer-6);
         }

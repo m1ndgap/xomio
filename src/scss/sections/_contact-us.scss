@@ -1,5 +1,5 @@
 .contact-us {
-    &__decor {
+    .section__decor {
         &--1 {
             left: rem(-116px);
             bottom: rem(-11px);
@@ -8,6 +8,11 @@
         &--2 {
             right: rem(-58px);
             bottom: rem(40px);
+        }
+
+        &--3 {
+            left: rem(-120px);
+            bottom: rem(-83px);
         }
     }
 
@@ -20,8 +25,19 @@
         }
     }
 
+    @include media-breakpoint-up(md) {
+        .section__object {
+            &-bg {
+                top: rem(35px);
+                left: rem(-75px);
+                right: 0;
+            }
+        }
+    }
+
     @include media-breakpoint-up(xl) {
-        &__decor {
+
+        .section__decor {
             &--2 {
                 right: rem(-10px);
                 bottom: rem(56px);

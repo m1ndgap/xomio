@@ -1,0 +1,29 @@
+.feature-9 {
+    .section__decor {
+        transform: scale(.415);
+        right: rem(-131px);
+        bottom: rem(0);
+    }
+
+    @include media-breakpoint-up(md) {
+        .section__decor {
+            transform: scale(.75);
+            right: rem(-101px);
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .section__decor {
+            transform: scale(1);
+            top: rem(13px);
+            right: rem(-60px);
+            bottom: auto;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .section__subtitle {
+            margin-bottom: rem($spacer-10);
+        }
+    }
+}

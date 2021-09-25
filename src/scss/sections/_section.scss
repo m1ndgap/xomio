@@ -31,6 +31,20 @@
         margin-top: rem($spacer-10);
     }
 
+    &__slider {
+    }
+
+    &__slide {
+        opacity: 0;
+        visibility: hidden;
+        transition: .25s ease-in-out;
+
+        &.slick-active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
     &__object {
         position: relative;
 
@@ -38,6 +52,10 @@
             top: 50%;
             left: 50%;
             transform: translate(-51%,-40%) scale(0.8);
+        }
+
+        .slick-list {
+            overflow: visible;
         }
     }
 
@@ -101,13 +119,13 @@
 
         &__content {
             flex: 0 0 40%;
-            max-width: rem(480px);
+            max-width: 40%;
             margin-bottom: 0;
         }
 
         &__object {
             flex: 0 0 50%;
-            max-width: rem(600px);
+            max-width: 50%;
         }
 
         &__template {
@@ -128,9 +146,16 @@
         padding-top: rem($section-offset-top);
         padding-bottom: rem($section-offset-bottom);
 
+        &__content {
+            max-width: rem(480px);
+        }
+
+        &__object {
+            max-width: rem(600px);
+        }
+
         &__title {
             margin-bottom: rem($spacer-6);
-            margin-right: rem(-10px);
         }
 
         &__title + &__subtitle {
@@ -153,6 +178,12 @@
         &__form {
             box-shadow: 0 16px 24px rgba(#00362B, 0.04), 0 16px 40px rgba(#00362B, 0.04);
             padding: rem(48px $spacer-10);
+        }
+
+        &--compact {
+            padding-top: 0;
+            padding-bottom: rem(60px);
+            margin-top: rem(- $spacer-5);
         }
     }
 }

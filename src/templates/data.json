@@ -531,5 +531,73 @@
                 "name": "中文 -简体",
                 "code": "Zho"
         }
-    ]
+    ],
+    "glex": {
+        "brands": [
+            {
+                "image": "century-21",
+                "full": true
+            },
+            {
+                "image": "better-homes-and-gardens"
+            },
+            {
+                "image": "era"
+            }
+        ],
+        "slider": [
+            {
+                "title": "More languages, more listings, more leads",
+                "type": "lg",
+                "list": [
+                    "GLEX instantly converts your site into a multi language, global real estate portal",
+                    "Every listing from your entire brand global inventory is branded to you, as the website owner",
+                    "Anyone viewing any listing on your site, in any market, displayed in any language, can register as a lead in your client area.",
+                    "Convert the lead into a referral in your brand network, and start monetizing the global footprint of your brand"
+                ]
+            },
+            {
+                "title": "Global listings, beautifully displayed",
+                "type": "lg",
+                "list": [
+                    "Many of the biggest names in real estate rely on us for our web design skills, because we understand how to make listings shine online",
+                    "Choose from a range of beautiful designs with clean, modern listings and photo presentation",
+                    "Listings data is organized on the page thematically, for a clearer consumer experience",
+                    "Advanced client features give users the ability to find, save and share their ideal property, all from your site"
+                ]
+            },
+            {
+                "title": "We speak real estate, in 20 languages",
+                "text": "We’ve been working with listings in 20 languages for 20 years.We know everything there is to know about listings data, and about real estate translation.",
+                "list": [
+                    "Every brand listing in 20 languages",
+                    "Metadata for SEO in all languages",
+                    "Set up your GLEX feed in 3 clicks",
+                    "Choose from a range of display styles",
+                    "Listings data organized thematically",
+                    "Fully customize the content of your GLEX feed"
+                ]
+            }
+        ],
+        "features": [
+            {
+                "icon": "flag",
+                "theme": "red",
+                "title": "Ready",
+                "text": "Pick your preferred Xomio package and claim your GLEX feed"
+            },
+            {
+                "icon": "attention",
+                "theme": "orange",
+                "title": "Set",
+                "text": "Choose from a range of clean, modern listings search and display templates"
+            },
+            {
+                "icon": "rocket",
+                "theme": "green",
+                "title": "Go!",
+                "text": "Publish your site with a click, and start getting seen by local and international buyers"
+            }
+        ]
+    }
 }

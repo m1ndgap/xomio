@@ -82,10 +82,11 @@ $blue-500:   #1c3f74 !default;
 
 $gray-100:   #fafbfb !default;
 $gray-200:   #f0f0f0 !default;
-$gray-300:   #e8e8e8 !default;
-$gray-400:   #7f8fa4 !default;
-$gray-500:   #6c6c72 !default;
-$gray-600:   #445a59 !default;
+$gray-300:   #eaeaea !default;
+$gray-400:   #e8e8e8 !default;
+$gray-500:   #7f8fa4 !default;
+$gray-600:   #6c6c72 !default;
+$gray-700:   #445a59 !default;
 
 $green-100:  #8ac7c8 !default;
 $green-200:  #388172 !default;
@@ -109,7 +110,7 @@ $white:      #ffffff !default;
 $yellow-100: #dead00 !default;
 $yellow-200: #f0ad2c !default;
 
-$base-color:    $gray-500 !default;
+$base-color:    $gray-600 !default;
 $base-dark:     $black-100 !default;
 $primary:       $orange-300 !default;
 $primary-light: $orange-200 !default;
@@ -251,7 +252,7 @@ $link-hover-decoration: inherit !default;
 //
 // font, line-height, and color for body text, headings, and more.
 $font-family-sans-serif: 'Libre Franklin', Arial, sans-serif !default;
-$font-family-serif: 'Source Serif Pro', Arial, sans-serif !default;
+$font-family-cursive: 'Gochi Hand', cursive !default;
 $font-family-base: $font-family-sans-serif !default;
 
 $font-weight-light:     300 !default;
@@ -398,7 +399,7 @@ $btn-themes: map-merge(
 // Form
 //
 //
-$input-color-placeholder: $gray-400 !default;
+$input-color-placeholder: $gray-500 !default;
 
 $input-height:            $spacer-10 !default;
 $input-font-size:         $font-size-base !default;
@@ -408,7 +409,7 @@ $input-line-height:       $line-height-base !default;
 
 $input-color:             $base-dark !default;
 $input-bg-color:          $white !default;
-$input-border-color:      $gray-300 !default;
+$input-border-color:      $gray-400 !default;
 $input-border-width:      1px !default;
 $input-border-radius:     $border-radius-sm !default;
 
@@ -438,11 +439,6 @@ $navbar-z-index:         100 !default;
 // Section
 //
 //
-$section-offset-mobile:    80px !default;
-$section-offset-lg-mobile: 140px !default;
-$section-offset:           200px !default;
-
-
 $section-offset-top-mobile:    40px !default;
 $section-offset-bottom-mobile: 40px !default;
 $section-offset-top:           80px !default;

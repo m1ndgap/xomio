@@ -1,17 +1,15 @@
-.list-check {
+.list-check,
+.list-plus {
     @include list-unstyled;
 
     > li {
         position: relative;
-        padding-left: rem($spacer-8);
-        @include margin-bottom(rem(10px));
 
         &:before {
             position: absolute;
             top: 0;
             left: 0;
             color: $primary;
-            font-size: rem($spacer-6);
 
             .bg-primary &,
             .bg-secondary &,
@@ -21,6 +19,62 @@
         }
     }
 
-    @include media-breakpoint-up(lg) {
+    p + & {
+        margin-top: rem($spacer-5);
+    }
+}
+
+.list-check {
+    > li {
+        @include margin-bottom(rem(10px));
+        padding-left: rem($spacer-8);
+
+        &:before {
+            font-size: rem($spacer-6);
+        }
+    }
+
+    .text-lg &,
+    &.text-lg {
+        > li {
+            @include margin-bottom(rem($spacer-4));
+        }
+    }
+}
+
+.list-plus {
+    > li {
+        padding-left: rem($spacer-6);
+        @include margin-bottom(rem($spacer-4));
+
+        &:before {
+            font-size: rem($spacer-4);
+            top: .3125em;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .list-plus {
+        .text-lg &,
+        &.text-lg {
+            @include font($font-size-base, $line-height-base);
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .list-plus {
+        .text-lg &,
+        &.text-lg {
+            > li {
+                padding-left: rem($spacer-8);
+
+                &:before {
+                    top: 0;
+                    font-size: rem($spacer-6);
+                }
+            }
+        }
     }
 }

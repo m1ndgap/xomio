@@ -43,7 +43,7 @@
         cursor: pointer;
         transition: 0.25s ease color;
         @include font($font-size-lg, 22.01px, $font-weight-medium);
-        color: $gray-400;
+        color: $gray-500;
 
         &--left {
             order: 1;

@@ -7,9 +7,6 @@
     }
 
     &__intro {
-        max-width: rem(740px);
-        margin-left: auto;
-        margin-right: auto;
         margin-bottom: rem(56px);
     }
 
@@ -60,6 +57,10 @@
     @include media-breakpoint-up(xl) {
         &__intro {
             margin-bottom: rem(64px);
+        }
+
+        .intro__title {
+            margin-bottom: rem($spacer-8);
         }
 
         &__card {

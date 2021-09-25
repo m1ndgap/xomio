@@ -32,5 +32,8 @@
     }
 
     @include media-breakpoint-up(xl) {
+        &__title {
+            margin-right: rem(-10px);
+        }
     }
 }

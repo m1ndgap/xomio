@@ -1,0 +1,16 @@
+.feature-7 {
+
+    @include media-breakpoint-up(xl) {
+        .section__decor {
+            &--1 {
+                top: rem(-61px);
+                left: rem(-190px);
+            }
+
+            &--2 {
+                right: rem(-32px);
+                bottom: rem(-36px);
+            }
+        }
+    }
+}

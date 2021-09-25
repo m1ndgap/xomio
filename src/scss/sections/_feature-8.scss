@@ -1,0 +1,15 @@
+.feature-8 {
+    .intro {
+        max-width: none;
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        padding-bottom: rem($section-offset-top);
+
+        .section__decor {
+            top: rem(-55px);
+            left: rem(-37px);
+        }
+    }
+}

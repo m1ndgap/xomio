@@ -1,4 +1,9 @@
 .intro {
+    max-width: rem(740px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: rem($spacer-10);
+
     &__action {
         margin-top: rem($spacer-8);
     }
@@ -10,5 +15,10 @@
     }
 
     @include media-breakpoint-up(xl) {
+        margin-bottom: rem(48px);
+
+        &__title {
+            margin-bottom: rem($spacer-6);
+        }
    }
 }

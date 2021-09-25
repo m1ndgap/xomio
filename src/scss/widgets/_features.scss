@@ -1,21 +1,17 @@
 .features {
     @include list-unstyled;
+    margin-bottom: rem(- $spacer-10);
+    overflow: hidden;
 
     &__item {
-    }
-
-    &--stack & {
-        &__item {
-            @include margin-bottom(rem($spacer-10));
-        }
+        margin-bottom: rem($spacer-10);
     }
 
     @include media-breakpoint-up(xl) {
+        margin-bottom: rem(-48px);
 
-        &--stack & {
-            &__item {
-                margin-bottom: rem(48px);
-            }
+        &__item {
+            margin-bottom: rem(48px);
         }
     }
 }

@@ -119,6 +119,41 @@ b {
     font-weight: $font-weight-semibold;
 }
 
+.font-cursive {
+    font-size: 1.6em;
+    line-height: 1.15;
+    font-weight: $font-weight-normal;
+    font-family: $font-family-cursive;
+    display: inline-block;
+    margin-bottom: -.28125em;
+
+    &--underline {
+        display: inline-block;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 1em;
+            margin-top: -.4225em;
+            content: '';
+            background: url(../../assets/img/cursive-underline.svg) 50% 0/contain no-repeat;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 1.5em;
+
+        &--underline {
+            &:after {
+                margin-top: -.25em;
+            }
+        }
+    }
+}
+
 .text-uppercase {
     text-transform: uppercase;
 }
