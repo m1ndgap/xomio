@@ -37,6 +37,7 @@
                 "node_modules/select2/dist/css/select2.min.css",
                 "node_modules/tippy.js/dist/backdrop.css",
                 "node_modules/tippy.js/dist/tippy.css",
+                "node_modules/dropzone/dist/min/basic.min.css",
                 "node_modules/aos/dist/aos.css"
             ]
         },
@@ -51,6 +52,7 @@
                 "node_modules/parsleyjs/dist/parsley.min.js",
                 "node_modules/@popperjs/core/dist/umd/popper.min.js",
                 "node_modules/tippy.js/dist/tippy-bundle.umd.min.js",
+                "node_modules/dropzone/dist/min/dropzone.min.js",
                 "node_modules/aos/dist/aos.js",
                 "node_modules/debounce/index.js"
             ]

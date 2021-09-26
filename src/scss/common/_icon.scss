@@ -17,7 +17,8 @@
 .select2-search--dropdown:before,
 .select2-results__option:after,
 .list-check > li:before,
-.list-plus > li:before {
+.list-plus > li:before,
+.feature__toggle-link:after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
   speak: never;
@@ -49,7 +50,8 @@
 }
 .icon-chevron-down:before,
 .dropdown__toggle:after,
-.select2-selection__arrow:before {
+.select2-selection__arrow:before,
+.feature__toggle-link:after {
   content: "\e903";
 }
 .icon-close:before {

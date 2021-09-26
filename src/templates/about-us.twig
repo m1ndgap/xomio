@@ -1,0 +1,284 @@
+{% extends 'layout/_base.twig' %}
+
+{% set bodyClass = '' %}
+{% set pageTitle = 'About us' %}
+
+{% block content %}
+  <!-- Team -->
+  <section class="section team">
+    <div class="container container--mobile-fixed">
+      <div class="section__body section__body--center">
+        <div class="section__content">
+          <h2 class="section__title">Meet the team behind Xomio</h2>
+          <div class="section__description text-lg">
+            <p>At Immobel, we have over two decades of experience building websites and software for the biggest names in global real estate, with clients like Century 21®  and Sotheby’s International Real Estate®.</p>
+            <p>Xomio gives you access to the same technology we use to power the web presence of many of our largest partners.</p>
+            <p>Unlike other real estate website builders, we don’t use WordPress or other generic platforms underneath our products.</p>
+            <p>We know that the real estate industry has highly specific needs, and we build tools that answer them.</p>
+          </div>
+
+          <div class="section__action hidden-md-down">
+            <a href="#" class="button button--primary">Go to Immobel.com</a>
+          </div>
+        </div>
+
+        <div class="section__object">
+          <img src="./assets/img/about-us/countries.svg" alt="" class="section__img">
+        </div>
+      </div>
+
+      <div class="section__action hidden-lg-up">
+        <a href="#" class="button button--primary">Go to Immobel.com</a>
+      </div>
+    </div>
+
+    <div class="section__decor decor-dots-1 hidden-lg-down"></div>
+  </section>
+
+  <!-- Mission -->
+  <section class="section mission bg-accent">
+    <div class="container container--mobile-fixed">
+      <div class="section__body section__body--center">
+        <div class="section__content">
+          <h2 class="section__title">Our mission</h2>
+          <h3 class="section__subtitle">To help agents, brands, brokers, MLS and portals better serve the communities within their markets, and beyond.</h3>
+          <div class="section__description">
+            <p>We build products that help you increase the visibility of your business and your listings to all clients, regardless of their location, the language they speak, or their accessibility requirements.</p>
+          </div>
+        </div>
+
+        <div class="section__object">
+          <img src="./assets/img/about-us/map.svg" alt="" class="section__img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="section partners">
+    <div class="container container--mobile-fixed">
+      <div class="intro text-center">
+        <h2 class="intro__title">Partners and Clients</h2>
+        <div class="intro__description">
+          <p>Our technology powers the global visibility and connectivity of many of the most prestigious names in real estate.</p>
+        </div>
+      </div>
+
+      <ul class="section__logos logos row">
+        {% for item in partners %}
+          <li class="logos__item logos__item-order-{{ item.order }} {% if item.class %} {{ item.class }} {% else %} col{% endif %}">
+            <a href="#" class="logos__item-body">
+              {% if item.image2x %}
+                <img srcset="./assets/img/logos/{{ item.image }}.png 1x, ./assets/img/logos/{{ item.image }}@2x.png 2x" src="./assets/img/logos/{{ item.image }}.png" alt="" class="logos__img">
+                {% else %}
+                <img src="./assets/img/logos/{{ item.image }}.svg" alt="" class="logos__img">
+              {% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section values">
+    <div class="container container--mobile-fixed">
+      <h2 class="section__title">Our values</h2>
+
+      <ul class="section__features features row">
+        {% for item in values %}
+          <li class="features__item col-xs-12 col-lg-6">
+            <div class="feature">
+              {{ svg.icon(item.icon, 'feature__icon theme-'~item.theme) }}
+              <h3 class="feature__title">{{ item.title }}</h3>
+              <p class="feature__text">{{ item.text }}</p>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="section__decor section__decor--1 decor-complex-7"></div>
+    <div class="section__decor section__decor--2 decor-lines-5"></div>
+  </section>
+
+  <!-- Teams -->
+  <section class="section teams">
+    <div class="container container--mobile-fixed">
+      <div class="intro text-center">
+        <h2 class="intro__title">How the Xomio team supports you</h2>
+        <div class="intro__description">
+          <p>Meet the different teams that make Xomio great!</p>
+        </div>
+      </div>
+
+      <ul class="section__features features features--cards row">
+        {% for item in teams %}
+          <li class="features__item col-xs-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="feature feature--card" data-component="feature-card">
+              {{ svg.icon(item.icon, 'feature__icon theme-'~item.theme) }}
+              <h3 class="feature__title">{{ item.title }}</h3>
+              <div class="feature__toggle">
+                <a href="#" class="feature__toggle-link" data-element="feature-card-toggle">{{ item.toggle }}</a>
+              </div>
+              <div class="feature__text text-md">
+                <p>{{ item.text }}</p>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="section__decor section__decor--1 decor-shape-3"></div>
+    <div class="section__decor section__decor--2 decor-lines-4 hidden-lg-down"></div>
+  </section>
+
+  <!-- Work with us -->
+  <section class="section contact-us bg-blue">
+    <div class="container container--mobile-fixed">
+      <div class="section__body">
+        <div class="section__content">
+          <h2 class="section__title">Work with us!</h2>
+          <div class="section__description">
+            <ul class="list-plus">
+              <li>We’re always looking for talent, across a range of teams.</li>
+              <li>We’re 100% remote, and finding the right people matters more to us than where you’re based.</li>
+              <li>Attitude is just as important to us as experience, so if you’re creative and ambitious, and your values align with ours, please get in touch today and find out whether we have any openings.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section__object">
+          <form action="" method="POST" class="section__form form">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend h3">Tell us more about you.</legend>
+
+              <div class="row row--md">
+                <div class="col-xs-12 col-md-6">
+                  <div class="form__group">
+                    <label class="form__label" for="first-name">First name</label>
+                    <div class="form__field">
+                      <input type="text" id="first-name" class="form__input">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <div class="form__group">
+                    <label class="form__label" for="last-name">Last name</label>
+                    <div class="form__field">
+                      <input type="text" id="last-name" class="form__input">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="team">Team you’re interested in joining</label>
+                <div class="form__field">
+                  <select id="team" data-element="select-default" data-placeholder="Select your team" data-minimum-results-for-search="Infinity">
+                    <!-- Empty option for placeholder -->
+                    <option></option>
+                    {% for item in teams %}
+                      <option value="team-{{ item.title|lower|replace({' ': '-'}) }}">{{ item.title }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+
+              <div class="row row--md">
+                <div class="col-xs-12 col-md-6">
+                  <div class="form__group is-required">
+                    <label class="form__label" for="email">Email</label>
+                    <div class="form__field">
+                      <input type="email" id="email" class="form__input" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <div class="form__group">
+                    <label class="form__label" for="mls">Phone</label>
+                    <div class="form__field">
+                      <input type="text" id="phone" class="form__input" data-mask="phone" placeholder="+1 234 567 89 00">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form__group is-required">
+                <label class="form__label" for="country">Country</label>
+                <div class="form__field">
+                  <select id="country" data-element="select-default" data-placeholder="Select your country" data-search-placeholder="Search country" required>
+                    <!-- Empty option for placeholder -->
+                    <option></option>
+                    {% for country in countries %}
+                      <option value="{{ country.code }}">{{ country.name }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+
+              <div class="form__group is-required">
+                <label class="form__label" for="message">Anything else we should know about you?</label>
+                <div class="form__field">
+                  <textarea id="message" rows="4" class="form__input" placeholder="Enter text" required></textarea>
+                </div>
+              </div>
+
+              <div class="form__group form__dropzone">
+                <div class="dropzone" data-dropzone-block>
+                  <div class="fallback">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="dropzoneCvUpload">
+                      <label class="custom-file__label" for="dropzoneCvUpload">
+                        <i class="custom-file__icon icon-attach"></i><span class="custom-file__text">Upload CV or Cover Letter</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="dz-message custom-file">
+                    <div class="custom-file__label" data-element="dropzone-trigger">
+                      <i class="custom-file__icon icon-attach"></i><span class="custom-file__text">Upload CV or Cover Letter</span>
+                    </div>
+                  </div>
+                  <div class="dz-preview" data-element="dropzone-previews">
+                    <div data-element="dropzone-template">
+                      <div class="dz-item row">
+                        <div class="dz-item__col dz-item__col--icon col">
+                          <i class="dz-item__icon icon-attach"></i>
+                        </div>
+                        <div class="dz-item__col dz-item__col--content col">
+                          <div class="dz-item__name" data-dz-name></div>
+                          <div class="dz-item__error error text-error" data-dz-errormessage></div>
+                        </div>
+                        <div class="dz-item__col dz-item__col--progress col">
+                          <div class="progress active" role="progressbar">
+                            <div class="progress__bar" style="width:50%;" data-dz-uploadprogress></div>
+                          </div>
+                        </div>
+                        <div class="dz-item__col dz-item__col--delete col">
+                          <button class="dz-item__icon icon-trash" data-dz-remove title="Delete"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form__submit">
+              <input type="submit" class="button button--primary button--block" value="Send">
+            </div>
+          </form>
+
+          <div class="section__object-bg-2 decor-dots-bg-3 hidden-xs-down"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section__decor section__decor--3 decor-complex-1 hidden-md-down"></div>
+    <div class="section__decor section__decor--4 decor-lines-10 hidden-lg-down"></div>
+  </section>
+{% endblock %}
+
+{% block modals %}
+{% endblock %}

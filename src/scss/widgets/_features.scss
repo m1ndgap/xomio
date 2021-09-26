@@ -7,11 +7,37 @@
         margin-bottom: rem($spacer-10);
     }
 
+    &--cards {
+        margin-bottom: rem(- $spacer-5);
+        overflow: visible;
+    }
+
+    &--cards & {
+        &__item {
+            margin-bottom: rem($spacer-5);
+            height: rem(222px);
+        }
+    }
+
     @include media-breakpoint-up(xl) {
         margin-bottom: rem(-48px);
 
         &__item {
             margin-bottom: rem(48px);
+        }
+
+        &--cards {
+            margin-left: rem(- $spacer-4);
+            margin-right: rem(- $spacer-4);
+            margin-bottom: rem(- $spacer-6);
+        }
+
+        &--cards & {
+            &__item {
+                padding-left: rem($spacer-4);
+                padding-right: rem($spacer-4);
+                margin-bottom: rem($spacer-6);
+            }
         }
     }
 }

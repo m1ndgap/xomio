@@ -1,0 +1,50 @@
+.team {
+    .section__object {
+        display: flex;
+        justify-content: center;
+    }
+
+    .section__img {
+        max-width: rem(481px);
+        transform: translateX(-2%);
+        //transform: translateX(-16.25%);
+        margin-top: rem(-71px);
+        margin-bottom: rem(-18px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        .section__title {
+            max-width: 80%;
+        }
+
+        .section__img {
+            max-width: rem(750px);
+            transform: translateX(-6%);
+            margin-bottom: 0;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .section__title {
+            margin-bottom: rem($spacer-8);
+        }
+
+        .section__description {
+            p {
+                @include margin-bottom(rem($spacer-4));
+            }
+        }
+
+        .section__img {
+            max-width: none;
+            transform: translateX(-1%);
+            align-self: flex-start;
+            margin-top: 0;
+        }
+
+        .section__decor {
+            top: rem(57px);
+            left: rem(-62px);
+        }
+    }
+}

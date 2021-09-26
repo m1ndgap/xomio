@@ -669,5 +669,118 @@
                 ]
             }
         ]
-    }
+    },
+    "values": [
+        {
+            "icon": "accessibility",
+            "theme": "purple",
+            "title": "Accessibility",
+            "text": "We build technology and websites with inclusivity at the forefront. We enable multi language content and accessibility features that cater to all."
+        },
+        {
+            "icon": "chat",
+            "theme": "blue",
+            "title": "Collaboration",
+            "text": "As a fully remote team across four continents, we walk the walk of global collaboration! We are committed to helping real estate professionals work together and co-market across borders and language barriers."
+        },
+        {
+            "icon": "service",
+            "theme": "pink",
+            "title": "Service",
+            "text": "We are all about excellence in customer service, both for our own clients, and our clients’ clients! Our tools are designed to make it as easy as possible to engage and deliver for the people who matter most to your business."
+        },
+        {
+            "icon": "heart",
+            "theme": "orange",
+            "title": "Family",
+            "text": "We remain family owned and run, after 20 years in the business. This means that we aren’t chasing short term profits at the expense of long term quality and stability, and that our clients are our most important stakeholders."
+        }
+    ],
+    "partners": [
+        {
+            "image": "ntreis",
+            "image2x": true,
+            "order": 3
+        },
+        {
+            "image": "better-homes-and-gardens",
+            "order": 1
+        },
+        {
+            "image": "era",
+            "order": 6
+        },
+        {
+            "image": "beaches-mls",
+            "image2x": true,
+            "order": 4,
+            "class": "col-xs-12 col-md-auto"
+        },
+        {
+            "image": "one-key",
+            "order": 2
+        },
+        {
+            "image": "century-21",
+            "order": 5
+        }
+    ],
+    "teams": [
+        {
+            "icon": "star",
+            "theme": "orange",
+            "title": "QA",
+            "toggle": "Improving user experience",
+            "text": "Every new feature, product or design passes our Quality Assurance process. We are power users who test every Immobel product in every possible way to find flaws that need fixing, and to recommend ways to make user experience better."
+        },
+        {
+            "icon": "desktop",
+            "theme": "purple",
+            "title": "Frontend",
+            "toggle": "Building great products",
+            "text": "In the frontend team, we turn the Design team’s work into reality, hooking it up to all the cool features built by the Backend team. Our goal at all times is to create the best possible User Experience for our users, and for the people who visit the websites that are powered by products like Xomio."
+        },
+        {
+            "icon": "ba",
+            "theme": "green",
+            "title": "BA",
+            "toggle": "Turning ideas into features",
+            "text": "In the Business Analyst team, our goal is to take great ideas for new features, document them, and plan how to build them. We work with every team, coordinating across all the departments to bring a new idea to life."
+        },
+        {
+            "icon": "handshake",
+            "theme": "yellow",
+            "title": "Partnership",
+            "toggle": "Result-oriented",
+            "text": "Successful businesses always depend on successful partnerships. We work closely with the Customer Success team to make sure that our enterprise clients and distribution partners have all the resources they need to successfully roll out our products to their own members and clients"
+        },
+        {
+            "icon": "service-2",
+            "theme": "yellow",
+            "title": "DevOps",
+            "toggle": "Laying the foundations",
+            "text": "In the Business Analyst team, our goal is to take great ideas for new features, document them, and plan how to build them. We work with every team, coordinating across all the departments to bring a new idea to life."
+        },
+        {
+            "icon": "code",
+            "theme": "dark-green",
+            "title": "Backend",
+            "toggle": "Building useful tools",
+            "text": "We are the Backend team! Our job is to build all the technology, systems and microservices under the hood in every single Immobel product. We are a team of software developers spread across the globe, and we are passionate about making highly functional tools that deliver great value to our users."
+        },
+        {
+            "icon": "design-2",
+            "theme": "blue",
+            "title": "Design",
+            "toggle": "Creating the look & feel",
+            "text": "In the Business Analyst team, our goal is to take great ideas for new features, document them, and plan how to build them. We work with every team, coordinating across all the departments to bring a new idea to life."
+        },
+        {
+            "icon": "user",
+            "theme": "red",
+            "title": "Customer Success",
+            "toggle": "Helping users and clients",
+            "text": "We handle everything customer-facing, from onboarding new MLS data, to helping users get the most out of their Xomio website or Referral Network with training, support and documentation."
+        }
+    ]
 }

@@ -1,4 +1,6 @@
 .feature {
+    max-width: rem(480px);
+
     &__icon {
         display: inline-block;
         @include size(rem(48px));
@@ -16,6 +18,94 @@
         margin-right: auto;
     }
 
+    &__toggle {
+        @include em-line-height($font-size-base, 19.01px);
+
+        &-link {
+            color: $gray-500;
+
+            &:after {
+                color: $primary;
+                opacity: .5;
+                font-size: rem($spacer-6);
+                transition: .2s ease-in-out;
+            }
+
+            @include hover-focus {
+                color: $primary;
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &--card {
+        background-color: $white;
+        border: 1px solid rgba(#1e5c5a, .12);
+        border-radius: $border-radius-lg;
+        height: 100%;
+        padding: rem(63px $spacer-3 $spacer-9 $spacer-8);
+        overflow: hidden;
+        transition: .2s ease-in-out;
+
+        &.is-expanded {
+            position: absolute;
+            top: 0;
+            left: rem($gutter / 2);
+            right: rem($gutter / 2);
+            border-color: rgba(#1e5c5a, 0);
+            box-shadow: 0 16px 24px rgba(#00362b, 0.02), 0 16px 40px rgba(#00362b, 0.02);
+            height: auto;
+            z-index: 2;
+            min-height: rem(394px);
+
+            .feature__toggle-link {
+                color: $primary;
+
+                &:after {
+                    transform: rotate(-180deg);
+                    opacity: 1;
+                }
+            }
+
+            .feature__text {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &--card & {
+        &__icon {
+            @include size(rem($spacer-10));
+            margin-bottom: rem($spacer-5);
+        }
+
+        &__title {
+            margin-bottom: rem($spacer-3);
+            @include font($font-size-h3, $line-height-h3);
+        }
+
+        &__text {
+            opacity: 0;
+            visibility: hidden;
+            color: $gray-500;
+            transition: .2s ease-in-out;
+            margin-top: rem(15px);
+            margin-bottom: rem(-2px);
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        &--card {
+            &.is-expanded {
+                min-height: rem(464px);
+            }
+        }
+    }
+
     @include media-breakpoint-up(xl) {
         &__icon {
             @include size(rem(64px));
@@ -25,6 +115,14 @@
         &__title {
             margin-bottom: rem($spacer-2);
             @include em-line-height($font-size-h3, $line-height-h3-mobile);
+        }
+
+        &--card {
+            &.is-expanded {
+                left: rem($spacer-4);
+                right: rem($spacer-4);
+                min-height: rem(468px);
+            }
         }
     }
 }

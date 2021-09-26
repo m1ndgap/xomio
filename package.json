@@ -16,6 +16,7 @@
     "app-root-path": "^3.0.0",
     "browser-sync": "^2.26.3",
     "debounce": "^1.2.0",
+    "dropzone": "^5.9.3",
     "fontfacegen": "^0.4.0",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-base64-inline": "^1.0.6",

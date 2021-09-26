@@ -46,7 +46,9 @@ h1, h2, h3, h4, h5, h6,
     color: $headings-color;
     font-weight: $headings-font-weight;
 
-    .bg-primary & {
+    .bg-primary &,
+    .bg-secondary &,
+    .bg-accent & {
         color: inherit;
     }
 }

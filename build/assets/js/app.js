@@ -77,6 +77,68 @@ $(document).ready(function(){
         });
     });
 });
+Dropzone.autoDiscover = false;
+
+$(document).ready(function () {
+    let previewNode = $('[data-element="dropzone-template"]');
+    let previewTemplate = previewNode.html();
+    previewNode.parent().html('');
+
+    $('[data-dropzone-block]').dropzone({
+        maxFiles: 10,
+        maxFilesize: 10,
+        url: "/ajax_file_upload_handler/",
+        previewTemplate: previewTemplate,
+        autoQueue: false, // Make sure the files aren't queued until manually added
+        previewsContainer: '[data-element="dropzone-previews"]', // Define the container to display the previews
+        clickable: '[data-element="dropzone-trigger"]', // Define the element that should be used as click trigger to select files.
+        dictFileTooBig: 'File is over 10 Мb',
+        success: function (file, response) {
+            $(file.previewElement).find('[data-dz-uploadprogress]').parent().hide();
+        },
+        error: function (file, response) {
+            let item = $(file.previewElement);
+            let itemError = $(file.previewElement).find('[data-dz-errormessage]');
+            let itemName = $(file.previewElement).find('[data-dz-name]');
+
+            if (file && response) {
+                item.addClass('has-error');
+                itemName.hide();
+                itemError.html(response)
+            } else {
+                item.removeClass('has-error');
+                itemName.show();
+                itemError.html('')
+            }
+        },
+        uploadprogress: function(progress) {
+            $(file.previewElement).find('[data-dz-uploadprogress]').css('width', progress + '%');
+        },
+    });
+});
+/* Feature card */
+$(document).ready(function(){
+    let $featureCardToggle = $('[data-element="feature-card-toggle"]');
+
+    $featureCardToggle.on('click', function(e){
+        e.preventDefault();
+
+        let $toggle  = $(this);
+        let $card = $toggle.closest('[data-component="feature-card"]');
+        let cardHeight = $card[0].scrollHeight;
+        let $activeSibling = $('.'+expandedClass+'[data-component="feature-card"]');
+
+        if ($card.hasClass(expandedClass)) {
+            $card.removeClass(expandedClass);
+            $card.css('height', '');
+        } else {
+            $activeSibling.removeClass(expandedClass);
+            $activeSibling.css('height', '');
+            $card.addClass(expandedClass);
+            $card.css('height', cardHeight);
+        }
+    });
+});
 let $phoneInputs = document.querySelectorAll('[data-mask="phone"]');
 
 if ($phoneInputs.length !== 0) {
@@ -621,7 +683,7 @@ $(document).ready(function(){
                 } else {
                     percentTime += 1 / (time + 5);
                     $('.in-progress-' + progressBarIndex).css({
-                        height: percentTime + "%"
+                        //height: percentTime + "%"
                     });
                     if (percentTime >= 100) {
                         $tabNavSlider.slick('slickNext');
@@ -636,7 +698,7 @@ $(document).ready(function(){
 
             function resetProgressbar() {
                 $('.in-progress').css({
-                    height: 0 + '%'
+                    //height: 0 + '%'
                 });
                 clearInterval(tick);
             }

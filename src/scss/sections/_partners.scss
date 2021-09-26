@@ -1,0 +1,23 @@
+.partners {
+    padding-top: rem(48px);
+    padding-bottom: rem(48px);
+
+    .intro {
+        max-width: none;
+
+        &__desctiption {
+            max-width: rem(720px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+        .intro {
+            margin-bottom: rem(42px);
+        }
+    }
+}

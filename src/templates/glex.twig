@@ -255,7 +255,7 @@
                     <!-- Empty option for placeholder -->
                     <option></option>
                     {% for country in countries %}
-                      <option id="{{ country.code }}">{{ country.name }}</option>
+                      <option value="{{ country.code }}">{{ country.name }}</option>
                     {% endfor %}
                   </select>
                 </div>

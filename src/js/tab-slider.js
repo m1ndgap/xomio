@@ -45,7 +45,7 @@ $(document).ready(function(){
                 } else {
                     percentTime += 1 / (time + 5);
                     $('.in-progress-' + progressBarIndex).css({
-                        height: percentTime + "%"
+                        //height: percentTime + "%"
                     });
                     if (percentTime >= 100) {
                         $tabNavSlider.slick('slickNext');
@@ -60,7 +60,7 @@ $(document).ready(function(){
 
             function resetProgressbar() {
                 $('.in-progress').css({
-                    height: 0 + '%'
+                    //height: 0 + '%'
                 });
                 clearInterval(tick);
             }

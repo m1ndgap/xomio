@@ -42,6 +42,10 @@
         margin-top: rem($spacer);
     }
 
+    &__dropzone {
+        margin-bottom: rem($spacer-8);
+    }
+
     @include media-breakpoint-down(md) {
         &__legend {
             @include em-line-height($font-size-h3-mobile, $line-height-h4);
