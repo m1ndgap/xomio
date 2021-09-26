@@ -92,6 +92,19 @@
         .section__img {
             border-radius: $border-radius-md;
         }
+
+        &--shadow {
+            filter: none;
+
+            &:after {
+                filter: blur(28.5545px);
+                border-radius: 5.7109px;
+            }
+
+            .section__img {
+                border-radius: $border-radius-sm;
+            }
+        }
     }
 
     @include media-breakpoint-up(md) {
@@ -138,6 +151,19 @@
 
             .section__img {
                 border-radius: $border-radius-lg;
+            }
+
+            &--shadow {
+                filter: none;
+
+                &:after {
+                    filter: blur(28.5545px);
+                    border-radius: 5.7109px;
+                }
+
+                .section__img {
+                    border-radius: $border-radius-sm;
+                }
             }
         }
     }

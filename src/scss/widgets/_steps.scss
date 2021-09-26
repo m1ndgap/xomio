@@ -1,0 +1,58 @@
+.steps {
+    @include list-unstyled;
+
+    &__item {
+        position: relative;
+        padding-left: rem($spacer-6);
+        padding-bottom: rem($spacer-10);
+        cursor: pointer;
+
+        &:last-child {
+            padding-bottom: 0;
+
+            &:after,
+            .steps__item-progress {
+                display: none;
+            }
+        }
+
+        &:before {
+            position: absolute;
+            top: rem($spacer-2);
+            left: 0;
+            @include size(rem($spacer-3));
+            @include rounded;
+            background-color: $primary;
+            content: '';
+        }
+
+        &-progress,
+        &:after {
+            position: absolute;
+            top: rem($spacer-3);
+            left: rem(5px);
+            bottom: rem(- $spacer-4);
+            width: rem(2px);
+            background-color: rgba($primary, .2);
+            content: '';
+        }
+
+        &-progress {
+            .in-progress {
+              background-color: $primary;
+              height: 0%;
+              width: rem(2px);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__item {
+            padding-left: rem(42px);
+            padding-bottom: rem(45px);
+        }
+   }
+}

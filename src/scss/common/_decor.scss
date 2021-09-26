@@ -37,6 +37,14 @@
     @include size(292px, 394px);
     background-image: url(../../assets/img/decor/lines-7.svg);
 }
+.decor-lines-8 {
+    @include size(267px, 254px);
+    background-image: url(../../assets/img/decor/lines-8.svg);
+}
+.decor-lines-9 {
+    @include size(192px, 183px);
+    background-image: url(../../assets/img/decor/lines-9.svg);
+}
 
 .decor-dots-1 {
     @include size(112px, 146px);
@@ -78,6 +86,10 @@
     @include size(177px, 140px);
     background-image: url(../../assets/img/decor/shape-2.svg);
 }
+.decor-shape-3 {
+    @include size(256px, 283px);
+    background-image: url(../../assets/img/decor/shape-3.svg);
+}
 
 .decor-complex-1 {
     @include size(255px, 323px);
@@ -98,6 +110,10 @@
 .decor-complex-5 {
     @include size(304px, 344px);
     background-image: url(../../assets/img/decor/complex-5.svg);
+}
+.decor-complex-6 {
+    @include size(315px, 275px);
+    background-image: url(../../assets/img/decor/complex-6.svg);
 }
 
 @include media-breakpoint-up(xl) {

@@ -1,0 +1,28 @@
+.feature-10 {
+    padding-bottom: rem(80px);
+
+    .section__object {
+        &-decor {
+            right: rem(-76px);
+            bottom: rem(-49px);
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+    }
+
+    @include media-breakpoint-up(lg) {
+        .section__object {
+            align-self: flex-start;
+            margin-top: rem(43px);
+
+            &-decor {
+                right: rem(-112px);
+                bottom: rem(-118px);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+    }
+}

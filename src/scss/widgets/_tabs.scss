@@ -1,0 +1,116 @@
+.tabs {
+    &__list {
+        @include list-unstyled;
+        display: flex;
+        margin-bottom: rem($spacer-8);
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        padding: rem(11.5px $spacer-6);
+        background-color: $primary;
+        border-radius: $border-radius-xl;
+        color: $white;
+        @include font($font-size-md, $line-height-sm + 1, $font-weight-semibold);
+        z-index: 1;
+        width: rem(121px);
+        text-align: center;
+
+        &:after {
+            position: absolute;
+            top: rem($spacer-4);
+            left: rem(11px);
+            right: rem(11px);
+            z-index: -1;
+            height: rem($spacer-8);
+            background-color: #bc4013;
+            opacity: 0.14;
+            filter: blur(18.1667px);
+            border-radius: $border-radius-xl;
+            content: '';
+        }
+
+        &.is-active {
+            border-radius: 0;
+            background: none;
+            color: $primary;
+
+            &:before {
+                position: absolute;
+                top: rem(-18px);
+                right: 100%;
+                margin-right: rem(-26px);
+                @include size(rem(95px), rem(26px));
+                content: '';
+                background: url(../../assets/img/tab-arrow.svg) 50%/contain no-repeat;
+            }
+
+            &:after {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: url(../../assets/img/tab-bg.svg) 50%/contain no-repeat;
+                opacity: 1;
+                height: auto;
+                filter: none;
+                border-radius: 0;
+                @include size(rem(105px), rem(32px));
+            }
+
+            .tabs__item:last-child & {
+                &:before {
+                    left: 100%;
+                    right: auto;
+                    margin-left: rem(-26px);
+                    margin-right: 0;
+                    transform: scaleX(-1);
+                }
+
+                &:after {
+                    transform: translate(-50%, -50%) scaleX(-1);
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__tab {
+        width: 100%;
+        visibility: hidden;
+        margin-right: -100%;
+        height: 0;
+        overflow: hidden;
+
+        &.is-active {
+            visibility: visible;
+            height: auto;
+            overflow: visible;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        &__list {
+            justify-content: center;
+            margin-bottom: rem(48px);
+        }
+
+        &__link {
+            &.is-active {
+                &:before {
+                    top: rem(-11px);
+                    margin-right: rem(-20px);
+                }
+
+                .tabs__item:last-child & {
+                    &:before {
+                        margin-left: rem(-20px);
+                    }
+                }
+            }
+        }
+    }
+}

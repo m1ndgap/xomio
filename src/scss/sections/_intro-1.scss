@@ -1,0 +1,52 @@
+.intro-1 {
+    .intro__title {
+        margin-bottom: rem($spacer-6);
+    }
+
+    .section__decor {
+        &--3 {
+            top: 30%;
+            right: rem(-108px);
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+    }
+
+    @include media-breakpoint-up(lg) {
+        text-align: center;
+
+        .section__object {
+            max-width: none;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .intro__title {
+            margin-bottom: rem(48px);
+        }
+
+        .intro__description {
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .section__decor {
+            &--1 {
+                top: rem(57px);
+                left: rem(-62px);
+            }
+
+            &--2 {
+                left: rem(-100px);
+                bottom: 0;
+            }
+
+            &--3 {
+                top: rem(267px);
+                right: rem(-72px);
+            }
+        }
+    }
+}

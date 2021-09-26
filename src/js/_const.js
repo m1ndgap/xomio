@@ -21,8 +21,7 @@ const $header = $('[data-component="header"]');
 const $body = $('.body');
 const $main = $('.main');
 
-const bpSM = 576;
 const bpMD = 768;
 const bpLG = 1024;
-const bpXL = 1248;
+const bpXL = 1232;
 const bp2Xl = 1440;

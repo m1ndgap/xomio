@@ -1,0 +1,38 @@
+.intro-2 {
+    .section__title {
+        margin-bottom: rem($spacer-8);
+    }
+
+    .section__decor {
+        transform: scale(.389);
+        top: 36%;
+        right: rem(-126px);
+    }
+
+    @include media-breakpoint-up(md) {
+        .section__title {
+            max-width: rem(512px);
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-bottom: rem($section-offset-top);
+
+        .section__title {
+            margin-bottom: rem(48px);
+        }
+
+        .section__decor {
+            transform: scale(1);
+            top: auto;
+            right: rem(-78px);
+            bottom: rem(-64px);
+        }
+    }
+}

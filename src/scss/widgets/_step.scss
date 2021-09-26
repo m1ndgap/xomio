@@ -1,0 +1,22 @@
+.step {
+    &__title {
+        margin-bottom: rem($spacer-2);
+    }
+
+    &__object {
+        margin-top: rem($spacer-5);
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__title {
+            @include em-line-height($font-size-h3-mobile, $line-height-lg);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+
+        &__description {
+            @include font($font-size-md, $line-height-md);
+        }
+   }
+}

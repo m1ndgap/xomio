@@ -21,10 +21,9 @@ const $header = $('[data-component="header"]');
 const $body = $('.body');
 const $main = $('.main');
 
-const bpSM = 576;
 const bpMD = 768;
 const bpLG = 1024;
-const bpXL = 1248;
+const bpXL = 1232;
 const bp2Xl = 1440;
 
 /* Dropdown */
@@ -573,5 +572,110 @@ $(document).ready(function(){
             $slider.slick('resize');
             $sliderNav.slick('resize');
         });
+    });
+});
+/* Tab slider */
+$(document).ready(function(){
+    let $tabNavSliders = $('[data-slider="tab-nav"]');
+
+    $tabNavSliders.each(function(index, slider) {
+        let $tabNavSlider = $(slider);
+        let $sliderParent = $tabNavSlider.closest('[data-slider-parent]');
+
+        $tabNavSlider.slick({
+            arrows: false,
+            fade: true,
+            responsive: [
+                {
+                    breakpoint: bpLG,
+                    settings: 'unslick'
+                },
+            ]
+        });
+
+        $(window).on('orientationchange resize', function() {
+            $tabNavSlider.slick('resize');
+        });
+
+        if ($(window).width() >= bpXL) {
+            var percentTime;
+            var tick;
+            var time = .1;
+            var progressBarIndex = 0;
+
+            $('[data-element="tab-progress"]').each(function(index) {
+                var progress = "<div class='in-progress in-progress-" + index + "'></div>";
+                $(this).html(progress);
+            });
+
+            function startProgressbar() {
+                resetProgressbar();
+                percentTime = 0;
+                tick = setInterval(interval, 10);
+            }
+
+            function interval() {
+                if (($('.slider .slick-track div[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
+                    progressBarIndex = $('.slider .slick-track div[aria-hidden="false"]').data("slickIndex");
+                    startProgressbar();
+                } else {
+                    percentTime += 1 / (time + 5);
+                    $('.in-progress-' + progressBarIndex).css({
+                        height: percentTime + "%"
+                    });
+                    if (percentTime >= 100) {
+                        $tabNavSlider.slick('slickNext');
+                        progressBarIndex++;
+                        if (progressBarIndex > 2) {
+                            progressBarIndex = 0;
+                        }
+                        startProgressbar();
+                    }
+                }
+            }
+
+            function resetProgressbar() {
+                $('.in-progress').css({
+                    height: 0 + '%'
+                });
+                clearInterval(tick);
+            }
+            startProgressbar();
+            // End ticking machine
+
+            $('[data-element="tab-trigger"]').click(function () {
+                clearInterval(tick);
+                var goToThisIndex = $(this).data("slickIndex");
+                $tabNavSlider.slick('slickGoTo', goToThisIndex, false);
+                startProgressbar();
+            });
+        }
+    });
+});
+/* Tabs */
+$(document).ready(function(){
+    let $tabToggle = $('[data-element="tabs-toggle"]');
+
+    $tabToggle.on('click', function(e) {
+        e.stopPropagation();
+
+        let $toggle = $(this);
+        let $tabs = $toggle.closest('[data-component="tabs"]');
+        let tabID;
+
+        if ($toggle.attr('href')) {
+            tabID = $toggle.attr('href').slice(1);
+        }
+
+        if ($toggle.attr('data-src')) {
+            tabID = $toggle.attr('data-src');
+        }
+
+        let $tabActive = '[data-element="tabs-tab"][data-id="' + tabID +'"]';
+
+        $tabs.find('[data-element="tabs-tab"]').removeClass(activeClass);
+        $tabs.find('.' + activeClass +'[data-element="tabs-toggle"]').removeClass(activeClass);
+        $tabs.find($tabActive).addClass(activeClass);
+        $toggle.addClass(activeClass);
     });
 });
