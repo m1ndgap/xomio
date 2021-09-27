@@ -17,6 +17,8 @@ const modalVisibleClass      = 'modal-is-visible';
 const mobileMenuVisibleClass = 'mobile-menu-is-visible';
 const asideMenuVisibleClass  = 'aside-menu-is-visible';
 
+const aosDuration  = 250;
+
 const $header = $('[data-component="header"]');
 const $body = $('.body');
 const $main = $('.main');

@@ -17,6 +17,8 @@ const modalVisibleClass      = 'modal-is-visible';
 const mobileMenuVisibleClass = 'mobile-menu-is-visible';
 const asideMenuVisibleClass  = 'aside-menu-is-visible';
 
+const aosDuration  = 250;
+
 const $header = $('[data-component="header"]');
 const $body = $('.body');
 const $main = $('.main');
@@ -650,7 +652,11 @@ $(document).ready(function(){
         let $typer = $currentSlideEl.find('[data-element="stats-typewriter"]');
         let $aosEl = $(slick.$slider).find('[data-aos]');
 
-        $aosEl.attr('data-aos', 'fade-up').removeClass('aos-animate');
+        $aosEl.removeClass('aos-animate');
+
+        setTimeout(function (e) {
+            $aosEl.attr('data-aos', 'fade-down');
+        },aosDuration);
 
         $typer.css('opacity', 0);
     });
@@ -689,7 +695,10 @@ $(document).ready(function(){
         let typerSmall = '<small>'+$typer.dataset.small+'</small>';
         let $aosEl = $currentSlideEl.find('[data-aos]');
 
-        $aosEl.attr('data-aos', 'fade-down').addClass('aos-animate');
+        $aosEl.addClass('aos-animate');
+        setTimeout(function (e) {
+            $aosEl.attr('data-aos', 'fade-up');
+        },aosDuration);
 
         $typer.innerHTML = '';
 
@@ -830,7 +839,7 @@ $(document).ready(function(){
 /* Animate on Scroll */
 $(document).ready(function(){
     AOS.init({
-        duration: 250,
+        duration: aosDuration,
         easing: 'ease-in-out',
         once: true
     });

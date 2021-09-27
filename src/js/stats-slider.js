@@ -12,7 +12,11 @@ $(document).ready(function(){
         let $typer = $currentSlideEl.find('[data-element="stats-typewriter"]');
         let $aosEl = $(slick.$slider).find('[data-aos]');
 
-        $aosEl.attr('data-aos', 'fade-up').removeClass('aos-animate');
+        $aosEl.removeClass('aos-animate');
+
+        setTimeout(function (e) {
+            $aosEl.attr('data-aos', 'fade-down');
+        },aosDuration);
 
         $typer.css('opacity', 0);
     });
@@ -51,7 +55,10 @@ $(document).ready(function(){
         let typerSmall = '<small>'+$typer.dataset.small+'</small>';
         let $aosEl = $currentSlideEl.find('[data-aos]');
 
-        $aosEl.attr('data-aos', 'fade-down').addClass('aos-animate');
+        $aosEl.addClass('aos-animate');
+        setTimeout(function (e) {
+            $aosEl.attr('data-aos', 'fade-up');
+        },aosDuration);
 
         $typer.innerHTML = '';
 
