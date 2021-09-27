@@ -1,0 +1,108 @@
+.stats {
+    &__label {
+        color: $secondary;
+        @include font(152px, 184px, $font-weight-heavy);
+        letter-spacing: -0.03em;
+        transition: opacity .1s ease-in-out;
+
+        small {
+            @include font(66px, 80.01px);
+        }
+    }
+
+    &__data {
+        @include font($font-size-h1-mobile, 48.01px);
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: rem($spacer-6);
+    }
+
+    &__prev,
+    &__next {
+        position: static;
+        transform: none;
+    }
+
+    &__progress {
+        flex: 1;
+        margin-left: rem($spacer-3);
+        margin-right: rem($spacer-3);
+        height: 2px;
+        background-color: $gray-400;
+        background-image: linear-gradient(to right, $primary, $primary);
+        background-repeat: no-repeat;
+        background-size: 0 100%;
+        transition: background-size 0.4s ease-in-out;
+    }
+
+    .Typewriter__cursor {
+        font-weight: $font-weight-normal;
+    }
+
+    @include media-breakpoint-up(lg) {
+        &__container {
+            position: relative;
+        }
+
+        &__slide {
+            display: flex;
+            align-items: center;
+
+            .slick-initialized &.slick-slide {
+                display: flex;
+            }
+        }
+
+        &__label,
+        &__data {
+            width: 50%;
+            flex: 0 0 50%;
+        }
+
+        &__label {
+            padding-left: rem(77px);
+            padding-right: rem($spacer-10);
+        }
+
+        &__prev,
+        &__next {
+            transform: rotate(90deg);
+        }
+
+        &__controls {
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: rem($gutter);
+        }
+
+        &__progress {
+            margin: rem($spacer-3) 0;
+            width: 2px;
+            height: auto;
+            background-image: linear-gradient(to bottom, $primary, $primary);
+            background-size: 100% 0;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__label {
+            @include font(182px, 220px);
+
+            small {
+                @include font(80px, 97.01px);
+            }
+        }
+
+        &__data {
+            @include font($font-size-h1, 64.01px);
+        }
+    }
+}

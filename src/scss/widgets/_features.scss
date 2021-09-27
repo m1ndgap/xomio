@@ -19,6 +19,16 @@
         }
     }
 
+    @include media-breakpoint-up(lg) {
+        &--halved & {
+            &__item {
+                &:nth-child(even) {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
     @include media-breakpoint-up(xl) {
         margin-bottom: rem(-48px);
 
@@ -27,6 +37,8 @@
         }
 
         &--cards {
+            flex-direction: column;
+            height: rem(492px);
             margin-left: rem(- $spacer-4);
             margin-right: rem(- $spacer-4);
             margin-bottom: rem(- $spacer-6);
@@ -37,6 +49,7 @@
                 padding-left: rem($spacer-4);
                 padding-right: rem($spacer-4);
                 margin-bottom: rem($spacer-6);
+                flex: 0 0 rem(222px);
             }
         }
     }

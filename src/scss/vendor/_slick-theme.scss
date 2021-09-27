@@ -1,3 +1,49 @@
+/* Arrows */
+.slick-arrow {
+    transition: all 0.25s;
+    pointer-events: auto;
+    outline: none;
+    appearance: none;
+    background: none;
+    @include size(rem($spacer-6));
+    text-align: center;
+    z-index: 20;
+
+    &:before {
+        display: block;
+        color: $blue-500;
+        font-size: rem($spacer-6);
+        opacity: 1;
+        transition: color .25s ease-in-out;
+    }
+
+    @include hover-focus {
+        &:before {
+            color: $primary;
+        }
+    }
+
+    &.slick-disabled {
+        &:before {
+            color: $gray-200;
+            opacity: 1;
+        }
+
+        @include hover-focus {
+            &:before {
+            }
+        }
+    }
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-next {
+    right: 0;
+}
+
 /* Dots */
 .slick-dots {
     position: static;

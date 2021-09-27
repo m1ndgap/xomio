@@ -782,5 +782,27 @@
             "toggle": "Helping users and clients",
             "text": "We handle everything customer-facing, from onboarding new MLS data, to helping users get the most out of their Xomio website or Referral Network with training, support and documentation."
         }
+    ],
+    "stats": [
+        {
+            "title": {
+                "main": "21",
+                "small": "years"
+            },
+            "text": "of web design, translation and localization for real estate"
+        },
+        {
+            "title": {
+                "main": "1M+"
+            },
+            "text": "listing translated daily"
+        },
+        {
+            "title": {
+                "main": "10",
+                "small": "min"
+            },
+            "text": "to publish a fully functional website"
+        }
     ]
 }

@@ -53,6 +53,7 @@
                 "node_modules/@popperjs/core/dist/umd/popper.min.js",
                 "node_modules/tippy.js/dist/tippy-bundle.umd.min.js",
                 "node_modules/dropzone/dist/min/dropzone.min.js",
+                "node_modules/typewriter-effect/dist/core.js",
                 "node_modules/aos/dist/aos.js",
                 "node_modules/debounce/index.js"
             ]

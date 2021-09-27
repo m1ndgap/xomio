@@ -1,24 +1,26 @@
 @font-face {
   font-family: 'icons';
-  src: url('../fonts/icons.eot?k2zy2c#iefix') format('embedded-opentype'),
-       url('../fonts/icons.svg?k2zy2c') format('svg'),
-       url('../fonts/icons.woff?k2zy2c') format('woff');
+  src: url('../fonts/icons.eot?serfxx#iefix') format('embedded-opentype'),
+       url('../fonts/icons.svg?serfxx') format('svg'),
+       url('../fonts/icons.woff?serfxx') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"],
-.panel__title:after,
+.custom-checkbox .custom-control__indicator:before,
 .dropdown__toggle:after,
 .dropdown__option:after,
-.custom-checkbox .custom-control__indicator:before,
+.feature__toggle-link:after,
+.list-check > li:before,
+.list-plus > li:before,
+.panel__title:after,
 .select2-selection__arrow:before,
 .select2-search--dropdown:before,
 .select2-results__option:after,
-.list-check > li:before,
-.list-plus > li:before,
-.feature__toggle-link:after {
+.slick-prev:before,
+.slick-next:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
   speak: never;
@@ -39,19 +41,27 @@
 .icon-attach:before {
   content: "\e900";
 }
+.icon-caret-left:before,
+.slick-prev:before {
+  content: "\e910";
+}
+.icon-caret-right:before,
+.slick-next:before {
+  content: "\e911";
+}
 .icon-cart:before {
   content: "\e901";
 }
 .icon-check:before,
-.list-check > li:before,
 .dropdown__option:after,
+.list-check > li:before,
 .select2-results__option:after {
   content: "\e902";
 }
 .icon-chevron-down:before,
 .dropdown__toggle:after,
-.select2-selection__arrow:before,
-.feature__toggle-link:after {
+.feature__toggle-link:after,
+.select2-selection__arrow:before {
   content: "\e903";
 }
 .icon-close:before {

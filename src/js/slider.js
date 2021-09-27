@@ -11,8 +11,8 @@ $(document).ready(function(){
             dots: true,
             arrows: false,
             swipeToSlide: true,
-            //autoplay: true,
-            //autoplaySpeed: 5000,
+            autoplay: true,
+            autoplaySpeed: 5000,
             asNavFor: $sliderNav
         });
 

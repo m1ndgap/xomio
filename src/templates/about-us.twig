@@ -85,7 +85,7 @@
     <div class="container container--mobile-fixed">
       <h2 class="section__title">Our values</h2>
 
-      <ul class="section__features features row">
+      <ul class="section__features features features--halved row">
         {% for item in values %}
           <li class="features__item col-xs-12 col-lg-6">
             <div class="feature">
@@ -100,6 +100,27 @@
 
     <div class="section__decor section__decor--1 decor-complex-7"></div>
     <div class="section__decor section__decor--2 decor-lines-5"></div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section stats">
+    <div class="stats__container container container--mobile-fixed">
+      <div class="stats__slider" data-slider="stats">
+        {% for item in stats %}
+          <dl class="stats__slide slick-slide">
+            <dt class="stats__label typewriter" data-element="stats-typewriter" data-main="{{ item.title.main }}" data-small="{{ item.title.small }}" style="opacity: 0;">{{ item.title.main }}{% if item.title.small %}<small>{{ item.title.small }}</small>{% endif %}</dt>
+            <dd class="stats__data" data-aos="fade-down">{{ item.text }}</dd>
+          </dl>
+        {% endfor %}
+      </div>
+
+      <div class="stats__controls">
+        <button class="stats__prev slick-prev slick-arrow" aria-label="Previous" type="button" data-element="stats-prev">Previous</button>
+        <div class="stats__progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-element="stats-progress"></div>
+        <button class="stats__next slick-next slick-arrow" aria-label="Next" type="button" data-element="stats-next">Next</button>
+      </div>
+
+    </div>
   </section>
 
   <!-- Teams -->
