@@ -63,6 +63,11 @@
                 "src/images/**/*"
             ]
         },
+        "video": {
+            "files": [
+                "src/video/**/*"
+            ]
+        },
         "fonts": {
             "files": [
               "src/fonts/**/*"
@@ -84,6 +89,7 @@
         "icons": ["src/svg-icons/**/*.svg"],
         "fonts": "src/fonts/**/*",
         "images": "src/images/**/*",
+        "video": "src/video/**/*",
         "scripts": "src/js/**/*",
         "styles": ["src/scss/**/*"],
         "twig": "src/templates/**/*",

@@ -17,6 +17,7 @@ module.exports = function (cb) {
     gulp.watch(watch.scripts, ['scripts', browser_sync.reload]);
     gulp.watch(watch.fonts, ['fonts', browser_sync.reload]);
     gulp.watch(watch.images, ['images', browser_sync.reload]);
+    gulp.watch(watch.video, ['video', browser_sync.reload]);
     gulp.watch(watch.twig, ['twig']);
     gulp.watch(watch.html, browser_sync.reload);
 
