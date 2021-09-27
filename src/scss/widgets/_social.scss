@@ -1,0 +1,15 @@
+.social {
+    &__list {
+        @include list-unstyled;
+    }
+
+    &__link {
+        font-size: rem($spacer-6);
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+    }
+}

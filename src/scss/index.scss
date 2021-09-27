@@ -766,70 +766,6 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
     
 }
 
-.footer {
-    padding-top: 104px;
-    background: #1E5C5A;
-}
-
-.footer .line1 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer .line1 .colmenu {
-    width: 240px;
-    display: inline-block;
-    vertical-align: top;
-    
-}
-
-.footer .line1 .colmenu .title {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 24px;
-}
-
-.footer .line1 .colmenu a {
-    color: #fff;
-    opacity: 0.7;
-    font-size: 12px;
-    margin-bottom: 16px;
-    display: block;
-}
-
-.footer .line1 .soclinks {
-    margin-top: 60px;
-}
-
-.footer .line1 .soclinks a {
-    display: inline-block;
-    margin-right: 16px;
-}
-
-.footer .fleft .colmenu.mob {
-    display: none;
-}
-
-.footer .line2 {
-    margin-top: 90px;
-    padding: 17px 0;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-}
-
-.footer .line2 .links {
-    font-size: 12px;
-    
-    color: rgba(255,255,255,0.5);
-}
-
-.footer .line2 .links a {
-    margin-right: 80px;
-}
-
 .test-wrap {
     position: relative;
     
@@ -1732,57 +1668,6 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
         bottom: -16px;
         background: url(../../assets/img/images/decor_5.svg) center center no-repeat;
         background-size: 100% auto;
-    }
-    
-    .footer .line1 {
-        display: block;
-    }
-    
-    .footer .fleft {
-        font-size: 0;
-    }
-    
-    .footer .line1 .colmenu {
-        width: 50%;
-        margin-bottom: 32px;
-    }
-    
-    .footer .line1 .colmenu .title br {
-        display: none;
-    }
-    
-    .footer .fleft .colmenu.mob {
-        display: inline-block;
-    }
-    
-    .footer .line1 .colmenu .contact {
-        display: none;
-    }
-    
-    .footer .line1 .colmenu.last {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .footer .line1 .soclinks {
-        margin-top: 0;
-    }
-    
-    .footer .line2 {
-        margin-top: 0px;
-        padding: 25px 0;
-        display: block;
-        text-align: left;
-    }
-    
-    .footer .line2 .logo {
-        display: block;
-        margin-bottom: 20px;
-    }
-    
-    .footer .line2 .links a {
-        display: block;
-        margin-bottom: 20px;
     }
     
     .main .bl1 {
