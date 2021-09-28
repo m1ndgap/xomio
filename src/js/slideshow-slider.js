@@ -8,6 +8,7 @@ $(document).ready(function(){
         swipeToSlide: true,
         autoplay: true,
         autoplaySpeed: 2500,
+        pauseOnHover: false,
     });
 
     $(window).on('orientationchange resize', function() {
