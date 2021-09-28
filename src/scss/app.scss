@@ -1,9 +1,9 @@
-// Css
-@import "index";
-
 // Core variables and mixins
 @import "common/variables";
 @import "mixins";
+
+// Css
+@import "index";
 
 // Reset and dependencies
 @import "common/normalize";
@@ -25,6 +25,7 @@
 @import "vendor/slick-theme";
 
 // Widgets
+@import "widgets/burger";
 @import "widgets/button";
 @import "widgets/brand-card";
 @import "widgets/check";
@@ -45,6 +46,9 @@
 @import "widgets/tabs";
 
 // Layout
+@import "layout/nav";
+@import "layout/navbar";
+@import "layout/main";
 @import "layout/footer";
 
 // Sections
@@ -77,5 +81,6 @@
 @import "forms/form";
 
 // Pages
+@import "pages/pricing";
 
 @import "common/responsive";

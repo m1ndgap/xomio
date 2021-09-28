@@ -3,7 +3,7 @@ $(document).ready(function(){
     let $slideshow = $('[data-slider="slideshow"]');
 
     $slideshow.slick({
-        fade: true,
+        infinite: true,
         arrows: false,
         swipeToSlide: true,
         autoplay: true,

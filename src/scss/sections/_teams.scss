@@ -14,7 +14,8 @@
     .section__decor {
         &--1 {
             top: 26.5%;
-            right: rem(-61px);
+            right: 0;
+            @include size(196px, 283px);
         }
     }
 
@@ -28,10 +29,11 @@
 
         .section__decor {
             &--1 {
-                transform: scale(1.05);
                 top: rem(-13px);
                 left: rem(-126px);
                 right: auto;
+                @include size(256px, 283px);
+
             }
 
             &--2 {

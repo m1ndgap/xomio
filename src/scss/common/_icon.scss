@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'icons';
-  src: url('../fonts/icons.eot?serfxx#iefix') format('embedded-opentype'),
-       url('../fonts/icons.svg?serfxx') format('svg'),
-       url('../fonts/icons.woff?serfxx') format('woff');
+  src: url('../fonts/icons.eot?rzngkw#iefix') format('embedded-opentype'),
+       url('../fonts/icons.svg?rzngkw') format('svg'),
+       url('../fonts/icons.woff?rzngkw') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -15,6 +15,7 @@
 .feature__toggle-link:after,
 .list-check > li:before,
 .list-plus > li:before,
+.navbar__lang .dropdown__toggle:before,
 .panel__title:after,
 .select2-selection__arrow:before,
 .select2-search--dropdown:before,
@@ -72,6 +73,10 @@
 }
 .icon-instagram:before {
   content: "\e905";
+}
+.icon-lang:before,
+.navbar__lang .dropdown__toggle:before {
+  content: "\e912";
 }
 .icon-linkedin:before {
   content: "\e906";

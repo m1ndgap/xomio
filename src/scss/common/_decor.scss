@@ -1,9 +1,10 @@
 [class^="decor-"], [class*=" decor-"] {
     position: absolute;
-    background-position: 50%;
+    background-position: 0;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     z-index: -1;
+    overflow: hidden;
     transform: all .25s ease-in-out;
 }
 
@@ -17,8 +18,7 @@
     background-image: url(../../assets/img/decor/lines-2.svg);
 }
 .decor-lines-3 {
-    @include size(315px, 324px);
-    transform: scale(.5);
+    @include size(257px, 241px);
     background-image: url(../../assets/img/decor/lines-3.svg);
 }
 .decor-lines-4 {
@@ -48,6 +48,11 @@
 .decor-lines-10 {
     @include size(204px, 238px);
     background-image: url(../../assets/img/decor/lines-10.svg);
+}
+.decor-lines-11 {
+    @include size(254px, 232px);
+    background-image: url(../../assets/img/decor/lines-11.svg);
+    opacity: .7;
 }
 
 .decor-dots-1 {

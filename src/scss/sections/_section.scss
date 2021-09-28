@@ -1,6 +1,5 @@
 .section {
     position: relative;
-    //overflow: hidden;
     z-index: 1;
     padding-top: rem($section-offset-top-mobile);
     padding-bottom: rem($section-offset-bottom-mobile);
@@ -38,10 +37,12 @@
         opacity: 0;
         visibility: hidden;
         transition: .25s ease-in-out;
+        pointer-events: none;
 
         &.slick-active {
             opacity: 1;
             visibility: visible;
+            pointer-events: all;
         }
     }
 

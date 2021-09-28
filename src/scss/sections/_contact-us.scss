@@ -6,8 +6,9 @@
         }
 
         &--2 {
-            right: rem(-58px);
+            width: rem(167px);
             bottom: rem(40px);
+            right: 0;
         }
 
         &--3 {
@@ -46,13 +47,15 @@
     }
 
     @include media-breakpoint-up(xl) {
+        overflow: visible;
+
         &.bd-blue {
             padding-top: rem($section-offset-bottom);
         }
 
         .section__decor {
             &--2 {
-                right: rem(-10px);
+                width: rem(283px);
                 bottom: rem(56px);
             }
         }

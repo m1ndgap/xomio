@@ -1,23 +1,16 @@
 .feature-9 {
     .section__decor {
-        transform: scale(.415);
-        right: rem(-131px);
-        bottom: 0;
-    }
-
-    @include media-breakpoint-up(md) {
-        .section__decor {
-            transform: scale(.75);
-            right: rem(-101px);
-        }
+        right: 0;
+        bottom: rem(90px);
+        @include size(83px, 143px);
+        
     }
 
     @include media-breakpoint-up(lg) {
         .section__decor {
-            transform: scale(1);
-            top: rem(13px);
-            right: rem(-60px);
+            top: rem(15px);
             bottom: auto;
+            @include size(244px, 344px);
         }
     }
 

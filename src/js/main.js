@@ -75,10 +75,10 @@ $(document).ready(function() {
         }
     }
     
-    $('.burger').on('click', function() {
+    /*$('.burger').on('click', function() {
         $(this).toggleClass('act');
         $('.mobmenu').toggleClass('open');
-    });
+    });*/
     
     $('.close-popup').on('click', function() {
         $('.popup').fadeOut(300);

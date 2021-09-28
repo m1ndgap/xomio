@@ -1,0 +1,51 @@
+.burger {
+    display: block;
+    @include size(rem($spacer-6));
+    position: relative;
+
+    &__inner {
+        position: absolute;
+        top: calc(50% - 2px);
+        height: 3px;
+        width: 100%;
+        background-color: $primary;
+        border-radius: 2px;
+        transition: all 0.3s;
+
+        &:before,
+        &:after {
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: $primary;
+            border-radius: 2px;
+            content: " ";
+            display: block;
+            transition: all 0.3s;
+        }
+
+        &:before {
+            top: -9px;
+        }
+
+        &:after {
+            top: 9px;
+        }
+    }
+
+    &.is-active & {
+        &__inner {
+            background: transparent;
+
+            &:before {
+                transform: rotate(-45deg);
+                top: 0;
+            }
+
+            &:after {
+                transform: rotate(45deg);
+                top: 0;
+            }
+        }
+    }
+}

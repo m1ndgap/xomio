@@ -1,7 +1,5 @@
 .page-pricing {
-    .main {
-        //overflow: visible;
-    }
+    overflow: initial;
 
     @include media-breakpoint-up(xl) {
     }

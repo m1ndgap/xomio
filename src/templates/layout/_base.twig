@@ -32,15 +32,13 @@
 <body class="body {{ bodyClass|default('') }}" id="top">
   <include src="./build/assets/img/icons.svg"></include>
 
-  {% include '_header.twig' %}
+  {% include '_navbar.twig' %}
 
   <main class="main">
     {% block content %}{% endblock %}
   </main>
 
   {% include '_footer.twig' %}
-
-  {% include '_popup.twig' %}
 
   {% block modals %}{% endblock %}
 

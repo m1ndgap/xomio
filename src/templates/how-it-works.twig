@@ -57,7 +57,7 @@
                         <p>{{ step.description }}</p>
                       </div>
                       <div class="step__object section__template section__template--shadow hidden-lg-up">
-                        <img srcset="./assets/img/{{ step.image }}.png 1x, ./assets/img/how-it-works/{{ step.image }}@2x.png 2x" src="./assets/img/how-it-works/{{ step.image }}.png" alt="" class="section__img">
+                        <img srcset="./assets/img/{{ step.image }}.png 1x, ./assets/img/{{ step.image }}@2x.png 2x" src="./assets/img/{{ step.image }}.png" alt="" class="section__img">
                       </div>
                       <span class="steps__item-progress" data-element="tab-progress"></span>
                     </li>
@@ -68,7 +68,7 @@
               <div class="section__object hidden-md-down" data-slider="tab-nav">
                 {% for step in tab.steps %}
                   <div class="section__template section__template--shadow slick-slide">
-                    <img srcset="./assets/img/{{ step.image }}.png 1x, ./assets/img/how-it-works/{{ step.image }}@2x.png 2x" src="./assets/img/how-it-works/{{ step.image }}.png" alt="" class="section__img">
+                    <img srcset="./assets/img/{{ step.image }}.png 1x, ./assets/img/{{ step.image }}@2x.png 2x" src="./assets/img{{ step.image }}.png" alt="" class="section__img">
                   </div>
                 {% endfor %}
               </div>

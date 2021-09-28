@@ -33,14 +33,14 @@
           </div>
         </div>
 
-        <div class="section__object">
-          <div class="section__template" data-slider="slideshow">
-            {% for item in ['en', 'zh', 'es', 'ru', 'fr'] %}
-              <div class="slick-slide">
+        <div class="section__object" data-slider="slideshow">
+          {% for item in ['en', 'zh', 'es', 'ru', 'fr'] %}
+            <div class="section__slide slick-slide">
+              <div class="section__template">
                 <img srcset="./assets/img/features/slider/{{ item }}.png 1x, ./assets/img/features/slider/{{ item }}@2x.png 2x" src="./assets/img/features/slider/{{ item }}.png" alt="" class="section__img">
               </div>
-            {% endfor %}
-          </div>
+            </div>
+          {% endfor %}
         </div>
       </div>
 
@@ -95,7 +95,7 @@
         </div>
 
         <div class="section__object">
-          <video muted playsinline autoplay width="600" height="382" preload="true">
+          <video muted playsinline autoplay>
             <source src="./assets/video/1_11_h264_silent.mp4" type="video/mp4">
             <p>Your browser doesn't support HTML5 video. Here is
                a <a href="./assets/video/1_11_h264_silent.mp4">link to the video</a> instead.</p>

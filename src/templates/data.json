@@ -39,31 +39,45 @@
     "nav": [
         {
             "name": "How it works",
-            "link": "how-it-works.html"
+            "link": "how-it-works.html",
+            "icon": "service",
+            "theme": "pink"
         },
         {
             "name": "Features",
-            "link": "features.html"
+            "link": "features.html",
+            "icon": "star",
+            "theme": "orange"
         },
         {
             "name": "IDX",
-            "link": "idx.html"
+            "link": "idx.html",
+            "icon": "home",
+            "theme": "blue"
         },
         {
             "name": "GLEX",
-            "link": "glex.html"
+            "link": "glex.html",
+            "icon": "globe",
+            "theme": "green"
         },
         {
             "name": "Pricing",
-            "link": "pricing.html"
+            "link": "pricing.html",
+            "icon": "wallet",
+            "theme": "red"
         },
         {
             "name": "Partners",
-            "link": "partners.html"
+            "link": "partners.html",
+            "icon": "heart",
+            "theme": "yellow"
         },
         {
             "name": "About us",
-            "link": "about-us.html"
+            "link": "about-us.html",
+            "icon": "user",
+            "theme": "purple"
         }
     ],
     "footer": {

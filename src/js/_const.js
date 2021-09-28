@@ -13,9 +13,7 @@ const collapsedClass = 'is-collapsed';
 const scrolledClass  = 'is-scrolled';
 const headerFixedClass  = 'header-is-fixed';
 const lockedScrollClass = 'scroll-is-locked';
-const modalVisibleClass      = 'modal-is-visible';
-const mobileMenuVisibleClass = 'mobile-menu-is-visible';
-const asideMenuVisibleClass  = 'aside-menu-is-visible';
+const menuVisibleClass  = 'menu-is-visible';
 
 const aosDuration  = 250;
 

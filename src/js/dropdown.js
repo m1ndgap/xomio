@@ -18,7 +18,7 @@ $(document).ready(function(){
             trigger: 'click',
             placement: 'bottom-end',
             interactive: true,
-            appendTo: document.body,
+            appendTo: 'parent',
             popperOptions: {
                 positionFixed: true,
             },
@@ -36,7 +36,7 @@ $(document).ready(function(){
                     let $toggleText = $dropdown.find('[data-element="dropdown-toggle-text"]');
 
                     if ($dropdown.attr('data-type') === 'code') {
-                        optionData = $option.attr('data-id');
+                        optionData = '<span class="hidden-xl-up">'+optionData+'</span><span class="hidden-lg-down">'+$option.attr('data-id')+'</span>';
                     }
 
                     $option.siblings().removeClass(selectedClass);

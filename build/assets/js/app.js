@@ -13,9 +13,7 @@ const collapsedClass = 'is-collapsed';
 const scrolledClass  = 'is-scrolled';
 const headerFixedClass  = 'header-is-fixed';
 const lockedScrollClass = 'scroll-is-locked';
-const modalVisibleClass      = 'modal-is-visible';
-const mobileMenuVisibleClass = 'mobile-menu-is-visible';
-const asideMenuVisibleClass  = 'aside-menu-is-visible';
+const menuVisibleClass  = 'menu-is-visible';
 
 const aosDuration  = 250;
 
@@ -48,7 +46,7 @@ $(document).ready(function(){
             trigger: 'click',
             placement: 'bottom-end',
             interactive: true,
-            appendTo: document.body,
+            appendTo: 'parent',
             popperOptions: {
                 positionFixed: true,
             },
@@ -66,7 +64,7 @@ $(document).ready(function(){
                     let $toggleText = $dropdown.find('[data-element="dropdown-toggle-text"]');
 
                     if ($dropdown.attr('data-type') === 'code') {
-                        optionData = $option.attr('data-id');
+                        optionData = '<span class="hidden-xl-up">'+optionData+'</span><span class="hidden-lg-down">'+$option.attr('data-id')+'</span>';
                     }
 
                     $option.siblings().removeClass(selectedClass);
@@ -225,10 +223,10 @@ $(document).ready(function() {
         }
     }
     
-    $('.burger').on('click', function() {
+    /*$('.burger').on('click', function() {
         $(this).toggleClass('act');
         $('.mobmenu').toggleClass('open');
-    });
+    });*/
     
     $('.close-popup').on('click', function() {
         $('.popup').fadeOut(300);
@@ -516,6 +514,87 @@ function validateEmail(email) {
 }
 
 
+/* Menu */
+let $menu = $('[data-component="menu"]');
+let $menuToggle = $('[data-element="menu-toggle"]');
+
+function hideMenu() {
+    $menu.removeClass(visibleClass);
+    $menuToggle.removeClass(activeClass);
+    $body.removeClass(menuVisibleClass);
+    $body.removeClass(lockedScrollClass);
+}
+
+function showMenu() {
+    if ($(window).width() < bpXL) {
+        $menu.addClass(visibleClass);
+        $menuToggle.addClass(activeClass);
+        $body.addClass(lockedScrollClass);
+        $body.addClass(menuVisibleClass);
+    }
+}
+
+function desktopCheck() {
+    if ($(window).width() >= bpXL) {
+        hideMenu($menu);
+    }
+}
+
+$(document).ready(function(){
+
+    $menuToggle.on('click', function(e) {
+        e.preventDefault();
+
+        if ($menu.hasClass(visibleClass)) {
+            hideMenu();
+        } else {
+            showMenu();
+        }
+    });
+
+    $(document).on('keyup', function(e) {
+        if ($(window).width() < bpXL) {
+            if (e.key === "Escape" || e.keyCode === 27) {
+                hideMenu();
+            }
+        }
+    });
+
+    $(document).on('click', function(e) {
+        if ($(window).width() < bpXL) {
+            if ($menu.has(e.target).length === 0 && !$menu.is(e.target) && $menuToggle.has(e.target).length === 0 && !$menuToggle.is(e.target)) {
+                hideMenu();
+            }
+        }
+    });
+
+    desktopCheck();
+
+    $(window).on('orientationchange resize', function() {
+        desktopCheck();
+    });
+});
+/* Navbar on scroll */
+document.addEventListener('DOMContentLoaded', function() {
+    const $navbar = document.querySelector('[data-component="navbar"]');
+
+    if (!$navbar) {
+        return false;
+    }
+
+    function navbarDeafultScroll() {
+        let onScroll = function () {
+            $navbar.classList.toggle(scrolledClass, window.scrollY > $navbar.offsetHeight);
+        };
+
+        onScroll();
+        window.addEventListener('scroll', function() {
+            onScroll();
+        });
+    }
+
+    navbarDeafultScroll();
+});
 /* Panel */
 $(document).ready(function(){
     let $panelToggle = $('[data-element="panel-toggle"]');
@@ -690,7 +769,7 @@ $(document).ready(function(){
     let $slideshow = $('[data-slider="slideshow"]');
 
     $slideshow.slick({
-        fade: true,
+        infinite: true,
         arrows: false,
         swipeToSlide: true,
         autoplay: true,
@@ -900,20 +979,28 @@ $(document).ready(function(){
     });
 });
 /* Video */
-let video = document.querySelector('video');
-let isPaused = false;
-let observer = new IntersectionObserver((entries, observer) => { 
-    entries.forEach(entry => {
-        if(entry.intersectionRatio!=1  && !video.paused){
-            video.pause();
-            isPaused = true;
-        }
-        else if(isPaused) {
-            video.play(); 
-            isPaused=false}
-        });
-    }, {threshold: 1});
-    observer.observe(video);
+document.addEventListener('DOMContentLoaded', function() {
+    let video = document.querySelector('video');
+
+    if (!video) {
+        return false;
+    }
+
+    let isPaused = false;
+    let observer = new IntersectionObserver((entries, observer) => { 
+        entries.forEach(entry => {
+            if(entry.intersectionRatio!=1  && !video.paused){
+                video.pause();
+                isPaused = true;
+            }
+            else if(isPaused) {
+                video.play(); 
+                isPaused=false}
+            });
+        }, {threshold: 1});
+        observer.observe(video);
+});
+
 /* Animate on Scroll */
 $(document).ready(function(){
     AOS.init({
