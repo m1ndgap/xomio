@@ -1433,138 +1433,6 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
     height: 24px;
 }
 
-.idx-block1, .idx-form {
-    padding: 80px 0;
-}
-
-.idx-form {
-    position: relative;
-}
-
-.idx-form .bl1list .item .title {
-    min-height: auto;
-}
-
-.idx-form.bl1 .bl1right {
-    width: 640px;
-    height: auto;
-    margin-top: 0;
-    overflow: visible;
-    
-}
-
-.idx-form.bl1 .bl1left {
-    width: calc(100% - 640px);
-}
-
-.idx-form-wrapper {
-    width: 600px;
-    position: relative;
-    margin: 0 auto;
-}
-
-.idx-form-wrapper:before {
-    position: absolute;
-    left: calc(50% - 435px);
-    top: 0;
-    z-index: 1;
-    content: " ";
-    display: block;
-    width: 870px;
-    height: 630px;
-    background: url(../../assets/img/images/idx-patterns.svg) center center no-repeat;
-}
-
-.idx-form-wrapper form {
-    width: 100%;
-    display: block;
-    background: #FFFFFF;
-    box-shadow: 0px 16px 24px rgba(0, 54, 43, 0.02), 0px 16px 40px rgba(0, 54, 43, 0.02);
-    border-radius: 16px;
-    padding: 48px 40px;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 2;
-}
-
-.idx-form-wrapper form .name {
-    color: #1C3F74;
-    font-weight: 600;
-    font-size: 24px;
-    margin-bottom: 32px;
-}
-
-.idx-form-wrapper form .row {
-    margin: 0 0 24px;
-    font-size: 0;
-}
-
-.idx-form-wrapper form .row .col2 {
-    width: calc((100% - 24px) / 2);
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 24px;
-}
-
-.idx-form-wrapper form .row .col2:last-child {
-    margin-right: 0;
-}
-
-.idx-form-wrapper form .row .lbl {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    color: #7F8FA4;
-    margin-bottom: 4px;
-    
-}
-
-.idx-form-wrapper form .row .lbl span {
-    color: #FF0000;
-}
-
-.idx-form-wrapper form .row .inp input {
-    border: 1px solid #E8E8E8;
-    box-sizing: border-box;
-    border-radius: 8px;
-    background: #fff;
-    height: 40px;
-    width: 100%;
-    line-height: 40px;
-    padding: 0 16px;
-}
-
-.idx-form-wrapper form .row select {
-    border: 1px solid #E8E8E8;
-    box-sizing: border-box;
-    border-radius: 8px;
-    background: #fff;
-    height: 40px;
-    width: 100%;
-    line-height: 40px;
-    padding: 0 16px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: url(../../assets/img/images/down.svg) right 7px center no-repeat;
-}
-
-.idx-form-wrapper form textarea {
-    height: 128px;
-    padding: 16px;
-    box-sizing: border-box;
-    width: 100%;
-    border: 1px solid #E8E8E8;
-    box-sizing: border-box;
-    border-radius: 8px;
-    font-size: 16px;
-    line-height: 26px;
-    color: #000;
-}
-
-.idx-form-wrapper form .btn {
-    width: 100%;
-}
 
 .idx-decor1 {
     position: absolute;
@@ -2024,41 +1892,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
     .idx-block1.bl1 {
         padding-bottom: 0;
     }
-    
-    .idx-form.bl1 .bl1left {
-        width: 100%;
-        padding-bottom: 0;
-    }
-    
-    .idx-form.bl1 .bl1right {
-        width: 100%;
-        position: relative;
-        bottom: 0;
-        left: 0;
-    }
-    
-    .idx-form-wrapper {
-        width: 100%;
-    }
-    
-    .idx-form-wrapper form .name {
-        font-size: 20px;
         
-    }
-    
-    .idx-form-wrapper form {
-        padding: 32px 24px;
-    }
-    
-    .idx-form-wrapper form .row .col2 {
-        width: 100%;
-        margin-right: 0;
-    }
-    
-    .idx-form-wrapper form .row .col2:first-child {
-        margin-bottom: 24px;
-    }
-    
     .idx-decor1 {
         top: auto;
         right: -34px;
@@ -2101,16 +1935,8 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
         display: none;
     }
     
-    .idx-form {
-        overflow: hidden;
-    }
-    
     .idx.bl4 {
         overflow-x: hidden;
-    }
-    
-    .idx-form {
-        padding-bottom: 50px;
     }
 }
 
