@@ -1,8 +1,6 @@
 .feature-1 {
     .section__decor {
         &--2 {
-            /*top: rem(4px);
-            right: rem(-160px);*/
             top: rem(105px);
             right: 0;
             @include size(65px, 120px);
@@ -15,12 +13,6 @@
     }
 
     @include media-breakpoint-up(lg) {
-        .section__content {
-            position: relative;
-            background-color: $white;
-            z-index: 2;
-        }
-
         .section__object {
             position: relative;
             z-index: 1;

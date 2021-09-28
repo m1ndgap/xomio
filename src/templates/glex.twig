@@ -102,11 +102,11 @@
   </section>
 
   <!-- Slider -->
-  <section class="section feature-7" data-slider-parent="true">
+  <section class="section feature-7">
     <div class="container container--mobile-fixed">
       <div class="section__body section__body--center">
         <div class="section__content">
-          <div class="section__slider" data-slider="slider">
+          <div class="section__slider" data-slider="text-slider">
             {% for slide in glex.slider %}
               <div class="section__slide slick-slide">
                 <h2 class="section__title">{{ slide.title }}</h2>
@@ -129,14 +129,12 @@
           </div>
         </div>
 
-        <div class="section__object" data-slider="slider-nav">
-          {% for slide in glex.slider %}
-            <div class="section__object-slide slick-slide">
-              <div class="section__template">
-                <img srcset="./assets/img/glex/template.png 1x, ./assets/img/glex/template@2x.png 2x" src="./assets/img/glex/template.png" alt="" class="section__img">
-              </div>
-            </div>
-          {% endfor %}
+        <div class="section__object">
+          <div class="section__template" data-slider="slideshow">
+            {% for item in ['en', 'zh', 'es', 'ru', 'fr'] %}
+              <img srcset="./assets/img/features/slider/{{ item }}.png 1x, ./assets/img/features/slider/{{ item }}@2x.png 2x" src="./assets/img/features/slider/{{ item }}.png" alt="" class="section__img">
+            {% endfor %}
+          </div>
         </div>
       </div>
 

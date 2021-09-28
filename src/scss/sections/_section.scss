@@ -106,6 +106,10 @@
                 border-radius: $border-radius-sm;
             }
         }
+
+        .slick-list {
+            overflow: hidden;
+        }
     }
 
     &__video {

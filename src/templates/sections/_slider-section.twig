@@ -1,0 +1,47 @@
+<!-- Slider -->
+<section class="section feature-7" data-slider-parent="true">
+  <div class="container container--mobile-fixed">
+    <div class="section__body section__body--center">
+      <div class="section__content">
+        <div class="section__slider" data-slider="slider">
+          {% for slide in glex.slider %}
+            <div class="section__slide slick-slide">
+              <h2 class="section__title">{{ slide.title }}</h2>
+              <div class="section__description {% if slide.type == "lg" %} text-lg{% endif %}">
+                {% if slide.text %}
+                  <p>{{ slide.text }}</p>
+                {% endif %}
+                <ul class="list-plus">
+                  {% for item in slide.list  %}
+                    <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="section__action hidden-md-down">
+          <a href="#" class="button button--primary">Get started</a>
+        </div>
+      </div>
+
+      <div class="section__object" data-slider="slider-nav">
+        {% for slide in glex.slider %}
+          <div class="section__object-slide slick-slide">
+            <div class="section__template">
+              <img srcset="./assets/img/glex/template.png 1x, ./assets/img/glex/template@2x.png 2x" src="./assets/img/glex/template.png" alt="" class="section__img">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="section__action hidden-lg-up">
+      <a href="#" class="button button--primary">Get started</a>
+    </div>
+  </div>
+
+  <div class="section__decor section__decor--1 decor-lines-6 hidden-lg-down"></div>
+  <div class="section__decor section__decor--2 decor-complex-4 hidden-lg-down"></div>
+</section>
