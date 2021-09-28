@@ -3,11 +3,6 @@
         "app.css": {
             "files": [
                 "src/scss/app.scss",
-                "!src/scss/vendor/css/fullcalendar.css",
-                "!src/scss/vendor/css/fullcalendar.css",
-                "!src/scss/vendor/css/jquery-ui.css",
-                "!src/scss/vendor/css/jquery-ui.structure.min.css",
-                "!src/scss/vendor/css/jquery-ui.theme.min.css",
                 "!src/scss/vendor/css/jquery.fancybox.css",
                 "!src/scss/vendor/css/jquery.mCustomScrollbar.css",
                 "!src/scss/vendor/css/normalize.css"
@@ -19,7 +14,6 @@
                 "!src/js/vendor.js",
                 "!src/js/vendor/anime.min.js",
                 "!src/js/vendor/instafeed.js",
-                "!src/js/vendor/jquery-ui.min.js",
                 "!src/js/vendor/jquery.fancybox.min.js",
                 "!src/js/vendor/jquery.mCustomScrollbar.js",
                 "!src/js/vendor/jquery.mousewheel-3.0.6.min.js",
@@ -28,8 +22,6 @@
         },
         "vendor.css": {
             "files": [
-                "src/scss/vendor/css/fullcalendar.css",
-                "src/scss/vendor/css/fullcalendar.css",
                 "src/scss/vendor/css/jquery.fancybox.css",
                 "src/scss/vendor/css/normalize.css",
                 "node_modules/slick-carousel/slick/slick.css",
@@ -45,6 +37,7 @@
             "files": [
                 "src/js/vendor.js",
                 "node_modules/jquery/dist/jquery.min.js",
+                "src/js/vendor/jquery.fancybox.min.js",
                 "src/js/vendor/anime.min.js",
                 "node_modules/inputmask/dist/inputmask.min.js",
                 "node_modules/slick-carousel/slick/slick.min.js",

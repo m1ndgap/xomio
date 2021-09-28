@@ -223,11 +223,6 @@ $(document).ready(function() {
         }
     }
     
-    /*$('.burger').on('click', function() {
-        $(this).toggleClass('act');
-        $('.mobmenu').toggleClass('open');
-    });*/
-    
     $('.close-popup').on('click', function() {
         $('.popup').fadeOut(300);
     });
@@ -360,70 +355,80 @@ $(document).ready(function() {
 		return false;
 	});
     
-    $('.bl1list').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        let txt = $('.bl1list .slick-slide[data-slick-index="'+currentSlide+'"] .title div').attr('data-text');
-        goRewrite($('.bl1list .slick-slide[data-slick-index="'+currentSlide+'"] .title div')[0], txt);
-      anime({
-          targets: '.bl1list .slick-slide[data-slick-index="'+nextSlide+'"] .li-item',
-          translateY: [-5, 0],
-          opacity: ['0', '1'],
-          delay: anime.stagger(100, {start: 1000}), // increase delay by 100ms for each elements.
+    if ($('.main .bl1list').length > 0) {
+         $('.bl1list').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            let txt = $('.main .bl1list .slick-slide[data-slick-index="'+currentSlide+'"] .title div').attr('data-text');
+            if (txt) {
+                goRewrite($('.main .bl1list .slick-slide[data-slick-index="'+currentSlide+'"] .title div')[0], txt);
+            }
+          anime({
+              targets: '.main .bl1list .slick-slide[data-slick-index="'+nextSlide+'"] .li-item',
+              translateY: [-5, 0],
+              opacity: ['0', '1'],
+              delay: anime.stagger(100, {start: 1000}), // increase delay by 100ms for each elements.
 
-      });
-    });
-    
-    $('.bl1list').on('afterChange', function(event, slick, currentSlide){
-      console.log(currentSlide);
-      let txt = $('.bl1list .slick-slide[data-slick-index="'+currentSlide+'"] .title div').attr('data-text');
-      goWrite($('.bl1list .slick-slide[data-slick-index="'+currentSlide+'"] .title div')[0], txt);
-      
-      if ($('.bl1list-video-item.slick-slide[data-slick-index="'+currentSlide+'"]').find('video').length > 0) {
-          let video = $('.bl1list-video-item.slick-slide[data-slick-index="'+currentSlide+'"] video')[0];
-          video.pause();
-          video.currentTime = 0;
-          video.play();
-      }
-
-
-    });
-    
-    $('.bl1list').on('init', function(event, slick){
-
-      let txt = $('.bl1list .slick-active .title div').attr('data-text');
-      goWrite($('.bl1list .slick-active .title div')[0], txt);
-      
-      anime({
-          targets: '.bl1list .slick-active .li-item',
-          translateY: [-5, 0],
-          opacity: ['0', '1'],
-          delay: anime.stagger(100, {start: 1000}), // increase delay by 100ms for each elements.
-
-      });
-      
-    });
+          });
+        });
         
-    $('.bl1list').slick({
-      dots: true,
-      arrows: false,
-      fade: true,
-      infinite: true,
-      slidesToShow: 1,
-      speed: 800,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-      autoplay: true,
-      autoplaySpeed: 28000,
-      asNavFor: '.bl1list-video'
-    });
+        $('.main .bl1list').on('afterChange', function(event, slick, currentSlide){
+          console.log(currentSlide);
+          let txt = $('.main .bl1list .slick-slide[data-slick-index="'+currentSlide+'"] .title div').attr('data-text');
+          if (txt) {
+              goWrite($('.main .bl1list .slick-slide[data-slick-index="'+currentSlide+'"] .title div')[0], txt);
+          }
+          
+          if ($('.main .bl1list-video-item.slick-slide[data-slick-index="'+currentSlide+'"]').find('video').length > 0) {
+              let video = $('.main .bl1list-video-item.slick-slide[data-slick-index="'+currentSlide+'"] video')[0];
+              video.pause();
+              video.currentTime = 0;
+              video.play();
+          }
+
+
+        });
+        
+        $('.main .bl1list').on('init', function(event, slick){
+
+          let txt = $('.main .bl1list .slick-active .title div').attr('data-text');
+          if (txt) {
+              goWrite($('.main .bl1list .slick-active .title div')[0], txt);
+          }
+          
+          anime({
+              targets: '.main .bl1list .slick-active .li-item',
+              translateY: [-5, 0],
+              opacity: ['0', '1'],
+              delay: anime.stagger(100, {start: 1000}), // increase delay by 100ms for each elements.
+
+          });
+          
+        });
+            
+        $('.main .bl1list').slick({
+          dots: true,
+          arrows: false,
+          fade: true,
+          infinite: true,
+          slidesToShow: 1,
+          speed: 800,
+          pauseOnHover: false,
+          pauseOnFocus: false,
+          autoplay: true,
+          autoplaySpeed: 28000,
+          asNavFor: '.main .bl1list-video'
+        });
+        
+        $('.main .bl1list-video').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          pauseOnFocus: false,
+          pauseOnHover: false,
+          arrows: false,
+          fade: true
+        });
+    }
     
-    $('.bl1list-video').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      pauseOnFocus: false,
-      pauseOnHover: false,
-      arrows: false,
-      fade: true
-    });
+    
     
     
     
@@ -437,38 +442,68 @@ $(document).ready(function() {
         autoplaySpeed: 4400
     });
     
-    $('.bl4list').on('afterChange', function(event, slick, currentSlide){
+    if ($('.main .bl4list').length > 0) {
+        $('.main .bl4list').on('afterChange', function(event, slick, currentSlide){
+          if ($('.bl4list-video-item.slick-slide[data-slick-index="'+currentSlide+'"]').find('video').length > 0) {
+              let video = $('.bl4list-video-item.slick-slide[data-slick-index="'+currentSlide+'"] video')[0];
+              video.pause();
+              video.currentTime = 0;
+              video.play();
+          }
+        });
+        
+        $('.main .bl4list').slick({
+          dots: true,
+          arrows: false,
+          infinite: true,
+          slidesToShow: 1,
+          pauseOnHover: false,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          asNavFor: '.bl4list-video'
+        });
+        
+        $('.main .bl4list-video').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true
+        });
+    }
+    
+    
+    
+        $('.idx-car1').on('afterChange', function(event, slick, currentSlide){
+          if ($('.idx-car1-video .bl4list-video-item.slick-slide[data-slick-index="'+currentSlide+'"]').find('video').length > 0) {
+              let video = $('.idx-car1-video .bl4list-video-item.slick-slide[data-slick-index="'+currentSlide+'"] video')[0];
+              video.pause();
+              video.currentTime = 0;
+              video.play();
+          }
+        });
+        
+        $('.idx-car1').slick({
+          dots: true,
+          arrows: false,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          pauseOnHover: false,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          asNavFor: '.idx1-car-video'
+        });
+        
+        $('.idx1-car-video').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true
+        });
 
-      if ($('.bl4list-video-item.slick-slide[data-slick-index="'+currentSlide+'"]').find('video').length > 0) {
-          let video = $('.bl4list-video-item.slick-slide[data-slick-index="'+currentSlide+'"] video')[0];
-          video.pause();
-          video.currentTime = 0;
-          video.play();
-      }
-
-
-    });
-    
-    $('.bl4list').slick({
-      dots: true,
-      arrows: false,
-      infinite: true,
-      slidesToShow: 1,
-      pauseOnHover: false,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      asNavFor: '.bl4list-video'
-    });
-    
-    $('.bl4list-video').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true
-    });
     
     
-    $('.bl1list .textlist .li-item .li-title').on('click', function() {
+    $('.textlist .li-item .li-title').on('click', function() {
 
         let el = $(this).parent().find('.li-desc')[0];
         let parent = $(this).closest('.li-item');
@@ -507,13 +542,6 @@ $(document).ready(function() {
     
 
 });
-
-function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-}
-
-
 /* Menu */
 let $menu = $('[data-component="menu"]');
 let $menuToggle = $('[data-element="menu-toggle"]');

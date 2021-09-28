@@ -2,11 +2,11 @@
 @import "common/variables";
 @import "mixins";
 
-// Css
-@import "index";
-
 // Reset and dependencies
 @import "common/normalize";
+
+// Css
+@import "unsorted";
 
 // Core CSS
 @import "common/reboot";

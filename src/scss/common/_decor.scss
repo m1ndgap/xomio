@@ -133,6 +133,10 @@
     @include size(287px, 229px);
     background-image: url(../../assets/img/decor/complex-7.svg);
 }
+.decor-complex-8 {
+    @include size(315px, 275px);
+    background-image: url(../../assets/img/decor/complex-8.svg);
+}
 
 @include media-breakpoint-up(xl) {
     .decor-dots-3 {
