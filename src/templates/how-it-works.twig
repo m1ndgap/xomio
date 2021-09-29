@@ -1,113 +1,115 @@
 {% extends 'layout/_base.twig' %}
 
-{% set bodyClass = '' %}
+{% set bodyClass = 'page-how-it-works' %}
 {% set pageTitle = 'How it works' %}
 
 {% block content %}
+  <div class="overflow-container">
 
-  <!-- Intro 1 -->
-  <section class="section intro-1">
-    <div class="container container--mobile-fixed">
-      <h2 class="intro__title">Beautiful websites that deliver more leads</h2>
-      <div class="section__intro intro">
-        <h3 class="section__subtitle">Ready to launch in just a few clicks</h3>
-        <div class="intro__description">
-          <p>Build your website from beautifully designed, customizable blocks.</p>
-          <p>With just a few clicks, you can create a look and feel that turns visitors into clients.</p>
-        </div>
-
-        <div class="section__action">
-          <a href="#" class="button button--primary">Get started</a>
-        </div>
-      </div>
-
-      <div class="section__object">
-        <img srcset="./assets/img/how-it-works/intro.png 1x, ./assets/img/how-it-works/intro@2x.png 2x" src="./assets/img/how-it-works/intro.png" alt="" class="section__img">
-      </div>
-    </div>
-    <div class="section__decor section__decor--1 decor-dots-1 hidden-lg-down"></div>
-    <div class="section__decor section__decor--2 decor-lines-1 hidden-lg-down"></div>
-    <div class="section__decor section__decor--3 decor-lines-9"></div>
-  </section>
-
-  <!-- Intro 2 -->
-  <section class="section intro-2" data-component="tabs">
-    <div class="container container--mobile-fixed">
-      <h2 class="section__title">A great experience for you and your clients</h2>
-      <ul class="section__tabs tabs__list row">
-        {% for tab in howItWorks.tabs %}
-          {% set tabId = tab.name|lower|replace({' ': '-'}) %}
-          <li class="tabs__item col">
-            <a href="#{{ tabId }}" class="tabs__link {% if loop.first %}is-active{% endif %}" data-element="tabs-toggle">{{ tab.name }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-
-      <div class="section__tabs-content tabs__content">
-        {% for tab in howItWorks.tabs %}
-          {% set tabId = tab.name|lower|replace({' ': '-'}) %}
-          <div class="tabs__tab {% if loop.first %}is-active{% endif %}" role="tabpanel" data-id="{{ tabId }}" data-element="tabs-tab" data-slider-parent>
-            <div class="section__body section__body--center">
-              <div class="section__content">
-                <ul class="steps">
-                  {% for step in tab.steps %}
-                    <li class="steps__item step" data-slick-index="{{ loop.index - 1 }}" data-element="tab-trigger">
-                      <h3 class="step__title">{{ step.title }}</h3>
-                      <div class="step__description">
-                        <p>{{ step.description }}</p>
-                      </div>
-                      <div class="step__object section__template section__template--shadow hidden-lg-up">
-                        <img srcset="./assets/img/{{ step.image }}.png 1x, ./assets/img/{{ step.image }}@2x.png 2x" src="./assets/img/{{ step.image }}.png" alt="" class="section__img">
-                      </div>
-                      <span class="steps__item-progress" data-element="tab-progress"></span>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>
-
-              <div class="section__object hidden-md-down" data-slider="tab-nav">
-                {% for step in tab.steps %}
-                  <div class="section__template section__template--shadow slick-slide">
-                    <img srcset="./assets/img/{{ step.image }}.png 1x, ./assets/img/{{ step.image }}@2x.png 2x" src="./assets/img{{ step.image }}.png" alt="" class="section__img">
-                  </div>
-                {% endfor %}
-              </div>
-            </div>
+    <!-- Intro 1 -->
+    <section class="section intro-1">
+      <div class="container container--mobile-fixed">
+        <h2 class="intro__title">Beautiful websites that deliver more leads</h2>
+        <div class="section__intro intro">
+          <h3 class="section__subtitle">Ready to launch in just a few clicks</h3>
+          <div class="intro__description">
+            <p>Build your website from beautifully designed, customizable blocks.</p>
+            <p>With just a few clicks, you can create a look and feel that turns visitors into clients.</p>
           </div>
-        {% endfor %}
-      </div>
-    </div>
 
-    <div class="section__decor decor-complex-6"></div>
-  </section>
-
-  <!-- Feature-11 -->
-  <section class="section feature-11">
-    <div class="container container--mobile-fixed">
-      <div class="section__content">
-        <h2 class="section__title">Our listings translation delivers more leads</h2>
-      </div>
-      <div class="section__body section__body--center">
-        <div class="section__content">
-          <h3 class="section__subtitle">How it works:</h3>
-          <div class="section__description text-lg">
-            <ul class="list-plus">
-              <li>We import your Brand or MLS listings into our Listings Translation Module</li>
-              <li>20 years of expertise is applied to deliver listings translation in 20 languages</li>
-              <li>Foreign language search engines index your listings and drive consumers to your Xomio site</li>
-              <li>When a foreign language visitor views your Xomio site, listings are displayed in translation</li>
-              <li>Consumers find and view the listings they are interested in, registering and receiving your multi language marketing mails</li>
-            </ul>
+          <div class="section__action">
+            <a href="#" class="button button--primary">Get started</a>
           </div>
         </div>
 
         <div class="section__object">
-          <img src="./assets/img/temp/placeholder.png" alt="" class="section__img">
+          <img srcset="./assets/img/how-it-works/intro.png 1x, ./assets/img/how-it-works/intro@2x.png 2x" src="./assets/img/how-it-works/intro.png" alt="" class="section__img">
         </div>
       </div>
-    </div>
-    <div class="section__decor decor-lines-8"></div>
-  </section>
+      <div class="section__decor section__decor--1 decor-dots-1 hidden-lg-down"></div>
+      <div class="section__decor section__decor--2 decor-lines-1 hidden-lg-down"></div>
+      <div class="section__decor section__decor--3 decor-lines-9"></div>
+    </section>
+
+    <!-- Intro 2 -->
+    <section class="section intro-2" data-component="tabs">
+      <div class="container container--mobile-fixed">
+        <h2 class="section__title">A great experience for you and your clients</h2>
+        <ul class="section__tabs tabs__list row">
+          {% for tab in howItWorks.tabs %}
+            {% set tabId = tab.name|lower|replace({' ': '-'}) %}
+            <li class="tabs__item col">
+              <a href="#{{ tabId }}" class="tabs__link {% if loop.first %}is-active{% endif %}" data-element="tabs-toggle">{{ tab.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <div class="section__tabs-content tabs__content">
+          {% for tab in howItWorks.tabs %}
+            {% set tabId = tab.name|lower|replace({' ': '-'}) %}
+            <div class="tabs__tab {% if loop.first %}is-active{% endif %}" role="tabpanel" data-id="{{ tabId }}" data-element="tabs-tab" data-slider-parent>
+              <div class="section__body section__body--center">
+                <div class="section__content">
+                  <div class="steps">
+                    {% for step in tab.steps %}
+                      <div class="steps__item step" data-slick-index="{{ loop.index - 1 }}" data-element="tab-item">
+                        <h3 class="step__title">{{ step.title }}</h3>
+                        <div class="step__description">
+                          <p>{{ step.description }}</p>
+                        </div>
+                        <div class="step__object section__template section__template--shadow hidden-lg-up">
+                          <img srcset="./assets/img/{{ step.image }}.png 1x, ./assets/img/{{ step.image }}@2x.png 2x" src="./assets/img/{{ step.image }}.png" alt="" class="section__img">
+                        </div>
+                      </div>
+                    {% endfor %}
+                    <span class="steps__progress" data-element="tab-progress"></span>
+                  </div>
+                </div>
+
+                <div class="section__object hidden-md-down" data-slider="tab">
+                  {% for step in tab.steps %}
+                    <div class="section__template section__template--shadow slick-slide">
+                      <img srcset="./assets/img/{{ step.image }}.png 1x, ./assets/img/{{ step.image }}@2x.png 2x" src="./assets/img{{ step.image }}.png" alt="" class="section__img">
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="section__decor decor-complex-6"></div>
+    </section>
+
+    <!-- Feature-11 -->
+    <section class="section feature-11">
+      <div class="container container--mobile-fixed">
+        <div class="section__content">
+          <h2 class="section__title">Our listings translation delivers more leads</h2>
+        </div>
+        <div class="section__body section__body--center">
+          <div class="section__content">
+            <h3 class="section__subtitle">How it works:</h3>
+            <div class="section__description text-lg">
+              <ul class="list-plus">
+                <li>We import your Brand or MLS listings into our Listings Translation Module</li>
+                <li>20 years of expertise is applied to deliver listings translation in 20 languages</li>
+                <li>Foreign language search engines index your listings and drive consumers to your Xomio site</li>
+                <li>When a foreign language visitor views your Xomio site, listings are displayed in translation</li>
+                <li>Consumers find and view the listings they are interested in, registering and receiving your multi language marketing mails</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section__object">
+            <img src="./assets/img/temp/placeholder.png" alt="" class="section__img">
+          </div>
+        </div>
+      </div>
+      <div class="section__decor decor-lines-8"></div>
+    </section>
+  </div>
 
   <!-- Feature-10 -->
   <section class="section feature-10">
@@ -128,14 +130,15 @@
           </ul>
         </div>
 
-        <div class="section__object">
+        <div class="section__object is-sticky">
           <div class="section__template">
             <img srcset="./assets/img/how-it-works/ideas-template.png 1x, ./assets/img/how-it-works/ideas-template@2x.png 2x" src="./assets/img/how-it-works/ideas-template.png" alt="" class="section__img">
           </div>
-          <div class="section__object-decor decor-shape-3"></div>
         </div>
       </div>
     </div>
+
+    <div class="section__decor decor-shape-3"></div>
   </section>
 {% endblock %}
 

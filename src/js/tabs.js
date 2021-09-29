@@ -3,7 +3,7 @@ $(document).ready(function(){
     let $tabToggle = $('[data-element="tabs-toggle"]');
 
     $tabToggle.on('click', function(e) {
-        e.stopPropagation();
+        e.preventDefault();
 
         let $toggle = $(this);
         let $tabs = $toggle.closest('[data-component="tabs"]');
@@ -18,10 +18,16 @@ $(document).ready(function(){
         }
 
         let $tabActive = '[data-element="tabs-tab"][data-id="' + tabID +'"]';
+        let $tabActiveEl = $tabs.find($tabActive);
+        let $tabActiveSlider = $tabActiveEl.find('[data-slider]');
 
         $tabs.find('[data-element="tabs-tab"]').removeClass(activeClass);
         $tabs.find('.' + activeClass +'[data-element="tabs-toggle"]').removeClass(activeClass);
-        $tabs.find($tabActive).addClass(activeClass);
+        $tabActiveEl.addClass(activeClass);
         $toggle.addClass(activeClass);
+
+        if ($tabActiveSlider.length > 0) {
+            $tabActiveSlider.slick("setPosition", 0).slick('slickGoTo', 0)
+        }
     });
 });

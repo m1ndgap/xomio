@@ -881,15 +881,22 @@ $(document).ready(function(){
 });
 /* Tab slider */
 $(document).ready(function(){
-    let $tabNavSliders = $('[data-slider="tab-nav"]');
+    let $tabSliders = $('[data-slider="tab"]');
 
-    $tabNavSliders.each(function(index, slider) {
-        let $tabNavSlider = $(slider);
-        let $sliderParent = $tabNavSlider.closest('[data-slider-parent]');
+    $tabSliders.each(function(index, slider) {
+        let $tabSlider = $(slider);
+        let $sliderParent = $tabSlider.closest('[data-slider-parent]');
+        let $tabProgress = $sliderParent.find('[data-element="tab-progress"]');
 
-        $tabNavSlider.slick({
+        $tabSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            setProgress(nextSlide);
+        });
+
+        $tabSlider.slick({
             arrows: false,
             fade: true,
+            autoplay: true,
+            autoplaySpeed: 3500,
             responsive: [
                 {
                     breakpoint: bpLG,
@@ -898,62 +905,33 @@ $(document).ready(function(){
             ]
         });
 
+        tabProgressSize($tabSlider, $sliderParent, $tabProgress);
+        setProgress(0);
+
         $(window).on('orientationchange resize', function() {
-            $tabNavSlider.slick('resize');
+            $tabSlider.slick('resize');
+
+            tabProgressSize($tabSlider, $sliderParent, $tabProgress);
+            setProgress(0);
         });
 
-        if ($(window).width() >= bpXL) {
-            var percentTime;
-            var tick;
-            var time = .1;
-            var progressBarIndex = 0;
+        function tabProgressSize(slider, sliderParent, tabProgressEl) {
+            let $triggers = sliderParent.find('[data-element="tab-item"]');
+            let triggersHeight = 0;
 
-            $('[data-element="tab-progress"]').each(function(index) {
-                var progress = "<div class='in-progress in-progress-" + index + "'></div>";
-                $(this).html(progress);
-            });
-
-            function startProgressbar() {
-                resetProgressbar();
-                percentTime = 0;
-                tick = setInterval(interval, 10);
+            for (let i = 0; i < $triggers.length - 1; i++) {
+                triggersHeight = triggersHeight + $($triggers[i]).outerHeight();
             }
 
-            function interval() {
-                if (($('.slider .slick-track div[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
-                    progressBarIndex = $('.slider .slick-track div[aria-hidden="false"]').data("slickIndex");
-                    startProgressbar();
-                } else {
-                    percentTime += 1 / (time + 5);
-                    $('.in-progress-' + progressBarIndex).css({
-                        //height: percentTime + "%"
-                    });
-                    if (percentTime >= 100) {
-                        $tabNavSlider.slick('slickNext');
-                        progressBarIndex++;
-                        if (progressBarIndex > 2) {
-                            progressBarIndex = 0;
-                        }
-                        startProgressbar();
-                    }
-                }
-            }
+            tabProgressEl.css('height', triggersHeight + 'px');
+        }
 
-            function resetProgressbar() {
-                $('.in-progress').css({
-                    //height: 0 + '%'
-                });
-                clearInterval(tick);
-            }
-            startProgressbar();
-            // End ticking machine
+        function setProgress(index) {
+            const calc = ((index + 1) / ($tabSlider.slick('getSlick').slideCount)) * 100;
 
-            $('[data-element="tab-trigger"]').click(function () {
-                clearInterval(tick);
-                var goToThisIndex = $(this).data("slickIndex");
-                $tabNavSlider.slick('slickGoTo', goToThisIndex, false);
-                startProgressbar();
-            });
+            $tabProgress
+            .css('background-size', `100% ${calc}%`)
+            .attr('aria-valuenow', calc);
         }
     });
 });
@@ -962,7 +940,7 @@ $(document).ready(function(){
     let $tabToggle = $('[data-element="tabs-toggle"]');
 
     $tabToggle.on('click', function(e) {
-        e.stopPropagation();
+        e.preventDefault();
 
         let $toggle = $(this);
         let $tabs = $toggle.closest('[data-component="tabs"]');
@@ -977,11 +955,17 @@ $(document).ready(function(){
         }
 
         let $tabActive = '[data-element="tabs-tab"][data-id="' + tabID +'"]';
+        let $tabActiveEl = $tabs.find($tabActive);
+        let $tabActiveSlider = $tabActiveEl.find('[data-slider]');
 
         $tabs.find('[data-element="tabs-tab"]').removeClass(activeClass);
         $tabs.find('.' + activeClass +'[data-element="tabs-toggle"]').removeClass(activeClass);
-        $tabs.find($tabActive).addClass(activeClass);
+        $tabActiveEl.addClass(activeClass);
         $toggle.addClass(activeClass);
+
+        if ($tabActiveSlider.length > 0) {
+            $tabActiveSlider.slick("setPosition", 0).slick('slickGoTo', 0)
+        }
     });
 });
 /* Text slider */

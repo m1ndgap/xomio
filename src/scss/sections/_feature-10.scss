@@ -1,11 +1,10 @@
 .feature-10 {
     padding-bottom: rem(80px);
 
-    .section__object {
-        &-decor {
-            right: rem(-76px);
-            bottom: rem(-49px);
-        }
+    .section__decor {
+        right: 0;
+        bottom: rem(33px);
+        @include size(rem(195px), rem(281px));
     }
 
     @include media-breakpoint-up(md) {
@@ -15,11 +14,12 @@
         .section__object {
             align-self: flex-start;
             margin-top: rem(43px);
+        }
 
-            &-decor {
-                right: rem(-112px);
-                bottom: rem(-118px);
-            }
+        .section__decor {
+            top: rem(408px);
+            bottom: auto;
+            @include size(rem(254px), rem(283px));
         }
     }
 

@@ -1,0 +1,10 @@
+.page-how-it-works {
+
+    @include media-breakpoint-up(lg) {
+        overflow: initial;
+
+        .overflow-container {
+            overflow: hidden;
+        }
+    }
+}

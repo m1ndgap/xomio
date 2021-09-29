@@ -156,6 +156,11 @@
         &__object {
             flex: 0 0 50%;
             max-width: 50%;
+
+            &.is-sticky {
+                position: sticky;
+                top: rem($navbar-height-mobile + $spacer-10);
+            }
         }
 
         &__template {
@@ -195,6 +200,10 @@
 
         &__object {
             max-width: rem(600px);
+
+            &.is-sticky {
+                top: rem($navbar-height + $spacer-10);
+            }
         }
 
         &__title {

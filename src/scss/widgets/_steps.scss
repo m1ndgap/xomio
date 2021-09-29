@@ -1,13 +1,13 @@
 .steps {
     @include list-unstyled;
+    position: relative;
 
     &__item {
         position: relative;
         padding-left: rem($spacer-6);
         padding-bottom: rem($spacer-10);
-        cursor: pointer;
 
-        &:last-child {
+        &:last-of-type {
             padding-bottom: 0;
 
             &:after,
@@ -26,7 +26,6 @@
             content: '';
         }
 
-        &-progress,
         &:after {
             position: absolute;
             top: rem($spacer-3);
@@ -36,17 +35,25 @@
             background-color: rgba($primary, .2);
             content: '';
         }
+    }
 
-        &-progress {
-            .in-progress {
-              background-color: $primary;
-              height: 0%;
-              width: rem(2px);
-            }
-        }
+    &__progress {
+        display: none;
     }
 
     @include media-breakpoint-up(lg) {
+
+        &__progress {
+            display: block;
+            position: absolute;
+            top: rem($spacer-3);
+            left: rem(5px);
+            width: rem(2px);
+            background-image: linear-gradient(to bottom, $primary, $primary);
+            background-repeat: no-repeat;
+            background-size: 100% 0;
+            transition: background-size 0.4s ease-in-out;
+        }
     }
 
     @include media-breakpoint-up(xl) {
