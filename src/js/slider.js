@@ -19,6 +19,15 @@ $(document).ready(function(){
         $sliderNav.slick({
           arrows: false,
           fade: true
+        }).on('afterChange', function(event, slick, currentSlide){
+            let $currentSlideEl = $(slick.$slides.get(currentSlide));
+
+            if ($currentSlideEl.find('video').length > 0) {
+                let video = $currentSlideEl.find('video')[0];
+                video.pause();
+                video.currentTime = 0;
+                video.play();
+            }
         });
 
         $(window).on('orientationchange resize', function() {

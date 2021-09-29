@@ -684,6 +684,71 @@
             }
         ]
     },
+    "idx": {
+        "slider": [
+            {
+                "title": "Setting up your IDX should be simple. <br>With Xomio, it is.",
+                "list": [
+                    "Why do other website builders make it so hard to integrate your IDX?",
+                    "The team behind Xomio have been integrating listings feeds for over 20 years, in 20 languages, and in over 60 countries",
+                    "We know everything there is to know about listings data, so we do all the hard stuff for you",
+                    "Get IDX on your site, beautifully arranged on the page in just a few clicks"
+                ],
+                "video": 2
+            },
+            {
+                "title": "Design, without the messy bits",
+                "list": [
+                    "Many of the biggest names in real estate rely on us for our web design skills, because we understand how to make listings shine online.",
+                    "Choose from a range of beautiful designs with clean, modern listings presentation.",
+                    "Listings data is organized on the page thematically, for a clearer consumer experience.",
+                    "Advanced features give clients the ability to find, save and share their ideal property, all from your site."
+                ],
+                "video": 3
+            },
+            {
+                "title": "Listings translation you can rely on",
+                "list": [
+                    "We translate millions of listings per day for the biggest names in real estate",
+                    "Every translation in our listings memory is provided and checked by industry specialist translators.",
+                    "We use listings in translation to create metadata: the information that search engines like Google and its foreign language versions use to index your page.",
+                    "Your business will finally be visible to every potential client, regardless of the language they speak, or what search engine they use."
+                ]
+            },
+            {
+                "title": "More languages, more listings, more leads",
+                "list": [
+                    "Hispanic homebuyers are the fastest growing homeownership demographic in the US",
+                    "22% of American residents speak a language other than English at home",
+                    "Overseas investors and foreign language speakers buy real estate in every price bracket from luxury to affordable first homes",
+                    "More languages? More views, more leads, more deals. It’s that simple."
+                ],
+                "video": 4
+            }
+        ],
+        "langs": [
+            "English",
+            "Português",
+            "Português EU",
+            "العربية",
+            "עברית",
+            "Türkçe",
+            "Русский",
+            "Français (CA)",
+            "Français",
+            "Italiano",
+            "日本語",
+            "Nederlands",
+            "中文 -简体",
+            "中文 -繁體",
+            "中文-繁體（台灣)",
+            "Español (Latin America)",
+            "Polski",
+            "한국어",
+            "Español EU",
+            "Tiếng Việt"
+        ]
+    },
     "values": [
         {
             "icon": "accessibility",

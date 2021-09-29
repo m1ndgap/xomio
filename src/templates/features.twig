@@ -34,11 +34,7 @@
         </div>
 
         <div class="section__object">
-          <div class="section__template" data-slider="slideshow">
-            {% for item in ['en', 'zh', 'es', 'ru', 'fr'] %}
-              <img srcset="./assets/img/features/slider/{{ item }}.png 1x, ./assets/img/features/slider/{{ item }}@2x.png 2x" src="./assets/img/features/slider/{{ item }}.png" alt="" class="section__img">
-            {% endfor %}
-          </div>
+          {% include 'partials/_lang-slideshow.twig' %}
         </div>
       </div>
 

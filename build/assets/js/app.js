@@ -471,38 +471,6 @@ $(document).ready(function() {
         });
     }
     
-    
-    
-        $('.idx-car1').on('afterChange', function(event, slick, currentSlide){
-          if ($('.idx-car1-video .bl4list-video-item.slick-slide[data-slick-index="'+currentSlide+'"]').find('video').length > 0) {
-              let video = $('.idx-car1-video .bl4list-video-item.slick-slide[data-slick-index="'+currentSlide+'"] video')[0];
-              video.pause();
-              video.currentTime = 0;
-              video.play();
-          }
-        });
-        
-        $('.idx-car1').slick({
-          dots: true,
-          arrows: false,
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          pauseOnHover: false,
-          autoplay: true,
-          autoplaySpeed: 5000,
-          asNavFor: '.idx1-car-video'
-        });
-        
-        $('.idx1-car-video').slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          fade: true
-        });
-
-    
-    
     $('.textlist .li-item .li-title').on('click', function() {
 
         let el = $(this).parent().find('.li-desc')[0];
@@ -784,6 +752,15 @@ $(document).ready(function(){
         $sliderNav.slick({
           arrows: false,
           fade: true
+        }).on('afterChange', function(event, slick, currentSlide){
+            let $currentSlideEl = $(slick.$slides.get(currentSlide));
+
+            if ($currentSlideEl.find('video').length > 0) {
+                let video = $currentSlideEl.find('video')[0];
+                video.pause();
+                video.currentTime = 0;
+                video.play();
+            }
         });
 
         $(window).on('orientationchange resize', function() {

@@ -11,11 +11,13 @@
                 {% if slide.text %}
                   <p>{{ slide.text }}</p>
                 {% endif %}
-                <ul class="list-plus">
-                  {% for item in slide.list  %}
-                    <li>{{ item }}</li>
-                  {% endfor %}
-                </ul>
+                {% if slide.list %}
+                  <ul class="list-plus">
+                    {% for item in slide.list  %}
+                      <li>{{ item }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
               </div>
             </div>
           {% endfor %}

@@ -1,0 +1,16 @@
+.feature-12 {
+    .section__decor {
+        right: 0;
+        bottom: rem(3px);
+        @include size(rem(125px), rem(164px));
+    }
+
+    @include media-breakpoint-up(xl) {
+        .section__decor {
+            top: 54.5%;
+            bottom: auto;
+            transform: translateY(-50%);
+            @include size(rem(307px), rem(416px));
+        }
+    }
+}
