@@ -3,6 +3,12 @@
         margin-bottom: rem($spacer-6);
     }
 
+    .section__img {
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateX(1.4%);
+    }
+
     .section__decor {
         &--3 {
             top: 38%;
