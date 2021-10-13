@@ -122,6 +122,12 @@
             left: 0;
             right: 0;
         }
+
+        &--2 {
+            &:after {
+                padding-top: 65.359477%;
+            }
+        }
     }
 
     @include media-breakpoint-up(md) {

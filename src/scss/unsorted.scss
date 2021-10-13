@@ -155,7 +155,6 @@ body, html {
     vertical-align: top;
     width: 560px;
     height: 350px;
-    overflow: hidden;
     margin-top: 90px;
 }
 
@@ -165,11 +164,6 @@ body, html {
 
 .bl1 .bl1right video {
     width: 100%;
-}
-
-.bl1list {
-    
-    
 }
 
 .bl1list .item {
@@ -1178,15 +1172,6 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 .step-block.step-final.act .wrapbtn {
     transform: scale(1);
 }
-
-.burger {
-    display: none;
-}
-
-.mobmenu {
-    display: none;
-}
-
 
 .popup {
     position: fixed;
