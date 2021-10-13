@@ -648,17 +648,17 @@
                     {
                         "title": "Features that deliver engagement",
                         "description": "Your clients’ dashboard is packed with features that keep them on your site",
-                        "image": "how-it-works/for-you"
+                        "image": "how-it-works/for-you/1"
                     },
                     {
                         "title": "Better experience, better insights",
                         "description": "Even the registration flow is engaging! Clients sign up using an interactive questionnaire that gives you insight into their needs",
-                        "image": "temp/placeholder"
+                        "image": "how-it-works/for-you/2"
                     },
                     {
                         "title": "Collections and saved searches",
                         "description": "Save them into customizable collections and share them to your social media, or to friends and family",
-                        "image": "temp/placeholder"
+                        "image": "how-it-works/for-you/3"
                     }
                 ]
             },
@@ -668,17 +668,17 @@
                     {
                         "title": "CRM with kanban view",
                         "description": "Stay on top of all your clients and leads",
-                        "image": "how-it-works/for-clients"
+                        "image": "how-it-works/for-clients/1"
                     },
                     {
                         "title": "Detailed client profiles",
                         "description": "See which listings clients have collected or saved and suggest other properties they might like",
-                        "image": "temp/placeholder"
+                        "image": "how-it-works/for-clients/2"
                     },
                     {
                         "title": "Customize your IDX or GLEX",
                         "description": "Only want to show listings in a certain price bracket, or in certain areas? Xomio lets you pick and choose what makes it on to your site.",
-                        "image": "temp/placeholder"
+                        "image": "how-it-works/for-clients/3"
                     }
                 ]
             }
