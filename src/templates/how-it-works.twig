@@ -50,9 +50,9 @@
             <div class="tabs__tab {% if loop.first %}is-active{% endif %}" role="tabpanel" data-id="{{ tabId }}" data-element="tabs-tab" data-slider-parent>
               <div class="section__body section__body--center">
                 <div class="section__content">
-                  <div class="steps">
+                  <ul class="steps">
                     {% for step in tab.steps %}
-                      <div class="steps__item step" data-slick-index="{{ loop.index - 1 }}" data-element="tab-item">
+                      <li class="steps__item step" data-slick-index="{{ loop.index - 1 }}">
                         <h3 class="step__title">{{ step.title }}</h3>
                         <div class="step__description">
                           <p>{{ step.description }}</p>
@@ -60,10 +60,10 @@
                         <div class="step__object section__template section__template--shadow hidden-lg-up">
                           <img srcset="./assets/img/{{ step.image }}.png 1x, ./assets/img/{{ step.image }}@2x.png 2x" src="./assets/img/{{ step.image }}.png" alt="" class="section__img">
                         </div>
-                      </div>
+                        <span class="steps__item-progress" data-element="tab-progress"></span>
+                      </li>
                     {% endfor %}
-                    <span class="steps__progress" data-element="tab-progress"></span>
-                  </div>
+                  </ul>
                 </div>
 
                 <div class="section__object hidden-md-down" data-slider="tab">

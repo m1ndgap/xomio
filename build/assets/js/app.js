@@ -846,18 +846,10 @@ $(document).ready(function(){
 
     $tabSliders.each(function(index, slider) {
         let $tabSlider = $(slider);
-        let $sliderParent = $tabSlider.closest('[data-slider-parent]');
-        let $tabProgress = $sliderParent.find('[data-element="tab-progress"]');
-
-        $tabSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-            setProgress(nextSlide);
-        });
 
         $tabSlider.slick({
             arrows: false,
             fade: true,
-            autoplay: true,
-            autoplaySpeed: 3500,
             responsive: [
                 {
                     breakpoint: bpLG,
@@ -866,39 +858,21 @@ $(document).ready(function(){
             ]
         });
 
-        tabProgressSize($tabSlider, $sliderParent, $tabProgress);
-        setProgress(0);
-
         $(window).on('orientationchange resize', function() {
             $tabSlider.slick('resize');
-
-            tabProgressSize($tabSlider, $sliderParent, $tabProgress);
-            setProgress(0);
         });
-
-        function tabProgressSize(slider, sliderParent, tabProgressEl) {
-            let $triggers = sliderParent.find('[data-element="tab-item"]');
-            let triggersHeight = 0;
-
-            for (let i = 0; i < $triggers.length - 1; i++) {
-                triggersHeight = triggersHeight + $($triggers[i]).outerHeight();
-            }
-
-            tabProgressEl.css('height', triggersHeight + 'px');
-        }
-
-        function setProgress(index) {
-            const calc = ((index + 1) / ($tabSlider.slick('getSlick').slideCount)) * 100;
-
-            $tabProgress
-            .css('background-size', `100% ${calc}%`)
-            .attr('aria-valuenow', calc);
-        }
     });
 });
+
 /* Tabs */
 $(document).ready(function(){
     let $tabToggle = $('[data-element="tabs-toggle"]');
+    let $activeTab = $('.is-active[data-element="tabs-tab"]');
+    let $activeTabSlider = $activeTab.find('[data-slider]');
+
+    if ($activeTabSlider.length > 0) {
+        animateTabSlider($activeTab, $activeTabSlider);
+    }
 
     $tabToggle.on('click', function(e) {
         e.preventDefault();
@@ -926,8 +900,60 @@ $(document).ready(function(){
 
         if ($tabActiveSlider.length > 0) {
             $tabActiveSlider.slick("setPosition", 0).slick('slickGoTo', 0)
+
+            animateTabSlider($tabActiveEl, $tabActiveSlider);
         }
     });
+
+    function animateTabSlider(tab, slider) {
+        if ($(window).width() >= bpXL) {
+
+            let percentTime;
+            let tick;
+            let time = .1;
+            let progressBarIndex = 0;
+
+            tab.find('[data-element="tab-progress"]').each(function(index) {
+                let progress = "<div class='in-progress in-progress-" + index + "'></div>";
+                $(this).html(progress);
+            });
+
+            startProgressbar();
+
+            function startProgressbar() {
+                resetProgressbar();
+                percentTime = 0;
+                tick = setInterval(interval, 10);
+            }
+
+            function interval() {
+                if ((slider.find('div[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
+                    progressBarIndex = slider.find('div[aria-hidden="false"]').data("slickIndex");
+                    startProgressbar();
+                } else {
+                    percentTime += 1 / (time + 5);
+                    tab.find('.in-progress-' + progressBarIndex).css({
+                        height: percentTime + "%"
+                    });
+                    if (percentTime >= 100) {
+                        slider.slick('slickNext');
+                        progressBarIndex++;
+                        if (progressBarIndex > 2) {
+                            progressBarIndex = 0;
+                        }
+                        startProgressbar();
+                    }
+                }
+            }
+
+            function resetProgressbar() {
+                tab.find('.in-progress').css({
+                    height: 0 + '%'
+                });
+                clearInterval(tick);
+            }
+        }
+    };
 });
 /* Text slider */
 $(document).ready(function(){
