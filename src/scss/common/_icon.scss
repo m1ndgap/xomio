@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'icons';
-  src: url('../fonts/icons.eot?rzngkw#iefix') format('embedded-opentype'),
-       url('../fonts/icons.svg?rzngkw') format('svg'),
-       url('../fonts/icons.woff?rzngkw') format('woff');
+  src: url('../fonts/icons.eot?7atlt4#iefix') format('embedded-opentype'),
+       url('../fonts/icons.svg?7atlt4') format('svg'),
+       url('../fonts/icons.woff?7atlt4') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -39,6 +39,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-right:before {
+  content: "\e913";
+}
 .icon-attach:before {
   content: "\e900";
 }

@@ -88,16 +88,17 @@
         <div class="section__content">
           <h2 class="section__title">Our listings translation delivers more leads</h2>
         </div>
-        <div class="section__body section__body--center">
+        <div class="section__body">
           <div class="section__content">
             <h3 class="section__subtitle">How it works:</h3>
-            <div class="section__description text-lg">
+            <div class="section__description">
               <ul class="list-plus">
-                <li>We import your Brand or MLS listings into our Listings Translation Module</li>
-                <li>20 years of expertise is applied to deliver listings translation in 20 languages</li>
-                <li>Foreign language search engines index your listings and drive consumers to your Xomio site</li>
-                <li>When a foreign language visitor views your Xomio site, listings are displayed in translation</li>
-                <li>Consumers find and view the listings they are interested in, registering and receiving your multi language marketing mails</li>
+                {% for item in howItWorks.workflow %}
+                  <li class="is-collapsed collapsible" data-component="panel">
+                    <div class="collapsible__toggle text-lg" data-element="panel-toggle">{{ item.title }}</div>
+                    <div class="collapsible__content" data-element="panel-content">{{ item.text }}</div>
+                  </li>
+                {% endfor %}
               </ul>
             </div>
           </div>
@@ -138,8 +139,13 @@
         </div>
 
         <div class="section__object is-sticky">
-          <div class="section__template">
-            <img srcset="./assets/img/how-it-works/ideas-template.png 1x, ./assets/img/how-it-works/ideas-template@2x.png 2x" src="./assets/img/how-it-works/ideas-template.png" alt="" class="section__img">
+          <div class="section__template section__template--shadow">
+            <div class="section__video section__video--default">
+              <video muted playsinline autoplay loop>
+                <source src="./assets/video/1_xomio_h264_cbr.mp4" type="video/mp4">
+                  <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
+                </video>
+            </div>
           </div>
         </div>
       </div>

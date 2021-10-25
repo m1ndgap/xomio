@@ -1,16 +1,17 @@
 'use strict';
 
 const activeClass    = 'is-active';
+const collapsedClass = 'is-collapsed';
+const disabledClass  = 'is-disabled';
+const expandedClass  = 'is-expanded';
 const fixedClass     = 'is-fixed';
 const focusClass     = 'is-focused';
 const hoverClass     = 'is-hover';
-const disabledClass  = 'is-disabled';
-const visibleClass   = 'is-visible';
 const invisibleClass = 'is-invisible';
-const expandedClass  = 'is-expanded';
 const selectedClass  = 'is-selected';
-const collapsedClass = 'is-collapsed';
 const scrolledClass  = 'is-scrolled';
+const visibleClass   = 'is-visible';
+
 const headerFixedClass  = 'header-is-fixed';
 const lockedScrollClass = 'scroll-is-locked';
 const menuVisibleClass  = 'menu-is-visible';
@@ -954,6 +955,34 @@ $(document).ready(function(){
             }
         }
     };
+});
+/* Tabs */
+$(document).ready(function(){
+    let $tag = $('[data-element="tag"]');
+    let $tagToggle = $('[data-element="tag-toggle"]');
+
+    $tag.each(function() {
+        let $tag = $(this);
+        let tagWidth = $tag.outerWidth();
+
+        $tag.find('[data-element="tag-popover-bg"]').width(tagWidth);
+    });
+
+    $tagToggle.on('click', function(e) {
+        e.preventDefault();
+
+        let $toggle = $(this);
+        let $item = $toggle.closest('[data-element="tag"]');
+
+        if ($item.hasClass(expandedClass)) {
+            $item.removeClass(expandedClass);
+        } else {
+            $('.'+expandedClass+'[data-element="tag"]').removeClass(expandedClass);
+            $item.addClass(expandedClass);
+        }
+
+        return false;
+    });
 });
 /* Text slider */
 $(document).ready(function(){

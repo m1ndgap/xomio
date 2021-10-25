@@ -1,0 +1,60 @@
+.fp-slidesNav {
+    text-align: center;
+
+    ul {
+        li {
+            width: rem(48px);
+            height: rem($spacer-6);
+            margin: 0 rem($spacer);
+
+            a {
+                span {
+                    width: rem(100%);
+                    height: rem(2px);
+                    border-radius: 0;
+                    background-color: $gray-400;
+                    left: 0;
+                    margin-left: 0;
+                    margin-top: rem(-1px);
+                }
+
+                &.active {
+                    span {
+                        width: rem(100%);
+                        height: rem(2px);
+                        border-radius: 0;
+                        background-color: $primary;
+                        margin-left: 0;
+                        margin-top: rem(-1px);
+                    }
+                }
+            }
+
+            &:hover {
+                a {
+                    &.active {
+                        span {
+                            width: rem(100%);
+                            height: rem(2px);
+                            border-radius: 0;
+                            background-color: $primary;
+                            margin-left: 0;
+                            margin-top: rem(-1px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fp-controlArrow.fp-next {
+    border-left-color: $primary;
+}
+
+.fp-controlArrow.fp-prev {
+    border-right-color: $primary;
+}
+
+@include media-breakpoint-up(lg) {
+}

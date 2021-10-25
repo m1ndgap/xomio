@@ -1,5 +1,9 @@
 .feature-7 {
     @include media-breakpoint-up(xl) {
+        .section__object {
+            margin-top: rem(- $spacer-5);
+        }
+
         .section__decor {
             &--1 {
                 top: rem(-61px);

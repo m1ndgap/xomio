@@ -1,0 +1,120 @@
+.tag {
+    color: $white;
+    border-radius: rem($spacer-5);
+    position: relative;
+    z-index: 1;
+
+    &__list {
+        max-height: rem(612px);
+        overflow: hidden;
+    }
+
+    &__link {
+        display: block;
+        padding: rem($spacer-2 $spacer-4 $spacer-2 44px);
+        @include font($font-size-h4, $line-height-h4, $font-weight-medium);
+        white-space: nowrap;
+        position: relative;
+        z-index: 1;
+
+        &-icon {
+            float: left;
+            font-size: rem($spacer-6);
+            margin-left: rem(- $spacer-9);
+            transform: rotate(0);
+            transition: transform .3s;
+        }
+    }
+
+    &__popover {
+       position: absolute;
+       top: 0;
+       left: 0;
+       border-radius: rem($spacer-5);
+
+       &-bg {
+           position: absolute;
+           top: 0;
+           left: 0;
+           @include size($spacer-10);
+           transition: all 0.3s;
+           z-index: -1;
+           border-radius: rem($spacer-5);
+       }
+
+       &-body {
+           @include size(0);
+           opacity: 0;
+           visibility: hidden;
+           padding: rem(38px 44px $spacer-3);
+           transition: opacity 0.3s 0s, height 0.3s 0.3s, width 0.3s 0.3s;
+       }
+
+       &-text {
+           margin-bottom: rem(3px);
+           opacity: .8;
+       }
+    }
+
+    &.is-expanded {
+        z-index: 2;
+    }
+
+    &.is-expanded & {
+        &__link {
+            &-icon {
+                transform: rotate(45deg);
+            }
+        }
+
+        &__popover {
+            opacity: 1;
+            visibility: visible;
+
+            &-bg {
+                width: 100% !important;
+                height: 100%;
+
+                &:before {
+                    position: absolute;
+                    top: rem($spacer-4);
+                    left: rem($spacer-5);
+                    right: rem($spacer-5);
+                    bottom: rem(-30px);
+                    content: '';
+                    background: inherit;
+                    opacity: .28;
+                    filter: blur(48px);
+                    border-radius: rem($spacer-6);
+                    z-index: -1;
+                }
+            }
+
+            &-body {
+                width: rem(365px);
+                height: auto;
+                opacity: 1;
+                visibility: visible;
+                transition: opacity 0.3s 0.1s;
+            }
+       }
+    }
+
+    @each $color-name, $color in $tag-colors {
+        &-#{$color-name} {
+            background-color: #{$color};
+
+            .tag__popover-bg {
+                background-color: #{$color};
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__link {
+        }
+    }
+}

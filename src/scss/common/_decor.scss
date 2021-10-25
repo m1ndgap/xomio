@@ -3,9 +3,13 @@
     background-position: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1;
+    z-index: -2;
     overflow: hidden;
     transform: all .25s ease-in-out;
+
+    [class^="decor-"], [class*=" decor-"] {
+        z-index: -1;
+    }
 }
 
 .decor-lines-1 {
@@ -113,6 +117,10 @@
 .decor-shape-3 {
     @include size(256px, 283px);
     background-image: url(../../assets/img/decor/shape-3.svg);
+}
+.decor-shape-4 {
+    @include size(1062px, 995px);
+    background-image: url(../../assets/img/decor/shape-4.svg);
 }
 
 

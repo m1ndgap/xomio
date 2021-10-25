@@ -173,7 +173,14 @@
                     </div>
 
                     <div class="section__object">
-                        <img src="./assets/img/temp/placeholder.png" alt="" class="section__img">
+                        <div class="section__template section__template--shadow">
+                            <div class="section__video section__video--default">
+                                <video muted="" playsinline="" autoplay="" loop="">
+                                    <source src="./assets/video/short_11_2x.mp4" type="video/mp4">
+                                    <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -203,7 +210,14 @@
                     </div>
 
                     <div class="section__object">
-                        <img src="./assets/img/temp/placeholder.png" alt="" class="section__img">
+                        <div class="section__template section__template--shadow">
+                            <div class="section__video">
+                                <video muted="" playsinline="" autoplay="" loop="">
+                                    <source src="./assets/video/glex_2x_scrolling.mp4" type="video/mp4">
+                                    <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -258,17 +272,37 @@
         <!-- Slider -->
         <section class="section feature-7">
             <div class="container container--mobile-fixed">
-                <div class="section__body section__body--center">
+                <div class="section__body">
                     <div class="section__content">
                         <div class="section__slider" data-slider="text-slider">
                             <div class="section__slide slick-slide">
                                 <h2 class="section__title">More languages, more listings, more leads</h2>
                                 <div class="section__description  text-lg">
                                     <ul class="list-plus">
-                                        <li>GLEX instantly converts your site into a multi language, global real estate portal</li>
-                                        <li>Every listing from your entire brand global inventory is branded to you, as the website owner</li>
-                                        <li>Anyone viewing any listing on your site, in any market, displayed in any language, can register as a lead in your client area.</li>
-                                        <li>Convert the lead into a referral in your brand network, and start monetizing the global footprint of your brand</li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">GLEX instantly converts your site into a multi language, global real estate portal</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                No need to worry about inventory, impress your clients with the thousands of international listings on your website, branded to you and there to support you in referral revenue.
+                                            </div>
+                                        </li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">Every listing from your entire brand global inventory is branded to you, as the website owner</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                Just like IDX, all the global listings on your website will be branded with you, showing your clients the impressive property selection and footprint you have to offer.
+                                            </div>
+                                        </li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">Anyone viewing any listing on your site, in any market, displayed in any language, can register as a lead in your client area.</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                Show your clients the world and support them as you would a client looking to buy locally. Your website provides you the tools to support your clients easily, whatever their needs.
+                                            </div>
+                                        </li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">Convert the lead into a referral in your brand network, and start monetizing the global footprint of your brand</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                When you have a client interested in an international purchase, you can easily pass that client through your brand referral network, sign a commission contract and enjoy your new revenue stream
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -276,10 +310,30 @@
                                 <h2 class="section__title">Global listings, beautifully displayed</h2>
                                 <div class="section__description  text-lg">
                                     <ul class="list-plus">
-                                        <li>Many of the biggest names in real estate rely on us for our web design skills, because we understand how to make listings shine online</li>
-                                        <li>Choose from a range of beautiful designs with clean, modern listings and photo presentation</li>
-                                        <li>Listings data is organized on the page thematically, for a clearer consumer experience</li>
-                                        <li>Advanced client features give users the ability to find, save and share their ideal property, all from your site</li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">The biggest names in real estate rely on us for listings portal design</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                We know how to make listings shine online, and we do it 19 languages, for brokerages with offices on 6 continents. That’s why GLEX is exclusive to Xomio.
+                                            </div>
+                                        </li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">Choose from a range of beautiful designs with clean, modern listings and photo presentation</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                If you don’t have your own graphics we make sure you have access to everything you need to define your style and customise your xomio website.
+                                            </div>
+                                        </li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">Listings data is organized on the page thematically, for a clearer consumer experience</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                We make sure to keep your website consistent and high-end so you can enjoy playing with the details.
+                                            </div>
+                                        </li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">Advanced client features give users the ability to find, save and share their ideal property, all from your site</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                It’s important for clients to easily understand your properties information and we make the most of the listing details you provide and make sure that’s clearly visible and organized.
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -288,12 +342,61 @@
                                 <div class="section__description ">
                                     <p>We’ve been working with listings in 20 languages for 20 years.We know everything there is to know about listings data, and about real estate translation.</p>
                                     <ul class="list-plus">
-                                        <li>Every brand listing in 20 languages</li>
-                                        <li>Metadata for SEO in all languages</li>
-                                        <li>Set up your GLEX feed in 3 clicks</li>
-                                        <li>Choose from a range of display styles</li>
-                                        <li>Listings data organized thematically</li>
-                                        <li>Fully customize the content of your GLEX feed</li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">Every brand listing in 19 languages</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                <ul class="list" columns="3">
+                                                    <li>Arabic</li>
+                                                    <li>Chinese (Simplified)</li>
+                                                    <li>Chinese (Traditional)</li>
+                                                    <li>French Canadian</li>
+                                                    <li>French (EU)</li>
+                                                    <li>German</li>
+                                                    <li>Hebrew</li>
+                                                    <li>Italian </li>
+                                                    <li>Japanese</li>
+                                                    <li>Korean</li>
+                                                    <li>Polish</li>
+                                                    <li>Portuguese (EU)</li>
+                                                    <li>Portuguese (Brazil)</li>
+                                                    <li>Russian</li>
+                                                    <li>Spanish (EU)</li>
+                                                    <li>Spanish (LatAm)</li>
+                                                    <li>Turkish</li>
+                                                    <li>Vietnamese</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">Metadata for SEO in all languages</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                Your brokerage brand’s listings data is translated to deliver Search Engine Optimization in 19 languages. Now every listing in your brand’s global inventory is working to get your site seen by visitors from around the world.
+                                            </div>
+                                        </li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">Set up your GLEX feed in 3 clicks</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                We work with our brand partners to standardise and import their listings data from around the world, with feeds from over 60 countries on 6 continents. Integrating all these listings into your site is as easy a clicking a few buttons to validate your brand membership. Turn your Xomio site into a global portal in moments.
+                                            </div>
+                                        </li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">Choose from a range of display styles</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                Xomio’s customizable blocks let you choose from a range of beautiful listings display options that will look great to visitors in every language.
+                                            </div>
+                                        </li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">Listings data organized thematically</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                Unlike most real estate platforms, we care about listings data, and we know how its display can affect the consumer experience. That’s why the biggest names in global real estate use us for their global portal design. We categorize and display all listings data thematically, so the presentation makes sense to international visitors.
+                                            </div>
+                                        </li>
+                                        <li class="is-collapsed collapsible" data-component="panel">
+                                            <div class="collapsible__toggle text-lg" data-element="panel-toggle">Fully customize the content of your GLEX feed</div>
+                                            <div class="collapsible__content" data-element="panel-content">
+                                                Filter the listings in your GLEX feed to ensure that you show only the properties, locations and price ranges that make sense for the type of leads that you want to generate. Limit the range of available languages to the ones that are most important to your market.
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

@@ -1,0 +1,15 @@
+.more {
+    font-weight: $font-weight-semibold;
+
+    &__icon {
+        margin-left: 0.2em;
+        font-size: 1.25em;
+        top: -.1em;
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+    }
+}

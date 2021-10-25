@@ -1,0 +1,41 @@
+.tags {
+    &__list {
+        @include list-unstyled;
+        @include make-row($spacer-5)
+        margin-bottom: rem(- $spacer-3);
+    }
+
+    &__item {
+        @include make-col($spacer-5)
+        margin-bottom: rem($spacer-3);
+    }
+
+    @include media-breakpoint-up(md) {
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+        .container {
+            max-width: rem(1428px);
+        }
+
+        &__intro {
+            margin-bottom: rem(64px);
+        }
+
+        &__list {
+            margin-left: rem(- $spacer-4);
+            margin-right: rem(- $spacer-4);
+            margin-bottom: rem(- $spacer-6);
+            justify-content: center;
+        }
+
+        &__item {
+            padding-left: rem($spacer-4);
+            padding-right: rem($spacer-4);
+            margin-bottom: rem($spacer-6);
+        }
+    }
+}

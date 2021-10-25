@@ -23,7 +23,7 @@
                     <p>{{ slide.text }}</p>
                   {% endif %}
                   {% if slide.list %}
-                    <ul class="list-plus">
+                    <ul class="list-dot">
                       {% for item in slide.list  %}
                         <li>{{ item }}</li>
                       {% endfor %}
@@ -75,40 +75,13 @@
 
       <ul class="section__lang-list lang-list">
         {% for lang in idx.langs %}
-          <li class="lang-list__item"><i class="lang-list__icon icon-lang"></i>{{ lang }}</li>
+          <li class="lang-list__item"><i class="lang-list__icon icon-lang"></i><span {% if lang.dir %}dir="{{ lang.dir }}"{% endif %}>{{ lang.name }}</span></li>
         {% endfor %}
       </ul>
     </div>
 
     <div class="section__decor section__decor--1 decor-dots-5"></div>
     <div class="section__decor section__decor--2 decor-lines-12"></div>
-  </section>
-
-  <!-- Slider -->
-  <section class="section feature-12">
-    <div class="container container--mobile-fixed">
-      <div class="section__body section__body--center">
-        <div class="section__content">
-          <h2 class="section__title">We speak real estate, in 20 languages</h2>
-          <div class="section__description">
-            <p>We’ve been working with listings in 20 languages for 20 years.We know everything there is to know about listings data, and about real estate translation.</p>
-            <ul class="list-plus">
-              <li>Every listing in 20 languages</li>
-              <li>Metadata for foreign language SEO</li>
-              <li>Set up your IDX in 3 clicks</li>
-              <li>Choose from a range of display styles</li>
-              <li>Listings data organized thematically</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="section__object">
-          {% include 'partials/_lang-slideshow.twig' %}
-        </div>
-      </div>
-    </div>
-
-    <div class="section__decor decor-shape-3"></div>
   </section>
 
   <!-- Contact us -->
@@ -118,11 +91,9 @@
         <div class="section__content">
           <h2 class="section__title">Become an MLS <br>Partner!</h2>
           <div class="section__description">
-            <ul class="list-plus">
-              <li>The team behind Xomio have been working with MLS organizations across North America for 20 years.</li>
-              <li>Our listings translation and web design services help your realtors deliver higher quality service to their markets.</li>
-              <li>Get in touch with us today to find out about our partner programs, and get Xomio working for your members, and for your market.</li>
-            </ul>
+            <p>The team behind Xomio have been working with MLS organizations across North America for 20 years.</p>
+            <p>Our listings translation and web design services help your realtors deliver higher quality service to their markets.</p>
+            <p>Get in touch with us today to find out about our partner programs, and get Xomio working for your members, and for your market.</p>
           </div>
         </div>
 

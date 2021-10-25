@@ -1,0 +1,49 @@
+.home-1 {
+    .section__decor {
+    }
+
+    @include media-breakpoint-up(lg) {
+        .section__decor {
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .section__title {
+            margin-right: -2.5em;
+            margin-bottom: rem($spacer-9);
+        }
+
+        .section__object {
+            margin-top: rem(-60px);
+        }
+
+        .section__decor {
+            &--1 {
+                width: rem(647px);
+                height: rem(995px);
+                overflow: hidden;
+                background-position: 0;
+                background-size: cover;
+                top: rem(-194px);
+                right: 0;
+            }
+
+            &--2 {
+                width: rem(192px);
+                height: rem(183px);
+                left: rem(196px);
+                bottom: rem(32px);
+            }
+
+            &--3 {
+                left: rem(-126px);
+                bottom: 0;
+            }
+
+            &--4 {
+                top: rem(151px);
+                left: rem(-62px);
+            }
+        }
+    }
+}

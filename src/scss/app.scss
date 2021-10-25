@@ -20,15 +20,17 @@
 
 // Vendor Widgets
 @import "vendor/dropzone";
+@import "vendor/fullpage";
 @import "vendor/select2";
-@import "vendor/tippy";
 @import "vendor/slick-theme";
+@import "vendor/tippy";
 
 // Widgets
 @import "widgets/burger";
 @import "widgets/button";
 @import "widgets/brand-card";
 @import "widgets/check";
+@import "widgets/collapsible";
 @import "widgets/dropdown";
 @import "widgets/feature";
 @import "widgets/features";
@@ -37,6 +39,7 @@
 @import "widgets/lang-list";
 @import "widgets/list";
 @import "widgets/logos";
+@import "widgets/more";
 @import "widgets/panel";
 @import "widgets/plan";
 @import "widgets/plans";
@@ -45,6 +48,7 @@
 @import "widgets/step";
 @import "widgets/steps";
 @import "widgets/tabs";
+@import "widgets/tag";
 
 // Layout
 @import "layout/nav";
@@ -67,8 +71,8 @@
 @import "sections/feature-9";
 @import "sections/feature-10";
 @import "sections/feature-11";
-@import "sections/feature-12";
 @import "sections/feature-13";
+@import "sections/home-1";
 @import "sections/intro-1";
 @import "sections/intro-2";
 @import "sections/mission";
@@ -76,6 +80,7 @@
 @import "sections/partners";
 @import "sections/pricing";
 @import "sections/stats";
+@import "sections/tags";
 @import "sections/team";
 @import "sections/teams";
 @import "sections/translations";
@@ -85,6 +90,7 @@
 @import "forms/form";
 
 // Pages
+@import "pages/home";
 @import "pages/pricing";
 @import "pages/how-it-works";
 

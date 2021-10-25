@@ -1,5 +1,16 @@
+.list {
+    @include list-unstyled;
+
+    &[columns="3"] {
+        columns: 3;
+        column-gap: rem($gutter);
+        column-width: rem(139px);
+    }
+}
+
 .list-check,
-.list-plus {
+.list-plus,
+.list-dot {
     @include list-unstyled;
 
     > li {
@@ -24,6 +35,29 @@
     }
 }
 
+.list-dot {
+    > li {
+        @include margin-bottom(rem(10px));
+        padding-left: rem($spacer-9);
+
+        &:before {
+            @include size(rem(6px));
+            @include rounded;
+            background-color: $primary;
+            content: '';
+            top: .5em;
+            left: rem($spacer-2);
+        }
+    }
+
+    .text-lg &,
+    &.text-lg {
+        > li {
+            @include margin-bottom(rem($spacer-4));
+        }
+    }
+}
+
 .list-check {
     > li {
         @include margin-bottom(rem(10px));
@@ -45,7 +79,7 @@
 .list-plus {
     > li {
         padding-left: rem($spacer-6);
-        @include margin-bottom(rem($spacer-4));
+        @include margin-bottom(1em);
 
         &:before {
             font-size: rem($spacer-4);
@@ -54,26 +88,14 @@
     }
 }
 
-@include media-breakpoint-down(lg) {
-    .list-plus {
-        .text-lg &,
-        &.text-lg {
-            @include font($font-size-base, $line-height-base);
-        }
-    }
-}
-
 @include media-breakpoint-up(xl) {
     .list-plus {
-        .text-lg &,
-        &.text-lg {
-            > li {
-                padding-left: rem($spacer-8);
+        > li {
+            padding-left: rem($spacer-9);
 
-                &:before {
-                    top: 0;
-                    font-size: rem($spacer-6);
-                }
+            &:before {
+                top: 0;
+                font-size: rem($spacer-6);
             }
         }
     }

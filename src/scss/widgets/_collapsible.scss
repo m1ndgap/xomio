@@ -1,0 +1,51 @@
+.collapsible {
+    &:before {
+        transform: rotate(45deg);
+        transition: transform .25s ease-in-out;
+    }
+
+    &__toggle {
+        color: $blue-500;
+        font-weight: $font-weight-medium;
+        cursor: pointer;
+        transition: all .25s ease-in-out;
+    }
+
+    &__content {
+        margin-top: rem($spacer-2);
+        margin-bottom: rem($spacer-6);
+    }
+
+    &.is-collapsed {
+        &:before {
+            transform: rotate(0);
+        }
+    }
+
+    &.is-collapsed & {
+        &__toggle {
+            color: $base-color;
+            font-weight: $font-weight-normal;
+        }
+
+        &__content {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__toggle {
+            @include font($font-size-lg, 22.01px);
+        }
+
+        &.is-collapsed & {
+            &__toggle {
+                @include em-line-height($font-size-lg, $line-height-lg);
+            }
+
+            &__content {
+                display: none;
+            }
+        }
+    }
+}

@@ -94,9 +94,7 @@ p {
     @include margin-bottom(rem($spacer-3));
 
     @include media-breakpoint-up(xl) {
-        p {
-            margin-bottom: rem($spacer-4);
-        }
+        margin-bottom: rem($spacer-4);
     }
 }
 
