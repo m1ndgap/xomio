@@ -6,8 +6,10 @@
     }
 
     &__item {
-        @include make-col($spacer-5)
+        margin-left: rem($spacer-5 / 2);
+        margin-right: rem($spacer-5 / 2);
         margin-bottom: rem($spacer-3);
+        position: relative;
     }
 
     @include media-breakpoint-up(md) {
@@ -33,8 +35,8 @@
         }
 
         &__item {
-            padding-left: rem($spacer-4);
-            padding-right: rem($spacer-4);
+            margin-left: rem($spacer-4);
+            margin-right: rem($spacer-4);
             margin-bottom: rem($spacer-6);
         }
     }

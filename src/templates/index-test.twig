@@ -1,0 +1,173 @@
+{% extends 'layout/_base.twig' %}
+
+{% set bodyClass = 'page-home' %}
+
+{% block content %}
+  <div data-page="fullpage">
+    <div class="section home-1" data-fullpage="section">
+      {% for slide in home|first.slides %}
+        <div class="slide" data-fullpage="slide">
+          <div class="container container--mobile-fixed">
+            <div class="section__content">
+              <h2 class="section__title h1">{{ slide.title }} <br>{{ slide.type }}</h2>
+            </div>
+            <div class="section__body">
+              <div class="section__content">
+                <div class="section__description text-lg">
+                  <ul class="list-plus">
+                    {% for item in slide.list %}
+                      <li>{{ item }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+
+                <div class="section__action">
+                  <a href="#" class="button button--primary">Get started</a>
+                </div>
+              </div>
+
+              <div class="section__object">
+                <div class="section__template section__template--shadow">
+                  <div class="section__video section__video--default">
+                    {#<video muted playsinline autoplay loop>
+                      <source src="./assets/video/{{ slide.video }}" type="video/mp4">
+                        <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
+                      </video>#}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      <div class="section__decor section__decor--1 decor-shape-4">
+        <div class="section__decor section__decor--2 decor-lines-9"></div>
+      </div>
+      <div class="section__decor section__decor--3 hidden-lg-down decor-lines-1"></div>
+      <div class="section__decor section__decor--4 hidden-lg-down decor-dots-1"></div>
+    </div>
+
+    <div class="section" data-fullpage="section">
+      <div class="bl2">
+        <div class="wrapper">
+          <h2 class="title">Whatever language or device your clients are using</h2>
+          <div class="subtitle">If they’re <span>looking</span>, they’ll <span>find</span> you.</div>
+          <div class="bl2inner">
+            <div class="bl2left">
+              <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_tkorcb6g.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay></lottie-player>
+            </div>
+            <div class="bl2left-mobile">
+              <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_vgroulgj.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay></lottie-player>
+            </div>
+            <div class="bl2right">
+              <div class="bl2list">
+                <div class="bl2item"><img src="./assets/img/images/block2.png" /></div>
+                <div class="bl2item"><img src="./assets/img/images/block21.png" /></div>
+                <div class="bl2item"><img src="./assets/img/images/block22.png" /></div>
+                <div class="bl2item bl2hintwrap">
+                  <div class="bl2hint">
+                    Your site, in 20 languages, indexed on all major search engines, accessible from any device.
+                    <img src="./assets/img/images/sentence.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section tags" data-fullpage="section">
+      <div class="container">
+        <div class="intro text-center">
+          <h2 class="intro__title">We know you want it</h2>
+        </div>
+
+        <ul class="tags__list">
+          {% for section in home|slice(2,1) %}
+            {% for item in section.tags %}
+              <li class="tags__item" data-element="tag-item">
+                <div class="tag tag-{{ item.theme }}" data-element="tag">
+                  <a href="#" class="tag__link" data-element="tag-toggle"><i class="tag__link-icon icon-plus"></i> {{ item.name }}</a>
+                  <div class="tag__popover">
+                    <div class="tag__popover-bg" data-element="tag-popover-bg"></div>
+                    <div class="tag__popover-body">
+                      <p class="tag__popover-text">{{ item.text }}</p>
+                      <p class="tag__popover-action">
+                        <a href="#popup-{{ item.id }}" class="tag__popover-more more">Learn more <i class="more__icon icon-arrow-right"></i></a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          {% endfor %}
+        </ul>
+
+        <div class="tags__action hidden-xl-up">
+          <button class="tags__action-button button button--outline-primary" data-element="show-more-toggle" data-text-on="Show more" data-text-off="Show less">Show more</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-fullpage="section">
+      <div class="slide" data-fullpage="slide">
+        <div class="container">
+          <h1>Section 3</h1>
+        </div>
+      </div>
+      <div class="slide" data-fullpage="slide">
+        <div class="container">
+          <h1>Section 3.2</h1>
+        </div>
+      </div>
+      <div class="slide" data-fullpage="slide">
+        <div class="container">
+          <h1>Section 3.3</h1>
+        </div>
+      </div>
+      <div class="slide" data-fullpage="slide">
+        <div class="container">
+          <h1>Section 3.4</h1>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}
+
+{% block modals %}
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <script type="text/javascript">
+  new fullpage('[data-page="fullpage"]', {
+    sectionSelector: '[data-fullpage="section"]',
+    slideSelector: '[data-fullpage="slide"]',
+    sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
+    //anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
+    //menu: '#menu',
+    slidesNavigation: true,
+    //scrollHorizontally: true,
+    //scrollHorizontallyKey: 'YWx2YXJvdHJpZ28uY29tX01mU2MyTnliMnhzU0c5eWFYcHZiblJoYkd4NVNRcg==',
+    afterSlideLoad: function(section, origin, destination, direction){
+      console.log({
+        section: section,
+        origin: origin,
+        destination: destination,
+        direction: direction
+      });
+    },
+    onSlideLeave: function(section, origin, destination, direction){
+      console.log({
+        section: section,
+        origin: origin,
+        destination: destination,
+        direction: direction
+      });
+    }
+  });
+  </script>
+{% endblock %}

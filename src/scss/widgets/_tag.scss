@@ -56,12 +56,28 @@
        }
     }
 
+    &.is-right & {
+        &__popover {
+           left: auto;
+           right: 0;
+
+           &-bg {
+               left: auto;
+               right: 0;
+           }
+       }
+    }
+
     &.is-expanded {
         z-index: 2;
     }
 
     &.is-expanded & {
         &__link {
+            position: absolute;
+            left: 0;
+            top: 0;
+
             &-icon {
                 transform: rotate(45deg);
             }
@@ -87,17 +103,24 @@
                     filter: blur(48px);
                     border-radius: rem($spacer-6);
                     z-index: -1;
+                    pointer-events: none;
                 }
             }
 
             &-body {
-                width: rem(365px);
+                width: 288px;
                 height: auto;
                 opacity: 1;
                 visibility: visible;
                 transition: opacity 0.3s 0.1s;
             }
        }
+    }
+
+    &.is-expanded.is-right {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
     @each $color-name, $color in $tag-colors {
@@ -107,6 +130,17 @@
             .tag__popover-bg {
                 background-color: #{$color};
             }
+        }
+    }
+
+    @media (min-width: 375px) {
+        &.is-expanded & {
+            &__popover {
+                &-body {
+                    min-width: 365px;
+                    width: auto;
+                }
+           }
         }
     }
 
