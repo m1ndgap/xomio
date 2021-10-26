@@ -1009,6 +1009,37 @@
             </div>
 
         </div>
+
+
+        <div class="section">
+            <div class="bl2">
+                <div class="wrapper">
+                    <h2 class="title">Whatever language or device your clients are using</h2>
+                    <div class="subtitle">If they’re <span>looking</span>, they’ll <span>find</span> you.</div>
+                    <div class="bl2inner">
+                        <div class="bl2left">
+                            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_tkorcb6g.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop="" autoplay=""></lottie-player>
+                        </div>
+                        <div class="bl2left-mobile">
+                            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_vgroulgj.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop="" autoplay=""></lottie-player>
+                        </div>
+                        <div class="bl2right">
+                            <div class="bl2list">
+                                <div class="bl2item"><img src="./assets/img/images/block2.png"></div>
+                                <div class="bl2item"><img src="./assets/img/images/block21.png"></div>
+                                <div class="bl2item"><img src="./assets/img/images/block22.png"></div>
+                                <div class="bl2item bl2hintwrap">
+                                    <div class="bl2hint">
+                                        Your site, in 20 languages, indexed on all major search engines, accessible from any device.
+                                        <img src="./assets/img/images/sentence.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <div class="footer bg-secondary">
@@ -1162,31 +1193,52 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <script type="text/javascript">
-        new fullpage('[data-page="fullpage"]', {
-            sectionSelector: '[data-fullpage="section"]',
-            slideSelector: '[data-fullpage="slide"]',
-            sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
-            //anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
-            //menu: '#menu',
-            slidesNavigation: true,
-            //scrollHorizontally: true,
-            //scrollHorizontallyKey: 'YWx2YXJvdHJpZ28uY29tX01mU2MyTnliMnhzU0c5eWFYcHZiblJoYkd4NVNRcg==',
-            afterSlideLoad: function(section, origin, destination, direction) {
-                console.log({
-                    section: section,
-                    origin: origin,
-                    destination: destination,
-                    direction: direction
-                });
-            },
-            onSlideLeave: function(section, origin, destination, direction) {
-                console.log({
-                    section: section,
-                    origin: origin,
-                    destination: destination,
-                    direction: direction
-                });
-            }
+        /*new fullpage('[data-page="fullpage"]', {
+    sectionSelector: '[data-fullpage="section"]',
+    slideSelector: '[data-fullpage="slide"]',
+    sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
+    //anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
+    //menu: '#menu',
+    slidesNavigation: true,
+    //scrollHorizontally: true,
+    //scrollHorizontallyKey: 'YWx2YXJvdHJpZ28uY29tX01mU2MyTnliMnhzU0c5eWFYcHZiblJoYkd4NVNRcg==',
+    afterSlideLoad: function(section, origin, destination, direction){
+      console.log({
+        section: section,
+        origin: origin,
+        destination: destination,
+        direction: direction
+      });
+    },
+    onSlideLeave: function(section, origin, destination, direction){
+      console.log({
+        section: section,
+        origin: origin,
+        destination: destination,
+        direction: direction
+      });
+    }
+  });*/
+
+        var apiFullPage;
+        $(document).ready(function() {
+
+            apiFullPage = new fullpage('[data-page="fullpage"]', {
+                sectionSelector: '[data-fullpage="section"]',
+                slideSelector: '[data-fullpage="slide"]',
+                slidesNavigation: true,
+                scrollBar: true,
+                onLeave: function(origin, destination, direction) {
+                    if (destination.isLast) {
+                        apiFullPage.setAutoScrolling(false);
+                        apiFullPage.setFitToSection(false);
+                    } else {
+                        apiFullPage.setAutoScrolling(true);
+                        apiFullPage.setFitToSection(true);
+                    }
+                }
+            });
+
         });
     </script>
 
