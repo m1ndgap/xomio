@@ -201,6 +201,8 @@
         padding-bottom: rem($section-offset-bottom);
 
         &__content {
+            flex: 0 0 45%;
+            max-width: 45%;
             max-width: rem(516px);
         }
 

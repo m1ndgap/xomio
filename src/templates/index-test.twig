@@ -9,14 +9,17 @@
         <div class="slide" data-fullpage="slide">
           <div class="container container--mobile-fixed">
             <div class="section__content">
-              <h2 class="section__title h1">{{ slide.title }} <br>{{ slide.type }}</h2>
+              <h2 class="section__title h1">{{ slide.title }} <span data-element="typewriter" data-word="{{ slide.type }}"></span></h2>
             </div>
             <div class="section__body">
               <div class="section__content">
-                <div class="section__description text-lg">
-                  <ul class="list-plus">
+                <div class="section__description ">
+                  <ul class="list-plus" data-component="accordion">
                     {% for item in slide.list %}
-                      <li>{{ item }}</li>
+                      <li class="is-collapsed collapsible" data-element="accordion-item">
+                        <div class="collapsible__toggle text-lg" data-element="accordion-toggle">{{ item.title }}</div>
+                        <div class="collapsible__content" data-element="accordion-content"><p>{{ item.text }}</p></div>
+                      </li>
                     {% endfor %}
                   </ul>
                 </div>
@@ -29,10 +32,10 @@
               <div class="section__object">
                 <div class="section__template section__template--shadow">
                   <div class="section__video section__video--default">
-                    {#<video muted playsinline autoplay loop>
-                      <source src="./assets/video/{{ slide.video }}" type="video/mp4">
-                        <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
-                      </video>#}
+                    <video muted playsinline autoplay loop data-autoplay>
+                      <source src="./assets/video/{{ slide.video }}" type="video/mp4" />
+                      <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
+                    </video>
                   </div>
                 </div>
               </div>
@@ -47,28 +50,26 @@
       <div class="section__decor section__decor--4 hidden-lg-down decor-dots-1"></div>
     </div>
 
-    <div class="section" data-fullpage="section">
-      <div class="bl2">
-        <div class="wrapper">
-          <h2 class="title">Whatever language or device your clients are using</h2>
-          <div class="subtitle">If they’re <span>looking</span>, they’ll <span>find</span> you.</div>
-          <div class="bl2inner">
-            <div class="bl2left">
-              <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_tkorcb6g.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay></lottie-player>
-            </div>
-            <div class="bl2left-mobile">
-              <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_vgroulgj.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay></lottie-player>
-            </div>
-            <div class="bl2right">
-              <div class="bl2list">
-                <div class="bl2item"><img src="./assets/img/images/block2.png" /></div>
-                <div class="bl2item"><img src="./assets/img/images/block21.png" /></div>
-                <div class="bl2item"><img src="./assets/img/images/block22.png" /></div>
-                <div class="bl2item bl2hintwrap">
-                  <div class="bl2hint">
-                    Your site, in 20 languages, indexed on all major search engines, accessible from any device.
-                    <img src="./assets/img/images/sentence.svg" />
-                  </div>
+    <div class="bl2 section" data-fullpage="section">
+      <div class="container">
+        <h2 class="title">Whatever language or device your clients are using</h2>
+        <div class="subtitle">If they’re <span>looking</span>, they’ll <span>find</span> you.</div>
+        <div class="bl2inner">
+          <div class="bl2left">
+            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_tkorcb6g.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay></lottie-player>
+          </div>
+          <div class="bl2left-mobile">
+            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_vgroulgj.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay></lottie-player>
+          </div>
+          <div class="bl2right">
+            <div class="bl2list">
+              <div class="bl2item"><img src="./assets/img/images/block2.png" /></div>
+              <div class="bl2item"><img src="./assets/img/images/block21.png" /></div>
+              <div class="bl2item"><img src="./assets/img/images/block22.png" /></div>
+              <div class="bl2item bl2hintwrap">
+                <div class="bl2hint">
+                  Your site, in 20 languages, indexed on all major search engines, accessible from any device.
+                  <img src="./assets/img/images/sentence.svg" />
                 </div>
               </div>
             </div>
@@ -110,30 +111,201 @@
       </div>
     </div>
 
-    <div class="section" data-fullpage="section">
-      <div class="slide" data-fullpage="slide">
-        <div class="container">
-          <h1>Section 3</h1>
-        </div>
-      </div>
-      <div class="slide" data-fullpage="slide">
-        <div class="container">
-          <h1>Section 3.2</h1>
-        </div>
-      </div>
-      <div class="slide" data-fullpage="slide">
-        <div class="container">
-          <h1>Section 3.3</h1>
-        </div>
-      </div>
-      <div class="slide" data-fullpage="slide">
-        <div class="container">
-          <h1>Section 3.4</h1>
-        </div>
-      </div>
+    <div class="section home-4" data-fullpage="section">
+      {% for section in home|slice(3,1) %}
+        {% for slide in section.slides %}
+          <div class="slide" data-fullpage="slide">
+            <div class="container container--mobile-fixed">
+              <div class="section__content">
+                <h2 class="section__title">{{ slide.title }}</h2>
+              </div>
+              <div class="section__body section__body--center">
+                <div class="section__content">
+                  <h3 class="section__subtitle">{{ slide.subtitle }}</h3>
+                  <div class="section__description ">
+                    {% for text in slide.text %}
+                      <p>{{ text }}</p>
+                    {% endfor %}
+                  </div>
+
+                  <div class="section__action">
+                    <a href="#" class="button button--primary">Get started</a>
+                  </div>
+                </div>
+
+                <div class="section__object">
+                  <div class="section__template section__template--shadow">
+                    <div class="section__video {% if slide.videoClass %} {{ slide.videoClass }} {% else %} section__video--default {% endif %}">
+                      <video muted playsinline autoplay loop data-autoplay>
+                        <source src="./assets/video/{{ slide.video }}" type="video/mp4" />
+                        <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% endfor %}
+      <div class="section__decor decor-lines-9 hidden-lg-down"></div>
     </div>
 
   </div>
+
+  <div class="bl5">
+    <div class="container">
+      <div class="bl5decor1"></div>
+      <div class="bl5decor2"></div>
+      <h2>Find the right fit for you</h2>
+      <div class="wrapbtn"><a href="#" class="big btn gofirst">Start</a></div>
+      <div class="test-wrap">
+        <div class="step-block " data-id="0" data-goto="11">
+          <div class="vert-line"></div>
+          <div class="step-label"><div>Welcome!</div></div>
+        </div>
+        <div class="step-block step-variants" data-id="11">
+          <div class="vert-line"></div>
+          <div class="step-label"><div>What best describes your business?</div></div>
+          <div class="variants-wrap">
+            <div class="variants">
+              <div class="variant" data-id="1"><div class="text"><span>Agent</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="1" ><div class="text"><span>Team</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="1" ><div class="text"><span>Brokerage</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="1" ><div class="text"><span>MLS</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="1" ><div class="text"><span>Brand</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="7" ><div class="text"><span>Portal</span></div><div class="end"></div><div class="start"></div></div>
+            </div>
+            <div class="vars-line"></div>
+            <div class="ans-line"></div>
+          </div>
+        </div>
+        <div class="step-block step-dialog" data-id="1">
+          <div class="vert-line"></div>
+          <div class="step-label"><div>Do you already have a website?</div></div>
+          <div class="ans yes" data-id="21">
+            <div class="ans-wrap">
+              <div class="ans-btn">
+                <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.80858 28.4433C0.721213 37.3436 -2.23814 46.8302 2.09109 56.8305C18.1532 93.7215 64.9224 100.556 83.8131 62.7212C88.6025 53.1174 89.8783 42.1456 84.4719 32.6143C79.0656 23.0831 69.9784 14.2665 61.733 7.62201C53.4876 0.977498 44.071 -1.93715 34.095 1.36835C21.9595 5.40531 12.1979 17.2593 5.80858 28.4433Z" fill="#EF8683"/>
+                </svg>
+                <span>Yes</span>
+              </div>
+            </div>
+          </div>
+          <div class="ans no" data-id="2">
+            <div class="ans-wrap">
+              <div class="ans-btn">
+                <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.80858 28.4433C0.721213 37.3436 -2.23814 46.8302 2.09109 56.8305C18.1532 93.7215 64.9224 100.556 83.8131 62.7212C88.6025 53.1174 89.8783 42.1456 84.4719 32.6143C79.0656 23.0831 69.9784 14.2665 61.733 7.62201C53.4876 0.977498 44.071 -1.93715 34.095 1.36835C21.9595 5.40531 12.1979 17.2593 5.80858 28.4433Z" fill="#EF8683"/>
+                </svg>
+                <span>No</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-block step-dialog" data-id="21">
+          <div class="vert-line"></div>
+          <div class="step-label"><div>Are you looking to replace your website?</div></div>
+          <div class="ans yes" data-id="22">
+            <div class="ans-wrap">
+              <div class="ans-btn">
+                <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.80858 28.4433C0.721213 37.3436 -2.23814 46.8302 2.09109 56.8305C18.1532 93.7215 64.9224 100.556 83.8131 62.7212C88.6025 53.1174 89.8783 42.1456 84.4719 32.6143C79.0656 23.0831 69.9784 14.2665 61.733 7.62201C53.4876 0.977498 44.071 -1.93715 34.095 1.36835C21.9595 5.40531 12.1979 17.2593 5.80858 28.4433Z" fill="#EF8683"/>
+                </svg>
+                <span>Yes</span>
+              </div>
+            </div>
+          </div>
+          <div class="ans no" data-id="23">
+            <div class="ans-wrap">
+              <div class="ans-btn">
+                <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.80858 28.4433C0.721213 37.3436 -2.23814 46.8302 2.09109 56.8305C18.1532 93.7215 64.9224 100.556 83.8131 62.7212C88.6025 53.1174 89.8783 42.1456 84.4719 32.6143C79.0656 23.0831 69.9784 14.2665 61.733 7.62201C53.4876 0.977498 44.071 -1.93715 34.095 1.36835C21.9595 5.40531 12.1979 17.2593 5.80858 28.4433Z" fill="#EF8683"/>
+                </svg>
+                <span>No</span>
+              </div>
+            </div>
+          </div>
+        </div>
+                    
+        <div class="step-block step-variants" data-id="23">
+          <div class="vert-line"></div>
+          <div class="step-label"><div>What are your plans?</div></div>
+          <div class="variants-wrap">
+            <div class="variants">
+              <div class="variant" data-id="2"><div class="text"><span>I want to add GLEX to my existing website</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="2"><div class="text"><span>I want to add Mutli-Language IDX to my existing website</span></div><div class="end"></div><div class="start"></div></div>
+            </div>
+            <div class="vars-line"></div>
+            <div class="ans-line"></div>
+          </div>
+        </div>
+                    
+        <div class="step-block step-variants" data-id="2">
+          <div class="vert-line"></div>
+          <div class="step-label"><div>Are you a member of our partner MLS organizations?</div></div>
+          <div class="variants-wrap">
+            <div class="variants">
+              <div class="variant" data-id="6"><div class="text"><span>Answer 1</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="6"><div class="text"><span>Answer 3</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="6"><div class="text"><span>Answer 2</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="6"><div class="text"><span>Do not belong to any of these</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="6"><div class="text"><span>Answer 3</span></div><div class="end"></div><div class="start"></div></div>
+            </div>
+            <div class="vars-line"></div>
+            <div class="ans-line"></div>
+          </div>
+        </div>
+        <div class="step-block " data-id="71" data-goto="72">
+          <div class="vert-line"></div>
+          <div class="step-label bigtext"><div>
+            <p>Coming soon!</p>
+            Xomio for Portals is launching soon — be the first to find out when it’s available by signing up for updates.
+          </div></div>
+        </div>
+        <div class="step-block " data-id="6" data-goto="61">
+          <div class="vert-line"></div>
+          <div class="step-label bigtext"><div>
+            <p>Coming soon!</p>
+            Xomio for Teams is launching soon — be the first to find out when it’s available by signing up for updates.
+          </div></div>
+        </div>
+        <div class="step-block " data-id="61" data-goto="5">
+          <div class="vert-line"></div>
+          <div class="step-label round"><div>violet.e.realtor@gmail.com</div></div>
+        </div>
+        <div class="step-block step-variants" data-id="4">
+          <div class="vert-line"></div>
+          <div class="step-label"><div>Are you member of our partner brands?</div></div>
+          <div class="variants-wrap">
+            <div class="variants">
+              <div class="variant" data-id="5"><div class="text"><span>Answer 1</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="5"><div class="text"><span>Answer 3</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="5"><div class="text"><span>Answer 2</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="5"><div class="text"><span>Do not belong to any of these</span></div><div class="end"></div><div class="start"></div></div>
+              <div class="variant" data-id="5"><div class="text"><span>Answer 3</span></div><div class="end"></div><div class="start"></div></div>
+            </div>
+            <div class="vars-line"></div>
+            <div class="ans-line"></div>
+          </div>
+        </div>
+        <div class="step-block " data-id="72">
+          <div class="vert-line"></div>
+          <div class="step-label bigtext"><div>
+            <p>Coming soon!</p>
+            Xomio for Portals is launching soon — be the first to find out when it’s available by signing up for updates.
+          </div></div>
+        </div>
+        <div class="step-block step-final" data-id="5">
+          <div class="vert-line"></div>
+          <div class="wrapbtn"><a href="#" class="big btn">Go!</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}
 
 {% block modals %}
@@ -143,31 +315,90 @@
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
   <script type="text/javascript">
-  new fullpage('[data-page="fullpage"]', {
-    sectionSelector: '[data-fullpage="section"]',
-    slideSelector: '[data-fullpage="slide"]',
-    sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
-    //anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
-    //menu: '#menu',
-    slidesNavigation: true,
-    //scrollHorizontally: true,
-    //scrollHorizontallyKey: 'YWx2YXJvdHJpZ28uY29tX01mU2MyTnliMnhzU0c5eWFYcHZiblJoYkd4NVNRcg==',
-    afterSlideLoad: function(section, origin, destination, direction){
-      console.log({
-        section: section,
-        origin: origin,
-        destination: destination,
-        direction: direction
-      });
-    },
-    onSlideLeave: function(section, origin, destination, direction){
-      console.log({
-        section: section,
-        origin: origin,
-        destination: destination,
-        direction: direction
+
+    function initialization(){
+      var myFullpage = new fullpage('[data-page="fullpage"]', {
+        //scrollOverflow: true,
+        autoScrolling:true,
+        //responsive: 900,
+        //fitSection: false,
+        sectionSelector: '[data-fullpage="section"]',
+        slideSelector: '[data-fullpage="slide"]',
+        //css3:true,
+        autoScrolling: true,
+        slidesNavigation: true,
+        scrollBar: true,
+       //scrollOverflow: true,
+        licenseKey: '70FFA765-BA464426-B38D8C81-8308669D',
+
+        paddingTop: document.querySelector('[data-component="navbar"]').offsetHeight+'px',
+        //continuousVertical:true,
+        afterLoad: function(origin, destination, direction) {
+          if ( destination.isLast ) {
+
+            fullpage_api.setAutoScrolling(false);
+            fullpage_api.setFitToSection(false);
+          } else {
+            fullpage_api.setAutoScrolling(true);
+            fullpage_api.setFitToSection(true);
+          }
+        },
+        afterRender: function(){
+          if (this.isFirst) {
+            let $typer = this.item.querySelector('[data-element="typewriter"]');
+
+            let typewriter = new Typewriter($typer, {
+              delay: 100,
+            });
+
+            typewriter
+            .typeString($typer.dataset.word)
+            .callFunction(function(state) {
+              state.elements.cursor.style.display = 'none';
+            })
+            .start();
+          }
+
+          let $video = this.item.querySelector('video');
+
+          if ($video.length > 0) {
+              $video.play();
+          }
+        },
+        afterSlideLoad: function(section, origin, destination, direction){
+          if (section.index === 0) {
+            let $typer = destination.item.querySelector('[data-element="typewriter"]');
+
+            let typewriter = new Typewriter($typer, {
+              delay: 100,
+            });
+
+            typewriter
+                .typeString($typer.dataset.word)
+                .callFunction(function(state) {
+                    state.elements.cursor.style.display = 'none';
+                })
+                .start();
+          }
+
+          let $video = destination.item.querySelector('video');
+
+          if ($video.length > 0) {
+              $video.play();
+          }
+        },
+        onSlideLeave: function(section, origin, destination, direction) {
+          let $typer = origin.item.querySelector('[data-element="typewriter"]');
+          let typewriter = new Typewriter($typer);
+
+          typewriter
+            .deleteAll(15)
+            .start();
+        }
       });
     }
-  });
+
+    //fullPage.js initialization
+    initialization();
   </script>
 {% endblock %}

@@ -33,7 +33,7 @@ $(document).ready(function(){
             $('.'+expandedClass+'[data-element="tag"]').removeClass(expandedClass);
 
             if ( $toggle.outerWidth() > tagPopoverWidth ) {
-                tagPopoverWidth = $toggle.outerWidth();
+                tagPopoverWidth = $toggle.outerWidth() + 44;
             }
 
             if ( ($(window).width() - $toggle.offset().left ) < tagPopoverWidth ) {

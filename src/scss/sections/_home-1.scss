@@ -1,5 +1,21 @@
 .home-1 {
     .section__decor {
+        &--1 {
+            width: rem(300px);
+            height: rem(995px);
+            overflow: hidden;
+            background-position: 0;
+            background-size: cover;
+            top: 0;
+            right: 0;
+        }
+
+        &--2 {
+            width: rem(123px);
+            height: rem(117px);
+            right: rem(43px);
+            bottom: rem(87px);
+        }
     }
 
     @include media-breakpoint-up(lg) {
@@ -20,18 +36,13 @@
         .section__decor {
             &--1 {
                 width: rem(647px);
-                height: rem(995px);
-                overflow: hidden;
-                background-position: 0;
-                background-size: cover;
                 top: rem(-194px);
-                right: 0;
             }
 
             &--2 {
                 width: rem(192px);
                 height: rem(183px);
-                left: rem(196px);
+                right: rem(260px);
                 bottom: rem(32px);
             }
 

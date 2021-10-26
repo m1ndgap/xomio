@@ -1,0 +1,19 @@
+.home-4 {
+    @include media-breakpoint-up(xl) {
+        .section__content {
+            padding-right: rem($spacer-7);
+        }
+
+        .section__object {
+            margin-top: rem(-60px);
+        }
+
+        .section__decor {
+            width: rem(204px);
+            height: rem(237px);
+            top: rem(-52px);
+            left: rem(-114px);
+            background-size: contain;
+        }
+    }
+}

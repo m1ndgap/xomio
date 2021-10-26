@@ -12,8 +12,13 @@
     }
 
     &__content {
-        margin-top: rem($spacer-2);
-        margin-bottom: rem($spacer-6);
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+
+        p {
+            padding-top: rem($spacer-2);
+            padding-bottom: rem($spacer-2);
+        }
     }
 
     &.is-collapsed {
@@ -29,7 +34,7 @@
         }
 
         &__content {
-            display: none;
+            max-height: 0;
         }
     }
 
@@ -40,11 +45,11 @@
 
         &.is-collapsed & {
             &__toggle {
-                @include em-line-height($font-size-lg, $line-height-lg);
+                //@include em-line-height($font-size-lg, $line-height-lg);
             }
 
             &__content {
-                display: none;
+                //display: none;
             }
         }
     }

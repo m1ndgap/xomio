@@ -1010,48 +1010,98 @@
         {
             "slides": [
                 {
-                    "title": "You’re a real estate expert.",
-                    "type": "Not a coder",
+                    "title": "You’re a real estate expert. <br> Not a ",
+                    "type": "coder",
                     "list": [
-                        "Just clicking. No coding.",
-                        "Your IDX and Brand listings integrated automatically",
-                        "Drag and drop to rearrange web pages",
-                        "Launch your customised website in minutes"
+                        {
+                            "title": "Just clicking. No coding.",
+                            "text": "Xomio takes away all the pain and frustration of launching a website. Just select the features you like best, customize in a few clicks, and publish your site.  "
+                        },
+                        {
+                            "title": "Your IDX and Brand listings integrated automatically",
+                            "text": "With Xomio, you don’t need any technical wizardry to add your IDX or Brand listings. We’ve done the work for you, and we’ll get your listings live in a few minutes."
+                        },
+                        {
+                            "title": "Drag and drop to rearrange web pages",
+                            "text": "With Xomio, you don’t need any technical wizardry to add your IDX or Brand listings. We’ve done the work for you, and we’ll get your listings live in a few minutes."
+                        },
+                        {
+                            "title": "Launch your customised website in minutes",
+                            "text": "Take longer with the customization if you want. But if speed and convenience are what you’re after, you can have a sleek, multi-language, IDX website in only 15 minutes. "
+                        }
                     ],
-                    "video": "1_xomio_h264_cbr.mp"
+                    "video": "1_xomio_h264_cbr.mp4"
                 },
                 {
-                    "title": "You’re a real estate expert.",
-                    "type": "Not a translator",
+                    "title": "You’re a real estate expert. <br> Not a ",
+                    "type": "translator",
                     "list": [
-                        "All listings translated into 20 languages",
-                        "Translated by human industry experts",
-                        "Localized content in 20 languages",
-                        "SEO & Meta tagging in all languages",
-                        "Currency & measurements conversion",
-                        "Multi language client interface"
+                        {
+                            "title": "All listings translated into 20 languages",
+                            "text": "Translation for real estate is about more than just matching words. Our translators know the right terms to use in every supported language, delivering consistent information to consumers everywhere."
+                        },
+                        {
+                            "title": "Translated by human industry experts",
+                            "text": "All our translations are provided and checked by human translators with real estate expertise."
+                        },
+                        {
+                            "title": "Website sections in 19 languages",
+                            "text": "Every customizable block is available in all supported languages. Your site looks the same to every visitor regardless of the language they speak.."
+                        },
+                        {
+                            "title": "SEO & Meta tagging in all languages",
+                            "text": "Listings data in translation is used to power search engine rankings in foreign languages to reach the majority of internet users who don’t speak English. Something that translation plugins cannot deliver."
+                        },
+                        {
+                            "title": "Currency & measurements conversion",
+                            "text": "It’s about more than just languages. Every visitor can view any listing in the currency and units of measurement that make sense to them."
+                        },
+                        {
+                            "title": "Multi language client interface",
+                            "text": "All our client facing features, from listings collections and saved searches, to automated listings alert emails, are all available in every supported language. More languages, more leads."
+                        }
                     ],
                     "video": "2x_10.mp4"
                 },
                 {
-                    "title": "You’re a real estate expert.",
-                    "type": "Not a web designer",
+                    "title": "You’re a real estate expert. <br> Not a ",
+                    "type": "web designer",
                     "list": [
-                        "Consistent design and style across your whole site",
-                        "Videos and animations deployed with a click",
-                        "Fully responsive sites for mobile, tablet and desktop",
-                        "21 years of web design for real estate"
+                        {
+                            "title": "Beautiful designs straight out of the box",
+                            "text": "With Xomio, you don’t have to choose between a clunky DIY design and paying an expensive designer. Every customized site looks great, in just a few clicks. "
+                        },
+                        {
+                            "title": "Apply consistent styles across your whole site",
+                            "text": "No need to hunt around for text boxes and color blocks. With Xomio, style changes are applied across your entire website in a single click, for a consistent look and feel."
+                        },
+                        {
+                            "title": "Videos and animations deployed with a click",
+                            "text": "You don’t need a $100k budget to have to have high end animations on your website. We make sure you have access to design features that keep visitors visually engaged, and on your site for longer."
+                        },
+                        {
+                            "title": "Fully responsive sites for mobile, tablet and desktop",
+                            "text": "Half of internet usage is now on mobile. Xomio lets you preview how your site looks on any tablet or smartphone. And it looks great."
+                        }
                     ],
                     "video": "xomio_2_1.mp4"
                 },
                 {
-                    "title": "You’re a real estate expert.",
-                    "type": "Not a Lawyer",
+                    "title": "You’re a real estate expert. <br> Not a ",
+                    "type": "Lawyer",
                     "list": [
-                        "Needs copy",
-                        "Needs copy",
-                        "Needs copy",
-                        "Needs copy"
+                        {
+                            "title": "ADA Compliance",
+                            "text": "All Xomio sites are 100% ADA-Compliant to standard WCAG 2.1 in every supported language. Never worry about an ADA lawsuit again."
+                        },
+                        {
+                            "title": "Fair Housing",
+                            "text": "Every realtor talks the talk on Fair Housing. But a Xomio site does the talking for you - in 19 languages. Reach every community in your market with the same information on housing.. "
+                        },
+                        {
+                            "title": "Accessibility is more than just a buzzword",
+                            "text": "It’s a legal liability if you get it wrong, and good business if you get it right. More accessibility means more people can access your listings, and more become leads. It’s that simple."
+                        }
                     ],
                     "video": "xomio_2_1.mp4"
                 }
@@ -1341,6 +1391,52 @@
                     "name": "Multi language emails",
                     "theme": "salmon",
                     "text": "We support you in providing a fully curated and consistent experience to your clients no matter their preferorange language."
+                }
+            ]
+        },
+        {
+            "slides": [
+                {
+                    "title": "Take a deeper look",
+                    "subtitle": "A website experience that boosts conversion",
+                    "text": [
+                        "Xomio sites are accessible to clients from any device, in their preferred language, localized according to their preferences.",
+                        "The feature-rich user experience encourages visitors to save searches, create listings mood boards, share properties to their social media, and more.",
+                        "Xomio’s user interface, translated listings, and multi language emails increase conversion and engagement thanks to a more personalized client journey."
+                    ],
+                    "video": "2_ipad_3.mp4",
+                    "videoClass": "section__video--2"
+                },
+                {
+                    "title": "Take a deeper look",
+                    "subtitle": "More languages + more listings =  more leads",
+                    "text": [
+                        "Listings data drives search engine rankings in every supported language, leading more consumers to your site, and giving them more to see when they arrive.",
+                        "Xomio is the only website platform that allows you to show the listings from your brand AND MLS, all branded to you.",
+                        "Every listing is available in 20 languages, localized by professional translators specializing in real estate."
+                    ],
+                    "video": ""
+                },
+                {
+                    "title": "Take a deeper look",
+                    "subtitle": "Compliance, without the headaches",
+                    "text": [
+                        "All Xomio sites are ADA-compliant, following WCAG 2.0 standards, delivering accessibility and eliminating costly fines and lawsuits.",
+                        "Multi language listings show your commitment to Fair Housing and diversity, with listings fully accessible to all prospective buyers searching in your market.",
+                        "Data protection, terms & conditions, CAPTCHA security — it’s all been taken care of for you."
+                    ],
+                    "video": ""
+                },
+                {
+                    "title": "Take a deeper look",
+                    "subtitle": "Better lead management means more <span class=\"text-primary\">sales",
+                    "text": [
+                        "Xomio’s Kanban CRM makes it easy to handle leads and follow up with clients.",
+                        "Drag and drop your contacts to track their status, helping you stay on top of your pipeline.",
+                        "Automated drip marketing, multi-language email auto-responses, and saved search alerts keep clients engaged with minimal effort."
+                    ],
+                    "video": "Homepage_ipad@2x.mp4",
+                    "videoClass": "section__video--2"
                 }
             ]
         }
