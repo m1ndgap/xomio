@@ -3,171 +3,177 @@
     background-position: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -2;
+    z-index: -1;
     overflow: hidden;
     transform: all .25s ease-in-out;
+}
 
-    [class^="decor-"], [class*=" decor-"] {
-        z-index: -1;
+.decor {
+    &-lines-1 {
+        @include size(313px, 285px);
+        opacity: .7;
+        background-image: url(../../assets/img/decor/lines-1.svg);
     }
-}
-
-.decor-lines-1 {
-    @include size(313px, 285px);
-    opacity: .7;
-    background-image: url(../../assets/img/decor/lines-1.svg);
-}
-.decor-lines-2 {
-    @include size(129px, 190px);
-    background-image: url(../../assets/img/decor/lines-2.svg);
-}
-.decor-lines-3 {
-    @include size(257px, 241px);
-    background-image: url(../../assets/img/decor/lines-3.svg);
-}
-.decor-lines-4 {
-    @include size(102px, 89px);
-    background-image: url(../../assets/img/decor/lines-4.svg);
-}
-.decor-lines-5 {
-    @include size(248px, 190px);
-    background-image: url(../../assets/img/decor/lines-5.svg);
-}
-.decor-lines-6 {
-    @include size(334px, 342px);
-    background-image: url(../../assets/img/decor/lines-6.svg);
-}
-.decor-lines-7 {
-    @include size(292px, 394px);
-    background-image: url(../../assets/img/decor/lines-7.svg);
-}
-.decor-lines-8 {
-    @include size(267px, 254px);
-    background-image: url(../../assets/img/decor/lines-8.svg);
-}
-.decor-lines-9 {
-    @include size(192px, 183px);
-    background-image: url(../../assets/img/decor/lines-9.svg);
-}
-.decor-lines-10 {
-    @include size(204px, 238px);
-    background-image: url(../../assets/img/decor/lines-10.svg);
-}
-.decor-lines-11 {
-    @include size(254px, 232px);
-    background-image: url(../../assets/img/decor/lines-11.svg);
-    opacity: .7;
-}
-.decor-lines-12 {
-    @include size(198px, 326px);
-    background-image: url(../../assets/img/decor/lines-12.svg);
-}
+    &-lines-2 {
+        @include size(129px, 190px);
+        background-image: url(../../assets/img/decor/lines-2.svg);
+    }
+    &-lines-3 {
+        @include size(257px, 241px);
+        background-image: url(../../assets/img/decor/lines-3.svg);
+    }
+    &-lines-4 {
+        @include size(102px, 89px);
+        background-image: url(../../assets/img/decor/lines-4.svg);
+    }
+    &-lines-5 {
+        @include size(248px, 190px);
+        background-image: url(../../assets/img/decor/lines-5.svg);
+    }
+    &-lines-6 {
+        @include size(334px, 342px);
+        background-image: url(../../assets/img/decor/lines-6.svg);
+    }
+    &-lines-7 {
+        @include size(292px, 394px);
+        background-image: url(../../assets/img/decor/lines-7.svg);
+    }
+    &-lines-8 {
+        @include size(267px, 254px);
+        background-image: url(../../assets/img/decor/lines-8.svg);
+    }
+    &-lines-9 {
+        @include size(192px, 183px);
+        background-image: url(../../assets/img/decor/lines-9.svg);
+    }
+    &-lines-10 {
+        @include size(204px, 238px);
+        background-image: url(../../assets/img/decor/lines-10.svg);
+    }
+    &-lines-11 {
+        @include size(254px, 232px);
+        background-image: url(../../assets/img/decor/lines-11.svg);
+        opacity: .7;
+    }
+    &-lines-12 {
+        @include size(198px, 326px);
+        background-image: url(../../assets/img/decor/lines-12.svg);
+    }
 
 
-.decor-dots-1 {
-    @include size(112px, 146px);
-    background-image: url(../../assets/img/decor/dots-1.svg);
-}
-.decor-dots-2 {
-    @include size(157px, 306px);
-    background-image: url(../../assets/img/decor/dots-2.svg);
-}
-.decor-dots-3 {
-    @include size(121px, 143px);
-    transform: scale(.66);
-    background-image: url(../../assets/img/decor/dots-3.svg);
-}
-.decor-dots-4 {
-    @include size(149px, 151px);
-    background-image: url(../../assets/img/decor/dots-4.svg);
-}
-.decor-dots-5 {
-    @include size(130px, 124px);
-    background-image: url(../../assets/img/decor/dots-5.svg);
-}
-
-
-.decor-dots-bg,
-.decor-dots-bg-2,
-.decor-dots-bg-3 {
-    background-position: 50% 0;
-    background-size: 100% auto;
-}
-.decor-dots-bg {
-    width: rem(1423px);
-    background-image: url(../../assets/img/decor/dots-bg.svg);
-}
-.decor-dots-bg-2 {
-    @include size(rem(765px), rem(609px));
-    background-image: url(../../assets/img/decor/dots-bg-2.svg);
-}
-.decor-dots-bg-3 {
-    @include size(rem(823px), rem(557px));
-    background-image: url(../../assets/img/decor/dots-bg-3.svg);
-}
-
-.decor-shape-1 {
-    @include size(288px, 235px);
-    background-image: url(../../assets/img/decor/shape-1.svg);
-}
-.decor-shape-2 {
-    @include size(177px, 140px);
-    background-image: url(../../assets/img/decor/shape-2.svg);
-}
-.decor-shape-3 {
-    @include size(256px, 283px);
-    background-image: url(../../assets/img/decor/shape-3.svg);
-}
-.decor-shape-4 {
-    @include size(1062px, 995px);
-    background-image: url(../../assets/img/decor/shape-4.svg);
-}
-
-
-.decor-complex-1 {
-    @include size(255px, 323px);
-    background-image: url(../../assets/img/decor/complex-1.svg);
-}
-.decor-complex-2 {
-    @include size(225px, 249px);
-    background-image: url(../../assets/img/decor/complex-2.svg);
-}
-.decor-complex-3 {
-    @include size(333px, 275px);
-    background-image: url(../../assets/img/decor/complex-3.svg);
-}
-.decor-complex-4 {
-    @include size(275px, 293px);
-    background-image: url(../../assets/img/decor/complex-4.svg);
-}
-.decor-complex-5 {
-    @include size(304px, 344px);
-    background-image: url(../../assets/img/decor/complex-5.svg);
-}
-.decor-complex-6 {
-    @include size(315px, 275px);
-    background-image: url(../../assets/img/decor/complex-6.svg);
-}
-.decor-complex-7 {
-    @include size(287px, 229px);
-    background-image: url(../../assets/img/decor/complex-7.svg);
-}
-.decor-complex-8 {
-    @include size(315px, 275px);
-    background-image: url(../../assets/img/decor/complex-8.svg);
-}
-
-@include media-breakpoint-up(xl) {
-    .decor-dots-3 {
+    &-dots-1 {
+        @include size(112px, 146px);
+        background-image: url(../../assets/img/decor/dots-1.svg);
+    }
+    &-dots-2 {
+        @include size(157px, 306px);
+        background-image: url(../../assets/img/decor/dots-2.svg);
+    }
+    &-dots-3 {
         @include size(121px, 143px);
-        transform: scale(1);
+        transform: scale(.66);
+        background-image: url(../../assets/img/decor/dots-3.svg);
+    }
+    &-dots-4 {
+        @include size(149px, 151px);
+        background-image: url(../../assets/img/decor/dots-4.svg);
+    }
+    &-dots-5 {
+        @include size(130px, 124px);
+        background-image: url(../../assets/img/decor/dots-5.svg);
+    }
+    &-dots-6 {
+        @include size(116px, 196px);
+        background-image: url(../../assets/img/decor/dots-6.svg);
     }
 
-    .decor-lines-3 {
-        transform: scale(1);
+
+    &-dots-bg,
+    &-dots-bg-2,
+    &-dots-bg-3 {
+        background-position: 50% 0;
+        background-size: 100% auto;
+    }
+    &-dots-bg {
+        width: rem(1423px);
+        background-image: url(../../assets/img/decor/dots-bg.svg);
+    }
+    &-dots-bg-2 {
+        @include size(rem(765px), rem(609px));
+        background-image: url(../../assets/img/decor/dots-bg-2.svg);
+    }
+    &-dots-bg-3 {
+        @include size(rem(823px), rem(557px));
+        background-image: url(../../assets/img/decor/dots-bg-3.svg);
     }
 
-    .decor-complex-2 {
-        @include size(293px, 322px);
+    &-shape-1 {
+        @include size(288px, 235px);
+        background-image: url(../../assets/img/decor/shape-1.svg);
+    }
+    &-shape-2 {
+        @include size(177px, 140px);
+        background-image: url(../../assets/img/decor/shape-2.svg);
+    }
+    &-shape-3 {
+        @include size(256px, 283px);
+        background-image: url(../../assets/img/decor/shape-3.svg);
+    }
+    &-shape-4 {
+        @include size(1062px, 995px);
+        background-image: url(../../assets/img/decor/shape-4.svg);
+    }
+    &-shape-5 {
+        @include size(293px, 275px);
+        background-image: url(../../assets/img/decor/shape-5.svg);
+    }
+
+
+    &-complex-1 {
+        @include size(255px, 323px);
+        background-image: url(../../assets/img/decor/complex-1.svg);
+    }
+    &-complex-2 {
+        @include size(225px, 249px);
+        background-image: url(../../assets/img/decor/complex-2.svg);
+    }
+    &-complex-3 {
+        @include size(333px, 275px);
+        background-image: url(../../assets/img/decor/complex-3.svg);
+    }
+    &-complex-4 {
+        @include size(275px, 293px);
+        background-image: url(../../assets/img/decor/complex-4.svg);
+    }
+    &-complex-5 {
+        @include size(304px, 344px);
+        background-image: url(../../assets/img/decor/complex-5.svg);
+    }
+    &-complex-6 {
+        @include size(315px, 275px);
+        background-image: url(../../assets/img/decor/complex-6.svg);
+    }
+    &-complex-7 {
+        @include size(287px, 229px);
+        background-image: url(../../assets/img/decor/complex-7.svg);
+    }
+    &-complex-8 {
+        @include size(315px, 275px);
+        background-image: url(../../assets/img/decor/complex-8.svg);
+    }
+
+    @include media-breakpoint-up(xl) {
+        &-dots-3 {
+            @include size(121px, 143px);
+            transform: scale(1);
+        }
+
+        &-lines-3 {
+            transform: scale(1);
+        }
+
+        &-complex-2 {
+            @include size(293px, 322px);
+        }
     }
 }

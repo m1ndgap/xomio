@@ -3,8 +3,10 @@
         padding-top: 0;
     }
 
-    .section {
-        padding: 0;
+    [data-page="fullpage"] {
+        .section {
+            padding: 0;
+        }
     }
 
     @include media-breakpoint-up(xl) {
@@ -12,8 +14,10 @@
             padding-top: 0;
         }
 
-        .section {
-            padding: 0;
+        [data-page="fullpage"] {
+            .section {
+                padding: 0;
+            }
         }
     }
 }
