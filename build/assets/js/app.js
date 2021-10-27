@@ -1095,6 +1095,7 @@ $(document).ready(function(){
 
         let $toggle = $(this);
         let $tag = $toggle.closest('[data-element="tag"]');
+        let tagWidth = tagPopoverWidth;
 
         if ($tag.hasClass(expandedClass)) {
             $tag.css('width', 'auto');
@@ -1103,16 +1104,16 @@ $(document).ready(function(){
             $('.'+expandedClass+'[data-element="tag"]').css('width', 'auto');
             $('.'+expandedClass+'[data-element="tag"]').removeClass(expandedClass);
 
-            if ( $toggle.outerWidth() > tagPopoverWidth ) {
-                tagPopoverWidth = $toggle.outerWidth() + 44;
+            if ( $toggle.outerWidth() > tagWidth ) {
+                tagWidth = $toggle.outerWidth() + 28;
             }
 
-            if ( ($(window).width() - $toggle.offset().left ) < tagPopoverWidth ) {
+            if ( ($(window).width() - $toggle.offset().left ) < tagWidth ) {
                 $tag.addClass('is-right');
             }
 
             $tag.addClass(expandedClass);
-            $tag.css('width', tagPopoverWidth);
+            $tag.css('width', tagWidth);
         }
 
         return false;

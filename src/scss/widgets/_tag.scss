@@ -43,11 +43,10 @@
        }
 
        &-body {
-           @include size(0);
+           @include size($spacer-10);
            opacity: 0;
            visibility: hidden;
-           padding: rem(38px 44px $spacer-3);
-           transition: opacity 0.3s 0s, height 0.3s 0.3s, width 0.3s 0.3s;
+           transition: opacity 0.3s 0.1s, width 0s 0s, height 0s 0s;
        }
 
        &-text {
@@ -76,6 +75,7 @@
         &__link {
             position: absolute;
             left: 0;
+            right: 0;
             top: 0;
 
             &-icon {
@@ -110,9 +110,10 @@
             &-body {
                 width: 288px;
                 height: auto;
+                padding: rem(38px 44px $spacer-3);
                 opacity: 1;
                 visibility: visible;
-                transition: opacity 0.3s 0.1s;
+                transition: opacity 0.3s 0s, height 0.3s 0.3s, width 0.3s 0.3s;
             }
        }
     }

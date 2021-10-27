@@ -17,7 +17,8 @@
                 "!src/js/vendor/jquery.fancybox.min.js",
                 "!src/js/vendor/jquery.mCustomScrollbar.js",
                 "!src/js/vendor/jquery.mousewheel-3.0.6.min.js",
-                "!src/js/vendor/jquery.mousewheel.min.js"
+                "!src/js/vendor/jquery.mousewheel.min.js",
+                "!src/js/vendor/scrolloverflow.js"
             ]
         },
         "vendor.css": {
@@ -51,6 +52,7 @@
                 "node_modules/aos/dist/aos.js",
                 "node_modules/smooth-scroll/dist/smooth-scroll.min.js",
                 "node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js",
+                "src/js/vendor/scrolloverflow.js",
                 "node_modules/fullpage.js/dist/fullpage.min.js",
                 "node_modules/debounce/index.js"
             ]
