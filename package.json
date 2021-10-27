@@ -12,6 +12,7 @@
     "gulp": "^3.9.1"
   },
   "dependencies": {
+    "animejs": "^3.2.1",
     "aos": "^2.3.4",
     "app-root-path": "^3.0.0",
     "browser-sync": "^2.26.3",
