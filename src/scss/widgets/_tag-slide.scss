@@ -1,0 +1,17 @@
+.tag-slide {
+    color: $white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        color: inherit;
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+    }
+}

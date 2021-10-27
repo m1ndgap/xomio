@@ -1,0 +1,87 @@
+.tags-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include size(100vw, 100vh);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s 0.1s;
+    z-index: $navbar-z-index + 10;
+
+    &.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s 0s;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        left: rem($spacer-2);
+        @include size(rem(120px), rem(85px));
+        @include background-svg("<svg width='120' height='85' xmlns='http://www.w3.org/2000/svg'><path d='m120.177.337-3.526.321c-14.044 1.278-24.94 12.595-25.864 26.477l.001 27.077c0 16.834-13.51 30.512-30.279 30.784L60 85l-.51-.004c-16.6-.27-30.008-13.678-30.274-30.28l-.004-.504.001-27.068C28.302 13.396 17.612 2.163 3.77.7L3.35.66-.177.336h120.354ZM52.929 41.101a2 2 0 1 0-2.829 2.828L57.172 51 50.1 58.071A2 2 0 0 0 52.93 60.9l7.07-7.072 7.072 7.072a2 2 0 0 0 2.828-2.829L62.83 51l7.07-7.071a2 2 0 1 0-2.828-2.829L60 48.172Z' fill='#{$white}' fill-rule='nonzero'/></svg>");
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    &__slider {
+        height: 100%;
+        width: 100%;
+
+        .slick-prev {
+            display: none;
+        }
+    }
+
+    &__slide {
+        min-height: 100vh;
+
+        .slick-initialized & {
+            display: flex;
+        }
+    }
+
+    .slick-arrow {
+        @include size(rem(48px));
+
+        &:before {
+            color: $white;
+            font-size: rem(48px);
+        }
+
+        @include hover-focus {
+            &:before {
+                color: $white;
+            }
+        }
+    }
+
+    .slick-prev {
+        display: none !important;
+    }
+
+    .slick-next {
+        right: rem(14px);
+    }
+
+    &__blob {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        touch-action: none;
+    }
+
+    @media (min-width: 375px) {
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+    }
+}

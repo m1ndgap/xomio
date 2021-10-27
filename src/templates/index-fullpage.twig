@@ -74,7 +74,7 @@
               <div class="bl2item"><img src="./assets/img/images/block22.png" alt=""></div>
               <div class="bl2item bl2hintwrap">
                 <div class="bl2hint">
-                  Your site, in 20 languages, indexed on all major search engines, accessible from any device.
+                  Your site, in 19 languages, indexed on all major search engines, accessible from any device.
                   <img src="./assets/img/images/sentence.svg" alt="">
                 </div>
               </div>
@@ -101,7 +101,7 @@
                     <div class="tag__popover-body">
                       <p class="tag__popover-text">{{ item.text }}</p>
                       <p class="tag__popover-action">
-                        <a href="#popup-{{ item.id }}" class="tag__popover-more more">Learn more <i class="more__icon icon-arrow-right"></i></a>
+                        <a href="#" class="tag__popover-more more" data-element="tags-popup-trigger" data-id="{{ loop.index }}">Learn more <i class="more__icon icon-arrow-right"></i></a>
                       </p>
                     </div>
                   </div>
@@ -322,8 +322,10 @@
 {% endblock %}
 
 {% block modals %}
+  {% include 'partials/_tags-popup.twig' %}
 {% endblock %}
 
 {% block scripts %}
+  <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 {% endblock %}

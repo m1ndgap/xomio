@@ -2,6 +2,10 @@
 $(document).ready(function(){
     let $tag = $('[data-element="tag"]');
     let $tagToggle = $('[data-element="tag-toggle"]');
+    let $tagsPopup = $('[data-component="tags-popup"]');
+    let $tagsPopupTrigger = $('[data-element="tags-popup-trigger"]');
+    let $tagsPopupSlider = $('[data-slider="tags"]');
+    let $tagsPopupClose = $('[data-element="tags-popup-close"]');
     let tagPopoverWidth = 365;
 
     if ( $(window).width() < 375 ) {
@@ -46,5 +50,35 @@ $(document).ready(function(){
         }
 
         return false;
+    });
+
+    $tagsPopupTrigger.on('click', function(e) {
+        e.preventDefault();
+
+        let $trigger = $(this);
+        let triggerID = $trigger.attr('data-id');
+
+        $tagsPopupSlider.slick('slickGoTo', triggerID - 1, false);
+
+        setTimeout(function() {
+            $tagsPopup.addClass(visibleClass);
+        }, 400);
+
+        $('.'+expandedClass+'[data-element="tag"]').css('width', 'auto');
+        $('.'+expandedClass+'[data-element="tag"]').removeClass(expandedClass);
+    });
+
+    $tagsPopupClose.on('click', function(e) {
+        e.preventDefault();
+
+        $tagsPopup.removeClass(visibleClass);
+    });
+
+    $(document).on('keyup', function(e) {
+        if (e.key === "Escape" || e.keyCode === 27) {
+            $tagsPopup.removeClass(visibleClass);
+            $('.'+expandedClass+'[data-element="tag"]').css('width', 'auto');
+            $('.'+expandedClass+'[data-element="tag"]').removeClass(expandedClass);
+        }
     });
 });

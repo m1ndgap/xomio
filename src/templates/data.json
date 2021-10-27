@@ -605,8 +605,8 @@
                 ]
             },
             {
-                "title": "We speak real estate, in 20 languages",
-                "text": "We’ve been working with listings in 20 languages for 20 years.We know everything there is to know about listings data, and about real estate translation.",
+                "title": "We speak real estate, in 19 languages",
+                "text": "We’ve been working with listings in 19 languages for 20 years.We know everything there is to know about listings data, and about real estate translation.",
                 "list": [
                     {
                         "title": "Every brand listing in 19 languages",
@@ -699,7 +699,7 @@
                 "icon": "publish",
                 "theme": "orange",
                 "title": "Publish internationally!",
-                "text": "Launch your website in 20 languages with a single click."
+                "text": "Launch your website in 19 languages with a single click."
             }
         ],
         "tabs": [
@@ -1037,7 +1037,7 @@
                     "type": "translator",
                     "list": [
                         {
-                            "title": "All listings translated into 20 languages",
+                            "title": "All listings translated into 19 languages",
                             "text": "Translation for real estate is about more than just matching words. Our translators know the right terms to use in every supported language, delivering consistent information to consumers everywhere."
                         },
                         {
@@ -1114,282 +1114,329 @@
                     "id": "client-kanban",
                     "name": "Client kanban",
                     "theme": "orange",
+                    "arrowColor": "#388172",
                     "text": "The easy, interactive, way to track your leads."
                 },
                 {
                     "id": "glex",
                     "name": "GLEX (Brand listings IDX)",
                     "theme": "green",
+                    "arrowColor": "#ff8e7b",
                     "text": "Every listing from your brokerage brand, worldwide. Translated and branded to you, on your Xomio site. More listings, more leads, more referrals."
                 },
                 {
                     "id": "dynamic-search-filters",
                     "name": "Dynamic search filters",
                     "theme": "salmon",
+                    "arrowColor": "#ffc300",
                     "text": "Property search filters are automatically updated based on the features of the listings avaialble on your Xomio site, for a better search experience."
                 },
                 {
                     "id": "multi-language-listings-view",
                     "name": "Multi language listings view",
                     "theme": "yellow",
+                    "arrowColor": "#f45d48",
                     "text": "We translate and localize your listings into 18 languages."
                 },
                 {
                     "id": "currency-conversion",
                     "name": "Currency conversion",
                     "theme": "orange",
+                    "arrowColor": "#388172",
                     "text": "A global website needs global features. Users can change their currency preferences and see pricing using up to date exchange rates."
                 },
                 {
                     "id": "fully-responsive",
                     "name": "Fully responsive",
                     "theme": "green",
+                    "arrowColor": "#388172",
                     "text": "Size matters... when it comes to responsive design. We make sure no matter the size of your clients' screens, they see your listings perfectly."
                 },
                 {
                     "id": "fair-housing-principles",
                     "name": "Fair housing principles",
                     "theme": "green",
+                    "arrowColor": "#ff8e7b",
                     "text": "Xomio helps you deliver on Fair Housing principles, with every site fully &lt;ADA compliant&gt; and accessible for all in &lt;a range of languages&gt;"
                 },
                 {
                     "id": "https",
                     "name": "https",
                     "theme": "salmon",
+                    "arrowColor": "#ffc300",
                     "text": "The technical stuff! Https delivers fully secure site encryption to protect visitors to every Xomio site, without sacrificing website performance."
                 },
                 {
                     "id": "no-coding",
                     "name": "No coding",
                     "theme": "yellow",
+                    "arrowColor": "#f45d48",
                     "text": "The only developers you should be speaking to are the ones building homes. No overwhelming settings here: Xomio is all clicks, no code."
                 },
                 {
                     "id": "human-customer-support",
                     "name": "Human customer support",
                     "theme": "orange",
+                    "arrowColor": "#f45d48",
                     "text": "You're not on your own. Every Xomio site plan comes with access to real customer support – deliveorange by actual people."
                 },
                 {
                     "id": "idx",
                     "name": "IDX",
                     "theme": "orange",
-                    "text": "IDX, in 20 languages, integrated into your website at the click of a button. With Xomio, it's that simple."
+                    "arrowColor": "#388172",
+                    "text": "IDX, in 19 languages, integrated into your website at the click of a button. With Xomio, it's that simple."
                 },
                 {
                     "id": "crm",
                     "name": "CRM with lead management",
                     "theme": "green",
+                    "arrowColor": "#ff8e7b",
                     "text": "Powerful features, simple interface, great ouctomes. Xomio delivers client lead tracking without the fuss."
                 },
                 {
                     "id": "video-background",
                     "name": "Video background",
                     "theme": "salmon",
+                    "arrowColor": "#ffc300",
                     "text": "Xomio sites deliver a more engaging experience for visitors. Choose from our library of real estate clips to add visually rich video backgrounds to your home page."
                 },
                 {
                     "id": "20-languages",
-                    "name": "20 languages",
+                    "name": "19 languages",
                     "theme": "yellow",
+                    "arrowColor": "#f45d48",
                     "text": "If you can't reach foreign language speakers, you can't reach your market. With Xomio, you can."
                 },
                 {
                     "id": "multi-language-client-tools",
                     "name": "Multi language client tools",
                     "theme": "orange",
+                    "arrowColor": "#f45d48",
                     "text": "Clients can do more than just view your properties in their preferorange language, they get the complete experience."
                 },
                 {
                     "id": "multi-language-listings-search",
                     "name": "Multi language listings search",
                     "theme": "orange",
+                    "arrowColor": "#388172",
                     "text": "Looking for homes in Nueva York?"
                 },
                 {
                     "id": "google-analytics",
                     "name": "Google analytics",
                     "theme": "green",
+                    "arrowColor": "#ff8e7b",
                     "text": "Website tracking made easy. Analyze your Xomio site performance with a simple integration to your Google account.."
                 },
                 {
                     "id": "knowledge-base",
                     "name": "Knowledge base",
                     "theme": "salmon",
+                    "arrowColor": "#ffc300",
                     "text": "Video explainers, articles, FAQs and more. Our knowledge base makes it easy to get the most out of your Xomio site."
                 },
                 {
                     "id": "wcag-2-0",
                     "name": "WCAG 2.0",
                     "theme": "yellow",
+                    "arrowColor": "#f45d48",
                     "text": "This is the standard of ADA compliance of all Xomio websites."
                 },
                 {
                     "id": "client-saved-collections",
                     "name": "Client saved collections",
                     "theme": "orange",
+                    "arrowColor": "#f45d48",
                     "text": "Give your clients a more interactive experience, keeping them active in your website for longer."
                 },
                 {
                     "id": "drip-marketing",
                     "name": "Drip marketing",
                     "theme": "orange",
+                    "arrowColor": "#388172",
                     "text": "In this competitive market, automatically give your clients what they want most: the inside track on the properties that interest them."
                 },
                 {
                     "id": "client-saved-properties",
                     "name": "Client saved properties",
                     "theme": "green",
+                    "arrowColor": "#ff8e7b",
                     "text": "COPY IS MISSING"
                 },
                 {
                     "id": "client-saved-searches",
                     "name": "Client saved searches",
                     "theme": "salmon",
+                    "arrowColor": "#ffc300",
                     "text": "Set up listing alerts for you clients or they can save their own search and receive updates. Don't worry,the control and insights are shaorange with you!"
                 },
                 {
                     "id": "clean-urls",
                     "name": "Clean URLs",
                     "theme": "yellow",
+                    "arrowColor": "#f45d48",
                     "text": "We make sure your URLS make sense no .com23tuj4/3#jy used here! We make sure your urls are nice to share and easy to remember!"
                 },
                 {
                     "id": "seo-friendly-urls",
                     "name": "SEO friendly URLs",
                     "theme": "orange",
+                    "arrowColor": "#f45d48",
                     "text": "SEO friendly URLS are an important part of achieving the best rankings in Google searches. We've got you coveorange!"
                 },
                 {
                     "id": "cloud-based",
                     "name": "Cloud based",
                     "theme": "orange",
+                    "arrowColor": "#388172",
                     "text": "Our super high availability cloud servers deliver great website performance from any location, across all mobile and desktop devices"
                 },
                 {
                     "id": "captcha",
                     "name": "CAPTCHA",
                     "theme": "green",
+                    "arrowColor": "#ff8e7b",
                     "text": "Security is important and no one wants to be spammed. We have a mix of hidden and test CAPTCHA used throught all xomio sites to keep you secure."
                 },
                 {
                     "id": "global-seo",
                     "name": "Global SEO",
                     "theme": "salmon",
+                    "arrowColor": "#ff8e7b",
                     "text": "You have 19 different language websites, each with their own language seo, all prepaorange to be indexed and searched by search engines globally."
                 },
                 {
                     "id": "featuorange-properties",
                     "name": "Featuorange properties",
                     "theme": "salmon",
+                    "arrowColor": "#ffc300",
                     "text": "We provide a simple way for you to feature properties on your website from your own listing invetory or the GLEX or IDX feed you have access to."
                 },
                 {
                     "id": "ssl-certificates",
                     "name": "SSL certificates",
                     "theme": "yellow",
+                    "arrowColor": "#f45d48",
                     "text": "Security and visibility is important, we automatically update your certificates for you so you don't need to worry."
                 },
                 {
                     "id": "Customizable-idx-filters",
                     "name": "Customizable IDX filters",
                     "theme": "orange",
+                    "arrowColor": "#388172",
                     "text": "Set filters around property style, price and more so you only display listing from your IDX that match your niche."
                 },
                 {
                     "id": "ada-compliance",
                     "name": "ADA compliance",
                     "theme": "green",
+                    "arrowColor": "#388172",
                     "text": "All Xomio websites are built to be fully ADA compliant in all 19 languages. It's important to us that all xomio sites provide equal access to all consumers."
                 },
                 {
                     "id": "data-protection",
                     "name": "DATA protection",
                     "theme": "green",
+                    "arrowColor": "#ff8e7b",
                     "text": "COPY IS MISSING"
                 },
                 {
                     "id": "photo-video-library",
                     "name": "Photo & video library",
                     "theme": "salmon",
+                    "arrowColor": "#ffc300",
                     "text": "If you don't have your own marketing assets, we've got you coveorange with our own curated licensed librarys to support you in customising your site."
                 },
                 {
                     "id": "custom-favicon",
                     "name": "Custom favicon",
                     "theme": "yellow",
+                    "arrowColor": "#f45d48",
                     "text": "We care about your visibility all the way down to the little details."
                 },
                 {
                     "id": "gallery-view",
                     "name": "Gallery view",
                     "theme": "orange",
+                    "arrowColor": "#f45d48",
                     "text": "Clients can view listings in the ways their prefer. List view, gallery view or map."
                 },
                 {
                     "id": "branded-auto-responder",
                     "name": "Branded auto responder",
                     "theme": "orange",
+                    "arrowColor": "#388172",
                     "text": "We support you in smart and nicely designed communication in your clients prefeorange language."
                 },
                 {
                     "id": "professional-translation",
                     "name": "Professional translation",
                     "theme": "green",
+                    "arrowColor": "#ff8e7b",
                     "text": "COPY IS MISSING"
                 },
                 {
                     "id": "custom-website-title",
                     "name": "Custom website title",
                     "theme": "salmon",
+                    "arrowColor": "#ffc300",
                     "text": "COPY IS MISSING"
                 },
                 {
                     "id": "animation",
                     "name": "Animation",
                     "theme": "yellow",
+                    "arrowColor": "#f45d48",
                     "text": "High end graphics aren't just for the big spenders, we've brought you the latest animation and graphic features to embrace on your website."
                 },
                 {
                     "id": "units-of-measurement-conversion",
                     "name": "Units of measurement conversion",
                     "theme": "orange",
+                    "arrowColor": "#388172",
                     "text": "We automatically convert and display the correct units of measurement based on your clients location. Or they can set their measurement preferences easily."
                 },
                 {
                     "id": "advanced-listing-data",
                     "name": "Advanced listing data",
                     "theme": "green",
+                    "arrowColor": "#ff8e7b",
                     "text": "We partner with your MLS or Brand to make sure we're taking full advantage of your listings data, we want to make sure your efforts didn't go to waste!"
                 },
                 {
                     "id": "client-dashboard",
                     "name": "Client dashboard",
                     "theme": "salmon",
+                    "arrowColor": "#ffc300",
                     "text": "Your clients can login to your custom designed client space. From their dashboard they can access your advanced client tools and provide you with more insights."
                 },
                 {
                     "id": "guided-onboarding",
                     "name": "Guided onboarding",
                     "theme": "yellow",
+                    "arrowColor": "#f45d48",
                     "text": "We want to make sure we support you every step of your way to provide you with the guidance you need to take full advantage of your new global marketing tools."
                 },
                 {
                     "id": "multi-language-meta-tagging",
                     "name": "Multi language Meta Tagging",
                     "theme": "orange",
+                    "arrowColor": "#388172",
                     "text": "COPY IS MISSING"
                 },
                 {
                     "id": "multi-language-social-sharing",
                     "name": "Multi language social sharing",
                     "theme": "green",
+                    "arrowColor": "#ff8e7b",
                     "text": "Both you and your clients can share your property listings socially in 19 languages."
                 },
                 {
                     "id": "Multi-language-emails",
                     "name": "Multi language emails",
                     "theme": "salmon",
+                    "arrowColor": "#f45d48",
                     "text": "We support you in providing a fully curated and consistent experience to your clients no matter their preferorange language."
                 }
             ]
@@ -1413,7 +1460,7 @@
                     "text": [
                         "Listings data drives search engine rankings in every supported language, leading more consumers to your site, and giving them more to see when they arrive.",
                         "Xomio is the only website platform that allows you to show the listings from your brand AND MLS, all branded to you.",
-                        "Every listing is available in 20 languages, localized by professional translators specializing in real estate."
+                        "Every listing is available in 19 languages, localized by professional translators specializing in real estate."
                     ],
                     "video": ""
                 },

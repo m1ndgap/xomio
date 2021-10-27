@@ -20,8 +20,7 @@
 .select2-selection__arrow:before,
 .select2-search--dropdown:before,
 .select2-results__option:after,
-.slick-prev:before,
-.slick-next:before {
+.slick-arrow:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
   speak: never;
@@ -39,7 +38,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-right:before {
+.icon-arrow-right:before,
+.tags-popup .slick-arrow:before {
   content: "\e913";
 }
 .icon-attach:before {
