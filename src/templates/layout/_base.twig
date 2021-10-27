@@ -10,8 +10,6 @@
   <meta name="keywords" content="{% block pageKeywords %}{% endblock %}">
   <meta name="author" content="">
 
-  {% block styles %}{% endblock %}
-
   <link href="./assets/img/favicon.svg" rel="shortcut icon">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +18,8 @@
 
   <link rel="stylesheet" href="./assets/css/vendor.css?123456">
   <link rel="stylesheet" href="./assets/css/app.css?123456">
+
+  {% block styles %}{% endblock %}
 
   <title>{% if pageTitle %} {{ pageTitle }} - {% endif %}{{ company.name }}</title>
 

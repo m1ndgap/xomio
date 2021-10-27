@@ -1,4 +1,9 @@
 
+// Core variables and mixins
+@import "common/variables";
+@import "mixins";
+
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	opacity: 0.55;
 }
@@ -50,23 +55,6 @@ h2 {
 	font-weight: 600;
 	margin: 0 0 25px;
 	padding: 0;
-}
-
-html {
-	height: 100%;
-	overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-body, html {
-	min-height: 100%;
-	width: 100%;
-	position: relative;
-	background-color: #fff;
-	font-family: 'Inter', sans-serif;
-	font-size: 16px;
-	color: #6C6C72;
-	font-weight: 400;
 }
 
 .wrapper {

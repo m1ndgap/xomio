@@ -5,6 +5,11 @@
                 "src/scss/app.scss"
             ]
         },
+        "home.css": {
+            "files": [
+                "src/scss/home.scss"
+            ]
+        },
         "app.js": {
             "files": [
                 "src/js/*.js",
