@@ -54,6 +54,7 @@
                 "node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js",
                 "src/js/vendor/scrolloverflow.js",
                 "node_modules/fullpage.js/dist/fullpage.min.js",
+                "node_modules/fullpage.js/dist/fullpage.min.js.map",
                 "node_modules/debounce/index.js"
             ]
         },

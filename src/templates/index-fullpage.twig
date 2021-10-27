@@ -32,7 +32,7 @@
               <div class="section__object">
                 <div class="section__template section__template--shadow">
                   <div class="section__video section__video--default">
-                    <video muted playsinline autoplay loop data-autoplay>
+                    <video muted playsinline loop data-autoplay>
                       <source src="./assets/video/{{ slide.video }}" type="video/mp4" />
                       <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
                     </video>
@@ -63,13 +63,13 @@
           </div>
           <div class="bl2right">
             <div class="bl2list">
-              <div class="bl2item"><img src="./assets/img/images/block2.png" /></div>
-              <div class="bl2item"><img src="./assets/img/images/block21.png" /></div>
-              <div class="bl2item"><img src="./assets/img/images/block22.png" /></div>
+              <div class="bl2item"><img src="./assets/img/images/block2.png" alt=""></div>
+              <div class="bl2item"><img src="./assets/img/images/block21.png" alt=""></div>
+              <div class="bl2item"><img src="./assets/img/images/block22.png" alt=""></div>
               <div class="bl2item bl2hintwrap">
                 <div class="bl2hint">
                   Your site, in 20 languages, indexed on all major search engines, accessible from any device.
-                  <img src="./assets/img/images/sentence.svg" />
+                  <img src="./assets/img/images/sentence.svg" alt="">
                 </div>
               </div>
             </div>
@@ -136,7 +136,7 @@
                 <div class="section__object">
                   <div class="section__template section__template--shadow">
                     <div class="section__video {% if slide.videoClass %} {{ slide.videoClass }} {% else %} section__video--default {% endif %}">
-                      <video muted playsinline autoplay loop data-autoplay>
+                      <video muted playsinline loop data-autoplay>
                         <source src="./assets/video/{{ slide.video }}" type="video/mp4" />
                         <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
                       </video>
@@ -314,7 +314,7 @@
 {% block scripts %}
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-  <script type="text/javascript">
+  <script>
 
     function initialization(){
       var myFullpage = new fullpage('[data-page="fullpage"]', {
@@ -358,12 +358,6 @@
             })
             .start();
           }
-
-          let $video = this.item.querySelector('video');
-
-          if ($video.length > 0) {
-              $video.play();
-          }
         },
         afterSlideLoad: function(section, origin, destination, direction){
           if (section.index === 0) {
@@ -379,12 +373,6 @@
                     state.elements.cursor.style.display = 'none';
                 })
                 .start();
-          }
-
-          let $video = destination.item.querySelector('video');
-
-          if ($video.length > 0) {
-              $video.play();
           }
         },
         onSlideLeave: function(section, origin, destination, direction) {

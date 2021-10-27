@@ -1150,7 +1150,7 @@
                     "id": "fair-housing-principles",
                     "name": "Fair housing principles",
                     "theme": "green",
-                    "text": "Xomio helps you deliver on Fair Housing principles, with every site fully <ADA compliant> and accessible for all in <a range of languages>"
+                    "text": "Xomio helps you deliver on Fair Housing principles, with every site fully &lt;ADA compliant&gt; and accessible for all in &lt;a range of languages&gt;"
                 },
                 {
                     "id": "https",
