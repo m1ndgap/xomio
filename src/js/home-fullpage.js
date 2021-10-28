@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             controlArrows: false,
             scrollBar: true,
             //responsive: 900,
-            licenseKey: '70FFA765-BA464426-B38D8C81-8308669D',
+            licenseKey: '7C83C7E4-02654F77-96AB0657-A3F6DE6F',
             scrollHorizontally: true,
             scrollHorizontallyKey: 'E6229FD0-80AC4893-A7CE7036-0EDBAD95',
             afterLoad: function(origin, destination, direction) {
