@@ -8,18 +8,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initialization(){
         var myFullpage = new fullpage('[data-page="fullpage"]', {
+            paddingTop: document.querySelector('[data-component="navbar"]').offsetHeight+'px',
             sectionSelector: '[data-fullpage="section"]',
             slideSelector: '[data-fullpage="slide"]',
-            autoScrolling: true,
-            slidesNavigation: true,
+            //autoScrolling: true,
+            slidesNavigation: false,
+            controlArrows: false,
             scrollBar: true,
             //responsive: 900,
-            //scrollOverflow: true,
             licenseKey: '70FFA765-BA464426-B38D8C81-8308669D',
-            paddingTop: document.querySelector('[data-component="navbar"]').offsetHeight+'px',
+            scrollHorizontally: true,
+            scrollHorizontallyKey: 'E6229FD0-80AC4893-A7CE7036-0EDBAD95',
             afterLoad: function(origin, destination, direction) {
                 if ( destination.isLast ) {
-
                     fullpage_api.setAutoScrolling(false);
                     fullpage_api.setFitToSection(false);
                 } else {

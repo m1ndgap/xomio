@@ -13,7 +13,8 @@
         "app.js": {
             "files": [
                 "src/js/*.js",
-                "!src/js/vendor.js"
+                "!src/js/vendor.js",
+                "!src/js/fullpage.scrollHorizontally.min.js"
             ]
         },
         "vendor.css": {
@@ -36,7 +37,8 @@
                 "node_modules/animejs/lib/anime.min.js",
                 "node_modules/aos/dist/aos.js",
                 "node_modules/dropzone/dist/min/dropzone.min.js",
-                "node_modules/fullpage.js/dist/fullpage.min.js",
+                "src/js/fullpage.scrollHorizontally.min.js",
+                "node_modules/fullpage.js/dist/fullpage.extensions.min.js",
                 "node_modules/inputmask/dist/inputmask.min.js",
                 "node_modules/parsleyjs/dist/parsley.min.js",
                 "node_modules/fullpage.js/vendors/scrolloverflow.min.js",

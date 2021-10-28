@@ -131,11 +131,11 @@
                   {% if slide.text %}
                     <p>{{ slide.text }}</p>
                   {% endif %}
-                  <ul class="list-plus">
+                  <ul class="list-plus" data-component="accordion">
                     {% for item in slide.list %}
-                      <li class="is-collapsed collapsible" data-component="panel">
-                        <div class="collapsible__toggle text-lg" data-element="panel-toggle">{{ item.title }}</div>
-                        <div class="collapsible__content" data-element="panel-content">
+                      <li class="is-collapsed collapsible" data-element="accordion-item">
+                        <div class="collapsible__toggle text-lg" data-element="accordion-toggle">{{ item.title }}</div>
+                        <div class="collapsible__content" data-element="accordion-content">
                           {% if item.text %}
                             {{ item.text }}
                           {% endif %}

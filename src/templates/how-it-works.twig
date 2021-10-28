@@ -92,11 +92,11 @@
           <div class="section__content">
             <h3 class="section__subtitle">How it works:</h3>
             <div class="section__description">
-              <ul class="list-plus">
+              <ul class="list-plus" data-component="accordion">
                 {% for item in howItWorks.workflow %}
-                  <li class="is-collapsed collapsible" data-component="panel">
-                    <div class="collapsible__toggle text-lg" data-element="panel-toggle">{{ item.title }}</div>
-                    <div class="collapsible__content" data-element="panel-content">{{ item.text }}</div>
+                  <li class="is-collapsed collapsible" data-element="accordion-item">
+                    <div class="collapsible__toggle text-lg" data-element="accordion-toggle">{{ item.title }}</div>
+                    <div class="collapsible__content" data-element="accordion-content">{{ item.text }}</div>
                   </li>
                 {% endfor %}
               </ul>
