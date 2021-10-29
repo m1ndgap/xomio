@@ -1046,8 +1046,8 @@ $(document).ready(function(){
             }
 
             function interval() {
-                if ((slider.find('div[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
-                    progressBarIndex = slider.find('div[aria-hidden="false"]').data("slickIndex");
+                if ((slider.find('[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
+                    progressBarIndex = slider.find('[aria-hidden="false"]').data("slickIndex");
                     startProgressbar();
                 } else {
                     percentTime += 1 / (time + 5);
@@ -1057,8 +1057,11 @@ $(document).ready(function(){
                     if (percentTime >= 100) {
                         slider.slick('slickNext');
                         progressBarIndex++;
-                        if (progressBarIndex > 2) {
+                        if (progressBarIndex > (slider[0].slick.$slides.length - 1)) {
                             progressBarIndex = 0;
+                            tab.find('.in-progress').css({
+                                height: 0 + '%'
+                            });
                         }
                         startProgressbar();
                     }
@@ -1066,9 +1069,6 @@ $(document).ready(function(){
             }
 
             function resetProgressbar() {
-                tab.find('.in-progress').css({
-                    height: 0 + '%'
-                });
                 clearInterval(tick);
             }
         }
