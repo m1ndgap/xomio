@@ -750,7 +750,7 @@
                 "text": "We import your Brand or MLS listings directly from them, with no data loss. Every term is mapped exactly into the world’s largest translation module for real estate specific terminology."
             },
             {
-                "title": "21 years of expertise is applied to deliver listings translation in 19 languages",
+                "title": "20 years of expertise is applied to deliver listings translation in 19 languages",
                 "text": "We have been translating listings for the biggest names in global real estate for over two decades. Our listings module contains listings from over 60 countries and powers the international presence of many of the biggest international brokerages and brands."
             },
             {
@@ -987,7 +987,7 @@
     "stats": [
         {
             "title": {
-                "main": "21",
+                "main": "20",
                 "small": "years"
             },
             "text": "of web design, translation and localization for real estate"
@@ -1456,7 +1456,7 @@
                 },
                 {
                     "title": "Take a deeper look",
-                    "subtitle": "More languages + more listings =  more leads",
+                    "subtitle": "More languages + more listings <span class=\"text-nowrap\">= more leads</span>",
                     "text": [
                         "Listings data drives search engine rankings in every supported language, leading more consumers to your site, and giving them more to see when they arrive.",
                         "Xomio is the only website platform that allows you to show the listings from your brand AND MLS, all branded to you.",
@@ -1476,7 +1476,7 @@
                 },
                 {
                     "title": "Take a deeper look",
-                    "subtitle": "Better lead management means more <span class=\"text-primary\">sales",
+                    "subtitle": "Better lead management <span class=\"text-nowrap\">means more <span class=\"text-primary\">sales</span></span>",
                     "text": [
                         "Xomio’s Kanban CRM makes it easy to handle leads and follow up with clients.",
                         "Drag and drop your contacts to track their status, helping you stay on top of your pipeline.",

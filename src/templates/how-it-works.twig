@@ -89,14 +89,18 @@
           <h2 class="section__title">Our listings translation delivers more leads</h2>
         </div>
         <div class="section__body">
-          <div class="section__content">
+          <div class="section__content section__content--lg">
             <h3 class="section__subtitle">How it works:</h3>
             <div class="section__description">
               <ul class="list-plus" data-component="accordion">
                 {% for item in howItWorks.workflow %}
-                  <li class="is-collapsed collapsible" data-element="accordion-item">
+                  <li class="collapsible {% if not loop.first %}is-collapsed{% endif %}" data-element="accordion-item">
                     <div class="collapsible__toggle text-lg" data-element="accordion-toggle">{{ item.title }}</div>
-                    <div class="collapsible__content" data-element="accordion-content">{{ item.text }}</div>
+                    <div class="collapsible__content" data-element="accordion-content">
+                      <div class="collapsible__body">
+                        {{ item.text }}
+                      </div>
+                    </div>
                   </li>
                 {% endfor %}
               </ul>

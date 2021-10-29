@@ -16,7 +16,7 @@
         <div class="section__content">
           <h3 class="section__subtitle">Introducing GLEX: <span class="font-cursive font-cursive--underline text-primary">Exclusive</span> to Xomio</h3>
           <div class="section__description text-lg">
-            <ul class="list-plus">
+            <ul class="list-dot">
               <li>GLEX is a unique proposition. It’s like IDX, but from your brand, instead of an MLS</li>
               <li>GLEX delivers your brand’s global listings inventory, in all 19 languages, integrated like an IDX feed into a Xomio site</li>
               <li>Foreign listings are delivered in your home language, and all your country’s listings are translated to catch the attention of local and international buyers</li>
@@ -122,7 +122,7 @@
   <section class="section feature-7">
     <div class="container container--mobile-fixed">
       <div class="section__body">
-        <div class="section__content">
+        <div class="section__content section__content--lg">
           <div class="section__slider" data-slider="text-slider">
             {% for slide in glex.slider %}
               <div class="section__slide slick-slide">
@@ -133,19 +133,21 @@
                   {% endif %}
                   <ul class="list-plus" data-component="accordion">
                     {% for item in slide.list %}
-                      <li class="is-collapsed collapsible" data-element="accordion-item">
+                      <li class="collapsible {% if not loop.first %}is-collapsed{% endif %}" data-element="accordion-item">
                         <div class="collapsible__toggle text-lg" data-element="accordion-toggle">{{ item.title }}</div>
                         <div class="collapsible__content" data-element="accordion-content">
-                          {% if item.text %}
-                            {{ item.text }}
-                          {% endif %}
-                          {% if item.list %}
-                            <ul class="list" columns="3">
-                              {% for li in item.list %}
-                                <li>{{ li }}</li>
-                              {% endfor %}
-                            </ul>
-                          {% endif %}
+                          <div class="collapsible__body">
+                            {% if item.text %}
+                              {{ item.text }}
+                            {% endif %}
+                            {% if item.list %}
+                              <ul class="list" columns="3">
+                                {% for li in item.list %}
+                                  <li>{{ li }}</li>
+                                {% endfor %}
+                              </ul>
+                            {% endif %}
+                          </div>
                         </div>
                       </li>
                     {% endfor %}

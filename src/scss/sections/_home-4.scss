@@ -1,9 +1,5 @@
 .home-4 {
     @include media-breakpoint-up(xl) {
-        .section__content {
-            padding-right: rem($spacer-7);
-        }
-
         .section__object {
             margin-top: rem(-60px);
         }

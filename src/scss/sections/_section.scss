@@ -30,9 +30,6 @@
         margin-top: rem($spacer-10);
     }
 
-    &__slider {
-    }
-
     &__slide {
         opacity: 0;
         visibility: hidden;
@@ -203,7 +200,11 @@
         &__content {
             flex: 0 0 45%;
             max-width: 45%;
-            max-width: rem(516px);
+            max-width: rem(480px);
+
+            &--lg {
+                max-width: rem(516px);
+            }
         }
 
         &__object {
