@@ -1014,13 +1014,6 @@
     "stats": [
         {
             "title": {
-                "main": "20",
-                "small": "years"
-            },
-            "text": "of web design, translation and localization for real estate"
-        },
-        {
-            "title": {
                 "main": "1M+"
             },
             "text": "listing translated daily"
@@ -1030,7 +1023,32 @@
                 "main": "10",
                 "small": "min"
             },
-            "text": "to publish a fully functional website"
+            "text": "for users to publish a multi language website"
+        },
+        {
+            "title": {
+                "main": "20",
+                "small": "years"
+            },
+            "text": "of web design, translation and localization for real estate"
+        },
+        {
+            "title": {
+                "main": "65"
+            },
+            "text": "countries represented in listings data"
+        },
+        {
+            "title": {
+                "main": "19"
+            },
+            "text": "languages"
+        },
+        {
+            "title": {
+                "main": "3K+"
+            },
+            "text": "professionally translated data fields"
         }
     ],
     "home": [
