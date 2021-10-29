@@ -135,7 +135,7 @@
                     {% for item in slide.list %}
                       <li class="collapsible {% if not loop.first %}is-collapsed{% endif %}" data-element="accordion-item">
                         <div class="collapsible__toggle text-lg" data-element="accordion-toggle">{{ item.title }}</div>
-                        <div class="collapsible__content" data-element="accordion-content">
+                        <div class="collapsible__content" data-element="accordion-content" {% if not loop.first %}style="max-height:0;"{% endif %}>
                           <div class="collapsible__body">
                             {% if item.text %}
                               {{ item.text }}
