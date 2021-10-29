@@ -9,7 +9,7 @@
             height: rem($navbar-height-mobile + $section-offset-top-mobile);
             content: '';
             display: block;
-            margin-top: rem( - $navbar-height-mobile);
+            margin-top: rem( - ($navbar-height-mobile + $section-offset-top-mobile));
         }
     }
 
@@ -119,7 +119,7 @@
     }
 
     &__video {
-        @include aspect-ratio-block(600/373);
+        @include aspect-ratio-block(600/382);
         border-radius: $border-radius-sm;
 
         video {
@@ -209,7 +209,7 @@
         &[id] {
             &:before {
                 height: rem($navbar-height + $section-offset-top);
-                margin-top: rem( - $navbar-height);
+                margin-top: rem( - ($navbar-height + $section-offset-top));
             }
         }
 
@@ -267,6 +267,10 @@
             padding-top: 0;
             padding-bottom: rem(60px);
             margin-top: rem(- $spacer-5);
+
+            &-top {
+                padding-top: 0;
+            }
         }
     }
 }

@@ -49,6 +49,7 @@
         padding: rem(63px $spacer-3 $spacer-9 $spacer-8);
         overflow: hidden;
         transition: .2s ease-in-out;
+        min-height: 0;
 
         &.is-expanded {
             position: absolute;
@@ -57,7 +58,6 @@
             right: rem($gutter / 2);
             border-color: rgba(#1e5c5a, 0);
             box-shadow: 0 16px 24px rgba(#00362b, 0.02), 0 16px 40px rgba(#00362b, 0.02);
-            height: auto;
             z-index: 2;
             min-height: rem(394px);
 

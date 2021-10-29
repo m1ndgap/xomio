@@ -3,21 +3,15 @@
 //
 
 a {
+    color: inherit;
     text-decoration: $link-decoration;
     @include transition(all 0.2s ease-in-out);
-
-    @include hover-focus {
-        text-decoration: $link-hover-decoration;
-    }
-    /*text-decoration: $link-decoration;
-    color: $link-color;
     outline: 0;
 
-
     @include hover-focus {
-        //color: $link-hover-color;
-        //text-decoration: $link-hover-decoration;
-    }*/
+        outline: 0;
+        text-decoration: $link-hover-decoration;
+    }
 }
 
 .link-primary {
