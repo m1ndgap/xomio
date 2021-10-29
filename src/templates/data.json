@@ -15,24 +15,16 @@
         "copyright": "©2021 Xomio.com. All rights reserved.",
         "social": [
             {
-                "icon": "facebook",
-                "title": "Facebook"
-            },
-            {
-                "icon": "instagram",
-                "title": "Instagram"
-            },
-            {
-                "icon": "linkedin",
-                "title": "LinkedIn"
-            },
-            {
                 "icon": "twitter",
                 "title": "Twitter"
             },
             {
-                "icon": "youtube",
-                "title": "Youtube"
+                "icon": "facebook",
+                "title": "Facebook"
+            },
+            {
+                "icon": "google-plus",
+                "title": "Google+"
             }
         ]
     },
@@ -83,34 +75,69 @@
     "footer": {
         "menu": [
             {
-                "title": "Residential Property",
-                "list": [
-                    "Property for Sale",
-                    "Help to Buy",
-                    "New Developments"
+                "sections": [
+                    {
+                        "title": "How it works",
+                        "link": "how-it-works.html"
+                    },
+                    {
+                        "title": "Features",
+                        "link": "features.html"
+                    }
                 ]
             },
             {
-                "title": "Commercial Property",
-                "list": [
-                    "Commercial Property",
-                    "Development Property",
-                    "Industrial Properties",
-                    "Offices for sale",
-                    "Hotels for sale",
-                    "Flexible office space"
+                "sections": [
+                    {
+                        "title": "IDX",
+                        "link": "idx.html",
+                        "list": [
+                            {
+                                "name": "Become an MLS Partner"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "GLEX",
+                        "link": "glex.html",
+                        "list": [
+                            {
+                                "name": "Partner with us"
+                            }
+                        ]
+                    }
                 ]
             },
             {
-                "title": "More Information",
-                "list": [
-                    "Sitemap",
-                    "Accessibility",
-                    "Feedback",
-                    "TDS Explained",
-                    "Provision of Services",
-                    "Help to Buy Calculator",
-                    "Land & Buildings Transaction Tax"
+                "sections": [
+                    {
+                        "title": "Pricing",
+                        "link": "pricing.html",
+                        "list": [
+                            {
+                                "name": "Our products"
+                            },
+                            {
+                                "name": "FAQs"
+                            },
+                            {
+                                "name": "Still have questions?"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "sections": [
+                    {
+                        "title": "About us",
+                        "link": "about-us.html",
+                        "list": [
+                            {
+                                "name": "Work with us"
+                            }
+                        ]
+                    }
                 ]
             }
         ],

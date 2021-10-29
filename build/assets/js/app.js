@@ -38,15 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for (i = 0; i < $accordions.length; i++) {
         let $toggles = $accordions[i].querySelectorAll('[data-element="accordion-toggle"]');
-        let $activeItems = $accordions[i].querySelectorAll('[data-element="accordion-item"]:not(.'+collapsedClass+')');
         let j;
-        let k;
-
-        for (k = 0; k < $activeItems.length; k++) {
-            let $content = $activeItems[k].querySelector('[data-element="accordion-content"]');
-
-            $content.style.maxHeight = $content.scrollHeight + 'px';
-        }
 
         for (j = 0; j < $toggles.length; j++) {
             $toggles[j].addEventListener("click", function(e) {

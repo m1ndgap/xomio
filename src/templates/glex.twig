@@ -133,9 +133,9 @@
                   {% endif %}
                   <ul class="list-plus" data-component="accordion">
                     {% for item in slide.list %}
-                      <li class="collapsible {% if not loop.first %}is-collapsed{% endif %}" data-element="accordion-item">
+                      <li class="collapsible is-collapsed" data-element="accordion-item">
                         <div class="collapsible__toggle text-lg" data-element="accordion-toggle">{{ item.title }}</div>
-                        <div class="collapsible__content" data-element="accordion-content" {% if not loop.first %}style="max-height:0;"{% endif %}>
+                        <div class="collapsible__content" data-element="accordion-content">
                           <div class="collapsible__body">
                             {% if item.text %}
                               {{ item.text }}
@@ -201,7 +201,7 @@
   </section>
 
   <!-- Contact us -->
-  <section class="section contact-us" id="contact-us">
+  <section class="section contact-us" id="partner-with-us">
     <div class="container container--mobile-fixed">
       <div class="section__body">
         <div class="section__content">

@@ -3,15 +3,26 @@
     padding-bottom: rem(49px);
 
     &__menu {
-        margin-bottom: rem($spacer-8);
+        &-section {
+            margin-bottom: rem($spacer-6);
+        }
 
         &-title {
             @include font($font-size-md, $line-height-sm + 1, $font-weight-semibold);
-            margin-bottom: rem($spacer-5);
+            margin-bottom: rem($spacer-4);
+
+            &-link {
+                color: $white;
+
+                @include hover-focus {
+                    color: rgba($white, .7);
+                }
+            }
         }
 
         &-list {
             @include list-unstyled;
+            margin-bottom: rem($spacer-10);
         }
 
         &-item {
@@ -30,15 +41,15 @@
 
     &__social {
         margin-top: rem(- $spacer);
-        margin-bottom: rem($spacer-10);
 
-        .footer__menu-title {
-            margin-bottom: rem($spacer-4);
+        &-list {
+            margin-top: rem(22px);
         }
     }
 
     &__bottom {
         border-top: 1px solid rgba($white, .2);
+        margin-top: rem($spacer-10);
         padding-top: rem($spacer-8);
         @include font($font-size-sm, $line-height-sm);
         color: rgba($white, .5);
@@ -78,7 +89,7 @@
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
-            padding-top: rem(17px);
+            padding-top: rem(19px);
         }
 
         &__logo {
@@ -113,19 +124,14 @@
         padding-top: rem(104px);
 
         &__menu {
-            &:not(.footer__social) {
-                display: flex;
-                flex-direction: column;
-            }
-
-            &-item {
-                margin-bottom: rem($spacer-4 - 1);
-            }
+            flex: 0 0 20%;
+            width: 20%;
         }
 
         &__social {
-            margin-top:auto;
+            margin-top: auto;
             margin-bottom: 0;
+            padding-top: rem($spacer-5);
 
             .social__link {
                 color: $white;
@@ -137,7 +143,7 @@
         }
 
         &__bottom {
-            margin-top: rem(65px);
+            margin-top: rem(105px);
         }
 
         &__links {
@@ -153,27 +159,5 @@
     }
 
     @include media-breakpoint-up(xl) {
-        &__menu {
-            &:not(.footer__social) {
-                width: 20%;
-                flex: 0 0 20%;
-
-                &:last-child {
-                    margin-left: auto;
-                }
-            }
-
-            &-title {
-                width: 50%;
-                min-height: 2.42857em;
-                margin-bottom: rem($spacer-6);
-            }
-        }
-
-        &__social {
-            .footer__menu-title {
-                margin-bottom: rem($spacer-3);
-            }
-        }
     }
 }

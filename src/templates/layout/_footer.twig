@@ -1,35 +1,45 @@
 <div class="footer bg-secondary">
   <div class="container">
     <div class="footer__main">
-      <div class="footer__main-row row">
-        {% for section in footer.menu %}
+      <div class="footer__main-row row row--xl">
+        {% for col in footer.menu %}
           <div class="footer__menu col-xs-6 col-md-3">
-            <div class="footer__menu-title">{{ section.title }}</div>
-            <ul class="footer__menu-list">
-              {% for item in section.list %}
-                <li class="footer__menu-item">
-                  <a href="#" class="footer__menu-link">{{ item }}</a>
-                </li>
-              {% endfor %}
-            </ul>
+            {% for section in col.sections %}
+              <div class="footer__menu-section">
+                <div class="footer__menu-title">
+                  <a href="{{ section.link }}" class="footer__menu-title-link">{{ section.title }}</a>
+                </div>
+                {% if section.list %}
+                  <ul class="footer__menu-list">
+                    {% for item in section.list %}
+                      <li class="footer__menu-item">
+                        <a href="{{ section.link }}#{{ item.name|lower|replace({' ': '-'})|replace({'?': ''}) }}" class="footer__menu-link">{{ item.name }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+            {% endfor %}
           </div>
         {% endfor %}
         <div class="footer__menu col-xs-6 col-md-3">
-          <div class="footer__menu-title">Contact Us</div>
-          <ul class="footer__menu-list">
-            {% for phone in company.phones %}
+          <div class="footer__menu-section">
+            <div class="footer__menu-title">Contact Us</div>
+            <ul class="footer__menu-list">
+              {% for phone in company.phones %}
+                <li class="footer__menu-item">
+                  <a href="{{ phone.link }}" class="footer__menu-link">{{ phone.number }}</a>
+                </li>
+              {% endfor %}
               <li class="footer__menu-item">
-                <a href="{{ phone.link }}" class="footer__menu-link">{{ phone.number }}</a>
+                <a href="mailto:{{ company.email }}" class="footer__menu-link">{{ company.email }}</a>
               </li>
-            {% endfor %}
-            <li class="footer__menu-item">
-              <a href="mailto:{{ company.email }}" class="footer__menu-link">{{ company.email }}</a>
-            </li>
-          </ul>
+            </ul>
+          </div>
 
-          <div class="footer__menu footer__social social hidden-md-down">
+          <div class="footer__menu-section footer__social social hidden-md-down">
             <div class="footer__menu-title">Find us on social</div>
-            <ul class="{{ socialClass}} social__list row">
+            <ul class="footer__social-list social__list row">
               {% for item in company.social %}
                 <li class="social__item col">
                   <a href="#" class="footer__link social__link icon-{{ item.icon }}" title="{{ item.title }}"></a>

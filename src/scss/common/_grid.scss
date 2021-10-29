@@ -42,7 +42,10 @@
         @include make-row-modification($spacer-2);
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
+        &--xl {
+            @include make-row-modification($spacer-8);
+        }
     }
 }
 

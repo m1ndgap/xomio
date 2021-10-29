@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'icons';
-  src: url('../fonts/icons.eot?7atlt4#iefix') format('embedded-opentype'),
-       url('../fonts/icons.svg?7atlt4') format('svg'),
-       url('../fonts/icons.woff?7atlt4') format('woff');
+  src: url('../fonts/icons.eot?33gidv#iefix') format('embedded-opentype'),
+       url('../fonts/icons.svg?33gidv') format('svg'),
+       url('../fonts/icons.woff?33gidv') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -73,6 +73,9 @@
 }
 .icon-facebook:before {
   content: "\e904";
+}
+.icon-google-plus:before {
+  content: "\e914";
 }
 .icon-instagram:before {
   content: "\e905";
