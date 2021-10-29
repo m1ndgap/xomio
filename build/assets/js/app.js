@@ -1502,7 +1502,7 @@ $(document).ready(function(){
             arrows: false,
             swipeToSlide: true,
             autoplay: true,
-            autoplaySpeed: 5000,
+            autoplaySpeed: 15000,
             asNavFor: $sliderNav
         });
 
