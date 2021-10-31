@@ -12,9 +12,10 @@ const selectedClass  = 'is-selected';
 const scrolledClass  = 'is-scrolled';
 const visibleClass   = 'is-visible';
 
-const headerFixedClass  = 'header-is-fixed';
-const lockedScrollClass = 'scroll-is-locked';
-const menuVisibleClass  = 'menu-is-visible';
+const headerFixedClass  =  'header-is-fixed';
+const lockedScrollClass =  'scroll-is-locked';
+const lockedScrollClass2 = 'locked-scroll';
+const menuVisibleClass  =  'menu-is-visible';
 
 const aosDuration  = 250;
 

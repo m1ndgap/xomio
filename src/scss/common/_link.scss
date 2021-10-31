@@ -78,3 +78,28 @@ a {
         text-decoration: none;
     }
 }
+
+.link-stripe {
+    font-weight: $font-weight-heavy;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        position: absolute;
+        top: rem(2px);
+        left: rem(-2px);
+        right: rem(-2px);
+        bottom: rem(2px);
+        content: '';
+        transform: matrix(-1, 0.01, 0.01, 1, 0, 0);
+        z-index: -1;
+    }
+
+    &:nth-of-type(even) {
+        &:before {
+            transform: matrix(1, 0.01, -0.01, 1, 0, 0);
+        }
+    }
+}

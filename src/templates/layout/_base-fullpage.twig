@@ -1,0 +1,49 @@
+{%- import '../macro/icon.twig' as svg -%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{% block pageDescription %}{% endblock %}">
+  <meta name="keywords" content="{% block pageKeywords %}{% endblock %}">
+  <meta name="author" content="">
+
+  <link href="./assets/img/favicon.svg" rel="shortcut icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="./assets/css/vendor.css?12345656">
+  <link rel="stylesheet" href="./assets/css/app.css?12345656">
+
+  {% block styles %}{% endblock %}
+
+  <title>{% if pageTitle %} {{ pageTitle }} - {% endif %}{{ company.name }}</title>
+
+  {% block headerScripts %}{% endblock %}
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
+</head>
+<body class="body {{ bodyClass|default('') }}" id="top">
+  <include src="./build/assets/img/icons.svg"></include>
+
+  {% include '_navbar.twig' %}
+
+  <main class="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% block modals %}{% endblock %}
+
+  <script src="./assets/js/vendor.js?12345656"></script>
+  <script src="./assets/js/app.js?12345656"></script>
+
+  {% block scripts %}{% endblock %}
+
+</body>
+</html>

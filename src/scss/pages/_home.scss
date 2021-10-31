@@ -1,8 +1,4 @@
 .page-home {
-    .main {
-        padding-top: 0;
-    }
-
     @include media-breakpoint-up(xl) {
         .main {
             padding-top: 0;

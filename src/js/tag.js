@@ -1,84 +1,122 @@
-/* Tabs */
-$(document).ready(function(){
-    let $tag = $('[data-element="tag"]');
-    let $tagToggle = $('[data-element="tag-toggle"]');
-    let $tagsPopup = $('[data-component="tags-popup"]');
-    let $tagsPopupTrigger = $('[data-element="tags-popup-trigger"]');
-    let $tagsPopupSlider = $('[data-slider="tags"]');
-    let $tagsPopupClose = $('[data-element="tags-popup-close"]');
-    let tagPopoverWidth = 365;
+/* Tags */
+document.addEventListener('DOMContentLoaded', function() {
+    let $tags = document.querySelectorAll('[data-element="tag"]');
 
-    if ( $(window).width() < 375 ) {
+    if ($tags.length === 0) {
+        return false;
+    }
+
+    let $tagToggles = document.querySelectorAll('[data-element="tag-toggle"]');
+    let $tagsPopup = document.querySelector('[data-component="tags-popup"]');
+    let $tagsPopupTriggers = document.querySelectorAll('[data-element="tags-popup-trigger"]');
+    let $tagsPopupSlider = document.querySelector('[data-slider="tags"]');
+    let $tagsPopupClose = document.querySelector('[data-element="tags-popup-close"]');
+    let tagPopoverWidth = 365;
+    let i;
+
+    if ( window.innerWidth < 375 ) {
         tagPopoverWidth = 288;
     }
 
-    $tag.each(function() {
-        let $tag = $(this);
-        let tagWidth = $tag.outerWidth();
-        let tagHeight = $tag.height();
+    for (i = 0; i < $tags.length; i++) {
+        let $tag = $tags[i];
+        let $tagToggle = $tag.querySelector('[data-element="tag-toggle"]');
         let $tagItem = $tag.closest('[data-element="tag-item"]');
+        let tagWidth = $tagToggle.offsetWidth;
+        let tagHeight = $tagToggle.offsetHeight;
+        let tagExpandedWidth = tagPopoverWidth;
 
-        $tagItem.width(tagWidth);
-        $tagItem.height(tagHeight);
-        $tag.find('[data-element="tag-popover-bg"]').width(tagWidth);
-    });
-
-    $tagToggle.on('click', function(e) {
-        e.preventDefault();
-
-        let $toggle = $(this);
-        let $tag = $toggle.closest('[data-element="tag"]');
-        let tagWidth = tagPopoverWidth;
-
-        if ($tag.hasClass(expandedClass)) {
-            $tag.css('width', 'auto');
-            $tag.removeClass(expandedClass);
-        } else {
-            $('.'+expandedClass+'[data-element="tag"]').css('width', 'auto');
-            $('.'+expandedClass+'[data-element="tag"]').removeClass(expandedClass);
-
-            if ( $toggle.outerWidth() > tagWidth ) {
-                tagWidth = $toggle.outerWidth() + 28;
-            }
-
-            if ( ($(window).width() - $toggle.offset().left ) < tagWidth ) {
-                $tag.addClass('is-right');
-            }
-
-            $tag.addClass(expandedClass);
-            $tag.css('width', tagWidth);
+        if ( tagWidth > tagExpandedWidth ) {
+            tagExpandedWidth = tagWidth + 28;
         }
 
-        return false;
-    });
+        $tagItem.style.width = tagWidth + 'px';
+        $tagItem.style.height = tagHeight + 'px';
+        $tag.querySelector('[data-element="tag-popover"]').style.width = tagExpandedWidth + 'px';
+    };
 
-    $tagsPopupTrigger.on('click', function(e) {
+    for (i = 0; i < $tagToggles.length; i++) {
+        $tagToggles[i].addEventListener("click", function(e) {
+            e.preventDefault();
+
+            let $toggle = this;
+            let $tag = $toggle.closest('[data-element="tag"]');
+            let $popover = $tag.querySelector('[data-element="tag-popover"]');
+            let tagWidth = tagPopoverWidth;
+            let tagHeight = $toggle.scrollHeight + $popover.scrollHeight;
+
+            if ($tag.classList.contains(expandedClass)) {
+                $tag.classList.remove(expandedClass);
+                $tag.style='';
+            } else {
+                collapseActiveTag();
+
+                if ( $toggle.offsetWidth > tagWidth ) {
+                    tagWidth = $toggle.offsetWidth + 28;
+                }
+
+                if ( (window.innerWidth - $toggle.getBoundingClientRect().left ) < tagWidth ) {
+                    $tag.classList.add('is-right');
+                }
+
+                if ( (window.innerHeight - $toggle.getBoundingClientRect().top ) < tagHeight ) {
+                    $tag.classList.add('is-bottom');
+                }
+
+                $tag.classList.add(expandedClass);
+                $tag.style.width = tagWidth + 'px';
+                $tag.style.height = tagHeight + 'px';
+                $tag.classList.add(expandedClass);
+            }
+
+            return false;
+        });
+    };
+
+    for (i = 0; i < $tagsPopupTriggers.length; i++) {
+        $tagsPopupTriggers[i].addEventListener("click", function(e) {
+            e.preventDefault();
+
+            let $trigger = this;
+            let triggerID = $trigger.dataset.id;
+
+            $($tagsPopupSlider).slick('slickGoTo', triggerID - 1, false);
+
+            setTimeout(function() {
+                $tagsPopup.classList.add(visibleClass);
+            }, 400);
+
+            collapseActiveTag();
+
+            fullpage_api.setAutoScrolling(false);
+            fullpage_api.setFitToSection(false);
+            $body[0].classList.add(lockedScrollClass2);
+        });
+    }
+
+    $tagsPopupClose.addEventListener("click", function(e) {
         e.preventDefault();
 
-        let $trigger = $(this);
-        let triggerID = $trigger.attr('data-id');
-
-        $tagsPopupSlider.slick('slickGoTo', triggerID - 1, false);
-
-        setTimeout(function() {
-            $tagsPopup.addClass(visibleClass);
-        }, 400);
-
-        $('.'+expandedClass+'[data-element="tag"]').css('width', 'auto');
-        $('.'+expandedClass+'[data-element="tag"]').removeClass(expandedClass);
+        $tagsPopup.classList.remove(visibleClass);
+        fullpage_api.setAutoScrolling(true);
+        fullpage_api.setFitToSection(true);
+        $body[0].classList.remove(lockedScrollClass2);
     });
 
-    $tagsPopupClose.on('click', function(e) {
-        e.preventDefault();
-
-        $tagsPopup.removeClass(visibleClass);
-    });
-
-    $(document).on('keyup', function(e) {
+    document.addEventListener("keyup", function(e) {
         if (e.key === "Escape" || e.keyCode === 27) {
-            $tagsPopup.removeClass(visibleClass);
-            $('.'+expandedClass+'[data-element="tag"]').css('width', 'auto');
-            $('.'+expandedClass+'[data-element="tag"]').removeClass(expandedClass);
+            $tagsPopup.classList.remove(visibleClass);
+            collapseActiveTag();
+            fullpage_api.setAutoScrolling(true);
+            fullpage_api.setFitToSection(true);
+            $body[0].classList.remove(lockedScrollClass2);
         }
     });
+
+    function collapseActiveTag() {
+        if (document.querySelector('.'+expandedClass+'[data-element="tag"]')) {
+            document.querySelector('.'+expandedClass+'[data-element="tag"]').style = '';
+            document.querySelector('.'+expandedClass+'[data-element="tag"]').classList.remove(expandedClass);
+        }
+    };
 });

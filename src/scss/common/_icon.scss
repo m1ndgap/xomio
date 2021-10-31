@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'icons';
-  src: url('../fonts/icons.eot?33gidv#iefix') format('embedded-opentype'),
-       url('../fonts/icons.svg?33gidv') format('svg'),
-       url('../fonts/icons.woff?33gidv') format('woff');
+  src: url('../fonts/icons.eot?k77qld#iefix') format('embedded-opentype'),
+       url('../fonts/icons.svg?k77qld') format('svg'),
+       url('../fonts/icons.woff?k77qld') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14,6 +14,7 @@
 .dropdown__option:after,
 .feature__toggle-link:after,
 .list-check > li:before,
+.list-flake > li:before,
 .collapsible__toggle:before,
 .navbar__lang .dropdown__toggle:before,
 .panel__title:after,
@@ -73,6 +74,10 @@
 }
 .icon-facebook:before {
   content: "\e904";
+}
+.icon-flake:before,
+.list-flake > li:before {
+  content: "\e915";
 }
 .icon-google-plus:before {
   content: "\e914";

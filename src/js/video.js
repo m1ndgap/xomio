@@ -1,5 +1,9 @@
 /* Video */
 document.addEventListener('DOMContentLoaded', function() {
+    if (document.body.classList.contains('page-home')) {
+        return false;
+    }
+
     let video = document.querySelector('video');
 
     if (!video) {
@@ -18,5 +22,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 isPaused=false}
             });
         }, {threshold: 1});
-        observer.observe(video);
+    observer.observe(video);
 });

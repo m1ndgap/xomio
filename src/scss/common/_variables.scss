@@ -175,10 +175,30 @@ $theme-colors: map-merge(
 
 $tag-colors: map-merge(
     (
-        "green":      $green-200,
-        "orange":     $orange-200,
-        "salmon":     $pink-200,
-        "yellow":     $yellow-100,
+        "green": (
+            "bg":         $green-200,
+            "color":      $white,
+            "link-bg":    $yellow-300,
+            "link-color": $white,
+        ),
+        "orange": (
+            "bg":         $orange-200,
+            "color":      $white,
+            "link-bg":    $white,
+            "link-color": $orange-200,
+        ),
+        "salmon": (
+            "bg":         $pink-200,
+            "color":      $white,
+            "link-bg":    $white,
+            "link-color": $pink-200,
+        ),
+        "yellow": (
+            "bg":         $yellow-100,
+            "color":      $secondary,
+            "link-bg":    $secondary,
+            "link-color": $white,
+        ),
     ),
     $tag-colors
 );

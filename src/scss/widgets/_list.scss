@@ -15,8 +15,9 @@
 }
 
 .list-check,
-.list-plus,
-.list-dot {
+.list-dot,
+.list-flake,
+.list-plus {
     @include list-unstyled;
 
     > li {
@@ -32,6 +33,12 @@
             .bg-secondary &,
             .bg-accent & {
                 color: inherit;
+            }
+
+            @each $color-name, $color in $tag-colors {
+                .tag-#{$color-name} & {
+                    color: inherit;
+                }
             }
         }
     }
@@ -64,7 +71,8 @@
     }
 }
 
-.list-check {
+.list-check,
+.list-flake {
     > li {
         @include margin-bottom(rem(10px));
         padding-left: rem($spacer-8);
@@ -78,6 +86,15 @@
     &.text-lg {
         > li {
             @include margin-bottom(rem($spacer-4));
+        }
+    }
+}
+
+.list-flake {
+    > li {
+        &:before {
+            opacity: .6;
+            top: rem(( $line-height-lg - $spacer-6));
         }
     }
 }

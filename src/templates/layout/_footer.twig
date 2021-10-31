@@ -2,27 +2,31 @@
   <div class="container">
     <div class="footer__main">
       <div class="footer__main-row row row--xl">
-        {% for col in footer.menu %}
-          <div class="footer__menu col-xs-6 col-md-3">
-            {% for section in col.sections %}
-              <div class="footer__menu-section">
-                <div class="footer__menu-title">
-                  <a href="{{ section.link }}" class="footer__menu-title-link">{{ section.title }}</a>
-                </div>
-                {% if section.list %}
-                  <ul class="footer__menu-list">
-                    {% for item in section.list %}
-                      <li class="footer__menu-item">
-                        <a href="{{ section.link }}#{{ item.name|lower|replace({' ': '-'})|replace({'?': ''}) }}" class="footer__menu-link">{{ item.name }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
+        <div class="footer__main-left col-xs-6 col-md-9">
+          <div class="row row--xl">
+            {% for col in footer.menu %}
+              <div class="footer__menu col-xs-12 col-md-3">
+                {% for section in col.sections %}
+                  <div class="footer__menu-section">
+                    <div class="footer__menu-title">
+                      <a href="{{ section.link }}" class="footer__menu-title-link">{{ section.title }}</a>
+                    </div>
+                    {% if section.list %}
+                      <ul class="footer__menu-list">
+                        {% for item in section.list %}
+                          <li class="footer__menu-item">
+                            <a href="{{ section.link }}#{{ item.name|lower|replace({' ': '-'})|replace({'?': ''}) }}" class="footer__menu-link" data-scroll>{{ item.name }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </div>
+                {% endfor %}
               </div>
             {% endfor %}
           </div>
-        {% endfor %}
-        <div class="footer__menu col-xs-6 col-md-3">
+        </div>
+        <div class="footer__main-right footer__menu col-xs-6 col-md-3">
           <div class="footer__menu-section">
             <div class="footer__menu-title">Contact Us</div>
             <ul class="footer__menu-list">
@@ -37,7 +41,7 @@
             </ul>
           </div>
 
-          <div class="footer__menu-section footer__social social hidden-md-down">
+          <div class="footer__menu-section footer__social social">
             <div class="footer__menu-title">Find us on social</div>
             <ul class="footer__social-list social__list row">
               {% for item in company.social %}
@@ -48,17 +52,6 @@
             </ul>
           </div>
         </div>
-      </div>
-
-      <div class="footer__menu footer__social social hidden-lg-up">
-        <div class="footer__menu-title">Find us on social</div>
-        <ul class="{{ socialClass}} social__list row">
-          {% for item in company.social %}
-            <li class="social__item col">
-              <a href="#" class="footer__menu-link social__link icon-{{ item.icon }}" title="{{ item.title }}"></a>
-            </li>
-          {% endfor %}
-        </ul>
       </div>
     </div>
 

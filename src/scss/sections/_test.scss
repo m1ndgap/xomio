@@ -1,7 +1,4 @@
 .test {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
     text-align: center;
     padding-top: rem(104px);
     padding-bottom: rem(104px);
@@ -61,6 +58,9 @@
     }
 
     @include media-breakpoint-up(xl) {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
         padding-top: rem(144px);
         padding-bottom: rem(174px);
 

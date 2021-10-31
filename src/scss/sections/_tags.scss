@@ -1,8 +1,19 @@
 .tags {
+    .intro {
+        margin-bottom: rem($spacer-8);
+    }
+
     &__list {
         @include list-unstyled;
         @include make-row($spacer-5)
         margin-bottom: rem(- $spacer-3);
+        max-height: rem(612px);
+        overflow: hidden;
+        transition: .25s ease-in-out;
+
+        .is-expanded & {
+            max-height: rem(2500px);
+        }
     }
 
     &__item {
@@ -12,7 +23,19 @@
         position: relative;
     }
 
+    &__action {
+        margin-top: rem($spacer-9);
+    }
+
     @include media-breakpoint-up(md) {
+        .intro {
+            text-align: center;
+        }
+
+        &__list {
+            max-height: none;
+            overflow: visible;
+        }
     }
 
     @include media-breakpoint-up(lg) {
@@ -23,7 +46,15 @@
             max-width: rem(1428px);
         }
 
-        &__intro {
+        &__list {
+            justify-content: center;
+            max-height: rem(468px);
+            overflow: hidden;
+        }
+    }
+
+    @include media-breakpoint-up(2xl) {
+        .intro {
             margin-bottom: rem(64px);
         }
 
@@ -31,13 +62,21 @@
             margin-left: rem(- $spacer-4);
             margin-right: rem(- $spacer-4);
             margin-bottom: rem(- $spacer-6);
-            justify-content: center;
+            max-height: none;
+            overflow: visible;
         }
 
         &__item {
             margin-left: rem($spacer-4);
             margin-right: rem($spacer-4);
             margin-bottom: rem($spacer-6);
+        }
+    }
+
+    @media (min-height: 1000px) {
+        &__list {
+            max-height: none;
+            overflow: visible;
         }
     }
 }

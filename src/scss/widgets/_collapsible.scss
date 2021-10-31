@@ -9,10 +9,11 @@
         font-weight: $font-weight-medium;
         cursor: pointer;
         transition: all .25s ease-in-out;
+        @include font($font-size-lg, 22.01px);
 
         &:before {
             position: absolute;
-            top: rem(-( $font-size-base - $spacer-4) / 2);
+            top: rem(( 22 - $spacer-4) / 2);
             left: 0;
             font-size: rem($spacer-4);
             color: $primary;
@@ -53,10 +54,8 @@
 
     @include media-breakpoint-up(xl) {
         &__toggle {
-            @include font($font-size-lg, 22.01px);
-
             &:before {
-                top: rem((22 - $spacer-6) / 2);
+                top: rem(( 22 - $spacer-6) / 2);
                 font-size: rem($spacer-6);
             }
         }

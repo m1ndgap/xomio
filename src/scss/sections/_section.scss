@@ -3,15 +3,7 @@
     z-index: 1;
     padding-top: rem($section-offset-top-mobile);
     padding-bottom: rem($section-offset-bottom-mobile);
-
-    &[id] {
-        &:before {
-            height: rem($navbar-height-mobile + $section-offset-top-mobile);
-            content: '';
-            display: block;
-            margin-top: rem( - ($navbar-height-mobile + $section-offset-top-mobile));
-        }
-    }
+    scroll-margin-top: rem($section-offset-top-mobile);
 
     &__body {
         max-width: rem(600px);
@@ -75,6 +67,10 @@
 
     &__img {
         display: block;
+
+        &--filter {
+            filter: drop-shadow(0 4px 4px rgba($black-400, 0.25));
+        }
     }
 
     &__template {
@@ -205,13 +201,7 @@
     @include media-breakpoint-up(xl) {
         padding-top: rem($section-offset-top);
         padding-bottom: rem($section-offset-bottom);
-
-        &[id] {
-            &:before {
-                height: rem($navbar-height + $section-offset-top);
-                margin-top: rem( - ($navbar-height + $section-offset-top));
-            }
-        }
+        scroll-margin-top: rem($section-offset-top);
 
         &__content {
             flex: 0 0 45%;

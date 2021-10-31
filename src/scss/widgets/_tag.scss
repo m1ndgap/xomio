@@ -2,15 +2,13 @@
     color: $white;
     border-radius: rem($spacer-5);
     position: relative;
+    overflow: hidden;
+    @include size(100%);
     z-index: 1;
-
-    &__list {
-        max-height: rem(612px);
-        overflow: hidden;
-    }
+    transition: width 0s 0s, height 0s 0s ease-in-out;
 
     &__link {
-        display: block;
+        display: inline-block;
         padding: rem($spacer-2 $spacer-4 $spacer-2 44px);
         @include font($font-size-h4, $line-height-h4, $font-weight-medium);
         white-space: nowrap;
@@ -22,61 +20,52 @@
             font-size: rem($spacer-6);
             margin-left: rem(- $spacer-9);
             transform: rotate(0);
-            transition: transform .3s;
+            transition: transform .25s .25s ease-in-out;
         }
     }
 
     &__popover {
-       position: absolute;
-       top: 0;
-       left: 0;
-       border-radius: rem($spacer-5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0s 0s ease-in-out;
 
-       &-bg {
-           position: absolute;
-           top: 0;
-           left: 0;
-           @include size($spacer-10);
-           transition: all 0.3s;
-           z-index: -1;
-           border-radius: rem($spacer-5);
-       }
+        &-body {
+            padding: rem(0 44px $spacer-3);
+        }
 
-       &-body {
-           @include size($spacer-10);
-           opacity: 0;
-           visibility: hidden;
-           transition: opacity 0.3s 0.1s, width 0s 0s, height 0s 0s;
-       }
-
-       &-text {
-           margin-bottom: rem(3px);
-           opacity: .8;
-       }
-    }
-
-    &.is-right & {
-        &__popover {
-           left: auto;
-           right: 0;
-
-           &-bg {
-               left: auto;
-               right: 0;
-           }
-       }
+        &-text {
+            margin-bottom: rem(3px);
+            opacity: .8;
+        }
     }
 
     &.is-expanded {
+        position: absolute;
+        top: 0;
+        left: 0;
         z-index: 2;
+        overflow: visible;
+        transition: height 0.25s 0.25s, width 0.25s 0.25s ease-in-out;
+
+        &:before {
+            position: absolute;
+            top: rem($spacer-4);
+            left: rem($spacer-5);
+            right: rem($spacer-5);
+            bottom: rem(-30px);
+            content: '';
+            background: inherit;
+            opacity: .28;
+            filter: blur(48px);
+            border-radius: rem($spacer-6);
+            z-index: -1;
+            pointer-events: none;
+        }
     }
 
     &.is-expanded & {
         &__link {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
+            display: block;
 
             &-icon {
                 transform: rotate(45deg);
@@ -86,70 +75,39 @@
         &__popover {
             opacity: 1;
             visibility: visible;
-
-            &-bg {
-                width: 100% !important;
-                height: 100%;
-
-                &:before {
-                    position: absolute;
-                    top: rem($spacer-4);
-                    left: rem($spacer-5);
-                    right: rem($spacer-5);
-                    bottom: rem(-30px);
-                    content: '';
-                    background: inherit;
-                    opacity: .28;
-                    filter: blur(48px);
-                    border-radius: rem($spacer-6);
-                    z-index: -1;
-                    pointer-events: none;
-                }
-            }
-
-            &-body {
-                width: 288px;
-                height: auto;
-                padding: rem(38px 44px $spacer-3);
-                opacity: 1;
-                visibility: visible;
-                transition: opacity 0.3s 0s, height 0.3s 0.3s, width 0.3s 0.3s;
-            }
+            transition: opacity 0.25s 0.25s ease-in-out;
+            margin-top: rem(-2px);
        }
     }
 
-    &.is-expanded.is-right {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
+    &.is-expanded {
+        &.is-right {
+            left: auto;
+            right: 0;
+        }
 
-    @each $color-name, $color in $tag-colors {
-        &-#{$color-name} {
-            background-color: #{$color};
+        &.is-bottom {
+            top: auto;
+            bottom: 0;
+        }
 
-            .tag__popover-bg {
-                background-color: #{$color};
-            }
+        &.is-right.is-bottom {
+            top: auto;
+            left: auto;
+            right: 0;
+            bottom: 0;
         }
     }
 
-    @media (min-width: 375px) {
-        &.is-expanded & {
-            &__popover {
-                &-body {
-                    min-width: 365px;
-                    width: auto;
-                }
-           }
-        }
+    @each $key, $value in $tag-colors {
+        &-#{$key} {
+            @include setProperty('background-color', $value, 'bg');
+         }
     }
 
     @include media-breakpoint-up(lg) {
     }
 
     @include media-breakpoint-up(xl) {
-        &__link {
-        }
     }
 }
