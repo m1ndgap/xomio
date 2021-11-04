@@ -104,14 +104,4 @@ $(document).ready(function() {
         }
         return false;
     });
-
-    $('.bl2list').slick({
-      dots: true,
-      arrows: false,
-      infinite: true,
-      slidesToShow: 1,
-      pauseOnHover: false,
-      autoplay: true,
-        autoplaySpeed: 4400
-    });
 });

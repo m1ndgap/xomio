@@ -72,7 +72,7 @@
     margin-left: rem(- $gutter / 2);
     margin-right: rem(- $gutter / 2);
 
-    >.col,
+    > .col,
     > [class^="col-"],
     > [class*=" col-"] {
         padding-left: rem($gutter / 2);

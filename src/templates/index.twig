@@ -65,29 +65,43 @@
       <div class="section__decor section__decor--4 hidden-lg-down decor-dots-1"></div>
     </div>
 
-    <div class="bl2 section" data-fullpage="section">
+    <div class="section home-2" data-fullpage="section">
       <div class="container">
-        <h2 class="title">Whatever language or device your clients are using</h2>
-        <div class="subtitle">If they’re <span>looking</span>, they’ll <span>find</span> you.</div>
-        <div class="bl2inner">
-          <div class="bl2left">
-            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_tkorcb6g.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop data-autoplay></lottie-player>
+        <div class="intro text-center">
+          <h2 class="intro__title">Whatever language or device your clients are using</h2>
+          <h3 class="intro__subtitle font-cursive hidden-xs-down">If they’re <span class="text-primary">looking</span>, they’ll <span class="text-primary">find</span> you.</h3>
+        </div>
+
+        <div class="section__body section__body--center">
+          <div class="section__content">
+            <div class="section__lottie lottie hidden-md-down">
+              <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_tkorcb6g.json" data-player="lottie" background="transparent" speed="1" mode="normal" loop autoplay></lottie-player>
+            </div>
+            <div class="section__lottie lottie lottie--mobile hidden-lg-up">
+              <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_vgroulgj.json" data-player="lottie" background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay></lottie-player>
+            </div>
           </div>
-          <div class="bl2left-mobile">
-            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_vgroulgj.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop data-autoplay></lottie-player>
-          </div>
-          <div class="bl2right">
-            <div class="bl2list">
-              <div class="bl2item"><img src="./assets/img/images/block2.png" alt=""></div>
-              <div class="bl2item"><img src="./assets/img/images/block21.png" alt=""></div>
-              <div class="bl2item"><img src="./assets/img/images/block22.png" alt=""></div>
-              <div class="bl2item bl2hintwrap">
-                <div class="bl2hint">
-                  Your site, in 19 languages, indexed on all major search engines, accessible from any device.
-                  <img src="./assets/img/images/sentence.svg" alt="">
+
+          <div class="section__object">
+            {% for section in home|slice(1,1) %}
+              <div class="screens row" data-slider="slideshow" data-autoplay-speed="4400" data-dots="true">
+                {% for item in section.screens %}
+                  <div class="screens__slide slick-slide col">
+                    <img srcset="./assets/img/screens/{{ item }}.png 1x, ./assets/img/screens/{{ item }}@2x.png 2x" src="./assets/img/screens/{{ item }}.png" alt="" class="section__img">
+                  </div>
+                {% endfor %}
+                <div class="screens__slide slick-slide col">
+                  <div class="result-slide">
+                    <div class="result-slide__body">
+                      <div class="result-slide__title">Your site, in 19 languages, <br>indexed on all major search engines, accessible from any device.</div>
+                      <div class="result-slide__subtitle font-cursive">If they’re <span class="text-primary looking-underline">looking</span>, they’ll <span class="text-primary find-underline">find</span> you.</div>
+                    </div>
+                    <div class="result-slide__decor result-slide__decor--1 hidden-lg-down decor-dots-7"></div>
+                    <div class="result-slide__decor result-slide__decor--2 decor-shape-3"></div>
+                  </div>
                 </div>
               </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>

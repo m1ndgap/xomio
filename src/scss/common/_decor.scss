@@ -83,8 +83,12 @@
         background-image: url(../../assets/img/decor/dots-5.svg);
     }
     &-dots-6 {
-        @include size(116px, 196px);
+        @include size(116px, 96px);
         background-image: url(../../assets/img/decor/dots-6.svg);
+    }
+    &-dots-7 {
+        @include size(116px, 96px);
+        background-image: url(../../assets/img/decor/dots-7.svg);
     }
 
 

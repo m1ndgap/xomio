@@ -19,7 +19,7 @@ const menuVisibleClass  =  'menu-is-visible';
 
 const aosDuration  = 250;
 
-const $header = $('[data-component="header"]');
+const $navbar = $('[data-component="navbar"]');
 const $body = $('.body');
 const $main = $('.main');
 
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initialization(){
         homeFullpage = new fullpage('[data-page="fullpage"]', {
-            paddingTop: document.querySelector('[data-component="navbar"]').offsetHeight+'px',
+            paddingTop: $navbar.offsetHeight+'px',
             sectionSelector: '[data-fullpage="section"]',
             slideSelector: '[data-fullpage="slide"]',
             slidesNavigation: true,
@@ -201,24 +201,13 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollBar: true,
             responsiveWidth: bpXL,
             normalScrollElements: '.section--scrollable',
-            //responsiveHeight: 1000,
-            //scrollOverflow: true,
             licenseKey: '7C83C7E4-02654F77-96AB0657-A3F6DE6F',
             scrollHorizontally: true,
             scrollHorizontallyKey: 'E6229FD0-80AC4893-A7CE7036-0EDBAD95',
-            afterLoad: function(origin, destination, direction) {
-            },
             afterRender: function(){
                 if (this.isFirst) {
                     typeWord(this);
                 }
-
-                /*let video = this.item.querySelector('video');
-
-                if ( video ) {
-                    video.muted = true;
-                    video.play();
-                }*/
             },
             afterSlideLoad: function(section, origin, destination, direction){
                 if (section.index === 0) {
@@ -262,6 +251,41 @@ if ($phoneInputs.length !== 0) {
         Inputmask({"mask": "+1 999 999 99 99"}).mask(inputPhone);
     }
 }
+/* Lottie in fullpage.js */
+let $players = document.querySelectorAll('[data-player="lottie"]');
+
+if ($players) {
+    for (let player of $players) {
+        playerInit(player);
+    }
+}
+
+function playerInit(player){
+    let target = player.parentElement;
+    let source = player.getAttribute('src');
+
+    // create an observer instance
+    let observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            if (mutation.removedNodes.length > 0) { // You need to check if the mutation.removedNodes array contains div#test2 here. I'm just too lazy.
+
+                const removedPlayer = [...mutation.removedNodes].find(el => el === player);
+
+                if (removedPlayer) {
+                    removedPlayer.load(source)
+                    target.append(removedPlayer.cloneNode(true))
+                    observer.disconnect(); // stop observing
+                }
+            }
+        });
+    });
+
+    // configuration of the observer
+    observer.observe(target, {
+        childList: true
+    }); // start observe
+}
+
 $(document).ready(function() {
     function checkStepVariants(el) {
         let wF = $(el).find('.variant:first').outerWidth();
@@ -367,16 +391,6 @@ $(document).ready(function() {
             $(inp).val(1);
         }
         return false;
-    });
-
-    $('.bl2list').slick({
-      dots: true,
-      arrows: false,
-      infinite: true,
-      slidesToShow: 1,
-      pauseOnHover: false,
-      autoplay: true,
-        autoplaySpeed: 4400
     });
 });
 /* Menu */
@@ -667,19 +681,30 @@ $(document).ready(function(){
 });
 /* Slideshow slider */
 $(document).ready(function(){
-    let $slideshow = $('[data-slider="slideshow"]');
+    let $slideshows = $('[data-slider="slideshow"]');
 
-    $slideshow.slick({
-        infinite: true,
-        arrows: false,
-        swipeToSlide: true,
-        autoplay: true,
-        autoplaySpeed: 2500,
-        pauseOnHover: false,
-    });
+    $slideshows.each(function(index, slider) {
+        let $slider = $(slider);
+        let sliderAutoplaySpeed = +$slider.attr('data-autoplay-speed') || 2500;
+        let sliderDots = false;
 
-    $(window).on('orientationchange resize', function() {
-        $slideshow.slick('resize');
+        if ($slider.attr('data-dots')) {
+            sliderDots = true;
+        }
+
+        $slider.slick({
+            infinite: true,
+            arrows: false,
+            dots: sliderDots,
+            swipeToSlide: true,
+            autoplay: true,
+            autoplaySpeed: sliderAutoplaySpeed,
+            pauseOnHover: false,
+        });
+
+        $(window).on('orientationchange resize', function() {
+            $slider.slick('resize');
+        });
     });
 });
 var smoothScrollOptions = {

@@ -19,7 +19,7 @@ const menuVisibleClass  =  'menu-is-visible';
 
 const aosDuration  = 250;
 
-const $header = $('[data-component="header"]');
+const $navbar = $('[data-component="navbar"]');
 const $body = $('.body');
 const $main = $('.main');
 

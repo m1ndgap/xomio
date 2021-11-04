@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initialization(){
         homeFullpage = new fullpage('[data-page="fullpage"]', {
-            paddingTop: document.querySelector('[data-component="navbar"]').offsetHeight+'px',
+            paddingTop: $navbar.offsetHeight+'px',
             sectionSelector: '[data-fullpage="section"]',
             slideSelector: '[data-fullpage="slide"]',
             slidesNavigation: true,
@@ -17,24 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollBar: true,
             responsiveWidth: bpXL,
             normalScrollElements: '.section--scrollable',
-            //responsiveHeight: 1000,
-            //scrollOverflow: true,
             licenseKey: '7C83C7E4-02654F77-96AB0657-A3F6DE6F',
             scrollHorizontally: true,
             scrollHorizontallyKey: 'E6229FD0-80AC4893-A7CE7036-0EDBAD95',
-            afterLoad: function(origin, destination, direction) {
-            },
             afterRender: function(){
                 if (this.isFirst) {
                     typeWord(this);
                 }
-
-                /*let video = this.item.querySelector('video');
-
-                if ( video ) {
-                    video.muted = true;
-                    video.play();
-                }*/
             },
             afterSlideLoad: function(section, origin, destination, direction){
                 if (section.index === 0) {

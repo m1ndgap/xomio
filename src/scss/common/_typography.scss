@@ -127,7 +127,9 @@ b {
     display: inline-block;
     margin-bottom: -.28125em;
 
-    &--underline {
+    &--underline,
+    .looking-underline,
+    .find-underline {
         display: inline-block;
         position: relative;
 
@@ -140,6 +142,26 @@ b {
             margin-top: -.4225em;
             content: '';
             background: url(../../assets/img/cursive-underline.svg) 50% 0/contain no-repeat;
+        }
+    }
+
+    .looking-underline,
+    .find-underline {
+        &:after {
+            height: 0.21875em;
+            margin-top: .03125em;
+        }
+    }
+
+    .looking-underline {
+        &:after {
+            background-image: url(../../assets/img/looking-underline.svg);
+        }
+    }
+
+    .find-underline {
+        &:after {
+            background-image: url(../../assets/img/find-underline.svg);
         }
     }
 

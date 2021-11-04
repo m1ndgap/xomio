@@ -1,0 +1,29 @@
+.lottie {
+    //@include aspect-ratio-block(375/375);
+
+    lottie-player {
+        //@extend %cover-image;
+    }
+
+    @include media-breakpoint-down(xs) {
+    }
+
+    @include media-breakpoint-up(lg) {
+        &:after {
+            //padding-top: 43.40%;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        &:after {
+            //padding-top: 100%;
+        }
+
+        lottie-player {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+}

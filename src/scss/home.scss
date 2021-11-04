@@ -3,114 +3,13 @@
 @import "common/variables";
 @import "mixins";
 
-.bl2 {
-    padding-top: 120px;
-}
-
-.bl2 h2 {
-    text-align: center;
-}
-
-.subtitle {
-    font-size: 32px;
-    font-family: Gochi Hand;
-    color: #1E5C59;
-    text-align: center;
-    margin-bottom: 65px;
-}
-
-.subtitle span {
-    color: #F55116;
-}
-
-.bl2inner {
-    font-size: 0;
-    position: relative;
-}
-
-.bl2inner .bl2left {
-    display: inline-block;
-    vertical-align: top;
-    width: 648px;
-}
-
-.bl2inner .bl2left-mobile {
-    display: none;
-}
-
-.bl2inner .bl2left img {
-    width: 100%;
-}
-
-.bl2inner .bl2left lottie-player {
+.bl2inner .anim-block lottie-player {
     position: absolute;
     width: 100%;
     left: 0;
     top: -145px;
 }
 
-.bl2inner .bl2right {
-    width: calc(100% - 648px);
-    display: inline-block;
-    vertical-align: top;
-}
-
-.bl2list .bl2item {
-    text-align: center;
-}
-
-.bl2list img {
-    max-width: 100%;
-}
-
-.bl2list .slick-dots {
-    text-align: center;
-}
-
-.bl2list .bl2hint {
-    padding: 40px;
-    box-sizing: border-box;
-    background: #fff;
-    border-radius: 16px;
-    font-size: 26px;
-    color: #1C3F74;
-    text-align: left;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
-    width: 96%;
-    margin: 45px auto 0;
-    position: relative;
-    z-index: 3;
-}
-
-.bl2list .bl2hint img {
-    margin-top: 20px;
-}
-
-.bl2list .bl2hintwrap {
-    position: relative;
-    
-}
-
-.bl2list .bl2hintwrap:before {
-    display: block;
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 116px;
-    height: 96px;
-    background: url(../../assets/img/images/hint-left.svg) center center no-repeat;
-}
-.bl2list .bl2hintwrap:after {
-    display: block;
-    content: " ";
-    position: absolute;
-    right: -71px;
-    bottom: -130px;
-    width: 351px;
-    height: 343px;
-    background: url(../../assets/img/images/hint-right.svg) center center no-repeat;
-}
 
 .test-wrap {
     position: relative;
@@ -593,36 +492,6 @@
 }
 
 @media only screen and (max-width:1220px) {
-    .bl2 {
-        padding-top: 80px;
-    }
-
-    .bl2 .subtitle {
-        display: none;
-    }
-    
-    .bl2inner .bl2left {
-        display: none;
-    }
-
-    .bl2inner .bl2left-mobile {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-    
-
-    
-    .bl2inner .bl2right {
-        width: 100%;
-    }
-    
-    .bl2list .bl2hint {
-        padding: 20px;
-        font-size: 18px;
-    }
-
     .step-block .variants {
         flex-direction: column;
         padding-bottom: 0;
