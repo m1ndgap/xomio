@@ -9,7 +9,7 @@
 {% block content %}
   <div data-page="fullpage">
     <div class="section home-1" data-fullpage="section">
-      {% for slide in home|first.slides|slice(0,3) %}
+      {% for slide in home|first.slides %}
         <div class="slide" data-fullpage="slide">
           <div class="container container--mobile-fixed">
             <div class="section__content section__content--lg">

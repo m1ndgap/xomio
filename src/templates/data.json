@@ -1136,16 +1136,20 @@
                     "type": "Lawyer",
                     "list": [
                         {
-                            "title": "ADA Compliance",
-                            "text": "All Xomio sites are 100% ADA-Compliant to standard WCAG 2.1 in every supported language. Never worry about an ADA lawsuit again."
+                            "title": "Compliance, without the headaches",
+                            "text": "Every Xomio site delivers ADA compliance in line with WCAG 2.1 protocols. Straight out of the box, with no effort from you."
                         },
                         {
-                            "title": "Fair Housing",
-                            "text": "Every realtor talks the talk on Fair Housing. But a Xomio site does the talking for you - in 19 languages. Reach every community in your market with the same information on housing.. "
+                            "title": "A website that’s an asset, not a legal liability",
+                            "text": "ADA compliance isn't just taken care of in English. The compliance module supports every one of the 19 languages. You never need to worry about an ADA legal threat again."
                         },
                         {
-                            "title": "Accessibility is more than just a buzzword",
-                            "text": "It’s a legal liability if you get it wrong, and good business if you get it right. More accessibility means more people can access your listings, and more become leads. It’s that simple."
+                            "title": "Accessibility that’s good for business",
+                            "text": "Just like Fair Housing, accessibility and inclusivity aren't just buzzwords. They're good business. More accessibility for a wider range of consumers means more leads for you. It's that simple."
+                        },
+                        {
+                            "title": "Protection for you, security for your clients",
+                            "text": "Xomio's built in CAPTCHA and data privacy modules ensure that your site is secure, and so is your client data."
                         }
                     ],
                     "video": "xomio_2_1.mp4"
