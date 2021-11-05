@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initialization(){
         homeFullpage = new fullpage('[data-page="fullpage"]', {
-            paddingTop: $navbar.offsetHeight+'px',
+            paddingTop: $navbar[0].offsetHeight +'px',
             sectionSelector: '[data-fullpage="section"]',
             slideSelector: '[data-fullpage="slide"]',
             slidesNavigation: true,

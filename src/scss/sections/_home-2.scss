@@ -23,7 +23,7 @@
     @include media-breakpoint-up(xl) {
         .intro {
             max-width: none;
-            margin-bottom: rem(64px);
+            margin-bottom: rem($spacer-8);
         }
 
         .intro__title {
@@ -37,6 +37,10 @@
     }
 
     @include media-breakpoint-up(2xl) {
+        .intro {
+            margin-bottom: rem(64px);
+        }
+
         .section__content {
             flex: 0 0 rem(639px);
             width: rem(639px);

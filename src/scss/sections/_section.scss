@@ -204,12 +204,12 @@
         scroll-margin-top: rem($section-offset-top);
 
         &__content {
-            flex: 0 0 45%;
-            max-width: 45%;
+            flex: 0 0 50%;
+            max-width: 50%;
             max-width: rem(480px);
 
             &--lg {
-                max-width: rem(516px);
+                max-width: rem(520px);
             }
         }
 
@@ -218,6 +218,10 @@
 
             &.is-sticky {
                 top: rem($navbar-height + $spacer-10);
+            }
+
+            &--md {
+                max-width: rem(560px);
             }
         }
 

@@ -118,7 +118,7 @@
 @include media-breakpoint-up(xl) {
     .list-plus {
         > li {
-            padding-left: rem($spacer-9);
+            padding-left: rem($spacer-10);
             margin-bottom: rem($spacer-6);
         }
     }

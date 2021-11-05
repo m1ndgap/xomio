@@ -83,7 +83,7 @@
             &--2 {
                 width: rem(162px);
                 height: rem(275px);
-                top: rem(-138px);
+                top: rem(-98px);
             }
 
             &--3 {
@@ -91,6 +91,14 @@
                 height: rem(96px);
                 top: rem(91px);
                 left: rem(-61px);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(2xl) {
+        .section__decor {
+            &--2 {
+                top: rem(-138px);
             }
         }
     }

@@ -24,12 +24,8 @@
 
     @include media-breakpoint-up(xl) {
         .section__title {
-            margin-right: -2.5em;
-            margin-bottom: rem($spacer-9);
-        }
-
-        .section__object {
-            margin-top: rem(-60px);
+            margin-right: rem(-80px);
+            margin-bottom: rem($spacer-8);
         }
 
         .section__decor {
@@ -46,14 +42,20 @@
             }
 
             &--3 {
+                top: 76%;
                 left: rem(-126px);
-                bottom: 0;
+                bottom: auto;
             }
 
             &--4 {
-                top: rem(151px);
+                top: 19%;
                 left: rem(-62px);
             }
+        }
+    }
+
+    @include media-breakpoint-up(2xl) {
+        .section__decor {
         }
     }
 }

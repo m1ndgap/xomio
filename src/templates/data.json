@@ -1056,7 +1056,7 @@
             "slides": [
                 {
                     "title": "You’re a real estate expert. <br> Not a ",
-                    "type": "coder",
+                    "type": "coder.",
                     "list": [
                         {
                             "title": "Just clicking. No coding.",
@@ -1079,7 +1079,7 @@
                 },
                 {
                     "title": "You’re a real estate expert. <br> Not a ",
-                    "type": "translator",
+                    "type": "translator.",
                     "list": [
                         {
                             "title": "All listings translated into 19 languages",
@@ -1110,7 +1110,7 @@
                 },
                 {
                     "title": "You’re a real estate expert. <br> Not a ",
-                    "type": "web designer",
+                    "type": "web designer.",
                     "list": [
                         {
                             "title": "Beautiful designs straight out of the box",
@@ -1133,7 +1133,7 @@
                 },
                 {
                     "title": "You’re a real estate expert. <br> Not a ",
-                    "type": "Lawyer",
+                    "type": "Lawyer.",
                     "list": [
                         {
                             "title": "Compliance, without the headaches",
@@ -1152,7 +1152,7 @@
                             "text": "Xomio's built in CAPTCHA and data privacy modules ensure that your site is secure, and so is your client data."
                         }
                     ],
-                    "video": "xomio_2_1.mp4"
+                    "video": "12@2x.mp4"
                 }
             ]
         },
