@@ -50,9 +50,6 @@
         }
     }
 
-    @include media-breakpoint-up(lg) {
-    }
-
     @include media-breakpoint-up(xl) {
         &__intro {
             margin-bottom: rem(64px);
@@ -65,32 +62,6 @@
         &__card {
             margin-left: 8%;
             top: rem(120px);
-        }
-
-        &__decor {
-            &--1 {
-                top: rem(140px);
-                left: rem(-64px);
-            }
-
-            &--2 {
-                left: rem(-44px);
-                bottom: rem(163px);
-            }
-
-            &--3 {
-                width: rem(91px);
-                background-position: 0;
-                background-size: cover;
-                top: rem(79px);
-                right: 0;
-            }
-
-            &--4 {
-                left: 100%;
-                top: 50%;
-                transform: translate(-135%, 62%);
-            }
         }
     }
 }

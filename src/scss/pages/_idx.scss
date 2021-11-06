@@ -1,0 +1,68 @@
+.page-idx {
+    .decor {
+        &--2,
+        &--3,
+        &--4,
+        &--5 {
+            transform: scale(.65);
+        }
+
+        &--2 {
+            right: rem(-69px);
+            bottom: rem(-61px);
+        }
+
+        &--3 {
+            left: rem(-96px);
+            bottom: rem(-71px);
+        }
+
+        &--4 {
+            right: rem(-148px);
+            bottom: rem(-55px);
+        }
+
+        &--5 {
+            right: rem(-21px);
+            bottom: rem(-54px);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .decor {
+            &--1 {
+                width: rem(95px);
+                top: rem(-2px);
+                right: 0;
+                background-position: 0;
+                background-size: cover;
+            }
+
+            &--2,
+            &--3,
+            &--4,
+            &--5 {
+                transform: scale(1);
+            }
+
+            &--6 {
+                width: rem(140px);
+                top: rem(-151px);
+                right: rem(0);
+                right: 0;
+                background-position: 0;
+                background-size: cover;
+            }
+
+            &--7 {
+                left: rem(-118px);
+                bottom: rem(-97px);
+            }
+
+            &--8 {
+                left: rem(-116px);
+                bottom: rem(-79px);
+            }
+        }
+    }
+}

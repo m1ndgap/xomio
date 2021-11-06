@@ -7,7 +7,7 @@
           {% for slide in glex.slider %}
             <div class="section__slide slick-slide">
               <h2 class="section__title">{{ slide.title }}</h2>
-              <div class="section__description {% if slide.type == "lg" %} text-lg{% endif %}">
+              <div class="section__text {% if slide.type == "lg" %} text-lg{% endif %}">
                 {% if slide.text %}
                   <p>{{ slide.text }}</p>
                 {% endif %}

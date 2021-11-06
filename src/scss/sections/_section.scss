@@ -1,16 +1,20 @@
 .section {
     position: relative;
     z-index: 1;
-    padding-top: rem($section-offset-top-mobile);
-    padding-bottom: rem($section-offset-bottom-mobile);
-    scroll-margin-top: rem($section-offset-top-mobile);
+    padding-top: rem($section-offset-mobile);
+    padding-bottom: rem($section-offset-mobile);
+    scroll-margin-top: rem($section-offset-mobile);
+
+    &__header {
+        margin-bottom: rem($spacer-6);
+    }
 
     &__body {
         max-width: rem(600px);
         margin-left: auto;
         margin-right: auto;
     }
- 
+
     &__content {
         margin-bottom: rem($spacer-10);
     }
@@ -47,14 +51,14 @@
     &__object {
         position: relative;
 
-        &-bg {
-            top: 50%;
-            left: 50%;
-            transform: translate(-51%,-40%) scale(0.8);
-        }
-
         .slick-list {
             overflow: visible;
+        }
+
+        &-bg {
+            top: 0;
+            left: 0;
+            right: 0;
         }
     }
 
@@ -63,13 +67,19 @@
         box-shadow: 0 6px 24px -6px rgba(#18274b, 0.06), 0 10px 32px -4px rgba(#18274b, 0.05);
         border-radius: $border-radius-lg;
         padding: rem($spacer-8 $spacer-6);
+
+        &-bg {
+            top: 0;
+            left: 0;
+            right: 0;
+        }
     }
 
     &__img {
         display: block;
 
         &--filter {
-            filter: drop-shadow(0 4px 4px rgba($black-400, 0.25));
+            filter: drop-shadow(0 4px 4px rgba($black-500, 0.25));
         }
     }
 
@@ -117,6 +127,7 @@
     &__video {
         @include aspect-ratio-block(600/382);
         border-radius: $border-radius-sm;
+        box-shadow: 0 16px 24px rgba($black-400, 0.02), 0 16px 40px rgba($black-400, 0.02);
 
         video {
             position: absolute;
@@ -132,19 +143,11 @@
         }
     }
 
-    @include media-breakpoint-up(md) {
-        &__object {
-            &-bg {
-                top: rem(-158px);
-                left: rem(-63px);
-                right: rem(-102px);
-                bottom: rem(-69px);
-                transform: scale(1);
-            }
-        }
-    }
-
     @include media-breakpoint-up(lg) {
+        &__header {
+            margin-bottom: rem(48px);
+        }
+
         &__body {
             display: flex;
             justify-content: space-between;
@@ -157,17 +160,21 @@
 
         &__content {
             flex: 0 0 40%;
-            max-width: 40%;
+            width: 40%;
             margin-bottom: 0;
         }
 
         &__object {
             flex: 0 0 50%;
-            max-width: 50%;
+            width: 50%;
 
             &.is-sticky {
                 position: sticky;
                 top: rem($navbar-height-mobile + $spacer-10);
+            }
+
+            .section__content {
+                width: 100%;
             }
         }
 
@@ -196,16 +203,26 @@
                 }
             }
         }
+
+        &__video {
+            border-radius: $border-radius-lg;
+        }
+
+        &--reversed & {
+            &__body {
+                flex-direction: row-reverse;
+            }
+        }
     }
 
     @include media-breakpoint-up(xl) {
-        padding-top: rem($section-offset-top);
-        padding-bottom: rem($section-offset-bottom);
-        scroll-margin-top: rem($section-offset-top);
+        padding-top: rem($section-offset);
+        padding-bottom: rem($section-offset);
+        scroll-margin-top: rem($section-offset);
 
         &__content {
             flex: 0 0 50%;
-            max-width: 50%;
+            width: 50%;
             max-width: rem(480px);
 
             &--lg {
@@ -218,6 +235,7 @@
 
             &.is-sticky {
                 top: rem($navbar-height + $spacer-10);
+                align-self: flex-start;
             }
 
             &--md {
@@ -226,6 +244,7 @@
         }
 
         &__title {
+            margin-right: rem(-10px);
             margin-bottom: rem($spacer-6);
         }
 
@@ -247,7 +266,7 @@
         }
 
         &__form {
-            box-shadow: 0 16px 24px rgba(#00362B, 0.04), 0 16px 40px rgba(#00362B, 0.04);
+            box-shadow: 0 16px 24px rgba($black-400, 0.04), 0 16px 40px rgba($black-400, 0.04);
             padding: rem(48px $spacer-10);
         }
 

@@ -60,6 +60,7 @@
 
 // Sections
 @import "sections/section";
+@import "sections/sections";
 @import "sections/brands";
 @import "sections/contact-us";
 @import "sections/feature-1";
@@ -69,11 +70,6 @@
 @import "sections/feature-5";
 @import "sections/feature-6";
 @import "sections/feature-7";
-@import "sections/feature-8";
-@import "sections/feature-9";
-@import "sections/feature-10";
-@import "sections/feature-11";
-@import "sections/feature-13";
 @import "sections/home-1";
 @import "sections/home-2";
 @import "sections/home-4";
@@ -96,7 +92,11 @@
 
 // Pages
 @import "pages/home";
-@import "pages/pricing";
+@import "pages/about-us";
+@import "pages/features";
+@import "pages/glex";
 @import "pages/how-it-works";
+@import "pages/idx";
+@import "pages/pricing";
 
 @import "common/responsive";

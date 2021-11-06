@@ -4,7 +4,7 @@
   <div class="tags-popup__slider" data-slider="tags">
     {% for section in home|slice(2,1) %}
       {% for item in section.tags %}
-        <div class="tags-popup__slide section tag-slide slick-slide tag-{{ item.theme }}" data-arrow-color="{{ item.arrowColor }}">
+        <div class="tags-popup__slide section tag-slide slick-slide theme-tag-{{ item.theme }}" data-arrow-color="{{ item.arrowColor }}">
           <div class="container container--mobile-fixed">
             <div class="section__body section__body--center">
               <div class="section__content">
@@ -13,7 +13,7 @@
                   {% if item.popup.subtitle %}
                     <h3 class="section__subtitle">{{ item.popup.subtitle  }}</h3>
                   {% endif %}
-                  <div class="section__description text-lg">
+                  <div class="section__text text-lg">
                     {% if item.popup.list %}
                       <ul class="list-flake">
                         {% for li in item.popup.list  %}

@@ -1,6 +1,8 @@
 .page-home {
+    overflow-x: visible;
+
     .main {
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     @include media-breakpoint-up(xl) {

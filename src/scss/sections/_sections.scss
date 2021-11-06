@@ -1,0 +1,11 @@
+.sections {
+    margin-bottom: rem($section-offset-mobile);
+
+    @include media-breakpoint-up(xl) {
+        margin-bottom: rem(70px);
+
+        .section {
+            padding-bottom: rem($section-offset);
+        }
+    }
+}

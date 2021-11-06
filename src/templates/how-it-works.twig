@@ -1,6 +1,6 @@
 {% extends 'layout/_base.twig' %}
 
-{% set bodyClass = 'page-how-it-works' %}
+{% set pageClass = 'page-how-it-works' %}
 {% set pageTitle = 'How it works' %}
 
 {% block content %}
@@ -9,12 +9,14 @@
     <!-- Intro 1 -->
     <section class="section intro-1">
       <div class="container container--mobile-fixed">
-        <h2 class="intro__title">Beautiful websites that deliver more leads</h2>
-        <div class="section__intro intro">
-          <h3 class="section__subtitle">Ready to launch in just a few clicks</h3>
+        <div class="section__header intro text-md-center">
+          <h2 class="intro__title">Beautiful websites that deliver more leads</h2>
+          <h3 class="intro__subtitle">Ready to launch in just a few clicks</h3>
           <div class="intro__description">
-            <p>Build your website from beautifully designed, customizable blocks.</p>
-            <p>With just a few clicks, you can create a look and feel that turns visitors into clients.</p>
+            <p>
+              Build your website from beautifully designed, customizable blocks. <br>
+              With just a few clicks, you can create a look and feel that turns visitors into clients.
+            </p>
           </div>
         </div>
 
@@ -22,15 +24,17 @@
           <img srcset="./assets/img/how-it-works/intro.png 1x, ./assets/img/how-it-works/intro@2x.png 2x" src="./assets/img/how-it-works/intro.png" alt="" class="section__img">
         </div>
       </div>
-      <div class="section__decor section__decor--1 decor-dots-1 hidden-lg-down"></div>
-      <div class="section__decor section__decor--2 decor-lines-1 hidden-lg-down"></div>
-      <div class="section__decor section__decor--3 decor-lines-9"></div>
+      <div class="decor decor--1 decor-dots-1 hidden-lg-down"></div>
+      <div class="decor decor--2 decor-lines-1 hidden-lg-down"></div>
+      <div class="decor decor--3 decor-lines-9"></div>
     </section>
 
     <!-- Intro 2 -->
     <section class="section intro-2" data-component="tabs">
       <div class="container container--mobile-fixed">
-        <h2 class="section__title">A great experience for you and your clients</h2>
+        <div class="section__header intro intro--sm text-md-center">
+          <h2 class="section__title">A great experience for&nbsp;you and your clients</h2>
+        </div>
         <ul class="section__tabs tabs__list row">
           {% for tab in howItWorks.tabs %}
             {% set tabId = tab.name|lower|replace({' ': '-'}) %}
@@ -75,11 +79,11 @@
         </div>
       </div>
 
-      <div class="section__decor decor-complex-6"></div>
+      <div class="decor decor--4 decor-complex-6"></div>
     </section>
 
-    <!-- Feature-11 -->
-    <section class="section feature-11">
+    <!-- feature-7 -->
+    <section class="section feature-7">
       <div class="container container--mobile-fixed">
         <div class="section__content">
           <h2 class="section__title">Our listings translation delivers more leads</h2>
@@ -87,7 +91,7 @@
         <div class="section__body">
           <div class="section__content section__content--lg">
             <h3 class="section__subtitle">How it works:</h3>
-            <div class="section__description">
+            <div class="section__text">
               <ul class="list-plus" data-component="accordion">
                 {% for item in howItWorks.workflow %}
                   <li class="collapsible is-collapsed" data-element="accordion-item">
@@ -104,23 +108,21 @@
           </div>
 
           <div class="section__object">
-            <div class="section__template section__template--shadow">
-              <div class="section__video">
-                <video muted playsinline autoplay loop>
-                  <source src="./assets/video/1_xomio_h264_cbr.mp4" type="video/mp4">
-                  <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
-                </video>
-              </div>
+            <div class="section__video">
+              <video muted playsinline autoplay loop>
+                <source src="./assets/video/1_xomio_h264_cbr.mp4" type="video/mp4" />
+                <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
+              </video>
             </div>
           </div>
         </div>
       </div>
-      <div class="section__decor decor-lines-8"></div>
+      <div class="decor decor--5 decor-lines-8"></div>
     </section>
   </div>
 
-  <!-- Feature-10 -->
-  <section class="section feature-10">
+  <!-- feature-6 -->
+  <section class="section feature-6">
     <div class="container container--mobile-fixed">
       <h2 class="section__title">Bring your ideas to life</h2>
       <div class="section__body">
@@ -129,7 +131,7 @@
             {% for feature in howItWorks.features %}
               <li class="features__item">
                 <div class="feature">
-                  {{ svg.icon(feature.icon, 'feature__icon theme-'~feature.theme) }}
+                  {{ svg.icon(feature.icon, 'feature__icon theme-icon-'~feature.theme) }}
                   <h3 class="feature__title">{{ feature.title }}</h3>
                   <p class="feature__text text-lg">{{ feature.text }}</p>
                 </div>
@@ -139,19 +141,16 @@
         </div>
 
         <div class="section__object is-sticky">
-          <div class="section__template section__template--shadow">
-            <div class="section__video">
-              <video muted playsinline autoplay loop>
-                <source src="./assets/video/1_xomio_h264_cbr.mp4" type="video/mp4">
-                  <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
-                </video>
-            </div>
+          <div class="section__video">
+            <video muted playsinline autoplay loop>
+              <source src="./assets/video/1_xomio_h264_cbr.mp4" type="video/mp4" />
+              <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
+            </video>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="section__decor decor-shape-3"></div>
+    <div class="decor decor--6 decor-shape-3"></div>
   </section>
 {% endblock %}
 

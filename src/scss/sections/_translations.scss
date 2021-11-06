@@ -1,48 +1,12 @@
-.translations {
+/*.translations {
     padding-top: rem(48px);
     padding-bottom: rem(48px);
-
-    .intro {
-        margin-bottom: rem($spacer-6);
-    }
-
-    .section__decor {
-        &--1 {
-            top: rem(-16px);
-            left: rem(-17px);
-            @include size(57px, 54px);
-        }
-
-        &--2 {
-            right: 0;
-            bottom: rem(-43px);
-            @include size(53px, 120px);
-        }
-    }
 
     @include media-breakpoint-up(lg) {
     }
 
     @include media-breakpoint-up(xl) {
-        padding-top: rem($section-offset-top);
-        padding-bottom: rem($section-offset-top);
-
-        .intro {
-            margin-bottom: rem(48px);
-        }
-
-        .section__decor {
-            &--1 {
-                top: rem(-46px);
-                left: rem(-24px);
-                @include size(130px, 124px);
-            }
-
-            &--2 {
-                top: rem(-79px);
-                bottom: auto;
-                @include size(154px, 326px);
-            }
-        }
+        padding-top: rem($section-offset);
+        padding-bottom: rem($section-offset);
     }
-}
+}*/

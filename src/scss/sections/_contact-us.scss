@@ -1,27 +1,4 @@
 .contact-us {
-    .section__decor {
-        &--1 {
-            left: rem(-116px);
-            bottom: rem(-11px);
-        }
-
-        &--2 {
-            width: rem(167px);
-            bottom: rem(40px);
-            right: 0;
-        }
-
-        &--3 {
-            left: rem(-120px);
-            bottom: rem(-83px);
-        }
-
-        &--4 {
-            top: rem(-90px);
-            left: rem(-44px);
-        }
-    }
-
     @include media-breakpoint-down(lg) {
         padding-top: rem(56px);
         padding-bottom: rem(56px);
@@ -31,38 +8,9 @@
         }
     }
 
-    @include media-breakpoint-up(md) {
-        .section__object {
-            &-bg {
-                top: rem(35px);
-                left: rem(-75px);
-                right: 0;
-            }
-
-            &-bg-2 {
-                top: rem(36px);
-                left: rem(-80px);
-            }
-        }
-    }
-
     @include media-breakpoint-up(xl) {
-        overflow: visible;
-
         &.bd-blue {
             padding-top: rem($section-offset-bottom);
-        }
-
-        .section__decor {
-            &--2 {
-                width: rem(283px);
-                bottom: rem(56px);
-            }
-
-            &--5 {
-                left: rem(-116px);
-                bottom: rem(-47px);
-            }
         }
     }
 }

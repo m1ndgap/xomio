@@ -1,45 +1,19 @@
 .feature-1 {
-    .section__decor {
-        &--2 {
-            top: rem(105px);
-            right: 0;
-            @include size(65px, 120px);
-        }
-
-        &--3 {
-            left: rem(-35px);
-            bottom: rem(88px);
+    .section__img {
+        &-hover {
+            position: absolute;
+            top: rem(-22px);
+            top: -5.7%;
+            right: 6.122%;
+            width: 76.676%;
+            z-index: 1;
         }
     }
 
     @include media-breakpoint-up(lg) {
-        .section__object {
-            position: relative;
-            z-index: 1;
-        }
-
-        .section__decor {
-            &--1 {
-                left: rem(-29px);
-                bottom: rem(-79px);
-            }
-
-            &--2 {
-                top: rem(-3px);
-                @include size(165px, 241px);
-            }
-
-            &--3 {
-                left: 50%;
-                margin-left: rem(-71px);
-                bottom: rem(121px);
-            }
-        }
     }
 
     @include media-breakpoint-up(xl) {
-        .section__title {
-            margin-right: rem(-10px);
-        }
+        padding-top: rem($spacer-6);
     }
 }

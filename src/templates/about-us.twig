@@ -1,6 +1,6 @@
 {% extends 'layout/_base.twig' %}
 
-{% set bodyClass = '' %}
+{% set pageClass = 'page-about-us' %}
 {% set pageTitle = 'About us' %}
 
 {% block content %}
@@ -10,7 +10,7 @@
       <div class="section__body">
         <div class="section__content">
           <h2 class="section__title">Meet the team behind Xomio</h2>
-          <div class="section__description text-lg">
+          <div class="section__text text-lg">
             <p>At Immobel, we have over two decades of experience building websites and software for the biggest names in global real estate, with clients like Century 21®  and Sotheby’s International Real Estate®.</p>
             <p>Xomio gives you access to the same technology we use to power the web presence of many of our largest partners.</p>
             <p>Unlike other real estate website builders, we don’t use WordPress or other generic platforms underneath our products.</p>
@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <div class="section__decor decor-dots-1 hidden-lg-down"></div>
+    <div class="decor decor--1 decor-dots-1 hidden-lg-down"></div>
   </section>
 
   <!-- Mission -->
@@ -42,7 +42,7 @@
         <div class="section__content">
           <h2 class="section__title">Our mission</h2>
           <h3 class="section__subtitle">To help agents, brands, brokers, MLS and portals better serve the communities within their markets, and beyond.</h3>
-          <div class="section__description">
+          <div class="section__text">
             <p>We build products that help you increase the visibility of your business and your listings to all clients, regardless of their location, the language they speak, or their accessibility requirements.</p>
           </div>
         </div>
@@ -57,7 +57,7 @@
   <!-- Partners -->
   <section class="section partners">
     <div class="container container--mobile-fixed">
-      <div class="intro text-center">
+      <div class="section__header intro text-center">
         <h2 class="intro__title">Partners and Clients</h2>
         <div class="intro__description">
           <p>Our technology powers the global visibility and connectivity of many of the most prestigious names in real estate.</p>
@@ -89,7 +89,7 @@
         {% for item in values %}
           <li class="features__item col-xs-12 col-lg-6">
             <div class="feature">
-              {{ svg.icon(item.icon, 'feature__icon theme-'~item.theme) }}
+              {{ svg.icon(item.icon, 'feature__icon theme-icon-'~item.theme) }}
               <h3 class="feature__title">{{ item.title }}</h3>
               <p class="feature__text">{{ item.text }}</p>
             </div>
@@ -98,8 +98,8 @@
       </ul>
     </div>
 
-    <div class="section__decor section__decor--1 decor-complex-7"></div>
-    <div class="section__decor section__decor--2 decor-lines-5"></div>
+    <div class="decor decor--2 decor-complex-7"></div>
+    <div class="decor decor--3 decor-lines-5"></div>
   </section>
 
   <!-- Stats -->
@@ -126,7 +126,7 @@
   <!-- Teams -->
   <section class="section teams">
     <div class="container container--mobile-fixed">
-      <div class="intro text-center">
+      <div class="section__header intro text-center">
         <h2 class="intro__title">How the Xomio team supports you</h2>
         <div class="intro__description">
           <p>Meet the different teams that make Xomio great!</p>
@@ -137,7 +137,7 @@
         {% for item in teams %}
           <li class="features__item col-xs-12 col-md-6 col-lg-4 col-xl-3">
             <div class="feature feature--card" data-component="feature-card">
-              {{ svg.icon(item.icon, 'feature__icon theme-'~item.theme) }}
+              {{ svg.icon(item.icon, 'feature__icon theme-icon-'~item.theme) }}
               <h3 class="feature__title">{{ item.title }}</h3>
               <div class="feature__toggle">
                 <a href="#" class="feature__toggle-link" data-element="feature-card-toggle">{{ item.toggle }}</a>
@@ -151,8 +151,8 @@
       </ul>
     </div>
 
-    <div class="section__decor section__decor--1 decor-shape-3"></div>
-    <div class="section__decor section__decor--2 decor-lines-4 hidden-lg-down"></div>
+    <div class="decor decor--4 decor-shape-3"></div>
+    <div class="decor decor--5 decor-lines-4 hidden-lg-down"></div>
   </section>
 
   <!-- Work with us -->
@@ -161,7 +161,7 @@
       <div class="section__body">
         <div class="section__content">
           <h2 class="section__title">Work with us!</h2>
-          <div class="section__description">
+          <div class="section__text">
             <p>We’re always looking for talent, across a range of teams.</p>
             <p>We’re 100% remote, and finding the right people matters more to us than where you’re based.</p>
             <p>Attitude is just as important to us as experience, so if you’re creative and ambitious, and your values align with ours, please get in touch today and find out whether we have any openings.</p>
@@ -289,13 +289,13 @@
             </div>
           </form>
 
-          <div class="section__object-bg-2 decor-dots-bg-3 hidden-xs-down"></div>
+          <div class="section__form-bg decor-dots-bg-3"></div>
         </div>
       </div>
     </div>
 
-    <div class="section__decor section__decor--3 decor-complex-1 hidden-lg-down"></div>
-    <div class="section__decor section__decor--4 decor-lines-10 hidden-lg-down"></div>
+    <div class="decor decor--6 decor-complex-1 hidden-lg-down"></div>
+    <div class="decor decor--7 decor-lines-10 hidden-lg-down"></div>
   </section>
 {% endblock %}
 

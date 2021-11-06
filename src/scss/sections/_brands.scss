@@ -33,13 +33,4 @@
             margin-bottom: rem(48px);
         }
     }
-
-    @include media-breakpoint-up(xl) {
-        padding-bottom: rem(60px);
-
-        .section__decor {
-            right: 0;
-            bottom: rem(-116px);
-        }
-    }
 }

@@ -1,37 +1,7 @@
 .values {
-    .section__decor {
-        &--1 {
-            top: rem(12px);
-            right: 0;
-            @include size(81px, 177px);
-        }
-
-        &--2 {
-            bottom: rem(-68px);
-            right: 0;
-            @include size(107px, 121px);
-        }
-    }
-
-    @include media-breakpoint-up(lg) {
-    }
-
     @include media-breakpoint-up(xl) {
         .section__title {
-            margin-bottom: rem(68px);
-        }
-
-        .section__decor {
-            &--1 {
-                top: rem(-31px);
-                @include size(173px, 229px);
-            }
-
-            &--2 {
-                right: rem(148px);
-                bottom: rem(-83px);
-                @include size(248px, 190px);
-            }
+            margin-bottom: rem(64px);
         }
     }
 }

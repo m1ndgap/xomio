@@ -1,27 +1,29 @@
 {% extends 'layout/_base.twig' %}
 
-{% set bodyClass = '' %}
+{% set pageClass = 'page-features' %}
 {% set pageTitle = 'Features' %}
 
 {% block content %}
 
   <!-- First -->
-  <section class="section feature-1">
+  <section class="section">
     <div class="container container--mobile-fixed">
-      <div class="section__body section__body--center">
+      <div class="section__body">
         <div class="section__content">
-          <h2 class="section__title">Multi language straight out of the box</h2>
+          <div class="section__header">
+            <h2 class="section__title">Multi language straight out of the box</h2>
+          </div>
           <ul class="section__features features">
             <li class="features__item">
               <div class="feature">
-                {{ svg.icon('eye', 'feature__icon theme-blue') }}
+                {{ svg.icon('eye', 'feature__icon theme-icon-blue') }}
                 <h3 class="feature__title">Be seen</h3>
                 <p class="feature__text text-lg">Demonstrate unbeatable marketing reach to potential clients, with the ability to show their property to overseas investors speaking 19 languages.</p>
               </div>
             </li>
             <li class="features__item">
               <div class="feature">
-                {{ svg.icon('globe', 'feature__icon theme-green') }}
+                {{ svg.icon('globe', 'feature__icon theme-icon-green') }}
                 <h3 class="feature__title">Your local expertise deserves a global platform</h3>
                 <p class="feature__text text-lg">With multi language pages, international SEO and fully translated listings feeds, Xomio showcases your business to a whole world of buyers.</p>
               </div>
@@ -35,19 +37,19 @@
       </div>
     </div>
 
-    <div class="section__decor section__decor--1 hidden-lg-down decor-lines-2"></div>
-    <div class="section__decor section__decor--2 decor-lines-3"></div>
-    <div class="section__decor section__decor--3 decor-dots-3"></div>
+    <div class="decor decor--1 decor-lines-2 hidden-lg-down"></div>
+    <div class="decor decor--2 decor-lines-3"></div>
+    <div class="decor decor--3 decor-dots-3"></div>
   </section>
 
   <!-- Second -->
-  <section class="section feature-2 section--compact-top">
+  <section class="section feature-1 section--compact-top">
     <div class="container container--mobile-fixed">
       <div class="section__body section__body--center">
         <div class="section__content">
           <h2 class="section__title">No coding needed</h2>
           <h3 class="section__subtitle">The only developers you should be speaking to are the ones building homes.</h3>
-          <div class="section__description">
+          <div class="section__text">
             <p>Leave the software development and web design to us.</p>
             <p>Xomio is the easiest website builder in real estate, or anywhere.</p>
             <p>It’s impossible to build a Xomio site that doesn’t work. Every button, link and feature has been crafted to deliver a better platform for you, and a better website experience for your clients.</p>
@@ -64,13 +66,13 @@
   </section>
 
   <!-- Third -->
-  <section class="section feature-3 section--compact-top">
+  <section class="section feature-2 section--compact-top">
     <div class="container container--mobile-fixed">
       <div class="section__body section__body--center">
         <div class="section__content">
           <h2 class="section__title">Simplicity</h2>
           <h3 class="section__subtitle">UI / UX are terms you don’t need to learn</h3>
-          <div class="section__description">
+          <div class="section__text">
             <p>We get you up and running in no time, with a fully functional, multi language website, plus a dedicated client side and a CRM.</p>
             <p>Listings feeds from your brand and MLS can be switched on with no technical integration (by you).</p>
             <p>Design styles can be applied across your whole site with a single click.</p>
@@ -81,29 +83,26 @@
         </div>
 
         <div class="section__object">
-          <div class="section__template section__template--shadow">
-            <div class="section__video">
-              <video muted playsinline autoplay loop>
-                <source src="./assets/video/1.mp4" type="video/mp4">
-                <p>Your browser doesn't support HTML5 video. Here is
-                   a <a href="./assets/video/1.mp4">link to the video</a> instead.</p>
-              </video>
-            </div>
+          <div class="section__video">
+            <video muted playsinline autoplay loop>
+              <source src="./assets/video/1.mp4" type="video/mp4" />
+              <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1.mp4">link to the video</a> instead.</p>
+            </video>
           </div>
-          <div class="section__object-bg decor-dots-bg-2"></div>
+          <div class="section__object-bg decor-dots-bg-5"></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Forth -->
-  <section class="section feature-4">
+  <section class="section feature-3">
     <div class="container container--mobile-fixed">
       <div class="section__body section__body--center">
         <div class="section__content">
           <h2 class="section__title">ADA compliant</h2>
           <h3 class="section__subtitle">Because accessibility isn’t just a&nbsp;buzzword.</h3>
-          <div class="section__description">
+          <div class="section__text">
             <p>The threat of <a href="#" class="link-primary">ADA lawsuits</a> has many real estate business concerned.</p>
             <p>But we think that making your website visible to all isn’t just the right thing to do. It’s also the right thing to do for your business.</p>
             <p>Treat your market like a community. It’s your biggest asset.</p>
@@ -118,15 +117,15 @@
             <img srcset="./assets/img/features/4.png 1x, ./assets/img/features/4@2x.png 2x" src="./assets/img/features/4.png" alt="" class="section__img">
           </div>
           <img src="./assets/img/features/4-hover.svg" alt="" class="section__img-hover">
-          <div class="section__object-decor decor-shape-2"></div>
+          <div class="decor decor--4 decor-shape-2"></div>
         </div>
       </div>
     </div>
-    <div class="section__decor decor-lines-4 hidden-lg-down"></div>
+    <div class="decor decor--5 decor-lines-4 hidden-lg-down"></div>
   </section>
 
   <!-- Fifth -->
-  <section class="section feature-5">
+  <section class="section feature-4">
     <div class="container container--mobile-fixed">
       <div class="section__body">
         <div class="section__content">
@@ -136,29 +135,31 @@
         </div>
 
         <div class="section__object">
-          <div class="section__content section__description">
-            <p>It’s not enough to choose a website platform that promotes your business.</p>
-            <p>It also has to protect your business.</p>
-            <p>Data protection legislation poses a threat to industries like real estate, where CRMs and lead management are often built without any thought for data compliance.</p>
-            <p>Xomio handles all client registrations, lead capture, and CRM data appropriately, following the key principle of informed consent.</p>
-            <p>Securely handling your clients’ data is the best way to protect yourself and your business against legal risks.</p>
+          <div class="section__content">
+            <div class="section__text">
+              <p>It’s not enough to choose a website platform that promotes your business.</p>
+              <p>It also has to protect your business.</p>
+              <p>Data protection legislation poses a threat to industries like real estate, where CRMs and lead management are often built without any thought for data compliance.</p>
+              <p>Xomio handles all client registrations, lead capture, and CRM data appropriately, following the key principle of informed consent.</p>
+              <p>Securely handling your clients’ data is the best way to protect yourself and your business against legal risks.</p>
+            </div>
           </div>
         </div>
       </div>
 
       <img src="./assets/img/illustrations/lock.svg" alt="" class="section__img hidden-lg-up">
     </div>
-    <div class="section__decor decor-lines-5 hidden-lg-down"></div>
+    <div class="decor decor--6 decor-lines-5 hidden-lg-down"></div>
   </section>
 
   <!-- Sixth -->
-  <section class="section feature-6">
+  <section class="section feature-5">
     <div class="container container--mobile-fixed">
       <div class="section__body">
         <div class="section__content">
           <h2 class="section__title">Our user support team are the best.</h2>
           <h3 class="section__subtitle">But we doubt you’ll ever need to speak to them.</h3>
-          <div class="section__description">
+          <div class="section__text">
             <p>The team behind Xomio have all the SEO, web design, coding and translation skills you’ll ever need, backed up by outstanding user support experts.</p>
             <p>But all that knowledge and experience is already baked into the product.</p>
             <p>If you’d like to go deeper, we’re all here to help. But Xomio’s user-friendly interface and detailed knowledge base mean you probably won’t need us to. It’s already easy.</p>
@@ -168,11 +169,11 @@
         <div class="section__object">
           <img srcset="./assets/img/features/6-1.png 1x, ./assets/img/features/6-1@2x.png 2x" src="./assets/img/features/6-1.png" alt="" class="section__img">
           <img srcset="./assets/img/features/6-2.png 1x, ./assets/img/features/6-2@2x.png 2x" src="./assets/img/features/6-1.png" alt="" class="section__img">
-          <div class="section__object-decor decor-complex-3"></div>
+          <div class="decor decor--7 decor-complex-3"></div>
         </div>
       </div>
     </div>
-    <div class="section__decor section__decor--1 hidden-lg-down decor-complex-1"></div>
+    <div class="decor decor--8 hidden-lg-down decor-complex-1"></div>
   </section>
 {% endblock %}
 

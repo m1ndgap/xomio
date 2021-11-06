@@ -1,0 +1,76 @@
+.page-features {
+    .decor {
+        &--2 {
+            top: rem(105px);
+            right: 0;
+            @include size(65px, 120px);
+        }
+
+        &--3 {
+            left: rem(-35px);
+            bottom: rem(88px);
+        }
+
+        &--4 {
+            transform: scale(.82);
+            right: rem(-59px);
+            bottom: rem(-58px);
+        }
+
+        &--7 {
+            transform: translateX(-47%) scale(.5);
+            left: 50%;
+            bottom: rem(-53px);
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .decor {
+            &--1 {
+                left: rem(-29px);
+                bottom: rem(-79px);
+            }
+
+            &--2 {
+                top: rem(-3px);
+                @include size(165px, 241px);
+            }
+
+            &--3 {
+                left: 50%;
+                margin-left: rem(-71px);
+                bottom: rem(121px);
+            }
+
+            &--5 {
+                top: rem(-19px);
+                left: rem(33px);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .decor {
+            &--4 {
+                transform: scale(1);
+                right: rem(-102px);
+            }
+
+            &--6 {
+                bottom: rem(-55px);
+                right: rem(74px);
+            }
+
+            &--7 {
+                transform: translateX(-29%) scale(1);
+                left: 50%;
+                bottom: rem(34px);
+            }
+
+            &--8 {
+                left: rem(-120px);
+                bottom: rem(-83px);
+            }
+        }
+    }
+}

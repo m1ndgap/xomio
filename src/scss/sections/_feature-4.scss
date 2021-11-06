@@ -1,62 +1,32 @@
 .feature-4 {
     .section__content {
-        margin-bottom: rem(56px);
-    }
-
-    .section__object {
-        &-decor {
-            transform: scale(.82);
-            right: rem(-59px);
-            bottom: rem(-58px);
-        }
-    }
-
-    .section__template {
-        max-width: 86%;
-        margin-left: auto;
-        margin-right: auto;
+        margin-bottom: 0;
     }
 
     .section__img {
-        &-hover {
-            position: absolute;
-            top: rem(-24px);
-            z-index: 1;
-            left: 0;
-        }
+        margin-top: rem(48px);
     }
 
     @include media-breakpoint-up(lg) {
-        .section__content {
-            margin-bottom: 0;
+        .section__text {
+            margin-top: rem($spacer-3);
         }
 
-        .section__decor {
-            top: rem(-19px);
-            left: rem(33px);
+        .section__img {
+            margin-top: rem($spacer-8);
+            margin-left: rem(- $spacer-5);
         }
     }
 
     @include media-breakpoint-up(xl) {
-        padding-top: rem(60px);
+        margin-bottom: rem($spacer-9);
 
-        .section__object {
-            &-decor {
-                transform: scale(1);
-                right: rem(-102px);
-            }
+        .section__title {
+            margin-bottom: rem($spacer-4);
         }
 
-        .section__template {
-            max-width: none;
-        }
-
-        .section__img {
-            &-hover {
-                top: rem(-49px);
-                left: rem(-26px);
-                max-width: none;
-            }
+        .section__subtitle {
+            margin-top: rem($spacer-4);
         }
     }
 }

@@ -99,7 +99,7 @@
         }
     }
 
-    @each $key, $value in $tag-colors {
+    @each $key, $value in $theme-tag-colors {
         &-#{$key} {
             @include setProperty('background-color', $value, 'bg');
          }

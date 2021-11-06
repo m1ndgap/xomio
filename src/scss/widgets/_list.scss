@@ -35,7 +35,7 @@
                 color: inherit;
             }
 
-            @each $color-name, $color in $tag-colors {
+            @each $color-name, $color in $theme-tag-colors {
                 .tag-#{$color-name} & {
                     color: inherit;
                 }

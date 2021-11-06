@@ -1,37 +1,34 @@
 .feature-5 {
-    .section__content {
-        margin-bottom: 0;
+    .section__object {
+        display: flex;
+        align-items: flex-start;
     }
 
     .section__img {
-        margin-top: rem(48px);
+        border-radius: $border-radius-sm;
+        max-width: 52%;
+
+        &:last-of-type {
+            margin-top: rem(73px);
+        }
     }
 
-    @include media-breakpoint-up(lg) {
-        .section__description {
-            margin-top: rem($spacer-3);
-        }
-
-        .section__img {
-            margin-top: rem($spacer-8);
-            margin-left: rem(- $spacer-5);
-        }
+    .section__img + .section__img {
+        margin-left: rem($spacer-4);
     }
 
     @include media-breakpoint-up(xl) {
-        margin-bottom: rem($spacer-9);
+        .section__img {
+            border-radius: $border-radius-lg;
+            max-width: 60%;
 
-        .section__title {
-            margin-bottom: rem($spacer-4);
+            &:last-of-type {
+                margin-top: 25%;
+            }
         }
 
-        .section__subtitle {
-            margin-top: rem($spacer-4);
-        }
-
-        .section__decor {
-            bottom: rem(-55px);
-            right: rem(74px);
+        .section__img + .section__img {
+            margin-left: rem(44px);
         }
     }
 }

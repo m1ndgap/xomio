@@ -72,7 +72,8 @@
 $black-100:  #222525 !default;
 $black-200:  #053550 !default;
 $black-300:  #02413a !default;
-$black-400:  #000000 !default;
+$black-400:  #00362b !default;
+$black-500:  #000000 !default;
 
 $blue-100:   #e8f4f4 !default;
 $blue-200:   #b9dede !default;
@@ -119,12 +120,14 @@ $primary:       $orange-400 !default;
 $primary-light: $orange-200 !default;
 $secondary:     $green-400 !default;
 $accent:        $green-300 !default;
+$accent-light:  $green-200 !default;
 $error:         $red-100 !default;
 
 $colors: () !default
 $bg-colors: () !default
-$theme-colors: () !default
-$tag-colors: () !default
+$theme-icon-colors: () !default
+$theme-section-colors: () !default
+$theme-tag-colors: () !default
 
 $colors: map-merge(
     (
@@ -134,6 +137,7 @@ $colors: map-merge(
         "primary-light": $primary-light,
         "secondary":     $secondary,
         "accent":        $accent,
+        "accent-light":  $accent-light,
         "error":         $error,
     ),
     $colors
@@ -159,7 +163,7 @@ $bg-colors: map-merge(
     $bg-colors
 );
 
-$theme-colors: map-merge(
+$theme-icon-colors: map-merge(
     (
         "blue":       $blue-400,
         "dark-green": $green-500,
@@ -170,10 +174,21 @@ $theme-colors: map-merge(
         "red":        $red-200,
         "yellow":     $yellow-200,
     ),
-    $theme-colors
+    $theme-icon-colors
 );
 
-$tag-colors: map-merge(
+$theme-section-colors: map-merge(
+    (
+        "accent": (
+            "bg": $accent,
+            "color": $white,
+            "secondary": $yellow-100,
+        ),
+    ),
+    $theme-section-colors
+);
+
+$theme-tag-colors: map-merge(
     (
         "green": (
             "bg":         $green-200,
@@ -200,7 +215,7 @@ $tag-colors: map-merge(
             "link-color": $white,
         ),
     ),
-    $tag-colors
+    $theme-tag-colors
 );
 
 $enable-gradients: true;
@@ -474,7 +489,6 @@ $navbar-z-index:         100 !default;
 // Section
 //
 //
-$section-offset-top-mobile:    40px !default;
-$section-offset-bottom-mobile: 40px !default;
-$section-offset-top:           80px !default;
-$section-offset-bottom:        100px !default;
+$section-offset-mobile:  40px !default;
+$section-offset:         80px !default;
+$section-offset-bottom:  100px !default;

@@ -1,64 +1,86 @@
 {% extends 'layout/_base.twig' %}
 
-{% set bodyClass = '' %}
+{% set pageClass = 'page-idx' %}
 {% set pageTitle = 'IDX' %}
 
 {% block content %}
 
   <!-- Slider -->
-  <section class="section feature-13" data-slider-parent="true">
-    <div class="container container--mobile-fixed">
-      <div class="section__content">
-        <h2 class="section__title">IDX in 19 Languages</h2>
-      </div>
-
-      <div class="section__body section__body--center">
+  {% for section in idx.sections|slice(0, 1) %}
+    <section class="section idx-1 theme-section-accent">
+      <div class="container container--mobile-fixed">
         <div class="section__content">
-          <div class="section__slider" data-slider="vertical-slider">
-            {% for slide in idx.slider %}
-              <div class="section__slide slick-slide">
-                <h3 class="section__subtitle">{{ slide.title }}</h3>
-                <div class="section__description text-lg {% if slide.type == "lg" %} text-lg{% endif %}">
-                  {% if slide.text %}
-                    <p>{{ slide.text }}</p>
-                  {% endif %}
-                  {% if slide.list %}
-                    <ul class="list-dot">
-                      {% for item in slide.list  %}
-                        <li>{{ item }}</li>
-                      {% endfor %}
-                    </ul>
-                  {% endif %}
-                </div>
-              </div>
-            {% endfor %}
-          </div>
+          <h2 class="section__title">{{ section.title }}</h2>
         </div>
+        <div class="section__body section__body--center">
+          <div class="section__content">
+            <h3 class="section__subtitle">{{ section.subtitle }}</h3>
+            <div class="section__text text-lg">
+              <ul class="list-dot">
+                {% for item in section.list %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
 
-        <div class="section__object">
-          <div class="section__template section__template--shadow" data-slider="slider-nav">
-            {% for slide in idx.slider %}
+          <div class="section__object">
+            {% if section.video %}
               <div class="section__video">
-                {% if slide.video %}
-                  <video muted playsinline autoplay loop>
-                    <source src="./assets/video/{{ slide.video }}.mp4" type="video/mp4">
-                    <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/{{ slide.video }}.mp4">link to the video</a> instead.</p>
-                  </video>
-                {% endif %}
+                <video muted playsinline autoplay loop>
+                  <source src="./assets/video/{{ section.video }}.mp4" type="video/mp4" />
+                  <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/{{ section.video }}.mp4">link to the video</a> instead.</p>
+                </video>
               </div>
-            {% endfor %}
+            {% endif %}
+            <div class="decor decor--2 decor-shape-6"></div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="section__decor decor-complex-5"></div>
-  </section>
+      <div class="decor decor--1 decor-dots-8 hidden-lg-down"></div>
+    </section>
+  {% endfor %}
+
+  <div class="sections">
+    {% for section in idx.sections|slice(1, 3) %}
+      <section class="section {% if section.reversed %}section--reversed{% endif %}">
+        <div class="container container--mobile-fixed">
+          <div class="section__body section__body--center">
+            <div class="section__content">
+              <h3 class="section__subtitle text-accent-light">{{ section.subtitle }}</h3>
+              <div class="section__text text-lg">
+                <ul class="list-dot">
+                  {% for item in section.list  %}
+                    <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+
+            <div class="section__object">
+              {% if section.video %}
+                <div class="section__video">
+                  <video muted playsinline autoplay loop>
+                    <source src="./assets/video/{{ section.video }}.mp4" type="video/mp4" />
+                    <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/{{ section.video }}.mp4">link to the video</a> instead.</p>
+                  </video>
+                </div>
+              {% endif %}
+              {% if section.objectDecor %}
+                <div class="decor {{ section.objectDecor }}"></div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </section>
+    {% endfor %}
+  </div>
 
   <!-- Translations -->
   <section class="section translations bg-blue">
     <div class="container container--mobile-fixed">
-      <div class="intro text-center">
+      <div class="section__header intro intro--md text-center">
         <h2 class="intro__title">Xomio Listings Translation</h2>
         <div class="intro__description">
           <p>Xomio listings are translated using the Immobel translation engine: the world’s largest translation memory of real-estate-specific terms and phrases. Every translation has been provided and checked by industry experts. That’s why we’re trusted  by the biggest names in real estate.</p>
@@ -72,8 +94,8 @@
       </ul>
     </div>
 
-    <div class="section__decor section__decor--1 decor-dots-5"></div>
-    <div class="section__decor section__decor--2 decor-lines-12"></div>
+    <div class="decor decor--6 decor-lines-12 hidden-lg-down"></div>
+    <div class="decor decor--7 decor-lines-6 hidden-lg-down"></div>
   </section>
 
   <!-- Contact us -->
@@ -82,7 +104,7 @@
       <div class="section__body">
         <div class="section__content">
           <h2 class="section__title">Become an MLS <br>Partner!</h2>
-          <div class="section__description">
+          <div class="section__text">
             <p>The team behind Xomio have been working with MLS organizations across North America for 20 years.</p>
             <p>Our listings translation and web design services help your realtors deliver higher quality service to their markets.</p>
             <p>Get in touch with us today to find out about our partner programs, and get Xomio working for your members, and for your market.</p>
@@ -176,12 +198,12 @@
               <input type="submit" class="button button--primary button--block" value="Send">
             </div>
           </form>
-          <div class="section__object-bg decor-dots-bg-2"></div>
+          <div class="section__form-bg decor-dots-bg-2"></div>
         </div>
       </div>
     </div>
 
-    <div class="section__decor section__decor--5 decor-complex-8 hidden-lg-down"></div>
+    <div class="decor decor--8 decor-complex-8 hidden-lg-down"></div>
   </section>
 
 {% endblock %}

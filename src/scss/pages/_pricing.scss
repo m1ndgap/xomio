@@ -1,6 +1,49 @@
 .page-pricing {
     overflow: initial;
 
+    .decor {
+        &--5 {
+            left: rem(-116px);
+            bottom: rem(-11px);
+        }
+
+        &--6 {
+            width: rem(167px);
+            bottom: rem(40px);
+            right: 0;
+        }
+    }
+
     @include media-breakpoint-up(xl) {
+        .decor {
+            &--1 {
+                top: rem(140px);
+                left: rem(-64px);
+            }
+
+            &--2 {
+                left: rem(-44px);
+                bottom: rem(163px);
+            }
+
+            &--3 {
+                width: rem(91px);
+                background-position: 0;
+                background-size: cover;
+                top: rem(79px);
+                right: 0;
+            }
+
+            &--4 {
+                left: 100%;
+                top: 50%;
+                transform: translate(-135%, 62%);
+            }
+
+            &--6 {
+                width: rem(283px);
+                bottom: rem(56px);
+            }
+        }
     }
 }

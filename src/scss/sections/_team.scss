@@ -28,7 +28,7 @@
             margin-bottom: rem($spacer-8);
         }
 
-        .section__description {
+        .section__text {
             p {
                 @include margin-bottom(rem($spacer-4));
             }
@@ -38,12 +38,7 @@
             max-width: none;
             transform: translateX(-1%);
             align-self: flex-start;
-            margin-top: rem(- $section-offset-top);
-        }
-
-        .section__decor {
-            top: rem(57px);
-            left: rem(-62px);
+            margin-top: rem(- $section-offset);
         }
     }
 }

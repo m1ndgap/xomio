@@ -30,10 +30,6 @@
     &__slider {
         height: 100%;
         width: 100%;
-
-        .slick-prev {
-            display: none;
-        }
     }
 
     .slick-arrow {
@@ -52,7 +48,8 @@
     }
 
     .slick-prev {
-        display: none !important;
+        left: rem(14px);
+        opacity: .6;
     }
 
     .slick-next {
@@ -60,15 +57,19 @@
     }
 
     &__blob {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(0, -50%);
-        touch-action: none;
-        pointer-events: none;
+        display: none;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
+        &__blob {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+            touch-action: none;
+            pointer-events: none;
+        }
     }
 
     @include media-breakpoint-up(2xl) {

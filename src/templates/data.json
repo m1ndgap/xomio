@@ -795,9 +795,10 @@
         ]
     },
     "idx": {
-        "slider": [
+        "sections": [
             {
-                "title": "Setting up your IDX should be simple. With Xomio, it is.",
+                "title": "IDX in 19 Languages",
+                "subtitle": "Setting up your IDX should be simple. <br>With Xomio, it is.",
                 "list": [
                     "Why do other website builders make it so hard to integrate your IDX?",
                     "The team behind Xomio have been integrating listings feeds for over 20 years, in 19 languages, and in over 60 countries",
@@ -807,33 +808,38 @@
                 "video": 2
             },
             {
-                "title": "Design, without the messy bits",
+                "reversed": true,
+                "subtitle": "Design, without the messy bits",
                 "list": [
                     "Many of the biggest names in real estate rely on us for our web design skills, because we understand how to make listings shine online.",
                     "Choose from a range of beautiful designs with clean, modern listings presentation.",
                     "Listings data is organized on the page thematically, for a clearer consumer experience.",
                     "Advanced features give clients the ability to find, save and share their ideal property, all from your site."
                 ],
-                "video": 9
+                "video": 9,
+                "objectDecor": "decor--3 decor-shape-7"
             },
             {
-                "title": "Listings translation you can rely on",
+                "subtitle": "Listings translation you can rely on",
                 "list": [
                     "We translate millions of listings per day for the biggest names in real estate",
                     "Every translation in our listings memory is provided and checked by industry specialist translators.",
                     "We use listings in translation to create metadata: the information that search engines like Google and its foreign language versions use to index your page.",
                     "Your business will finally be visible to every potential client, regardless of the language they speak, or what search engine they use."
-                ]
+                ],
+                "objectDecor": "decor--4 decor-complex-9"
             },
             {
-                "title": "More languages, more listings, more leads",
+                "reversed": true,
+                "subtitle": "More languages, more listings, more leads",
                 "list": [
                     "Hispanic homebuyers are the fastest growing homeownership demographic in the US",
                     "22% of American residents speak a language other than English at home",
                     "Overseas investors and foreign language speakers buy real estate in every price bracket from luxury to affordable first homes",
                     "More languages? More views, more leads, more deals. It’s that simple."
                 ],
-                "video": 4
+                "video": 4,
+                "objectDecor": "decor--5 decor-dots-5"
             }
         ],
         "langs": [
@@ -1133,7 +1139,7 @@
                 },
                 {
                     "title": "You’re a real estate expert. <br> Not a ",
-                    "type": "Lawyer.",
+                    "type": " lawyer.",
                     "list": [
                         {
                             "title": "Compliance, without the headaches",
@@ -1324,7 +1330,7 @@
                     "name": "Human customer support",
                     "theme": "orange",
                     "arrowColor": "#d34733",
-                    "text": "You're not on your own. Every Xomio site plan comes with access to real customer support – deliveorange by actual people.",
+                    "text": "You're not on your own. Every Xomio site plan comes with access to real customer support – delivered by actual people.",
                     "popup": {
                         "subtitle": "Honestly, we don't think you'll actually NEED to speak to our customer support teams.",
                         "text": [
@@ -1410,7 +1416,7 @@
                     "name": "Multi language client tools",
                     "theme": "orange",
                     "arrowColor": "#d34733",
-                    "text": "Clients can do more than just view your properties in their preferorange language, they get the complete experience.",
+                    "text": "Clients can do more than just view your properties in their preferred language, they get the complete experience.",
                     "popup": {
                         "subtitle": "Xomio delivers the same great experience for all visitors, in every language.",
                         "text": [
@@ -1520,21 +1526,45 @@
                     "name": "Client saved searches",
                     "theme": "salmon",
                     "arrowColor": "#ffc300",
-                    "text": "Set up listing alerts for you clients or they can save their own search and receive updates. Don't worry,the control and insights are shaorange with you!"
+                    "text": "Set up listing alerts for you clients or they can save their own search and receive updates. Don't worry,the control and insights are shared with you!",
+                    "popup": {
+                        "text": [
+                            "Saved searches allow clients to save filtered listings searches, receiving automated update emails whenever new properties match their criteria.",
+                            "You can also set up searches and alerts on behalf of individual clients.",
+                            "You have complete visibility into your clients' saved searches, giving you insight that will help guide their homebuying experience.",
+                            "All emails are sent in each client's preferred language"
+                        ],
+                        "image": true
+                    }
                 },
                 {
                     "id": "clean-urls",
                     "name": "Clean URLs",
                     "theme": "yellow",
                     "arrowColor": "#f45d48",
-                    "text": "We make sure your URLS make sense no .com23tuj4/3#jy used here! We make sure your urls are nice to share and easy to remember!"
+                    "text": "We make sure your URLS make sense no .com23tuj4/3#jy used here! We make sure your urls are nice to share and easy to remember!",
+                    "popup": {
+                        "text": [
+                            "The days of messy URLs (web addresses) for your listings are no more! Xomio's URL construction is clean, tidy and tied to the most pertinent data in each listing.",
+                            "This doesn't just make your site look better, with links that are easier and more attractive to share. It also makes for better Search Engine Optimization, because Google and other search engines give better rankings to sites with clearer and more informative URL construction. Relevant logic is applied in all 19 languages to ensure great visibility for your site, wherever your next client is searching from."
+                        ],
+                        "image": true
+                    }
                 },
                 {
                     "id": "seo-friendly-urls",
                     "name": "SEO friendly URLs",
                     "theme": "orange",
                     "arrowColor": "#d34733",
-                    "text": "SEO friendly URLS are an important part of achieving the best rankings in Google searches. We've got you coveorange!"
+                    "text": "SEO friendly URLS are an important part of achieving the best rankings in Google searches. We've got you covered!",
+                    "popup": {
+                        "text": [
+                            "Xomio's clean URL construction is critical to achieving organic traffic from search engines.",
+                            "Google and other search engines give better rankings to websites with well organised URLs that contain high quality information about the contents of each page.",
+                            "Our two decades of expertise in listings data translation and website construction for the biggest names in global real estate mean that nobody knows more about how to drive local and foreign language visitors to your site."
+                        ],
+                        "image": true
+                    }
                 },
                 {
                     "id": "cloud-based",
@@ -1548,35 +1578,75 @@
                     "name": "CAPTCHA",
                     "theme": "green",
                     "arrowColor": "#ff8e7b",
-                    "text": "Security is important and no one wants to be spammed. We have a mix of hidden and test CAPTCHA used throught all xomio sites to keep you secure."
+                    "text": "Security is important and no one wants to be spammed. We have a mix of hidden and test CAPTCHA used throught all xomio sites to keep you secure.",
+                    "popup": {
+                        "text": [
+                            "All Xomio sites have embedded CAPTCHA security measures throughout. Some are hidden, while others are visible to site visitors.",
+                            "All serve to keep you, your site and your data safe from malicious bots and other attacks."
+                        ],
+                        "image": true
+                    }
                 },
                 {
                     "id": "global-seo",
                     "name": "Global SEO",
                     "theme": "salmon",
                     "arrowColor": "#ff8e7b",
-                    "text": "You have 19 different language websites, each with their own language seo, all prepaorange to be indexed and searched by search engines globally."
+                    "text": "You have 19 different language websites, each with their own language seo, all prepared to be indexed and searched by search engines globally.",
+                    "popup": {
+                        "text": [
+                            "With two decades of experience in real estate data translation and website construction, we know more than anyone about how to drive visitors to listings organically.",
+                            "The listings data from your IDX and GLEX (brokerage brand listings inventory) is translated and used to create metadata in all 19 languages. This is the data that Google and other search engines hunt for to categorize and rank all the websites they can find.",
+                            "Along with other features like our clean, multi language URL construction, this ensures that you and your business have great visibility within your market, and beyond.",
+                            "With Xomio, languages are no longer barriers. They're tools that drive more traffic, more views, and more leads to your business."
+                        ],
+                        "image": true
+                    }
                 },
                 {
-                    "id": "featuorange-properties",
-                    "name": "Featuorange properties",
+                    "id": "featured-properties",
+                    "name": "Featured properties",
                     "theme": "salmon",
                     "arrowColor": "#ffc300",
-                    "text": "We provide a simple way for you to feature properties on your website from your own listing invetory or the GLEX or IDX feed you have access to."
+                    "text": "We provide a simple way for you to feature properties on your website from your own listing invetory or the GLEX or IDX feed you have access to.",
+                    "popup": {
+                        "text": [
+                            "The Featured Properties block allows you to shine a spotlight on any combination of listings from your IDX and GLEX (brokerage brand listings) feeds.",
+                            "These listings will be showcased in a customizable block, front and center on your homepage.",
+                            "Every Xomio website makes a great first impression. The Featured Properties block is a simple and effective way to turn that first impression into a lead that closes with a high value sale."
+                        ],
+                        "image": true
+                    }
                 },
                 {
                     "id": "ssl-certificates",
                     "name": "SSL certificates",
                     "theme": "yellow",
                     "arrowColor": "#f45d48",
-                    "text": "Security and visibility is important, we automatically update your certificates for you so you don't need to worry."
+                    "text": "Security and visibility is important, we automatically update your certificates for you so you don't need to worry.",
+                    "popup": {
+                        "text": [
+                            "Without an up-to-date SSL certificate, your website will be inaccessible on many browsers, or will require visitors to click through a scary looking warning about insecure sites that are trying to steal their data. Not a great look for a real estate business.",
+                            "SSL certificates ensure that clients can access your site securely, through an encrypted connection that keeps them safe from malware and malicious actors.",
+                            "Updating them yourself can be a pain, and many real estate platforms don't even let you know that yours is about to expire, so the first you hear of it is when an angry seller wants to know why they can't view their listing on your site without getting a warning about viruses!",
+                            "Xomio doesn't inform you either - but that's because we take care of it ill, behind the scenes, so you don't have to. All part of the service."
+                        ],
+                        "image": true
+                    }
                 },
                 {
-                    "id": "Customizable-idx-filters",
+                    "id": "customizable-idx-filters",
                     "name": "Customizable IDX filters",
                     "theme": "orange",
                     "arrowColor": "#388172",
-                    "text": "Set filters around property style, price and more so you only display listing from your IDX that match your niche."
+                    "text": "Set filters around property style, price and more so you only display listing from your IDX that match your niche.",
+                    "popup": {
+                        "text": [
+                            "Xomio allows you to pre-filter your IDX feed based on a range of attributes. This means that you get to select the property types, price ranges, and more, for every listing that's displayed on your site.",
+                            "If you only want to work leads that match the profile of your ideal client, Customizing your IDX feed is a great way to pre-screen based on the type of property, and therefore the type of client, that you specialiize in serving."
+                        ],
+                        "image": true
+                    }
                 },
                 {
                     "id": "ada-compliance",
@@ -1597,14 +1667,19 @@
                     "name": "Photo & video library",
                     "theme": "salmon",
                     "arrowColor": "#ffc300",
-                    "text": "If you don't have your own marketing assets, we've got you coveorange with our own curated licensed librarys to support you in customising your site."
+                    "text": "If you don't have your own marketing assets, we've got you covered with our own curated licensed librarys to support you in customising your site."
                 },
                 {
                     "id": "custom-favicon",
                     "name": "Custom favicon",
                     "theme": "yellow",
                     "arrowColor": "#f45d48",
-                    "text": "We care about your visibility all the way down to the little details."
+                    "text": "We care about your visibility all the way down to the little details.",
+                    "popup": {
+                        "text": [
+                            "A favicon is an icon at the top of your web browser that provides branding. It is also a convenient way for visitors to locate your page when they have multiple tabs open."
+                        ]
+                    }
                 },
                 {
                     "id": "gallery-view",
@@ -1618,7 +1693,7 @@
                     "name": "Branded auto responder",
                     "theme": "orange",
                     "arrowColor": "#388172",
-                    "text": "We support you in smart and nicely designed communication in your clients prefeorange language."
+                    "text": "We support you in smart and nicely designed communication in your clients prefered language."
                 },
                 {
                     "id": "professional-translation",
@@ -1688,7 +1763,7 @@
                     "name": "Multi language emails",
                     "theme": "salmon",
                     "arrowColor": "#f45d48",
-                    "text": "We support you in providing a fully curated and consistent experience to your clients no matter their preferorange language."
+                    "text": "We support you in providing a fully curated and consistent experience to your clients no matter their preferred language."
                 }
             ]
         },

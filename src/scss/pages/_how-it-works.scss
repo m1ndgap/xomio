@@ -1,10 +1,75 @@
 .page-how-it-works {
+    .decor {
+        &--3 {
+            top: 38%;
+            right: rem(-108px);
+        }
+
+        &--4 {
+            transform: scale(.389);
+            top: 22%;
+            right: rem(-126px);
+        }
+
+        &--5 {
+            left: rem(-133px);
+            bottom: rem(-23px);
+        }
+
+        &--6 {
+            right: 0;
+            bottom: rem(33px);
+            @include size(rem(195px), rem(281px));
+        }
+    }
 
     @include media-breakpoint-up(lg) {
         overflow: initial;
 
         .overflow-container {
             overflow: hidden;
+        }
+
+        @include media-breakpoint-up(lg) {
+            .decor {
+                &--6 {
+                    top: rem(408px);
+                    bottom: auto;
+                    @include size(rem(254px), rem(283px));
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .decor {
+            &--1 {
+                top: rem(57px);
+                left: rem(-62px);
+            }
+
+            &--2 {
+                left: rem(-100px);
+                bottom: 0;
+            }
+
+            &--3 {
+                top: rem(267px);
+                right: rem(-72px);
+            }
+
+            &--4 {
+                transform: scale(1);
+                top: auto;
+                right: rem(-78px);
+                bottom: rem(-64px);
+            }
+
+            &--5 {
+                left: rem(-147px);
+                top: rem(496px);
+                bottom: auto;
+            }
         }
     }
 }

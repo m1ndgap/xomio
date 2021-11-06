@@ -1,45 +1,9 @@
 .teams {
     z-index: 2;
 
-    .intro {
-        max-width: none;
-
-        &__desctiption {
-            max-width: rem(720px);
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-
-    .section__decor {
-        &--1 {
-            top: 26.5%;
-            right: 0;
-            @include size(196px, 283px);
-        }
-    }
-
-    @include media-breakpoint-up(lg) {
-    }
-
     @include media-breakpoint-up(xl) {
         .intro {
             margin-bottom: rem(74px);
-        }
-
-        .section__decor {
-            &--1 {
-                top: rem(-13px);
-                left: rem(-126px);
-                right: auto;
-                @include size(256px, 283px);
-
-            }
-
-            &--2 {
-                top: rem(125px);
-                right: rem(74px);
-            }
         }
     }
 }

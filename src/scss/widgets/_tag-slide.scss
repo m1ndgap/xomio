@@ -33,26 +33,8 @@
     }
 
     .section__body {
-        padding-top: rem($section-offset-top);
+        padding-top: rem($section-offset);
         padding-bottom: rem(60px);
-    }
-
-    @each $key, $value in $tag-colors {
-        &.tag-#{$key} {
-            @if (getValue($value, 'color')) {
-                @include setProperty('color', $value, 'color');
-            }
-
-            @if (getValue($value, 'link-bg')) {
-                .link-stripe {
-                    @include setProperty('color', $value, 'link-color');
-
-                    &:before {
-                        @include setProperty('background-color', $value, 'link-bg');
-                    }
-                }
-            }
-         }
     }
 
     @include media-breakpoint-between(lg, lg) {

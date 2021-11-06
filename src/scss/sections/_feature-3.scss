@@ -1,10 +1,38 @@
 .feature-3 {
+    .section__content {
+        margin-bottom: rem(56px);
+    }
+
+    .section__template {
+        max-width: 86%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section__img-hover {
+        position: absolute;
+        top: rem(-24px);
+        z-index: 1;
+        left: 0;
+    }
 
     @include media-breakpoint-up(lg) {
+        .section__content {
+            margin-bottom: 0;
+        }
     }
 
     @include media-breakpoint-up(xl) {
-        padding-top: 0;
-        margin-top: rem(- $spacer-5);
+        padding-top: rem(60px);
+
+        .section__template {
+            max-width: none;
+        }
+
+        .section__img-hover {
+            top: rem(-49px);
+            left: rem(-26px);
+            max-width: none;
+        }
     }
 }

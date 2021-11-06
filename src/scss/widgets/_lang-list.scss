@@ -10,7 +10,7 @@
         white-space: nowrap;
         @include font($font-size-h4, $line-height-h4);
         background-color: $white;
-        box-shadow: 0 2px 8px rgba($black-400, 0.08);
+        box-shadow: 0 2px 8px rgba($black-500, 0.08);
         border-radius: rem(48px);
         padding: rem($spacer-2 $spacer-5);
         margin-left: rem($spacer-2);

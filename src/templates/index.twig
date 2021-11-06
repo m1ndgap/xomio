@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="./assets/css/home.css?123456">
 {% endblock %}
 
-{% set bodyClass = 'page-home' %}
+{% set pageClass = 'page-home' %}
 
 {% block content %}
   <div data-page="fullpage">
@@ -15,7 +15,7 @@
             <div class="section__body section__body--center">
               <div class="section__content section__content--lg">
                 <h2 class="section__title h1">{{ slide.title }} <span data-element="typewriter" data-word="{{ slide.type }}"></span></h2>
-                <div class="section__description ">
+                <div class="section__text ">
                   <ul class="list-plus" data-component="accordion">
                     {% for item in slide.list %}
                       <li class="collapsible is-collapsed" data-element="accordion-item">
@@ -32,16 +32,14 @@
               </div>
 
               <div class="section__object section__object--md">
-                <div class="section__template section__template--shadow">
-                  {% if slide.video %}
-                    <div class="section__video">
-                      <video muted playsinline loop data-autoplay>
-                        <source src="./assets/video/{{ slide.video }}" type="video/mp4" />
-                        <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/{{ slide.video }}">link to the video</a> instead.</p>
-                      </video>
-                    </div>
-                  {% endif %}
-                </div>
+                {% if slide.video %}
+                  <div class="section__video">
+                    <video muted playsinline loop data-autoplay>
+                      <source src="./assets/video/{{ slide.video }}" type="video/mp4" />
+                      <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/{{ slide.video }}">link to the video</a> instead.</p>
+                    </video>
+                  </div>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -142,7 +140,7 @@
               <div class="section__body section__body--center">
                 <div class="section__content">
                   <h3 class="section__subtitle">{{ slide.subtitle }}</h3>
-                  <div class="section__description ">
+                  <div class="section__text ">
                     {% for text in slide.text %}
                       <p>{{ text }}</p>
                     {% endfor %}
@@ -150,16 +148,14 @@
                 </div>
 
                 <div class="section__object">
-                  <div class="section__template section__template--shadow">
-                    {% if slide.video %}
-                      <div class="section__video {% if slide.videoClass %} {{ slide.videoClass }} {% else %} {% endif %}">
-                        <video muted playsinline loop data-autoplay>
-                          <source src="./assets/video/{{ slide.video }}" type="video/mp4" />
-                          <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/{{ slide.video }}">link to the video</a> instead.</p>
-                        </video>
-                      </div>
-                    {% endif %}
-                  </div>
+                  {% if slide.video %}
+                    <div class="section__video {% if slide.videoClass %} {{ slide.videoClass }} {% else %} {% endif %}">
+                      <video muted playsinline loop data-autoplay>
+                        <source src="./assets/video/{{ slide.video }}" type="video/mp4" />
+                        <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/{{ slide.video }}">link to the video</a> instead.</p>
+                      </video>
+                    </div>
+                  {% endif %}
                 </div>
               </div>
             </div>

@@ -57,7 +57,7 @@
             left: rem($gutter / 2);
             right: rem($gutter / 2);
             border-color: rgba(#1e5c5a, 0);
-            box-shadow: 0 16px 24px rgba(#00362b, 0.02), 0 16px 40px rgba(#00362b, 0.02);
+            box-shadow: 0 16px 24px rgba($black-400, 0.02), 0 16px 40px rgba($black-400, 0.02);
             z-index: 2;
             min-height: rem(394px);
 

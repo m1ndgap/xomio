@@ -1,11 +1,24 @@
 .intro {
-    max-width: rem(740px);
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: rem($spacer-10);
+
+    &__subtitle {
+        margin-bottom: rem($spacer-4);
+    }
 
     &__action {
         margin-top: rem($spacer-8);
+    }
+
+    &--sm {
+        max-width: rem(520px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &--md {
+        max-width: rem(740px);
+        margin-left: auto;
+        margin-right: auto;
     }
 
     @include media-breakpoint-up(lg) {
