@@ -1466,6 +1466,7 @@
                 {
                     "id": "wcag-2-0",
                     "name": "WCAG 2.0",
+                    "nameIcon": "accessibility",
                     "theme": "yellow",
                     "arrowColor": "#f45d48",
                     "text": "This is the standard of ADA compliance of all Xomio websites.",

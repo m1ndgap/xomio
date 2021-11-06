@@ -37,6 +37,42 @@
         padding-bottom: rem(60px);
     }
 
+    @each $key, $value in $theme-tag-colors {
+        &.theme-tag-#{$key} {
+            @if (getValue($value, 'bg')) {
+                @include setProperty('background-color', $value, 'bg');
+            }
+
+            @if (getValue($value, 'color')) {
+                @include setProperty('color', $value, 'color');
+
+                .list-flake {
+                    > li {
+                        &:before {
+                            color: inherit;
+                        }
+                    }
+                }
+            }
+
+            @if (getValue($value, 'link-bg')) {
+                .link-stripe {
+                    @include setProperty('color', $value, 'link-color');
+
+                    &:before {
+                        @include setProperty('background-color', $value, 'link-bg');
+                    }
+                }
+            }
+
+            .section__title {
+                &-icon {
+                    color: inherit;
+                }
+            }
+        }
+    }
+
     @include media-breakpoint-between(lg, lg) {
         .container {
             max-width: rem(616px);

@@ -8,7 +8,12 @@
           <div class="container container--mobile-fixed">
             <div class="section__body section__body--center">
               <div class="section__content">
-                <h2 class="section__title">{{ item.name }}</h2>
+                <h2 class="section__title">
+                  {{ item.name }}
+                  {% if item.nameIcon %}
+                    {{ svg.icon(item.nameIcon, 'section__title-icon') }}
+                  {% endif %}
+                </h2>
                 {% if item.popup %}
                   {% if item.popup.subtitle %}
                     <h3 class="section__subtitle">{{ item.popup.subtitle  }}</h3>

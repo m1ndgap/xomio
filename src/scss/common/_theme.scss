@@ -44,34 +44,4 @@
             }
         }
     }
-
-    @each $key, $value in $theme-tag-colors {
-        &-tag-#{$key} {
-            @if (getValue($value, 'bg')) {
-                @include setProperty('background-color', $value, 'bg');
-            }
-
-            @if (getValue($value, 'color')) {
-                @include setProperty('color', $value, 'color');
-
-                .list-flake {
-                    > li {
-                        &:before {
-                            color: inherit;
-                        }
-                    }
-                }
-            }
-
-            @if (getValue($value, 'link-bg')) {
-                .link-stripe {
-                    @include setProperty('color', $value, 'link-color');
-
-                    &:before {
-                        @include setProperty('background-color', $value, 'link-bg');
-                    }
-                }
-            }
-         }
-    }
 }

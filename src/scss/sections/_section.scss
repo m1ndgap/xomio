@@ -23,6 +23,15 @@
         margin-top: rem($spacer-6);
     }
 
+    &__title {
+        &-icon {
+            display: inline-block;
+            vertical-align: bottom;
+            @include size(rem($spacer-8));
+            margin-bottom: rem($spacer);
+        }
+    }
+
     &__subtitle {
         @include em-line-height($font-size-h3-mobile, $line-height-lg);
     }
@@ -246,6 +255,11 @@
         &__title {
             margin-right: rem(-10px);
             margin-bottom: rem($spacer-6);
+
+            &-icon {
+                @include size(rem(64px));
+                margin-bottom: 0;
+            }
         }
 
         &__title + &__subtitle {
