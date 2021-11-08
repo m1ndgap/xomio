@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
         let $tag = $tags[i];
         let $tagToggle = $tag.querySelector('[data-element="tag-toggle"]');
         let $tagItem = $tag.closest('[data-element="tag-item"]');
-        let tagWidth = $tagToggle.offsetWidth;
-        let tagHeight = $tagToggle.offsetHeight;
+        let tagWidth = $tagToggle.scrollWidth;
+        let tagHeight = $tagToggle.scrollHeight;
         let tagExpandedWidth = tagPopoverWidth;
 
         if ( tagWidth > tagExpandedWidth ) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 collapseActiveTag();
 
-                if ( $toggle.offsetWidth > tagWidth ) {
+                if ( $toggle.scrollWidth > tagWidth ) {
                     tagWidth = $toggle.offsetWidth + 28;
                 }
 
