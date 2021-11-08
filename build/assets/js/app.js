@@ -946,9 +946,12 @@ document.addEventListener('DOMContentLoaded', function() {
         let $tag = $tags[i];
         let $tagToggle = $tag.querySelector('[data-element="tag-toggle"]');
         let $tagItem = $tag.closest('[data-element="tag-item"]');
+        let $tagPopover = $tag.querySelector('[data-element="tag-popover"]');
         let tagWidth = $tagToggle.scrollWidth;
         let tagHeight = $tagToggle.scrollHeight;
         let tagExpandedWidth = tagPopoverWidth;
+
+        $tagPopover.style.display = "block";
 
         if ( tagWidth > tagExpandedWidth ) {
             tagExpandedWidth = tagWidth + 28;

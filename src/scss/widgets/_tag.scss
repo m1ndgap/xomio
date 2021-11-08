@@ -28,6 +28,7 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 0s 0s ease-in-out;
+        display: none;
 
         &-body {
             padding: rem(0 44px $spacer-3);
