@@ -1,6 +1,6 @@
 .footer {
     padding-top: rem(48px);
-    padding-bottom: rem(49px);
+    padding-bottom: rem(48px);
 
     &__menu {
         &-section {
@@ -80,14 +80,14 @@
     }
 
     @include media-breakpoint-up(md) {
-        padding-bottom: rem(17px);
+        padding-bottom: rem(15px);
 
         &__bottom {
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
-            margin-top: rem($spacer-10);
             padding-top: rem(19px);
+            margin-top: rem($spacer-2);
         }
 
         &__logo {
@@ -119,7 +119,7 @@
     }
 
     @include media-breakpoint-up(lg) {
-        padding-top: rem(104px);
+        padding-top: rem(56px) !important;
 
         &__main {
             &-left {
@@ -134,9 +134,7 @@
         }
 
         &__social {
-            margin-top: auto;
-            margin-bottom: 0;
-            padding-top: rem($spacer-5);
+            margin-top: rem(-10px);
 
             .social__link {
                 color: $white;
@@ -145,10 +143,6 @@
                     color: rgba($white, .7);
                 }
             }
-        }
-
-        &__bottom {
-            margin-top: rem(105px);
         }
 
         &__links {

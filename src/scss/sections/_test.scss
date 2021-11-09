@@ -35,7 +35,7 @@
             width: rem(137px);
             height: rem(171px);
             left: rem(-90px);
-            bottom: rem(-65px);
+            bottom: rem(-35px);
         }
 
         &--2 {
@@ -77,7 +77,7 @@
                 width: rem(255px);
                 height: rem(323px);
                 left: rem(-153px);
-                bottom: rem(-121px);
+                bottom: rem(-61px);
             }
 
             &--2 {
@@ -97,6 +97,10 @@
 
     @include media-breakpoint-up(2xl) {
         .section__decor {
+            &--1 {
+                bottom: rem(-121px);
+            }
+
             &--2 {
                 top: rem(-138px);
             }
