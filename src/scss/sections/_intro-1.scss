@@ -14,6 +14,7 @@
 
     @include media-breakpoint-up(lg) {
         .section__object {
+            width: auto;
             max-width: none;
         }
     }

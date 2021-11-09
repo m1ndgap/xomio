@@ -60,12 +60,6 @@
             "theme": "red"
         },
         {
-            "name": "Partners",
-            "link": "partners.html",
-            "icon": "heart",
-            "theme": "yellow"
-        },
-        {
             "name": "About us",
             "link": "about-us.html",
             "icon": "user",
