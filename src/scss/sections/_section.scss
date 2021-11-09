@@ -150,6 +150,22 @@
                 padding-top: 65.359477%;
             }
         }
+
+        &--3 {
+            &:after {
+                padding-top: 62.5%;
+            }
+        }
+
+        &--full {
+            &:after {
+                padding-top: 70.69444%;
+            }
+        }
+
+        &--noshadow {
+           box-shadow: none;
+        }
     }
 
     @include media-breakpoint-up(lg) {

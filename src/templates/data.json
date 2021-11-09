@@ -834,6 +834,7 @@
                     "More languages? More views, more leads, more deals. It’s that simple."
                 ],
                 "video": 4,
+                "videoClass": "section__video--3",
                 "objectDecor": "decor--5 decor-dots-5"
             }
         ],
