@@ -22,14 +22,6 @@
     @include media-breakpoint-down(xs) {
     }
 
-    @include media-breakpoint-up(lg) {
-        &__slide {
-            .slick-initialized & {
-                justify-content: flex-start;
-            }
-        }
-    }
-
     @include media-breakpoint-up(xl) {
         margin-left: rem(- $spacer-4);
         margin-right: rem(- $spacer-4);
