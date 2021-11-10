@@ -23,10 +23,11 @@ const $navbar = $('[data-component="navbar"]');
 const $body = $('.body');
 const $main = $('.main');
 
+const bpSM = 560;
 const bpMD = 768;
 const bpLG = 1024;
 const bpXL = 1232;
-const bp2Xl = 1440;
+const bp2XL = 1440;
 
 /* Accordion */
 document.addEventListener('DOMContentLoaded', function() {
@@ -243,7 +244,6 @@ document.addEventListener('DOMContentLoaded', function() {
     //fullPage.js initialization
     initialization();
 });
-
 let $phoneInputs = document.querySelectorAll('[data-mask="phone"]');
 
 if ($phoneInputs.length !== 0) {
@@ -615,30 +615,48 @@ $(document).ready(function() {
     }
 });
 /* Show More/Less */
-$.fn.toggleText = function(t1, t2){
-    if (this.text() == t1) {
-        this.text(t2);
+function toggleText(toggle, t1, t2){
+    if (toggle.innerHTML == t1) {
+        toggle.innerHTML = t2;
     } else {
-        this.text(t1);
+        toggle.innerHTML = t1;
     }
     return this;
 };
 
-$(document).ready(function(){
-    let $showAllToggle = $('[data-element="show-all-toggle"]');
+document.addEventListener('DOMContentLoaded', function() {
+    let $showAllToggles = document.querySelectorAll('[data-element="show-all-toggle"]');
+    let $showAllContents = document.querySelectorAll('[data-show-all-content]');
+    let i;
 
-    $showAllToggle.on('click', function(e) {
-        e.preventDefault();
+    if (!$showAllToggles) {
+        return false;
+    }
 
-        let toggle = $(this);
-        let toggleTextOn = toggle.attr('data-text-on');
-        let toggleTextOff = toggle.attr('data-text-off');
-        let showAllComponent = toggle.closest('[data-component="show-all"]');
+    for (i = 0; i < $showAllToggles.length; i++) {
+        $showAllToggles[i].addEventListener("click", function(e) {
+            e.preventDefault();
 
-        toggle.toggleText(toggleTextOn, toggleTextOff);
+            let $toggle = this;
+            let toggleTextOn = $toggle.dataset.textOn;
+            let toggleTextOff = $toggle.dataset.textOff;
+            let $component = $toggle.closest('[data-component="show-all"]');
+            let $content = $component.querySelector('[data-show-all-content]');
+            let contentHeight = $content.offsetHeight;
+            let contentScrollHeight = $content.scrollHeight;
 
-        showAllComponent.toggleClass(expandedClass);
-    });
+            toggleText($toggle, toggleTextOn, toggleTextOff);
+
+            $component.classList.toggle(expandedClass);
+
+            if (!$component.classList.contains(expandedClass)) {
+                collapseActiveTag();
+                $content.style = '';
+            } else {
+                $content.style.maxHeight = contentScrollHeight + 'px';
+            }
+        });
+    }
 });
 
 /* Common slider */
@@ -923,6 +941,13 @@ $(document).ready(function(){
     };
 });
 /* Tags */
+function collapseActiveTag() {
+    if (document.querySelector('.'+expandedClass+'[data-element="tag"]')) {
+        document.querySelector('.'+expandedClass+'[data-element="tag"]').style = '';
+        document.querySelector('.'+expandedClass+'[data-element="tag"]').classList.remove(expandedClass);
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     let $tags = document.querySelectorAll('[data-element="tag"]');
 
@@ -932,35 +957,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let $tagToggles = document.querySelectorAll('[data-element="tag-toggle"]');
     let $tagsPopup = document.querySelector('[data-component="tags-popup"]');
+    let $tagsList = document.querySelector('[data-element="tags-list"]');
     let $tagsPopupTriggers = document.querySelectorAll('[data-element="tags-popup-trigger"]');
     let $tagsPopupSlider = document.querySelector('[data-slider="tags"]');
     let $tagsPopupClose = document.querySelector('[data-element="tags-popup-close"]');
     let tagPopoverWidth = 365;
     let i;
 
-    if ( window.innerWidth < 375 ) {
-        tagPopoverWidth = 288;
+    if ( window.innerWidth < bpSM ) {
+        tagPopoverWidth = document.querySelector('[data-element="tag-item"]').scrollWidth;
     }
 
-    for (i = 0; i < $tags.length; i++) {
-        let $tag = $tags[i];
-        let $tagToggle = $tag.querySelector('[data-element="tag-toggle"]');
-        let $tagItem = $tag.closest('[data-element="tag-item"]');
-        let $tagPopover = $tag.querySelector('[data-element="tag-popover"]');
-        let tagWidth = $tagToggle.scrollWidth;
-        let tagHeight = $tagToggle.scrollHeight;
-        let tagExpandedWidth = tagPopoverWidth;
+    function resizeTags() {
+        collapseActiveTag();
 
-        $tagPopover.style.display = "block";
+        for (i = 0; i < $tags.length; i++) {
+            let $tag = $tags[i];
+            let $tagToggle = $tag.querySelector('[data-element="tag-toggle"]');
+            let $tagItem = $tag.closest('[data-element="tag-item"]');
+            let $tagPopover = $tag.querySelector('[data-element="tag-popover"]');
+            let tagWidth = $tagToggle.scrollWidth;
+            let tagHeight = $tagToggle.scrollHeight;
+            let tagExpandedWidth = tagPopoverWidth;
 
-        if ( tagWidth > tagExpandedWidth ) {
-            tagExpandedWidth = tagWidth + 28;
-        }
+            if ( window.innerWidth < bpSM ) {
+                if ( tagWidth > $tagItem.scrollWidth ) {
+                    tagExpandedWidth = $tagItem.scrollWidth;
+                }
+            } else {
+                if ( tagWidth > tagExpandedWidth ) {
+                    tagExpandedWidth = tagWidth + 28;
+                }
+            }
 
-        $tagItem.style.width = tagWidth + 'px';
-        $tagItem.style.height = tagHeight + 'px';
-        $tag.querySelector('[data-element="tag-popover"]').style.width = tagExpandedWidth + 'px';
-    };
+            $tagPopover.style.display = "block";
+            $tagPopover.style.width = tagExpandedWidth + 'px';
+
+            if ( window.innerWidth < bpSM ) {
+                $tagPopover.style.display = "";
+            }
+            $tagItem.style.width = tagWidth + 'px';
+            $tagItem.style.height = tagHeight + 'px';
+        };
+    }
+
+    resizeTags();
+
+    window.addEventListener("resize", function(e) {
+        resizeTags();
+    });
+
+    window.addEventListener("orientationchange", function(e) {
+        resizeTags();
+    });
 
     for (i = 0; i < $tagToggles.length; i++) {
         $tagToggles[i].addEventListener("click", function(e) {
@@ -969,12 +1018,16 @@ document.addEventListener('DOMContentLoaded', function() {
             let $toggle = this;
             let $tag = $toggle.closest('[data-element="tag"]');
             let $popover = $tag.querySelector('[data-element="tag-popover"]');
+
+            $popover.style.display = "block";
+
             let tagWidth = tagPopoverWidth;
             let tagHeight = $toggle.scrollHeight + $popover.scrollHeight;
 
             if ($tag.classList.contains(expandedClass)) {
                 $tag.classList.remove(expandedClass);
                 $tag.style='';
+                $popover.style.display = "";
             } else {
                 collapseActiveTag();
 
@@ -982,12 +1035,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     tagWidth = $toggle.offsetWidth + 28;
                 }
 
-                if ( (window.innerWidth - $toggle.getBoundingClientRect().left ) < tagWidth ) {
-                    $tag.classList.add('is-right');
-                }
-
-                if ( (window.innerHeight - $toggle.getBoundingClientRect().top ) < tagHeight ) {
-                    $tag.classList.add('is-bottom');
+                if ( window.innerWidth < bp2XL ) {
+                    if ( ($tagsList.clientWidth - ($toggle.getBoundingClientRect().left - $tagsList.getBoundingClientRect().left) ) < tagWidth ) {
+                        $tag.classList.add('is-right');
+                    }
+         
+                    if ( ($tagsList.clientHeight - ($toggle.getBoundingClientRect().top - $tagsList.getBoundingClientRect().top) ) < tagHeight ) {
+                        $tag.classList.add('is-bottom');
+                    }
+                } else {
+                    if ( (window.innerWidth - $toggle.getBoundingClientRect().left ) < tagWidth ) {
+                        $tag.classList.add('is-right');
+                    }
+       
+                    if ( (window.innerHeight - $toggle.getBoundingClientRect().top ) < tagHeight ) {
+                        $tag.classList.add('is-bottom');
+                    }
                 }
 
                 $tag.classList.add(expandedClass);
@@ -1014,11 +1077,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 $tagsPopup.classList.add(visibleClass);
             }, 400);
 
-            collapseActiveTag();
-
             fullpage_api.setAutoScrolling(false);
             fullpage_api.setFitToSection(false);
             $body[0].classList.add(lockedScrollClass2);
+
+            collapseActiveTag();
         });
     }
 
@@ -1040,122 +1103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             $body[0].classList.remove(lockedScrollClass2);
         }
     });
-
-    function collapseActiveTag() {
-        if (document.querySelector('.'+expandedClass+'[data-element="tag"]')) {
-            document.querySelector('.'+expandedClass+'[data-element="tag"]').style = '';
-            document.querySelector('.'+expandedClass+'[data-element="tag"]').classList.remove(expandedClass);
-        }
-    };
 });
-/* Tags
-document.addEventListener('DOMContentLoaded', function() {
-    let $tags = document.querySelectorAll('[data-element="tag"]');
-    let $tagToggles = document.querySelectorAll('[data-element="tag-toggle"]');
-    let $tagsPopup = document.querySelector('[data-component="tags-popup"]');
-    let $tagsPopupTriggers = document.querySelectorAll('[data-element="tags-popup-trigger"]');
-    let $tagsPopupSlider = document.querySelector('[data-slider="tags"]');
-    let $tagsPopupClose = document.querySelector('[data-element="tags-popup-close"]');
-    let tagPopoverWidth = 365;
-    let i;
-
-    if (!$tags) {
-        return false;
-    }
-
-    if ( window.innerWidth < 375 ) {
-        tagPopoverWidth = 288;
-    }
-
-    for (i = 0; i < $tags.length; i++) {
-        let $tag = $(this);
-        let $tagToggle = $tag.find('[data-element="tag-toggle"]');
-        let $tagItem = $tag.closest('[data-element="tag-item"]');
-
-        let tagWidth = $tagToggle.outerWidth();
-        let tagExpandedWidth = tagPopoverWidth;
-        let tagHeight = $tagToggle.outerHeight();
-
-        if ( tagWidth > tagExpandedWidth ) {
-            tagExpandedWidth = tagWidth + 28;
-        }
-
-        $tagItem.width(tagWidth);
-        $tagItem.height(tagHeight);
-        //$tag.find('[data-element="tag-popover-bg"]').width(tagWidth);
-        $tag.find('[data-element="tag-popover"]').width(tagExpandedWidth);
-    };
-
-    $tagToggle.on('click', function(e) {
-        e.preventDefault();
-
-        let $toggle = $(this);
-        let $tag = $toggle.closest('[data-element="tag"]');
-        let $tagPopover = $tag.find('[data-element="tag-popover"]');
-        let tagWidth = tagPopoverWidth;
-        let tagHeight = $tagPopover[0].scrollHeight + $tag.height();
-
-        if ($tag.hasClass(expandedClass)) {
-            $tag.classList.remove(expandedClass);
-            $tag[0].style='';
-        } else {
-            $('.'+expandedClass+'[data-element="tag"]')[0].style='';
-            $('.'+expandedClass+'[data-element="tag"]').classList.remove(expandedClass);
-
-            if ( $toggle.outerWidth() > tagWidth ) {
-                tagWidth = $toggle.outerWidth() + 28;
-            }
-
-            if ( (window.innerWidth - $toggle[0].getBoundingClientRect().left ) < tagWidth ) {
-                $tag.classList.add('is-right');
-            }
-
-            //console.log($tagPopover.height());
-            //console.log(tagHeight);
-
-            if ( ($(window).height() - $toggle[0].getBoundingClientRect().top ) < tagHeight ) {
-                $tag.classList.add('is-bottom');
-            }
-
-            $tag.classList.add(expandedClass);
-            $tag.css('width', tagWidth);
-            $tag.css('height', $tagPopover.outerHeight() + $toggle.outerHeight());
-            //$tag.css('width', tagWidth);
-        }
-
-        return false;
-    });
-
-    $tagsPopupTrigger.on('click', function(e) {
-        e.preventDefault();
-
-        let $trigger = $(this);
-        let triggerID = $trigger.attr('data-id');
-
-        $tagsPopupSlider.slick('slickGoTo', triggerID - 1, false);
-
-        setTimeout(function() {
-            $tagsPopup.classList.add(visibleClass);
-        }, 400);
-
-        $('.'+expandedClass+'[data-element="tag"]').css('width', 'auto');
-        $('.'+expandedClass+'[data-element="tag"]').classList.remove(expandedClass);
-    });
-
-    $tagsPopupClose.on('click', function(e) {
-        e.preventDefault();
-
-        $tagsPopup.classList.remove(visibleClass);
-    });
-
-    $(document).on('keyup', function(e) {
-        if (e.key === "Escape" || e.keyCode === 27) {
-            $tagsPopup.classList.remove(visibleClass);
-            $('.'+expandedClass+'[data-element="tag"]').css('width', 'auto');
-            $('.'+expandedClass+'[data-element="tag"]').classList.remove(expandedClass);
-        }
-    });
-}); */
 /* Tags slider */
 $(document).ready(function(){
     let $tagsSlider = $('[data-slider="tags"]');

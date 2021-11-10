@@ -5,20 +5,18 @@
 
     &__list {
         @include list-unstyled;
-        @include make-row($spacer-5)
         margin-bottom: rem(- $spacer-3);
         max-height: rem(612px);
         overflow: hidden;
-        transition: .25s ease-in-out;
+        transition: .5s ease-in-out;
 
         .is-expanded & {
-            max-height: rem(2500px);
+            max-height: none;
+            overflow: visible;
         }
     }
 
     &__item {
-        margin-left: rem($spacer-5 / 2);
-        margin-right: rem($spacer-5 / 2);
         margin-bottom: rem($spacer-3);
         position: relative;
         height: rem($spacer-10);
@@ -28,14 +26,20 @@
         margin-top: rem($spacer-9);
     }
 
+    @media(min-width: 560px) {
+        &__list {
+            @include make-row($spacer-5);
+        }
+
+        &__item {
+            margin-left: rem($spacer-5 / 2);
+            margin-right: rem($spacer-5 / 2);
+        }
+    }
+
     @include media-breakpoint-up(md) {
         .intro {
             text-align: center;
-        }
-
-        &__list {
-            max-height: none;
-            overflow: visible;
         }
     }
 
@@ -74,7 +78,7 @@
         }
     }
 
-    @media (min-height: 1000px) {
+    @media (min-width: 1232px) and (min-height: 1000px) {
         &__list {
             max-height: none;
             overflow: visible;

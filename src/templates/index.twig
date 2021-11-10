@@ -1,7 +1,7 @@
 {% extends 'layout/_base-fullpage.twig' %}
 
 {% block styles %}
-  <link rel="stylesheet" href="./assets/css/home.css?123456789">
+  <link rel="stylesheet" href="./assets/css/home.css?123456">
 {% endblock %}
 
 {% set pageClass = 'page-home' %}
@@ -102,12 +102,12 @@
         </div>
 
         <div data-component="show-all">
-          <ul class="tags__list">
+          <ul class="tags__list" data-element="tags-list" data-show-all-content>
             {% for section in home|slice(2,1) %}
               {% for item in section.tags %}
                 <li class="tags__item" data-element="tag-item">
                   <div class="tag tag-{{ item.theme }}" data-element="tag">
-                    <a href="#" class="tag__link" data-element="tag-toggle"><i class="tag__link-icon icon-plus"></i> {{ item.name }}</a>
+                    <a href="#" class="tag__link" data-element="tag-toggle"><i class="tag__link-icon icon-plus"></i> <span class="tag__link-text">{{ item.name }}</span></a>
                     <div class="tag__popover" data-element="tag-popover">
                       <div class="tag__popover-body">
                         <p class="tag__popover-text">{{ item.text }}</p>
@@ -124,7 +124,7 @@
             {% endfor %}
           </ul>
 
-          <div class="tags__action hidden-md-up">
+          <div class="tags__action hidden-xl-up">
             <button class="tags__action-button button button--outline-primary" data-element="show-all-toggle" data-text-on="Show more" data-text-off="Show less">Show more</button>
           </div>
         </div>

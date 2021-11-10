@@ -23,7 +23,8 @@ const $navbar = $('[data-component="navbar"]');
 const $body = $('.body');
 const $main = $('.main');
 
+const bpSM = 560;
 const bpMD = 768;
 const bpLG = 1024;
 const bpXL = 1232;
-const bp2Xl = 1440;
+const bp2XL = 1440;

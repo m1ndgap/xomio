@@ -36,17 +36,20 @@
                 {% endif %}
               </div>
 
-              <div class="section__object">
-                {% if item.popup.image == true %}
-                  <img srcset="./assets/img/tags/{{ item.id }}.png 1x, ./assets/img/tags/{{ item.id }}@2x.png 2x" src="./assets/img/tags/{{ item.id }}.png" alt="" class="section__img {% if item.popup.filter %}section__img--filter{% endif %}">
-                  {% else %}
-                  {% if item.popup.imageType == 'svg' %}
-                    <img src="./assets/img/tags/{{ item.popup.image }}.svg" alt="" class="section__img {% if item.popup.filter %}section__img--filter{% endif %}">
+              {% if item.popup.image %}
+                <div class="section__object">
+                  {% if item.popup.image == true %}
+                    <img srcset="./assets/img/tags/{{ item.id }}.png 1x, ./assets/img/tags/{{ item.id }}@2x.png 2x" src="./assets/img/tags/{{ item.id }}.png" alt="" class="section__img {% if item.popup.filter %}section__img--filter{% endif %}">
                     {% else %}
-                    <img srcset="./assets/img/tags/{{ item.popup.image }}.png 1x, ./assets/img/tags/{{ item.popup.image }}@2x.png 2x" src="./assets/img/tags/{{ item.popup.image }}.png" alt="" class="section__img {% if item.popup.filter %}section__img--filter{% endif %}">
+                    {% if item.popup.imageType == 'svg' %}
+                      <img src="./assets/img/tags/{{ item.popup.image }}.svg" alt="" class="section__img {% if item.popup.filter %}section__img--filter{% endif %}">
+                      {% else %}
+                      <img srcset="./assets/img/tags/{{ item.popup.image }}.png 1x, ./assets/img/tags/{{ item.popup.image }}@2x.png 2x" src="./assets/img/tags/{{ item.popup.image }}.png" alt="" class="section__img {% if item.popup.filter %}section__img--filter{% endif %}">
+                    {% endif %}
                   {% endif %}
-                {% endif %}
-              </div>
+                </div>
+              {% endif %}
+
             </div>
           </div>
         </div>

@@ -8,19 +8,22 @@
     transition: width 0s 0s, height 0s 0s ease-in-out;
 
     &__link {
-        display: inline-block;
-        padding: rem($spacer-2 $spacer-4 $spacer-2 44px);
+        display: inline-flex;
+        padding: rem($spacer-2 $spacer-4 $spacer-2 $spacer-2);
         @include font($font-size-h4, $line-height-h4, $font-weight-medium);
-        white-space: nowrap;
         position: relative;
         z-index: 1;
 
         &-icon {
-            float: left;
             font-size: rem($spacer-6);
-            margin-left: rem(- $spacer-9);
+            margin-right: rem($spacer-3);
             transform: rotate(0);
             transition: transform .25s .25s ease-in-out;
+        }
+
+        &-text {
+            @include text-truncate();
+            display: block;
         }
     }
 
@@ -66,7 +69,8 @@
 
     &.is-expanded & {
         &__link {
-            display: block;
+            //display: block;
+            display: flex;
 
             &-icon {
                 transform: rotate(45deg);
@@ -104,6 +108,18 @@
         &-#{$key} {
             @include setProperty('background-color', $value, 'bg');
          }
+    }
+
+    @media(min-width: 560px) {
+        display: block;
+        max-width: none;
+        width: 100%;
+
+        &__link {
+            &-text {
+                text-overflow: initial;
+            }
+        }
     }
 
     @include media-breakpoint-up(lg) {

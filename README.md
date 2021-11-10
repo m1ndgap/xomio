@@ -1,4 +1,4 @@
-# Xomio project (Formerly known as GleX-iT)
+# Xomio project
 
 This project was generated with [Gulp](https://www.npmjs.com/package/gulp/v/3.9.1) version 3.9.1.
 Gulp v3.9.1 requires Node v11.15.0.
@@ -20,7 +20,7 @@ Icon font was generated with [Icomoon.io](https://icomoon.io/app)
 Run `gulp watch` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
 
 
-### General structure
+## General structure
 
 General structure for each project is like this:
 
@@ -40,8 +40,8 @@ General structure for each project is like this:
             image-a.png
             image-b.svg
                 ∇ svg-font
-                    image-a.svg
-                    image-b.svg
+                    icon-a.svg
+                    icon-b.svg
         ∇ js
             app.js
             vendor.js
@@ -59,8 +59,8 @@ General structure for each project is like this:
         image-a.png
         image-b.svg
             ∇ svg-font
-                image-a.svg
-                image-b.svg
+                icon-a.svg
+                icon-b.svg
     ∇ js
         script-a.js
         script-b.js

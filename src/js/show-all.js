@@ -1,26 +1,44 @@
 /* Show More/Less */
-$.fn.toggleText = function(t1, t2){
-    if (this.text() == t1) {
-        this.text(t2);
+function toggleText(toggle, t1, t2){
+    if (toggle.innerHTML == t1) {
+        toggle.innerHTML = t2;
     } else {
-        this.text(t1);
+        toggle.innerHTML = t1;
     }
     return this;
 };
 
-$(document).ready(function(){
-    let $showAllToggle = $('[data-element="show-all-toggle"]');
+document.addEventListener('DOMContentLoaded', function() {
+    let $showAllToggles = document.querySelectorAll('[data-element="show-all-toggle"]');
+    let $showAllContents = document.querySelectorAll('[data-show-all-content]');
+    let i;
 
-    $showAllToggle.on('click', function(e) {
-        e.preventDefault();
+    if (!$showAllToggles) {
+        return false;
+    }
 
-        let toggle = $(this);
-        let toggleTextOn = toggle.attr('data-text-on');
-        let toggleTextOff = toggle.attr('data-text-off');
-        let showAllComponent = toggle.closest('[data-component="show-all"]');
+    for (i = 0; i < $showAllToggles.length; i++) {
+        $showAllToggles[i].addEventListener("click", function(e) {
+            e.preventDefault();
 
-        toggle.toggleText(toggleTextOn, toggleTextOff);
+            let $toggle = this;
+            let toggleTextOn = $toggle.dataset.textOn;
+            let toggleTextOff = $toggle.dataset.textOff;
+            let $component = $toggle.closest('[data-component="show-all"]');
+            let $content = $component.querySelector('[data-show-all-content]');
+            let contentHeight = $content.offsetHeight;
+            let contentScrollHeight = $content.scrollHeight;
 
-        showAllComponent.toggleClass(expandedClass);
-    });
+            toggleText($toggle, toggleTextOn, toggleTextOff);
+
+            $component.classList.toggle(expandedClass);
+
+            if (!$component.classList.contains(expandedClass)) {
+                collapseActiveTag();
+                $content.style = '';
+            } else {
+                $content.style.maxHeight = contentScrollHeight + 'px';
+            }
+        });
+    }
 });
