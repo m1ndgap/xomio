@@ -5,9 +5,10 @@
 }
 
 .fp-slidesNav {
-    text-align: center;
     position: static;
-    margin-top: rem($spacer-5) !important;
+    padding-top: rem($spacer-3);
+    padding-left: rem($spacer-3);
+    padding-bottom: rem(52px);
 
     ul {
         li {
@@ -65,8 +66,34 @@
     }
 }
 
-.fp-controlArrow.fp-next {
-    border-left-color: $primary;
+.fp-controlArrow {
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: rem($spacer-6);
+    }
+
+    &.fp-next,
+    &.fp-prev {
+        @include size(rem(48px));
+        @include rounded;
+        border: 1px solid $primary;
+        color: $primary;
+        margin-top: 0;
+        top: auto;
+        bottom: rem($spacer-8);
+        transform: none;
+    }
+
+    &.fp-next{
+        left: rem(80px);
+    }
+
+    &.fp-prev{
+        left: rem($gutter);
+    }
 }
 
 .fp-controlArrow.fp-prev {
@@ -84,5 +111,12 @@
     .fp-section {
         padding-top: rem($section-offset-mobile) !important;
         padding-bottom: rem($section-offset-mobile);
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .fp-slidesNav,
+    .fp-controlArrow {
+        display: none;
     }
 }

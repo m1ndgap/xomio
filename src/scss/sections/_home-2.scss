@@ -9,6 +9,7 @@
         }
 
         .slick-dots {
+            display: none;
             text-align: center;
             flex: 1;
         }
@@ -17,6 +18,14 @@
     @include media-breakpoint-up(lg) {
         .section__content {
             margin-bottom: 0;
+        }
+
+        .section__object {
+            .slick-dots {
+                display: block;
+                text-align: center;
+                flex: 1;
+            }
         }
     }
 

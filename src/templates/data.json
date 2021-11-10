@@ -1226,7 +1226,7 @@
                     "id": "multi-language-listings-view",
                     "name": "Multi language listings view",
                     "theme": "yellow",
-                    "arrowColor": "#f45d48",
+                    "arrowColor": "#388172",
                     "text": "We translate and localize your listings into 18 languages.",
                     "popup": {
                         "subtitle": "Leads become deals right before your eyes!",
@@ -1361,7 +1361,7 @@
                     "id": "crm",
                     "name": "CRM with lead management",
                     "theme": "green",
-                    "arrowColor": "#ff8e7b",
+                    "arrowColor": "#ffc300",
                     "text": "Powerful features, simple interface, great ouctomes. Xomio delivers client lead tracking without the fuss.",
                     "popup": {
                         "subtitle": "Setting up your IDX should be simple. With Xomio, it is.",
@@ -1431,7 +1431,7 @@
                     "id": "multi-language-listings-search",
                     "name": "Multi language listings search",
                     "theme": "orange",
-                    "arrowColor": "#388172",
+                    "arrowColor": "#ffc300",
                     "text": "Looking for homes in Nueva York?",
                     "popup": {
                         "subtitle": "Xomio doesn't just translate your listings. It localizes them.",
@@ -1552,7 +1552,7 @@
                     "id": "seo-friendly-urls",
                     "name": "SEO friendly URLs",
                     "theme": "orange",
-                    "arrowColor": "#d34733",
+                    "arrowColor": "#388172",
                     "text": "SEO friendly URLS are an important part of achieving the best rankings in Google searches. We've got you covered!",
                     "popup": {
                         "text": [
@@ -1588,7 +1588,7 @@
                     "id": "global-seo",
                     "name": "Global SEO",
                     "theme": "salmon",
-                    "arrowColor": "#ffc300",
+                    "arrowColor": "#fb634a",
                     "text": "You have 19 different language websites, each with their own language seo, all prepared to be indexed and searched by search engines globally.",
                     "popup": {
                         "text": [
@@ -1635,7 +1635,7 @@
                     "id": "customizable-idx-filters",
                     "name": "Customizable IDX filters",
                     "theme": "orange",
-                    "arrowColor": "#388172",
+                    "arrowColor": "#ffc300",
                     "text": "Set filters around property style, price and more so you only display listing from your IDX that match your niche.",
                     "popup": {
                         "text": [

@@ -15,6 +15,10 @@
         margin-right: auto;
     }
 
+    &__content + &__body {
+        margin-top: rem(- $spacer-4);
+    }
+
     &__content {
         margin-bottom: rem($spacer-10);
     }

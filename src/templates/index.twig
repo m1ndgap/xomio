@@ -1,7 +1,7 @@
 {% extends 'layout/_base-fullpage.twig' %}
 
 {% block styles %}
-  <link rel="stylesheet" href="./assets/css/home.css?123456566">
+  <link rel="stylesheet" href="./assets/css/home.css?123456789">
 {% endblock %}
 
 {% set pageClass = 'page-home' %}
@@ -111,9 +111,11 @@
                     <div class="tag__popover" data-element="tag-popover">
                       <div class="tag__popover-body">
                         <p class="tag__popover-text">{{ item.text }}</p>
-                        <p class="tag__popover-action">
-                          <a href="#" class="tag__popover-more more" data-element="tags-popup-trigger" data-id="{{ loop.index }}">Learn more <i class="more__icon icon-arrow-right"></i></a>
-                        </p>
+                        {% if item.popup %}
+                          <p class="tag__popover-action">
+                            <a href="#" class="tag__popover-more more" data-element="tags-popup-trigger" data-id="{{ item.id }}">Learn more <i class="more__icon icon-arrow-right"></i></a>
+                          </p>
+                        {% endif %}
                       </div>
                     </div>
                   </div>
@@ -167,10 +169,6 @@
 
     <div class="section test bg-blue bl5 section--scrollable" data-fullpage="section">
       <div class="container">
-        <div class="section__decor section__decor--1 decor-complex-1"></div>
-        <div class="section__decor section__decor--2 decor-shape-5">
-          <div class="section__decor section__decor--3 decor-dots-6"></div>
-        </div>
         <h2 class="test__title">Find the right fit for you</h2>
         <div class="test__start">
           <button class="test__button button button--primary button--huge gofirst" data-element="start-button">Start</button>
@@ -322,6 +320,11 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="section__decor section__decor--1 decor-complex-1"></div>
+      <div class="section__decor section__decor--2 decor-shape-5">
+        <div class="section__decor section__decor--3 decor-dots-6"></div>
       </div>
     </div>
 

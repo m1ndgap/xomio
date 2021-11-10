@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sectionSelector: '[data-fullpage="section"]',
             slideSelector: '[data-fullpage="slide"]',
             slidesNavigation: true,
-            controlArrows: false,
+            controlArrows: true,
             scrollBar: true,
             responsiveWidth: bpXL,
             normalScrollElements: '.section--scrollable',

@@ -33,8 +33,8 @@
     }
 
     .section__body {
-        padding-top: rem($section-offset);
-        padding-bottom: rem(60px);
+        padding-top: rem(116px);
+        padding-bottom: rem(30px);
     }
 
     @each $key, $value in $theme-tag-colors {
@@ -84,11 +84,13 @@
 
         .section__content {
             max-width: none;
+            width: auto;
             margin-bottom: rem($spacer-10);
         }
 
         .section__object {
             max-width: none;
+            width: auto;
         }
     }
 

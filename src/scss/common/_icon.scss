@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'icons';
-  src: url('../fonts/icons.eot?xb7q72#iefix') format('embedded-opentype'),
-       url('../fonts/icons.svg?xb7q72') format('svg'),
-       url('../fonts/icons.woff?xb7q72') format('woff');
+  src: url('../fonts/icons.eot?ownvgo#iefix') format('embedded-opentype'),
+       url('../fonts/icons.svg?ownvgo') format('svg'),
+       url('../fonts/icons.woff?ownvgo') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -21,7 +21,8 @@
 .select2-selection__arrow:before,
 .select2-search--dropdown:before,
 .select2-results__option:after,
-.slick-arrow:before {
+.slick-arrow:before,
+.fp-controlArrow:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
   speak: never;
@@ -40,12 +41,28 @@
 }
 
 .icon-arrow-left:before,
-.tags-popup .slick-prev:before {
+.tags-popup .slick-prev:before ,
+.fp-prev:before{
   content: "\e913";
 }
 .icon-arrow-right:before,
-.tags-popup .slick-next:before {
+.tags-popup .slick-next:before,
+.fp-next:before {
   content: "\e916";
+}
+@include media-breakpoint-down(lg) {
+    .tags-popup .slick-prev:before {
+      content: "\e917";
+    }
+    .tags-popup .slick-next:before {
+      content: "\e918";
+    }
+}
+.icon-arrow-left-round:before {
+  content: "\e917";
+}
+.icon-arrow-right-round:before {
+  content: "\e918";
 }
 .icon-attach:before {
   content: "\e900";

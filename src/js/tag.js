@@ -82,8 +82,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             let $trigger = this;
             let triggerID = $trigger.dataset.id;
+            let triggerSlideId = $tagsPopupSlider.querySelector('[data-id="'+triggerID+'"]').dataset.slickIndex;
 
-            $($tagsPopupSlider).slick('slickGoTo', triggerID - 1, false);
+            $($tagsPopupSlider).slick('slickGoTo', triggerSlideId, false);
 
             setTimeout(function() {
                 $tagsPopup.classList.add(visibleClass);

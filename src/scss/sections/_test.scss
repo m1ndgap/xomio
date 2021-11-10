@@ -1,6 +1,6 @@
 .test {
     text-align: center;
-    padding-top: rem(104px);
+    padding-top: rem(104px) !important;
     padding-bottom: rem(104px);
 
     &__title {
@@ -21,7 +21,7 @@
             width: 559px;
             height: 231px;
             content: '';
-            z-index: -1;
+            z-index: -2;
         }
     }
 
@@ -44,9 +44,9 @@
             background-position: 0;
             background-size: cover;
             overflow: visible;
-            top: rem(84px);
+            top: rem(122px);
             right: 0;
-            z-index: 1;
+            z-index: -1;
         }
 
         &--3 {
@@ -61,7 +61,6 @@
         min-height: 100vh;
         display: flex;
         align-items: center;
-        padding-top: rem(144px);
         padding-bottom: rem(174px);
 
         &__title {

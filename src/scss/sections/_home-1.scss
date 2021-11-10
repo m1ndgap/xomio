@@ -1,11 +1,15 @@
 .home-1 {
+    .section__content {
+        margin-bottom: rem($spacer-6);
+    }
+
     .section__decor {
         &--1 {
             width: rem(300px);
             height: rem(995px);
             background-position: 0;
             background-size: cover;
-            top: 0;
+            top: rem(-80px);
             right: 0;
         }
 
@@ -17,8 +21,13 @@
         }
     }
 
+    @include media-breakpoint-down(md) {
+        padding-top: rem($spacer-6) !important;
+    }
+
     @include media-breakpoint-up(lg) {
-        .section__decor {
+        .section__content {
+            margin-bottom: 0;
         }
     }
 

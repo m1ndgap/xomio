@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sectionSelector: '[data-fullpage="section"]',
             slideSelector: '[data-fullpage="slide"]',
             slidesNavigation: true,
-            controlArrows: false,
+            controlArrows: true,
             scrollBar: true,
             responsiveWidth: bpXL,
             normalScrollElements: '.section--scrollable',
@@ -1006,8 +1006,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             let $trigger = this;
             let triggerID = $trigger.dataset.id;
+            let triggerSlideId = $tagsPopupSlider.querySelector('[data-id="'+triggerID+'"]').dataset.slickIndex;
 
-            $($tagsPopupSlider).slick('slickGoTo', triggerID - 1, false);
+            $($tagsPopupSlider).slick('slickGoTo', triggerSlideId, false);
 
             setTimeout(function() {
                 $tagsPopup.classList.add(visibleClass);
