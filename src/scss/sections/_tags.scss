@@ -11,8 +11,7 @@
         transition: .5s ease-in-out;
 
         .is-expanded & {
-            max-height: none;
-            overflow: visible;
+            //overflow: visible;
         }
     }
 

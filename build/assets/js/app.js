@@ -647,13 +647,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
             toggleText($toggle, toggleTextOn, toggleTextOff);
 
-            $component.classList.toggle(expandedClass);
-
-            if (!$component.classList.contains(expandedClass)) {
+            if ($component.classList.contains(expandedClass)) {
                 collapseActiveTag();
                 $content.style = '';
+                $component.classList.remove(expandedClass);
             } else {
                 $content.style.maxHeight = contentScrollHeight + 'px';
+                setTimeout(function (e) {
+                    $content.style.overflow = 'visible';
+                }, 500);
+                $component.classList.add(expandedClass);
             }
         });
     }
