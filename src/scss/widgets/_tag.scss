@@ -5,7 +5,8 @@
     overflow: hidden;
     @include size(100%);
     z-index: 1;
-    transition: width 0s 0s, height 0s 0s ease-in-out;
+    box-shadow: none;
+    transition: width 0s 0s, height 0s 0s ease-in-out, box-shadow 0s 0s ease-in-out;
 
     &__link {
         display: inline-flex;
@@ -13,12 +14,13 @@
         @include font($font-size-h4, $line-height-h4, $font-weight-medium);
         position: relative;
         z-index: 1;
+        white-space: nowrap;
 
         &-icon {
             font-size: rem($spacer-6);
             margin-right: rem($spacer-3);
             transform: rotate(0);
-            transition: transform .25s .25s ease-in-out;
+            transition: transform .25s ease-in-out;
         }
 
         &-text {
@@ -31,7 +33,7 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 0s 0s ease-in-out;
-        display: none;
+        overflow: hidden;
 
         &-body {
             padding: rem(0 44px $spacer-3);
@@ -49,27 +51,11 @@
         left: 0;
         z-index: 2;
         overflow: visible;
-        transition: height 0.25s 0.25s, width 0.25s 0.25s ease-in-out;
-
-        &:before {
-            position: absolute;
-            top: rem($spacer-4);
-            left: rem($spacer-5);
-            right: rem($spacer-5);
-            bottom: rem(-30px);
-            content: '';
-            background: inherit;
-            opacity: .28;
-            filter: blur(48px);
-            border-radius: rem($spacer-6);
-            z-index: -1;
-            pointer-events: none;
-        }
+        transition: height 0.25s 0.25s, width 0.25s 0.25s ease-in-out, box-shadow 0.25s 0.25s ease-in-out;
     }
 
     &.is-expanded & {
         &__link {
-            //display: block;
             display: flex;
 
             &-icon {
@@ -107,6 +93,10 @@
     @each $key, $value in $theme-tag-colors {
         &-#{$key} {
             @include setProperty('background-color', $value, 'bg');
+
+            &.is-expanded {
+                box-shadow: 0 16px 40px rgba(getValue($value, 'shadow-color'), .3);
+            }
          }
     }
 

@@ -195,24 +195,28 @@ $theme-tag-colors: map-merge(
             "color":      $white,
             "link-bg":    $yellow-300,
             "link-color": $white,
+            "shadow-color": #055343,
         ),
         "orange": (
             "bg":         $orange-200,
             "color":      $white,
             "link-bg":    $white,
             "link-color": $orange-200,
+            "shadow-color": #851809,
         ),
         "salmon": (
             "bg":         $pink-200,
             "color":      $white,
             "link-bg":    $white,
             "link-color": $pink-200,
+            "shadow-color": #cc3015,
         ),
         "yellow": (
             "bg":         $yellow-100,
             "color":      $secondary,
             "link-bg":    $secondary,
             "link-color": $white,
+            "shadow-color": #9f7b05,
         ),
     ),
     $theme-tag-colors

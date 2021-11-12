@@ -183,67 +183,6 @@ $(document).ready(function(){
         }
     });
 });
-/* Index page with fullpage.js */
-var homeFullpage;
-document.addEventListener('DOMContentLoaded', function() {
-    const $homeFullpage = document.querySelector('.page-home [data-page="fullpage"]');
-
-    if (!$homeFullpage) {
-        return false;
-    }
-
-    function initialization(){
-        homeFullpage = new fullpage('[data-page="fullpage"]', {
-            paddingTop: $navbar[0].offsetHeight +'px',
-            sectionSelector: '[data-fullpage="section"]',
-            slideSelector: '[data-fullpage="slide"]',
-            slidesNavigation: true,
-            controlArrows: true,
-            scrollBar: true,
-            responsiveWidth: bpXL,
-            normalScrollElements: '.section--scrollable',
-            licenseKey: '7C83C7E4-02654F77-96AB0657-A3F6DE6F',
-            scrollHorizontally: true,
-            scrollHorizontallyKey: 'E6229FD0-80AC4893-A7CE7036-0EDBAD95',
-            afterRender: function(){
-                if (this.isFirst) {
-                    typeWord(this);
-                }
-            },
-            afterSlideLoad: function(section, origin, destination, direction){
-                if (section.index === 0) {
-                    typeWord(destination);
-                }
-            },
-            onSlideLeave: function(section, origin, destination, direction) {
-                let $typer = origin.item.querySelector('[data-element="typewriter"]');
-                let typewriter = new Typewriter($typer);
-
-                typewriter
-                .deleteAll(15)
-                .start();
-            }
-        });
-    }
-
-    function typeWord(el) {
-        let $typer = el.item.querySelector('[data-element="typewriter"]');
-
-        let typewriter = new Typewriter($typer, {
-            delay: 100,
-        });
-
-        typewriter
-        .typeString($typer.dataset.word)
-        .callFunction(function(state) {
-            state.elements.cursor.style.display = 'none';
-        })
-        .start();
-    }
-
-    //fullPage.js initialization
-    initialization();
-});
 let $phoneInputs = document.querySelectorAll('[data-mask="phone"]');
 
 if ($phoneInputs.length !== 0) {
@@ -642,7 +581,6 @@ document.addEventListener('DOMContentLoaded', function() {
             let toggleTextOff = $toggle.dataset.textOff;
             let $component = $toggle.closest('[data-component="show-all"]');
             let $content = $component.querySelector('[data-show-all-content]');
-            let contentHeight = $content.offsetHeight;
             let contentScrollHeight = $content.scrollHeight;
 
             toggleText($toggle, toggleTextOn, toggleTextOff);
@@ -951,20 +889,19 @@ function collapseActiveTag() {
     }
 };
 
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
     let $tags = document.querySelectorAll('[data-element="tag"]');
 
     if ($tags.length === 0) {
         return false;
     }
 
-    let $tagToggles = document.querySelectorAll('[data-element="tag-toggle"]');
-    let $tagsPopup = document.querySelector('[data-component="tags-popup"]');
-    let $tagsList = document.querySelector('[data-element="tags-list"]');
+    let $tagToggles        = document.querySelectorAll('[data-element="tag-toggle"]');
+    let $tagsList          = document.querySelector('[data-element="tags-list"]');
     let $tagsPopupTriggers = document.querySelectorAll('[data-element="tags-popup-trigger"]');
-    let $tagsPopupSlider = document.querySelector('[data-slider="tags"]');
-    let $tagsPopupClose = document.querySelector('[data-element="tags-popup-close"]');
-    let tagPopoverWidth = 365;
+    let $tagsPopupSlider   = document.querySelector('[data-slider="tags"]');
+    let $tagsPopupClose    = document.querySelector('[data-element="tags-popup-close"]');
+    let tagPopoverWidth    = 365;
     let i;
 
     if ( window.innerWidth < bpSM ) {
@@ -976,35 +913,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (i = 0; i < $tags.length; i++) {
             let $tag = $tags[i];
-            let $tagToggle = $tag.querySelector('[data-element="tag-toggle"]');
-            let $tagItem = $tag.closest('[data-element="tag-item"]');
-            let $tagPopover = $tag.querySelector('[data-element="tag-popover"]');
-            let tagWidth = $tagToggle.scrollWidth;
-            let tagHeight = $tagToggle.scrollHeight;
+            let $toggle   = $tag.querySelector('[data-element="tag-toggle"]');
+            let $popover  = $tag.querySelector('[data-element="tag-popover"]');
+            let $item     = $tag.closest('[data-element="tag-item"]');
+            let itemRect  =  $item.getBoundingClientRect();
+            let tagRect   =  $toggle.getBoundingClientRect();
+            let tagWidth  = tagRect.width;
+            let tagHeight = tagRect.height;
             let tagExpandedWidth = tagPopoverWidth;
 
             if ( window.innerWidth < bpSM ) {
-                if ( tagWidth > $tagItem.scrollWidth ) {
-                    tagExpandedWidth = $tagItem.scrollWidth;
+                if ( tagWidth > itemRect.width ) {
+                    tagExpandedWidth = itemRect.width;
                 }
+                $popover.style.display = "none";
             } else {
                 if ( tagWidth > tagExpandedWidth ) {
                     tagExpandedWidth = tagWidth + 28;
                 }
             }
 
-            $tagPopover.style.display = "block";
-            $tagPopover.style.width = tagExpandedWidth + 'px';
+            $popover.style.width = tagExpandedWidth + 'px';
 
             if ( window.innerWidth < bpSM ) {
-                $tagPopover.style.display = "";
+                $popover.style.display = "none";
+            } else {
+                $popover.style.display = "";
             }
-            $tagItem.style.width = tagWidth + 'px';
-            $tagItem.style.height = tagHeight + 'px';
+
+            $item.style.width = tagWidth + 'px';
+            $item.style.height = tagHeight + 'px';
         };
     }
 
-    resizeTags();
+    //window.scrollBy(0,1); // For Safari
+    window.addEventListener("load", function (e) {
+        resizeTags();
+    });
 
     window.addEventListener("resize", function(e) {
         resizeTags();
@@ -1019,18 +964,22 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
 
             let $toggle = this;
-            let $tag = $toggle.closest('[data-element="tag"]');
+            let $tag     = $toggle.closest('[data-element="tag"]');
             let $popover = $tag.querySelector('[data-element="tag-popover"]');
+            let toggleRect = $toggle.getBoundingClientRect();
+            let tagsListRect = $tagsList.getBoundingClientRect();
 
-            $popover.style.display = "block";
+            if ( window.innerWidth < bpSM ) {
+                $popover.style.display = "block";
+            }
 
-            let tagWidth = tagPopoverWidth;
+            let tagWidth  = tagPopoverWidth;
             let tagHeight = $toggle.scrollHeight + $popover.scrollHeight;
 
             if ($tag.classList.contains(expandedClass)) {
                 $tag.classList.remove(expandedClass);
                 $tag.style='';
-                $popover.style.display = "";
+                $popover.style.display = '';
             } else {
                 collapseActiveTag();
 
@@ -1039,24 +988,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 if ( window.innerWidth < bp2XL ) {
-                    if ( ($tagsList.clientWidth - ($toggle.getBoundingClientRect().left - $tagsList.getBoundingClientRect().left) ) < tagWidth ) {
+                    if ( ($tagsList.clientWidth - (toggleRect.left - tagsListRect.left) ) < tagWidth ) {
                         $tag.classList.add('is-right');
                     }
-         
-                    if ( ($tagsList.clientHeight - ($toggle.getBoundingClientRect().top - $tagsList.getBoundingClientRect().top) ) < tagHeight ) {
+
+                    if ( ($tagsList.clientHeight - (toggleRect.top - tagsListRect.top) ) < tagHeight ) {
                         $tag.classList.add('is-bottom');
                     }
                 } else {
-                    if ( (window.innerWidth - $toggle.getBoundingClientRect().left ) < tagWidth ) {
+                    if ( (window.innerWidth - toggleRect.left ) < tagWidth ) {
                         $tag.classList.add('is-right');
                     }
-       
-                    if ( (window.innerHeight - $toggle.getBoundingClientRect().top ) < tagHeight ) {
+
+                    if ( (window.innerHeight - toggleRect.top ) < tagHeight ) {
                         $tag.classList.add('is-bottom');
                     }
                 }
 
-                $tag.classList.add(expandedClass);
                 $tag.style.width = tagWidth + 'px';
                 $tag.style.height = tagHeight + 'px';
                 $tag.classList.add(expandedClass);
@@ -1106,7 +1054,7 @@ document.addEventListener('DOMContentLoaded', function() {
             $body[0].classList.remove(lockedScrollClass2);
         }
     });
-});
+})();
 /* Tags slider */
 $(document).ready(function(){
     let $tagsSlider = $('[data-slider="tags"]');
@@ -1508,4 +1456,65 @@ $(document).ready(function(){
         easing: 'ease-in-out',
         once: true
     });
+});
+/* Index page with fullpage.js */
+var homeFullpage;
+document.addEventListener('DOMContentLoaded', function() {
+    const $homeFullpage = document.querySelector('.page-home [data-page="fullpage"]');
+
+    if (!$homeFullpage) {
+        return false;
+    }
+
+    function initialization(){
+        homeFullpage = new fullpage('[data-page="fullpage"]', {
+            paddingTop: $navbar[0].offsetHeight +'px',
+            sectionSelector: '[data-fullpage="section"]',
+            slideSelector: '[data-fullpage="slide"]',
+            slidesNavigation: true,
+            controlArrows: true,
+            scrollBar: true,
+            responsiveWidth: bpXL,
+            normalScrollElements: '.section--scrollable',
+            licenseKey: '7C83C7E4-02654F77-96AB0657-A3F6DE6F',
+            scrollHorizontally: true,
+            scrollHorizontallyKey: 'E6229FD0-80AC4893-A7CE7036-0EDBAD95',
+            afterRender: function(){
+                if (this.isFirst) {
+                    typeWord(this);
+                }
+            },
+            afterSlideLoad: function(section, origin, destination, direction){
+                if (section.index === 0) {
+                    typeWord(destination);
+                }
+            },
+            onSlideLeave: function(section, origin, destination, direction) {
+                let $typer = origin.item.querySelector('[data-element="typewriter"]');
+                let typewriter = new Typewriter($typer);
+
+                typewriter
+                .deleteAll(15)
+                .start();
+            }
+        });
+    }
+
+    function typeWord(el) {
+        let $typer = el.item.querySelector('[data-element="typewriter"]');
+
+        let typewriter = new Typewriter($typer, {
+            delay: 100,
+        });
+
+        typewriter
+        .typeString($typer.dataset.word)
+        .callFunction(function(state) {
+            state.elements.cursor.style.display = 'none';
+        })
+        .start();
+    }
+
+    //fullPage.js initialization
+    initialization();
 });

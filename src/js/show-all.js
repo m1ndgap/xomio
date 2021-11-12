@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
             let toggleTextOff = $toggle.dataset.textOff;
             let $component = $toggle.closest('[data-component="show-all"]');
             let $content = $component.querySelector('[data-show-all-content]');
-            let contentHeight = $content.offsetHeight;
             let contentScrollHeight = $content.scrollHeight;
 
             toggleText($toggle, toggleTextOn, toggleTextOff);
