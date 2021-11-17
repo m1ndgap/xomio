@@ -18,6 +18,11 @@
     @include media-breakpoint-up(lg) {
         .section__content {
             margin-bottom: 0;
+            width: 50%;
+            flex: 0 0 50%;
+            max-width: none;
+            position: relative;
+            z-index: 1;
         }
 
         .section__object {
