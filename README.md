@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Xomio project
 
 This project was generated with [Gulp](https://www.npmjs.com/package/gulp/v/3.9.1) version 3.9.1.
@@ -96,3 +97,5 @@ General structure for each project is like this:
         video-a.mp4
         video-b.mp4
 ```
+=======
+# xomio
