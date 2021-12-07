@@ -123,11 +123,11 @@ $accent:        $green-300 !default;
 $accent-light:  $green-200 !default;
 $error:         $red-100 !default;
 
-$colors: () !default
-$bg-colors: () !default
-$theme-icon-colors: () !default
-$theme-section-colors: () !default
-$theme-tag-colors: () !default
+$colors: () !default;
+$bg-colors: () !default;
+$theme-icon-colors: () !default;
+$theme-section-colors: () !default;
+$theme-tag-colors: () !default;
 
 $colors: map-merge(
     (
