@@ -1,0 +1,22 @@
+.social {
+    &__list {
+        @include list-unstyled;
+        margin-left: rem(-15px);
+        margin-right: rem(-15px);
+    }
+
+    &__item {
+        padding-left: rem(15px);
+        padding-right: rem(15px);
+    }
+
+    &__link {
+        font-size: rem($spacer-6);
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+    }
+}

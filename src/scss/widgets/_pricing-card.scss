@@ -1,0 +1,72 @@
+.pricing-card {
+    padding: rem($spacer-6 $gutter);
+
+    &__header {
+        margin-bottom: rem($spacer-5);
+    }
+
+    &__title {
+        color: inherit;
+    }
+
+    &__info {
+        @include font($font-size-sm, 15.01px);
+        color: $blue-200;
+    }
+
+    &__content {
+        border-bottom: 1px solid $white;
+        padding-bottom: rem($spacer-6);
+        margin-bottom: rem($spacer-6);
+        color: $blue-100;
+    }
+
+    &__list {
+        margin-top: rem($spacer-6);
+    }
+
+    &__footer {
+        &-title {
+            @include em-line-height($font-size-base, 19.01px);
+            margin-bottom: rem($spacer-4);
+        }
+    }
+
+    &__button {
+        margin-top: rem($spacer-2);
+    }
+
+    @include media-breakpoint-up(md) {
+        border-radius: $border-radius-md;
+        box-shadow: 6px 6px 40px rgba($black-300, 0.08);
+        padding-left: rem($spacer-6);
+        padding-right: rem($spacer-6);
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: rem($spacer-8);
+
+        &__header {
+            margin-bottom: rem($spacer-4);
+        }
+
+        &__button {
+            margin-top: rem(14px);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        &:after {
+            position: absolute;
+            top: rem(-10px);
+            left: 100%;
+            content: '';
+            transform: translateX(rem(-79px));
+            @include size(rem(167px), rem(245px));
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(../../assets/img/illustrations/pricing-man.svg);
+        }
+   }
+}

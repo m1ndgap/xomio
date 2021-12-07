@@ -1,0 +1,125 @@
+.list {
+    @include list-unstyled;
+
+    &[columns="3"] {
+        columns: 3;
+        column-gap: rem($gutter);
+        column-width: rem(139px);
+    }
+
+    > li {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}
+
+.list-check,
+.list-dot,
+.list-flake,
+.list-plus {
+    @include list-unstyled;
+
+    > li {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: $primary;
+
+            .bg-primary &,
+            .bg-secondary &,
+            .bg-accent & {
+                color: inherit;
+            }
+
+            @each $color-name, $color in $theme-tag-colors {
+                .tag-#{$color-name} & {
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    p + & {
+        margin-top: rem($spacer-5);
+    }
+}
+
+.list-dot {
+    > li {
+        @include margin-bottom(rem(10px));
+        padding-left: rem($spacer-9);
+
+        &:before {
+            @include size(rem(6px));
+            @include rounded;
+            background-color: $primary;
+            content: '';
+            top: .5em;
+            left: rem($spacer-2);
+        }
+    }
+
+    .text-lg &,
+    &.text-lg {
+        > li {
+            @include margin-bottom(rem($spacer-4));
+        }
+    }
+}
+
+.list-check,
+.list-flake {
+    > li {
+        @include margin-bottom(rem(10px));
+        padding-left: rem($spacer-8);
+
+        &:before {
+            font-size: rem($spacer-6);
+        }
+    }
+
+    .text-lg &,
+    &.text-lg {
+        > li {
+            @include margin-bottom(rem($spacer-4));
+        }
+    }
+}
+
+.list-flake {
+    > li {
+        &:before {
+            opacity: .6;
+            top: rem(( $line-height-lg - $spacer-6));
+        }
+    }
+}
+
+.list-plus {
+    > li {
+        padding-left: rem($spacer-6);
+        @include margin-bottom(1em);
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .list {
+        &[columns="3"] {
+            column-gap: rem(44px);
+            column-width: auto;
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .list-plus {
+        > li {
+            padding-left: rem($spacer-10);
+            margin-bottom: rem($spacer-6);
+        }
+    }
+}

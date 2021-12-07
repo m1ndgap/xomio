@@ -1,0 +1,66 @@
+.mission {
+    padding-top: rem(60px);
+    padding-bottom: rem(56px);
+
+    .section__content {
+        margin-bottom: rem($spacer-6);
+    }
+
+    .section__title {
+        position: relative;
+        margin-bottom: rem($spacer-8);
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            left: -.1875em;
+            right: 0;
+            height: 1.75em;
+            transform: translateY(-50%);
+            content: '';
+            background: url(../../assets/img/mission-box.svg) 0 50%/contain no-repeat ;
+        }
+    }
+
+    .section__subtitle {
+        margin-bottom: rem($spacer-3);
+    }
+
+    @include media-breakpoint-up(lg) {
+        .section__object {
+            order: -1;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-top: rem(94px);
+        padding-bottom: rem(94px);
+
+        .section__content {
+            margin-bottom: 0;
+        }
+
+        .section__title {
+            margin-bottom: rem($spacer-10);
+
+            &:after {
+                left: -.375em;
+                height: 1.792em;
+            }
+        }
+
+        .section__subtitle {
+            @include em-line-height($font-size-h3, $line-height-xl);
+            margin-bottom: rem($spacer-4);
+        }
+
+        .section__object {
+            display: flex;
+            justify-content: center;
+        }
+
+        .section__img {
+            max-width: rem(703px);
+        }
+    }
+}

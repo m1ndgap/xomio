@@ -1,0 +1,58 @@
+@mixin clipped-frame($border-color: $gray-3, $bg-color: $white, $bottom-width: 76px, $left-width: 30px, $hover: false) {
+    position: relative;
+    @if ($hover) {
+        border: 1px solid rgba($white, 0);
+    } @else {
+        border: 1px solid $border-color;
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        content: '';
+        z-index: 2;
+        border: solid transparent;
+        height: 0;
+        width: 0;
+        pointer-events: none;
+        border-width: 0 0 $bottom-width $left-width;
+    }
+
+    &:before {
+        right: 0;
+        bottom: 0;
+        transition: border-color .25s ease-in-out;
+  
+        @if ($hover) {
+            border-bottom-color: rgba($border-color, 0);
+        } @else {
+            border-bottom-color: $border-color;
+        }
+    }
+
+    &:after {
+        right: -1px;
+        bottom: -1px;
+        border-bottom-color: $bg-color;
+
+        @if ($hover) {
+            border-bottom-color: $bg-color;
+        } @else {
+            border-bottom-color: $bg-color;
+        }
+    }
+
+    @if ($hover) {
+        @include hover-focus {
+            border-color: $border-color;
+    
+            &:before {
+                border-bottom-color: $border-color;
+            }
+
+            &:after {
+                border-bottom-color: $bg-color;
+            }
+        }
+    }
+}

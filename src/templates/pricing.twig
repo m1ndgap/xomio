@@ -1,0 +1,17 @@
+{% extends 'layout/_base.twig' %}
+
+{% set pageClass = 'page-pricing' %}
+{% set pageTitle = 'Pricing' %}
+
+{% block content %}
+
+    {% include 'sections/_pricing.twig' %}
+
+    {% include 'sections/_faq.twig' %}
+
+    {% include 'sections/_contact-us.twig' with { sectionClass: 'contact-us--lg-bottom' } %}
+
+{% endblock %}
+
+{% block modals %}
+{% endblock %}

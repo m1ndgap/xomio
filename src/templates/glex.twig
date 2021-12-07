@@ -1,0 +1,293 @@
+{% extends 'layout/_base.twig' %}
+
+{% set pageClass = 'page-glex' %}
+{% set pageTitle = 'Glex' %}
+
+{% block content %}
+
+  <!-- Glex-1 -->
+  <section class="section glex-1">
+    <div class="container container--mobile-fixed">
+      <div class="section__content">
+        <h2 class="section__title">Your brand listings in 19 languages</h2>
+      </div>
+
+      <div class="section__body section__body--center">
+        <div class="section__content">
+          <h3 class="section__subtitle">Introducing GLEX: <span class="font-cursive font-cursive--underline text-primary">Exclusive</span> to Xomio</h3>
+          <div class="section__text text-lg">
+            <ul class="list-dot">
+              <li>GLEX is a unique proposition. It’s like IDX, but from your brand, instead of an MLS</li>
+              <li>GLEX delivers your brand’s global listings inventory, in all 19 languages, integrated like an IDX feed into a Xomio site</li>
+              <li>Foreign listings are delivered in your home language, and all your country’s listings are translated to catch the attention of local and international buyers</li>
+              <li>Every listing is branded to the website owner, generating out of market referrals.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section__object">
+          <div class="section__video">
+            <video muted playsinline autoplay loop>
+              <source src="./assets/video/short_11_2x.mp4" type="video/mp4" />
+              <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="decor decor--1 decor-complex-5"></div>
+  </section>
+
+  <!-- Glex-2 -->
+  <section class="section bg-blue glex-2">
+    <div class="container container--mobile-fixed">
+      <div class="section__header intro text-lg-center">
+        <h2 class="intro__title">Every listing from every colleague around the world. <br>All branded to you.</h2>
+      </div>
+
+      <div class="section__body section__body--center">
+        <div class="section__content">
+          <div class="section__text">
+            <p>With GLEX enabled, your website becomes a global portal, with thousands of listings all working for you.</p>
+            <p>Xomio’s multi language SEO drives search engine results in 19 languages. So all those global listings act as a magnet for local and international consumers.</p>
+            <p>Visitors to your site see a global showcase, demonstrating the benefits of working with a big brand and a big network.</p>
+            <p>With every listing branded to YOU, you can start generating leads for colleagues in every single market that your brand has a presence. Start monetizing that global footprint today.</p>
+          </div>
+        </div>
+
+        <div class="section__object">
+          <div class="section__video">
+            <video muted playsinline autoplay loop>
+              <source src="./assets/video/glex_2x_scrolling.mp4" type="video/mp4" />
+              <p>Your browser doesn't support HTML5 video. Here is a <a href="./assets/video/1_xomio_h264_cbr.mp4">link to the video</a> instead.</p>
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="decor decor--2 decor-dots-4 hidden-lg-down"></div>
+  </section>
+
+  <!-- Brands -->
+  <section class="section brands">
+    <div class="container container--mobile-fixed">
+      <div class="section__body">
+        <div class="section__content">
+          <h2 class="section__title">Brands that offer GLEX</h2>
+          <div class="section__text">
+            <p><a href="#partner-with-us" class="link-primary" data-scroll>Contact us</a> today if you don’t see your franchise brand on the list! We are always looking for more GLEX partners and would love to work with your brand.</p>
+          </div>
+
+          <div class="section__action hidden-md-down">
+            <a href="#partner-with-us" class="button button--primary" data-scroll>Contact us</a>
+          </div>
+        </div>
+
+        <div class="section__object">
+          <ul class="brands__list row">
+            {% for brand in glex.brands %}
+              <li class="brands__item {% if brand.full %} col-xs-12 {% else %} col-xs-6 {% endif %}">
+                <a href="#" class="brand-card">
+                  <img src="./assets/img/logos/{{ brand.image }}.svg" alt="" class="brand-card__img">
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="section__action hidden-lg-up">
+        <a href="#contact-us" class="button button--primary" data-scroll>Contact us</a>
+      </div>
+    </div>
+
+    <div class="decor decor--3 decor-lines-7 hidden-lg-down"></div>
+  </section>
+
+  <!-- Glex-3 -->
+  <section class="section glex-3">
+    <div class="container container--mobile-fixed">
+      <div class="section__body section__body--center">
+        <div class="section__content section__content--lg">
+          <div class="section__slider" data-slider="text-slider">
+            {% for slide in glex.slider %}
+              <div class="section__slide slick-slide">
+                <h2 class="section__title">{{ slide.title }}</h2>
+                <div class="section__text">
+                  {% if slide.text %}
+                    <p>{{ slide.text }}</p>
+                  {% endif %}
+                  <ul class="list-plus" data-component="accordion">
+                    {% for item in slide.list %}
+                      <li class="collapsible is-collapsed" data-element="accordion-item">
+                        <div class="collapsible__toggle text-lg" data-element="accordion-toggle">{{ item.title }}</div>
+                        <div class="collapsible__content" data-element="accordion-content">
+                          <div class="collapsible__body">
+                            {% if item.text %}
+                              {{ item.text }}
+                            {% endif %}
+                            {% if item.list %}
+                              <ul class="list" columns="3">
+                                {% for li in item.list %}
+                                  <li>{{ li }}</li>
+                                {% endfor %}
+                              </ul>
+                            {% endif %}
+                          </div>
+                        </div>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="section__object">
+          {% include 'partials/_lang-slideshow.twig' %}
+        </div>
+      </div>
+    </div>
+
+    <div class="decor decor--4 decor-lines-6 hidden-lg-down"></div>
+    <div class="decor decor--5 decor-complex-4 hidden-lg-down"></div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <div class="container container--mobile-fixed">
+      <div class="section__header intro intro--md text-center">
+        <h2 class="intro__title">Get GLEX working for you</h2>
+        <div class="intro__description">
+          <p>Being part of a big franchise brand means more than just the name above the door. Start taking advantage of your brand’s footprint and reach. Show clients what it means to list their home with a global player. Generate referrals for colleagues around the world. All from your Xomio site.</p>
+        </div>
+      </div>
+
+      <ul class="section__features features row">
+        {% for item in glex.features %}
+          <li class="features__item col-xs-12 col-md-6 col-lg-4">
+            <div class="feature feature--fixed-width text-center">
+              {{ svg.icon(item.icon, 'feature__icon theme-icon-'~item.theme) }}
+              <h3 class="feature__title">{{ item.title }}</h3>
+              <p class="feature__text">{{ item.text }}</p>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact us -->
+  <section class="section contact-us" id="partner-with-us">
+    <div class="container container--mobile-fixed">
+      <div class="section__body">
+        <div class="section__content">
+          <h2 class="section__title">Calling all real estate brands: <br>Partner with us!</h2>
+          <div class="section__text">
+            <p>The team behind Xomio have been working with some of the biggest brands, brokerages and companies in global real estate for decades.</p>
+            <p>Our listings translation and web design services help you differentiate your recruitment or franchisee offering, while boosting your visibility and lead generation online.</p>
+            <p>Get in touch with us today to find out about our partner programs, and get Xomio working for your brand.</p>
+          </div>
+        </div>
+
+        <div class="section__object">
+          <form action="" method="POST" class="section__form form" novalidate="novalidate" data-parsley-validate>
+            <fieldset class="form__fieldset">
+              <legend class="form__legend h3">Get in touch to find out more!</legend>
+
+              <div class="row row--md">
+                <div class="col-xs-12 col-md-6">
+                  <div class="form__group is-required">
+                    <label class="form__label" for="first-name">First name</label>
+                    <div class="form__field">
+                      <input type="text" id="first-name" class="form__input" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <div class="form__group is-required">
+                    <label class="form__label" for="last-name">Last name</label>
+                    <div class="form__field">
+                      <input type="text" id="last-name" class="form__input" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row row--md">
+                <div class="col-xs-12 col-md-6">
+                  <div class="form__group is-required">
+                    <label class="form__label" for="company">Your company</label>
+                    <div class="form__field">
+                      <input type="text" id="company" class="form__input" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <div class="form__group is-required">
+                    <label class="form__label" for="role">Your role</label>
+                    <div class="form__field">
+                      <input type="text" id="role" class="form__input" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row row--md">
+                <div class="col-xs-12 col-md-6">
+                  <div class="form__group is-required">
+                    <label class="form__label" for="email">Email</label>
+                    <div class="form__field">
+                      <input type="email" id="email" class="form__input" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <div class="form__group">
+                    <label class="form__label" for="mls">Phone</label>
+                    <div class="form__field">
+                      <input type="text" id="phone" class="form__input" data-mask="phone" placeholder="+1 234 567 89 00">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form__group is-required">
+                <label class="form__label" for="country">Country</label>
+                <div class="form__field">
+                  <select id="country" data-element="select-default" data-placeholder="Select your country" data-search-placeholder="Search country" required>
+                    <!-- Empty option for placeholder -->
+                    <option></option>
+                    {% for country in countries %}
+                      <option value="{{ country.code }}">{{ country.name }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+
+              <div class="form__group is-required">
+                <label class="form__label" for="message">How can we help?</label>
+                <div class="form__field">
+                  <textarea id="message" rows="4" class="form__input" placeholder="Enter text" required></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form__submit">
+              <input type="submit" class="button button--primary button--block" value="Send">
+            </div>
+          </form>
+          <div class="section__form-bg decor-dots-bg-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="decor decor--6 decor-complex-1 hidden-md-down"></div>
+  </section>
+{% endblock %}
+
+{% block modals %}
+{% endblock %}

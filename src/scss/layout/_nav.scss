@@ -1,0 +1,49 @@
+.nav {
+    @include list-unstyled;
+
+    &__item {
+        margin-bottom: rem($spacer-8);
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        @include font($font-size-h4, $line-height-h4, $headings-font-weight);
+        color: $blue-500;
+    }
+
+    &__icon {
+        display: block;
+        @include size(rem($spacer-10));
+        margin-right: rem($spacer-3);
+    }
+
+    @include media-breakpoint-up(md) {
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include make-row($spacer-8);
+
+        &__item {
+            @include make-col($spacer-8);
+            margin-bottom: 0;
+        }
+
+        &__link {
+            display: block;
+            color: $headings-color;
+            @include font($font-size-base, 19.01px, $font-weight-normal);
+
+            @include hover-focus {
+                color: $primary;
+            }
+        }
+
+        &__icon {
+            display: none;
+        }
+    }
+}

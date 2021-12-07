@@ -1,0 +1,78 @@
+.switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__input,
+    &__toggle {
+        position: relative;
+        @include size(rem($spacer-10), rem($spacer-6));
+    }
+
+    &__input {
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+
+        &--left {
+            order: 2;
+            margin-right: rem(- $spacer-7);
+        }
+
+        &--right {
+            order: 4;
+            margin-left: rem(- $spacer-7);
+        }
+    }
+
+    &__input:checked {
+        z-index: 1;
+    }
+
+    &__input:checked + &__label {
+        color: $accent;
+        cursor: default;
+    }
+
+    &__input:not(:checked) + &__label:hover {
+        opacity: 0.75;
+    }
+
+    &__label {
+        display: block;
+        cursor: pointer;
+        transition: 0.25s ease color;
+        @include font($font-size-lg, 22.01px, $font-weight-medium);
+        color: $gray-500;
+
+        &--left {
+            order: 1;
+        }
+
+        &--right {
+            order: 5;
+        }
+    }
+
+    &__toggle {
+        transition: 0.25s ease all;
+        background-color: $accent;
+        border-radius: $border-radius-xl;
+        order: 3;
+
+        &:before {
+            content: '';
+            position: absolute;
+            @include size ($spacer-5);
+            @include rounded;
+            top: rem(2px);
+            left: rem(2px);
+            background-color: $white;
+            transition: 0.25s ease all;
+        }
+    }
+
+    &__input ~ &__input:checked ~ &__toggle:before {
+        left: rem(18px);
+    }
+}

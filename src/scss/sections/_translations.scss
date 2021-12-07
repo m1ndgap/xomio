@@ -1,0 +1,12 @@
+/*.translations {
+    padding-top: rem(48px);
+    padding-bottom: rem(48px);
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-top: rem($section-offset);
+        padding-bottom: rem($section-offset);
+    }
+}*/

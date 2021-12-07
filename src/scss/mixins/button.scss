@@ -1,0 +1,245 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background, $background-hover, $background-active) {
+    color: $color;
+    background-color: $background;
+    border-color: $background;
+
+    &:hover,
+    &:focus {
+        background-color: $background-hover;
+        border-color: $background-hover;
+        color: $color;
+    }
+
+    &:active,
+    &.is-active,
+    &.disabled,
+    &:disabled {
+        background-color: $background-active;
+        border-color: $background-active;
+        color: $color;
+    }
+}
+
+@mixin button-variants() {
+    @each $name, $options in $btn-themes {
+        &--#{$name} {
+            $color:       getValue($options, 'color');
+
+            color: $color;
+
+            @if (getValue($options, 'color-hover')) {
+                $color-hover: getValue($options, 'color-hover');
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $color-hover;
+                }
+            }
+
+            @if (getValue($options, 'bg')) {
+                $bg:  getValue($options, 'bg');
+
+                background-color: $bg;
+            }
+
+            @if (getValue($options, 'bg-hover')) {
+                $bg-hover:  getValue($options, 'bg-hover');
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: $bg-hover;
+                }
+            }
+
+            @if (getValue($options, 'border')) {
+                $border:  getValue($options, 'border');
+
+                border-color: $border;
+            }
+
+            @if (getValue($options, 'border-hover')) {
+                $border-hover:  getValue($options, 'border-hover');
+
+                &:hover,
+                &:focus,
+                &:active {
+                    border-color: $border-hover;
+                }
+            }
+        }
+    }
+}
+
+@mixin button-outline-variant($color, $border-color, $border-color-hover, $border-color-active) {
+    color: $color;
+    border-color: $border-color;
+
+    &:hover,
+    &:focus {
+        border-color: $border-color-hover;
+        color: $border-color-hover;
+    }
+
+    &:active,
+    &.is-active {
+        border-color: $border-color-active;
+        color: $border-color-active;
+    }
+}
+
+@mixin button-outline-variants() {
+    @each $name, $options in $btn-themes-outline {
+        &--outline-#{$name} {
+            $color:        getValue($options, 'color');
+            $border:       getValue($options, 'border');
+            $border-hover: getValue($options, 'border-hover');
+            $bg-hover:     getValue($options, 'bg-hover');
+
+            color: $color;
+            border-color: $border;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.is-active,
+            a:hover &,
+            a:focus & {
+                border-color: $border-hover;
+                background-color: $bg-hover;
+            }
+
+            &.is-active {
+                color: $border-hover;
+            }
+
+            &.disabled,
+            &.is-disabled,
+            &:disabled {
+                border-color: $btn-disabled-bg;
+                color: $btn-disabled-color;
+            }
+
+            &.is-success {
+                border-color: $success;
+                color: $success;
+            }
+        }
+    }
+}
+
+@mixin button-grd-variant($color, $background-light, $background, $background-hover) {
+    color: $color;
+    background-color: $background;
+    background-image:    -moz-linear-gradient(top, $background-light, $background); /* FF3.6-15 */
+    background-image: -webkit-linear-gradient(top, $background-light, $background); /* Chrome10-25,Safari5.1-6 */
+    background-image:         linear-gradient(to bottom, $background-light, $background); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$background-light', endColorstr='$background',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    @include hover-focus-active {
+        background: $background;
+    }
+}
+
+// Button sizes
+@mixin button-size($font-size, $line-height, $padding-x, $padding-y) {
+    padding: rem($padding-y $padding-x);
+    @include font($font-size, $line-height);
+}
+
+@mixin button-sizes() {
+    @each $name, $options in $btn-sizes {
+        &--#{$name} {
+            $button-height:        getValue($options, 'height');
+            $button-padding-x:     getValue($options, 'padding-x');
+            $button-font-size:     getValue($options, 'font-size');
+            $button-line-height:   getValue($options, 'line-height');
+            $button-border-radius: getValue($options, 'border-radius');
+            $button-icon-size:     getValue($options, 'icon-size');
+            $button-icon-offset:   getValue($options, 'icon-offset');
+
+            height: rem($button-height);
+
+            @if ($button-font-size) {
+            } @else {
+                $button-font-size:   $btn-font-size;
+                $button-line-height: $btn-line-height;
+            }
+
+            @if ($button-border-radius) {
+                border-radius: $button-border-radius;
+            }
+
+            padding: rem(( $button-height - $btn-border-width * 2 - $button-line-height) / 2 ($button-padding-x - $btn-border-width));
+
+            @if ($button-icon-size) {
+                .button__icon {
+                    font-size: rem($button-icon-size);
+
+                    @if ($button-icon-offset) {
+                        margin-left: rem($button-icon-offset);
+                        margin-right: rem($button-icon-offset);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@mixin button-responsive($br-map, $br-breakpoints: $grid-breakpoints) {
+  @each $br-breakpoint, $br-data in $br-map {
+    @if $br-breakpoint == null {
+      @include make-responsive-button($br-data);
+    }
+    @else {
+      // If $br-data is a key that exists in
+      // $br-breakpoints, use the value
+      @if map-has-key($br-breakpoints, $br-breakpoint) {
+        $br-breakpoint: map-get($br-breakpoints, $br-breakpoint);
+      }
+      @media screen and (min-width: $br-breakpoint) {
+        @include make-responsive-button($br-data);
+      }
+    }
+  }
+}
+
+// Utility function for mixin font-size
+@mixin make-responsive-button($br-data) {
+  // If $br-data is a list, include
+  // both font-size and line-height
+  @if type-of($br-data) == "list" {
+      $font-size: nth($br-data, 1);
+      $line-height: nth($br-data, 2);
+      @if ( nth($br-data, 1) != '') {
+          font-size: rem($font-size);
+      }
+    @if (length($br-data) > 1) {
+        @if ( nth($br-data, 2) != '') {
+            @include em-line-height($font-size, $line-height);
+        }
+    }
+    @if (length($br-data) > 2) {
+        @if ( nth($br-data, 3) != '') {
+            padding-left: rem(nth($br-data, 3));
+            padding-right: rem(nth($br-data, 3));
+        }
+    }
+    @if (length($br-data) > 3) {
+        padding-top: rem(nth($br-data, 4));
+        padding-bottom: rem(nth($br-data, 4));
+    }
+  }
+  @else {
+      @if ( $br-data != '') {
+          font-size: rem($br-data);
+      }
+  }
+}

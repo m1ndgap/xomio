@@ -1,0 +1,32 @@
+.feature-4 {
+    .section__content {
+        margin-bottom: 0;
+    }
+
+    .section__img {
+        margin-top: rem(48px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        .section__text {
+            margin-top: rem($spacer-3);
+        }
+
+        .section__img {
+            margin-top: rem($spacer-8);
+            margin-left: rem(- $spacer-5);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        margin-bottom: rem($spacer-9);
+
+        .section__title {
+            margin-bottom: rem($spacer-4);
+        }
+
+        .section__subtitle {
+            margin-top: rem($spacer-4);
+        }
+    }
+}

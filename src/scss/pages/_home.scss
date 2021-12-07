@@ -1,0 +1,19 @@
+.page-home {
+    overflow-x: visible;
+
+    .main {
+        overflow: hidden;
+    }
+
+    @include media-breakpoint-up(xl) {
+        .main {
+            padding-top: 0;
+        }
+
+        [data-page="fullpage"] {
+            .section {
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@mixin margin-bottom($margin, $last-margin: null) {
+  margin-bottom: ($margin);
+
+  @if $last-margin {
+    &:last-child {
+      margin-bottom: $last-margin;
+    }
+  } @else {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,620 @@
+
+// Core variables and mixins
+@import "common/variables";
+@import "mixins";
+
+.bl2inner .anim-block lottie-player {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -145px;
+}
+
+
+.test-wrap {
+    position: relative;
+    
+}
+
+.step-block {
+    text-align: center;
+    display: none;
+    position: relative;
+    
+}
+
+.step-block.act {
+    transition: opacity 0.5s;
+}
+
+.step-block.prev {
+    opacity: 0.5;
+}
+
+.step-block .step-label {
+    position: relative;
+    margin: 96px auto 0;
+    height: auto;
+    min-height: 64px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #EF8683;
+    text-align: center;
+    padding: 16px 56px;
+    display: inline-block;
+    z-index: 4;
+    transition: all 1s 0.5s;
+    opacity: 0;
+}
+
+.step-block.act .step-label {
+    opacity: 1;
+} 
+
+.step-block .step-label div {
+    z-index: 2;
+    opacity: 0;
+    position: relative;
+    transition: all 0.5s 1s;
+}
+
+.step-block .step-label.bigtext {
+    max-width: 364px;
+    padding: 16px 32px;
+}
+
+.step-block .step-label.bigtext div {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.step-block .step-label.bigtext div p {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+.step-block.act .step-label div {
+    opacity: 1;
+    
+}
+
+.step-block .step-label:before {
+    height: 100%;
+    left: 50%; 
+    right: 50%;
+    top: 0;
+    content: " ";
+    display: block;
+    position: absolute;
+    background: #fff;
+    z-index: 1;
+}
+
+.step-block .step-label.round:before {
+    border-radius: 64px;
+}
+
+@keyframes steplabel-bg {
+    0%   { left: 50%; right: 50%; }
+    50%   { left: -20px; right: -20px; }
+    100%   { left: 0px; right: 0px; }
+}
+
+.step-block.act .step-label:before {
+    animation: steplabel-bg 0.5s ease 1s 1 normal forwards;
+}
+
+* {
+    overflow-anchor: none;
+}
+
+.step-block .vert-line {
+    width: 2px;
+    height: 0;
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 1px);
+    content: " ";
+    display: block;
+    background: url(../../assets/img/images/vertical.svg) center top repeat-y;
+    transition: all 0.5s;
+    
+}
+
+.step-block.act .vert-line {
+    height:96px;
+}
+.step-block.act.wvariants .vert-line {
+    opacity: 0.5;
+}
+.step-block.act.prev.wvariants .vert-line {
+    opacity: 1;
+}
+
+.step-block.step-variants {
+    position: relative;
+   
+}
+
+
+.step-block .variants-wrap {
+    position: relative;
+}
+
+.step-block .variants {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+    opacity: 0;
+    transition: all 0.3s 1.5s;
+}
+
+.step-block.act .variants {
+    opacity: 1;
+}
+
+.step-block .variants:before {
+
+    width: 2px;
+    height: 0px;
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 1px);
+    content: " ";
+    display: block;
+    background: url(../../assets/img/images/vertical.svg) center top repeat-y;
+    transition: all 0.5s 1.8s;
+}
+
+.step-block .vars-line {
+    
+    height: 2px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    right: 50%;
+    content: " ";
+    display: block;
+    background: url(../../assets/img/images/horizontal.svg) center top repeat-x;
+    transition: all 0.5s 2.3s;
+}
+
+
+.step-block.step-variants .ans-line {
+    position: absolute;
+    bottom: 0;
+
+    width: 0px;
+    height: 2px;
+    background: url(../../assets/img/images/horizontal.svg) center top repeat-y;
+    transition: width 0.5s 0.5s;
+}
+
+
+
+.step-block.act .variants:before {
+    height: 60px;
+}
+
+.step-block .variants .variant {
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s 2.8s;
+}
+
+.step-block .variants .variant .text {
+    height: 48px;
+    padding: 0 56px;
+    
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+}
+
+.step-block .variants .variant .text span {
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.3s 3.6s; 
+}
+
+.step-block .variants .variant.go .text span {
+    opacity: 1;
+    
+}
+
+.step-block .variants .variant .text:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    height: 48px;
+    border-radius: 100px;
+    background: #EF8683;
+}
+
+.step-block .variants .variant.go .text:before {
+    animation: steplabel-bg 0.5s ease 3.2s 1 normal forwards;
+}
+
+.step-block .variants .variant.act .text span {
+    color: #EF8683;
+    transition: color 0.3s; 
+}
+
+@keyframes zoom-click {
+    0%   { left: 0; right: 0; transform: scale(1); }
+    33%   { left: 0; right: 0;  transform: scale(0.7); background: #fff; }
+    66%   { left: 0; right: 0;  transform: scale(1.2); background: #fff;  }
+    100%   { left: 0; right: 0;  transform: scale(1); background: #fff;  }
+}
+
+@keyframes zoom-click2 {
+    0%   { transform: scale(1); }
+    33%   { transform: scale(0.7); }
+    66%   { transform: scale(1.2); }
+    100%   { transform: scale(1); }
+}
+
+@keyframes rotate {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.step-block .variants .variant.act .text:before {
+    animation: zoom-click 0.3s ease 0s 1 normal forwards;
+}
+
+.step-block.act .variants .variant {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.step-block .variants .variant .start {
+    width: 2px;
+    position: absolute;
+    height: 0;
+    top: -58px;
+    left: calc(50% - 1px);
+    overflow: hidden;
+    display: block;
+    background: url(../../assets/img/images/vertical.svg) center top repeat-y;
+    transition: all 0.5s 3s;
+}
+
+.step-block .variants .variant.go .start {
+    height: 58px;
+}
+
+.step-block .variants .variant .end {
+    position: absolute;
+    height: 0;
+    width: 2px;
+    left: 50%;
+    top: 48px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.step-block .variants .variant .end:before {
+    width: 2px;
+    height: 120px;
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 1px);
+    content: " ";
+    display: block;
+    background: url(../../assets/img/images/vertical.svg) center top repeat-y;
+    
+}
+
+.step-block .variants .variant.act .end {
+    height: 120px;
+}
+
+.step-block.step-dialog {
+    position: relative;
+    padding-bottom: 180px;
+}
+
+
+.step-block.step-dialog .ans {
+    height: 88px;
+    position: absolute;
+    overflow: hidden;
+    top: 84px;
+    left: calc(50% - 414px);
+    right: 50%;
+    
+}
+
+
+
+.step-block.step-dialog .ans .ans-btn {
+    width: 88px;
+    height: 88px;
+    line-height: 88px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(0);
+    transition: all 0.5s 2s;
+}
+
+.step-block.step-dialog.act .ans .ans-btn {
+    transform: scale(1);
+}
+
+.step-block.step-dialog .ans.no .ans-btn {
+    right: 0;
+    left: auto;
+}
+
+.step-block.step-dialog .ans.no {
+    right: calc(50% - 414px);
+    left: 50%;
+    
+}
+
+.step-block.step-dialog .ans.act {
+    overflow: visible;
+}
+
+.step-block.step-dialog .ans span {
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s;
+}
+
+.step-block.step-dialog .ans svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition: all 0.5s;
+}
+
+.step-block.step-dialog .ans svg {
+    animation: rotate 20s linear 0s infinite normal forwards;
+}
+
+
+.step-block.step-dialog .ans.act svg path {
+    fill: #FFFFFF;
+    transition: all 0.3s;
+}
+
+.step-block.step-dialog .ans.act span {
+    color: #EF8683;
+    display: block;
+    transform: rotate(90deg);
+}
+
+.step-block.step-dialog .ans.no.act span {
+    transform: rotate(-90deg);
+}
+
+
+.step-block.step-dialog .ans .ans-wrap {
+    position: absolute;
+    height: 88px;
+    width: 200%;
+    left: 0;
+    transition: all 0.5s 0.5s;
+}
+
+.step-block.step-dialog .ans.no .ans-wrap {
+    left: auto;
+    right: 0;
+}
+
+.step-block.step-dialog .ans.act .ans-wrap {
+    transform: rotate(-90deg);
+    left: 48%;
+    width: 104%;
+}
+
+.step-block.step-dialog .ans.act .ans-btn {
+    animation: zoom-click2 0.5s ease 0s 1 normal forwards;
+}
+
+.step-block.step-dialog .ans.no.act .ans-wrap {
+    right: 48%;
+    transform: rotate(90deg);
+    left: auto;
+}
+
+.step-block.step-dialog .ans .ans-wrap:before {
+    left: 50%;
+    height: 2px;
+    position: absolute;
+    bottom: 42px;
+    right: 50%;
+    content: " ";
+    display: block;
+    background: url(../../assets/img/images/horizontal.svg) center top repeat-y;
+
+    transition: all 0.5s 1.5s;
+}
+
+
+.step-block.step-dialog.act .ans .ans-wrap:before {
+    left: 15px;
+    right: 50%;
+}
+.step-block.step-dialog.act .ans.no .ans-wrap:before {
+    right: 15px;
+    left: 50%;
+}
+
+
+.step-block.step-final {
+    position: relative;
+    padding-top: 112px;
+}
+
+.step-block.step-final:before {
+    width: 2px;
+    height: 112px;
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 1px);
+    content: " ";
+    display: block;
+    background: url(../../assets/img/images/vertical.svg) center top repeat-y;
+    transition: all 0.5s;
+}
+
+.step-block.step-final .wrapbtn {
+    margin-top: 0;
+    transform: scale(0);
+    transition: all 0.5s 0.5s;
+}
+
+.step-block.step-final.act .wrapbtn {
+    transform: scale(1);
+}
+
+@media only screen and (max-width:1220px) {
+    .step-block .variants {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+    
+    .step-block .variants .variant {
+        margin-bottom: 60px;
+        width: 100%;
+        min-height: 48px;
+        height: auto;
+    }
+    
+    .step-block .vars-line {
+        display: none;
+    }
+    
+    .step-block.step-variants .ans-line {
+        display: none;
+    }
+    
+    
+    
+    .step-block .variants .variant .end {
+        display: none;
+    }
+    
+    .step-block .variants .variant:last-child {
+        margin-bottom: 0;
+    }
+    
+    .step-block.step-dialog .ans {
+        height: 88px;
+        position: absolute;
+        overflow: visible;
+        bottom: 0;
+        left: 0;
+        right: auto;
+        top: auto;
+        transition: all 0.5s 0.5s;
+    }
+    
+    .step-block.step-dialog .ans .ans-btn {
+        top: auto;
+        bottom: 0;
+    }
+    
+    .step-block.step-dialog .ans .ans-wrap {
+        width: 88px;
+        height: 180px;
+        bottom: 0;
+        top: auto;
+    }
+    
+    .step-block.step-dialog .ans.no {
+        right: 0;
+        left: auto;
+    }
+    
+    .step-block.step-dialog .ans .ans-wrap:before {
+        height: auto;
+        top: 0;
+        bottom: 100%;
+        width: 2px;
+        background: url(../../assets/img/images/vertical.svg) center top repeat-y;
+    }
+    
+    .step-block.step-dialog.act .ans .ans-wrap:before {
+        bottom: 80px;
+        left: 50%;
+        right: auto;
+    }
+    
+    
+    
+    .step-block.step-dialog.act .ans.no .ans-wrap:before {
+        left: 50%;
+        right: auto;
+    }
+    
+    .step-block.step-dialog .ans.act .ans-wrap {
+        transform: none;
+        left: 0;
+        width: 88px;
+    }
+    
+    .step-block.step-dialog .ans.no.act .ans-wrap {
+        right: 0;
+        transform: none;
+        left: auto;
+    }
+    
+    .step-block.step-dialog .ans.act {
+        left: calc(50% - 44px);
+    }
+    
+    .step-block.step-dialog .ans.act span {
+        transform: none;
+    }
+    
+    .step-block.step-dialog .ans.no.act span {
+        transform: none;
+    }
+    
+    .step-block.step-dialog .ans.act.no {
+        left: auto;
+        right: calc(50% - 44px);
+    }
+    
+    .step-block .variants .variant .text {
+        min-height: 48px;
+        height: auto;
+    }
+    
+    .step-block .variants .variant .text:before {
+        min-height: 48px;
+        height: 100%;
+    }
+    
+    .step-block .step-label.round {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:760px) {
+    
+}

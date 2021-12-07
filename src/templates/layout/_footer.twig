@@ -1,0 +1,74 @@
+<div class="footer bg-secondary">
+  <div class="container">
+    <div class="footer__main">
+      <div class="footer__main-row row row--xl">
+        <div class="footer__main-left col-xs-6 col-md-9">
+          <div class="row row--xl">
+            {% for col in footer.menu %}
+              <div class="footer__menu col-xs-12 col-md-3">
+                {% for section in col.sections %}
+                  <div class="footer__menu-section">
+                    <div class="footer__menu-title">
+                      <a href="{{ section.link }}" class="footer__menu-title-link">{{ section.title }}</a>
+                    </div>
+                    {% if section.list %}
+                      <ul class="footer__menu-list">
+                        {% for item in section.list %}
+                          <li class="footer__menu-item">
+                            <a href="{{ section.link }}#{{ item.name|lower|replace({' ': '-'})|replace({'?': ''}) }}" class="footer__menu-link" data-scroll>{{ item.name }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </div>
+                {% endfor %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="footer__main-right footer__menu col-xs-6 col-md-3">
+          <div class="footer__menu-section">
+            <div class="footer__menu-title">Contact Us</div>
+            <ul class="footer__menu-list">
+              {% for phone in company.phones %}
+                <li class="footer__menu-item">
+                  <a href="{{ phone.link }}" class="footer__menu-link">{{ phone.number }}</a>
+                </li>
+              {% endfor %}
+              <li class="footer__menu-item">
+                <a href="mailto:{{ company.email }}" class="footer__menu-link">{{ company.email }}</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-section footer__social social">
+            <div class="footer__menu-title">Find us on social</div>
+            <ul class="footer__social-list social__list row">
+              {% for item in company.social %}
+                <li class="social__item col">
+                  <a href="#" class="footer__link social__link icon-{{ item.icon }}" title="{{ item.title }}"></a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <a href="index.html" class="footer__logo">
+        <img src="./assets/img/xomio-logo-white.svg" alt="{{ company.name }} logo" class="footer__logo-img">
+      </a>
+
+      <ul class="footer__links">
+        {% for item in footer.links %}
+          <li class="footer__links-item">
+            <a href="#" class="footer__links-link">{{ item }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="footer__copyright">{{ company.copyright }}</div>
+    </div>
+  </div>
+</div>

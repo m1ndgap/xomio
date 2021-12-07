@@ -1,0 +1,60 @@
+.dropzone {
+    .dz-message {
+        cursor: pointer;
+    }
+
+    .dz-preview {
+        width: auto;
+        margin: rem($spacer-2) 0 0;
+        display: block;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    .dz-item {
+        @include font($font-size-md, $line-height-md + 1);
+        flex-wrap: nowrap;
+        transition: .25s ease-in-out;
+        margin-top: rem($spacer-2);
+
+        &__col {
+            &--icon,
+            &--delete {
+                max-width: rem($spacer-6);
+                flex: 0 0 rem($spacer-6);
+            }
+
+            &--content {
+                margin-right: auto;
+            }
+
+            &--progress {
+                max-width: rem(110px + $gutter);
+                flex: 0 0 rem(110px + $gutter);
+                padding-top: rem(7px);
+            }
+        }
+
+        &__icon {
+            font-size: rem($spacer-4);
+            text-decoration: none;
+            color: inherit;
+            margin-top: rem(-4px);
+        }
+
+        &.has-error {
+            color: $error;
+
+            @include hover-focus {
+                color: $error;
+            }
+        }
+
+        @include hover-focus {
+            color: $link-color;
+            cursor: pointer;
+        }
+    }
+}

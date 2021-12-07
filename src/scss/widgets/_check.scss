@@ -1,0 +1,41 @@
+.check {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-row-gap: rem($spacer-4);
+    align-items: flex-start;
+    @include margin-bottom(rem($spacer-5));
+    @include font($font-size-md, 17.01px);
+
+    &__label {
+        grid-column-start: 1;
+
+        &-name {
+            margin-right: rem($spacer);
+        }
+
+        &-info {
+            @include font($font-size-md, 15.01px);
+            color: $blue-200;
+            margin-top: rem(6px);
+        }
+    }
+
+    &__data {
+        grid-column-start: 2;
+        text-align: right;
+    }
+
+    &__data {
+        &--lg {
+            @include font($font-size-h2-mobile, $line-height-h2-mobile, $headings-font-weight);
+        }
+    }
+
+    &--total {
+        border-top: 1px dashed $green-100;
+        padding-top: rem($spacer-5);
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+}

@@ -1,0 +1,7 @@
+.values {
+    @include media-breakpoint-up(xl) {
+        .section__title {
+            margin-bottom: rem(64px);
+        }
+    }
+}

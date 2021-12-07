@@ -1,0 +1,122 @@
+.fp-scrollable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fp-slidesNav {
+    position: static;
+    padding-top: rem($spacer-3);
+    padding-left: rem($spacer-3);
+    padding-bottom: rem(52px);
+
+    ul {
+        li {
+            width: rem(48px);
+            height: rem($spacer-6 + 2);
+            margin: 0 rem($spacer);
+
+            a {
+                span {
+                    width: rem(100%);
+                    height: rem(2px);
+                    border-radius: 0;
+                    background-color: $gray-400;
+                    left: 0;
+                    margin-left: 0;
+                    margin-top: rem(-1px);
+                }
+
+                &.active {
+                    span {
+                        width: rem(100%);
+                        height: rem(2px);
+                        border-radius: 0;
+                        background-color: $primary;
+                        margin-left: 0;
+                        margin-top: rem(-1px);
+                    }
+                }
+            }
+
+            &:hover,
+            &.active {
+                a {
+                    &,
+                    &.active {
+                        span {
+                            width: rem(100%);
+                            height: rem(2px);
+                            border-radius: 0;
+                            margin-left: 0;
+                            margin-top: rem(-1px);
+                        }
+                    }
+                }
+
+                a {
+                    &.active {
+                        span {
+                            background-color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fp-controlArrow {
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: rem($spacer-6);
+    }
+
+    &.fp-next,
+    &.fp-prev {
+        @include size(rem(48px));
+        @include rounded;
+        border: 1px solid $primary;
+        color: $primary;
+        margin-top: 0;
+        top: auto;
+        bottom: rem($spacer-8);
+        transform: none;
+    }
+
+    &.fp-next{
+        left: rem(80px);
+    }
+
+    &.fp-prev{
+        left: rem($gutter);
+    }
+}
+
+.fp-controlArrow.fp-prev {
+    border-right-color: $primary;
+}
+
+@include media-breakpoint-down(lg) {
+    .fp-section,
+    .fp-slide,
+    .fp-tableCell{
+        height: auto !important;
+        min-height: 100%;
+    }
+
+    .fp-section {
+        padding-top: rem($section-offset-mobile) !important;
+        padding-bottom: rem($section-offset-mobile);
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .fp-slidesNav,
+    .fp-controlArrow {
+        display: none;
+    }
+}

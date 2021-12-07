@@ -1,0 +1,125 @@
+.tag-slide {
+    color: $white;
+    font-weight: $font-weight-medium;
+    overflow: hidden auto;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: 100vh;
+    text-align: center;
+    font-size: 0;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    b,
+    strong {
+        font-weight: $font-weight-heavy;
+    }
+
+    .container {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        font-size: rem($font-size-base);
+    }
+
+    .section__title,
+    .section__subtitle {
+        color: inherit;
+    }
+
+    .section__body {
+        padding-top: rem(116px);
+        padding-bottom: rem(30px);
+    }
+
+    @each $key, $value in $theme-tag-colors {
+        &.theme-tag-#{$key} {
+            @if (getValue($value, 'bg')) {
+                @include setProperty('background-color', $value, 'bg');
+            }
+
+            @if (getValue($value, 'color')) {
+                @include setProperty('color', $value, 'color');
+
+                .list-flake {
+                    > li {
+                        &:before {
+                            color: inherit;
+                        }
+                    }
+                }
+            }
+
+            @if (getValue($value, 'link-bg')) {
+                .link-stripe {
+                    @include setProperty('color', $value, 'link-color');
+
+                    &:before {
+                        @include setProperty('background-color', $value, 'link-bg');
+                    }
+                }
+            }
+
+            .section__title {
+                &-icon {
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-between(lg, lg) {
+        .container {
+            max-width: rem(616px);
+        }
+
+        .section__body {
+            display: block;
+        }
+
+        .section__content {
+            max-width: none;
+            width: auto;
+            margin-bottom: rem($spacer-10);
+        }
+
+        .section__object {
+            max-width: none;
+            width: auto;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .section__title {
+            margin-bottom: rem($spacer-8);
+        }
+
+        .section__title + .section__subtitle {
+            margin-top: rem(- $spacer-2);
+        }
+
+        .section__subtitle {
+            margin-bottom: rem($spacer-5);
+            @include em-line-height($font-size-h3, $line-height-xl);
+        }
+
+        .section__object {
+            position: fixed;
+            top: 50%;
+            transform: translate(100%, -50%);
+            width: 100%;
+            pointer-events: none;
+        }
+    }
+
+    @include media-breakpoint-up(2xl) {
+        .section__body {
+            padding-top: rem(60px);
+        }
+    }
+}

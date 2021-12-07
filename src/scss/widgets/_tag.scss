@@ -1,0 +1,120 @@
+.tag {
+    color: $white;
+    border-radius: rem($spacer-5);
+    position: relative;
+    overflow: hidden;
+    @include size(100%);
+    z-index: 1;
+    box-shadow: none;
+    transition: width 0s 0s, height 0s 0s ease-in-out, box-shadow 0s 0s ease-in-out;
+
+    &__link {
+        display: inline-flex;
+        padding: rem($spacer-2 $spacer-4 $spacer-2 $spacer-2);
+        @include font($font-size-h4, $line-height-h4, $font-weight-medium);
+        position: relative;
+        z-index: 1;
+        white-space: nowrap;
+
+        &-icon {
+            font-size: rem($spacer-6);
+            margin-right: rem($spacer-3);
+            transform: rotate(0);
+            transition: transform .25s ease-in-out;
+        }
+
+        &-text {
+            @include text-truncate();
+            display: block;
+        }
+    }
+
+    &__popover {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0s 0s ease-in-out;
+        overflow: hidden;
+
+        &-body {
+            padding: rem(0 44px $spacer-3);
+        }
+
+        &-text {
+            margin-bottom: rem(3px);
+            opacity: .8;
+        }
+    }
+
+    &.is-expanded {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        overflow: visible;
+        transition: height 0.25s 0.25s, width 0.25s 0.25s ease-in-out, box-shadow 0.25s 0.25s ease-in-out;
+    }
+
+    &.is-expanded & {
+        &__link {
+            display: flex;
+
+            &-icon {
+                transform: rotate(45deg);
+            }
+        }
+
+        &__popover {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.25s 0.25s ease-in-out;
+            margin-top: rem(-2px);
+       }
+    }
+
+    &.is-expanded {
+        &.is-right {
+            left: auto;
+            right: 0;
+        }
+
+        &.is-bottom {
+            top: auto;
+            bottom: 0;
+        }
+
+        &.is-right.is-bottom {
+            top: auto;
+            left: auto;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    @each $key, $value in $theme-tag-colors {
+        &-#{$key} {
+            @include setProperty('background-color', $value, 'bg');
+
+            &.is-expanded {
+                box-shadow: 0 16px 40px rgba(getValue($value, 'shadow-color'), .3);
+            }
+         }
+    }
+
+    @media(min-width: 560px) {
+        display: block;
+        max-width: none;
+        width: 100%;
+
+        &__link {
+            &-text {
+                text-overflow: initial;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+    }
+}

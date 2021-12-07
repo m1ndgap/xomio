@@ -1,0 +1,63 @@
+.collapsible {
+    &:before {
+        transform: rotate(45deg);
+        transition: transform .25s ease-in-out;
+    }
+
+    &__toggle {
+        color: $blue-500;
+        font-weight: $font-weight-medium;
+        cursor: pointer;
+        transition: all .25s ease-in-out;
+        @include font($font-size-lg, 22.01px);
+
+        &:before {
+            position: absolute;
+            top: rem(( 22 - $spacer-4) / 2);
+            left: 0;
+            font-size: rem($spacer-4);
+            color: $primary;
+            transform: rotate(45deg);
+            transition: transform 0.2s ease-out;
+
+            .bg-primary &,
+            .bg-secondary &,
+            .bg-accent & {
+                color: inherit;
+            }
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+
+    &__body {
+        padding-top: rem(6px);
+    }
+
+    &.is-collapsed & {
+        &__toggle {
+            color: $base-color;
+            font-weight: $font-weight-normal;
+
+            &:before {
+                transform: rotate(0);
+            }
+        }
+
+        &__content {
+            max-height: 0;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__toggle {
+            &:before {
+                top: rem(( 22 - $spacer-6) / 2);
+                font-size: rem($spacer-6);
+            }
+        }
+    }
+}

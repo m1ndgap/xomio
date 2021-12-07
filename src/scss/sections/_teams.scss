@@ -1,0 +1,9 @@
+.teams {
+    z-index: 2;
+
+    @include media-breakpoint-up(xl) {
+        .intro {
+            margin-bottom: rem(74px);
+        }
+    }
+}

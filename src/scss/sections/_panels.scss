@@ -1,0 +1,52 @@
+.panels {
+    &__title {
+        margin-bottom: rem($spacer-8);
+    }
+
+    &__list {
+        @include list-unstyled;
+    }
+
+    &__item {
+        border-bottom: 1px solid $gray-200;
+        padding-bottom: rem($spacer-6);
+        @include margin-bottom(rem($spacer-6));
+
+        &:last-child {
+            border-bottom-width: 0;
+            padding-bottom: 0;
+        }
+
+        .bg-primary &,
+        .bg-secondary &,
+        .bg-blue &, 
+        .bg-accent & {
+            border-color: rgba($white, .4);
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-top: rem(56px);
+        padding-bottom: rem(56px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        &__title {
+            margin-bottom: rem(56px);
+            text-align: center;
+        }
+
+        &__item {
+            border-bottom-width: 0;
+            padding-bottom: 0;
+            margin-bottom: rem($spacer-4);
+        }
+
+        &__decor {
+            top: rem(248px);
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-48.5%);
+        }
+    }
+}

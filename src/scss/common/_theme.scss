@@ -1,0 +1,47 @@
+.theme {
+    @each $color-name, $color in $theme-icon-colors {
+        &-icon-#{$color-name} {
+            color: #{$color};
+            fill: #{$color};
+        }
+    }
+
+    @each $key, $value in $theme-section-colors {
+        &-section-#{$key} {
+            @if (getValue($value, 'bg')) {
+                @include setProperty('background-color', $value, 'bg');
+            }
+
+            @if (getValue($value, 'color')) {
+                @include setProperty('color', $value, 'color');
+
+                .section__title {
+                    color: inherit;
+                }
+            }
+
+            @if (getValue($value, 'secondary')) {
+                .section__subtitle {
+                    @include setProperty('color', $value, 'secondary');
+                }
+
+                .list-check,
+                .list-plus {
+                    > li {
+                        &:before {
+                            @include setProperty('color', $value, 'secondary');
+                        }
+                    }
+                }
+
+                .list-dot {
+                    > li {
+                        &:before {
+                            @include setProperty('background-color', $value, 'secondary');
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

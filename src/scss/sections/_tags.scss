@@ -1,0 +1,88 @@
+.tags {
+    .intro {
+        margin-bottom: rem($spacer-8);
+    }
+
+    &__list {
+        @include list-unstyled;
+        margin-left: rem(- $spacer-6);
+        margin-right: rem(- $spacer-6);
+        margin-bottom: rem(- $spacer-3);
+        padding-left: rem($spacer-6);
+        padding-right: rem($spacer-6);
+        max-height: rem(612px);
+        overflow: hidden;
+        transition: .5s ease-in-out;
+    }
+
+    &__item {
+        margin-bottom: rem($spacer-3);
+        position: relative;
+        height: rem($spacer-10);
+    }
+
+    &__action {
+        margin-top: rem($spacer-9);
+    }
+
+    @media(min-width: 560px) {
+        &__list {
+            @include make-row($spacer-9);
+        }
+
+        &__item {
+            margin-left: rem($spacer-5 / 2);
+            margin-right: rem($spacer-5 / 2);
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .intro {
+            text-align: center;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+        .container {
+            max-width: rem(1428px);
+        }
+
+        &__list {
+            justify-content: center;
+            max-height: rem(468px);
+            overflow: hidden;
+        }
+    }
+
+    @include media-breakpoint-up(2xl) {
+        .intro {
+            margin-bottom: rem(64px);
+        }
+
+        &__list {
+            margin-left: rem(- $spacer-4);
+            margin-right: rem(- $spacer-4);
+            margin-bottom: rem(- $spacer-6);
+            padding-left: 0;
+            padding-right: 0;
+            max-height: none;
+            overflow: visible;
+        }
+
+        &__item {
+            margin-left: rem($spacer-4);
+            margin-right: rem($spacer-4);
+            margin-bottom: rem($spacer-6);
+        }
+    }
+
+    @media (min-width: 1232px) and (min-height: 1000px) {
+        &__list {
+            max-height: none;
+            overflow: visible;
+        }
+    }
+}

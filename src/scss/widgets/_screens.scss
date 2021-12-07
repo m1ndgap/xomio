@@ -1,0 +1,34 @@
+.screens {
+    .slick-track {
+        display: flex;
+    }
+
+    .slick-list {
+        margin-top: rem(- $spacer-10);
+        margin-bottom: rem(- $spacer-10);
+        padding-top: rem($spacer-10);
+        padding-bottom: rem($spacer-10);
+    }
+
+    &__slide {
+        .slick-initialized & {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+    }
+
+    @include media-breakpoint-up(xl) {
+        margin-left: rem(- $spacer-4);
+        margin-right: rem(- $spacer-4);
+
+        &__slide {
+            padding-left: rem($spacer-4);
+            padding-right: rem($spacer-4);
+        }
+    }
+}

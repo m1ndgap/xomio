@@ -1,0 +1,20 @@
+.tippy {
+    &-box {
+        &[data-theme~="light"] {
+            background-color: $white;
+            box-shadow: 0 0 10px rgba($black-100, 0.1);
+            border-radius: $border-radius-sm;
+            padding: 0;
+            overflow: hidden;
+            @include font($font-size-base, $line-height-base);
+            color: $base-dark;
+
+            .tippy-content {
+                padding: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+}

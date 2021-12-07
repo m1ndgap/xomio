@@ -1,0 +1,123 @@
+.plan {
+    background-color: $white;
+    border: 1px solid $gray-200;
+    box-shadow: 2px 2px 20px rgba($black-200, 0.04);
+    border-radius: $border-radius-md;
+    padding: rem(( $spacer-8 - 1) ($spacer-5 - 1));
+
+    &__header {
+        margin-bottom: rem(14px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__label {
+        order: -1;
+        margin-bottom: rem($spacer-2);
+    }
+
+    &__info {
+        @include font($font-size-sm, 15.01px);
+        color: $gray-500;
+    }
+
+    &__description {
+        color: $base-dark;
+    }
+
+    &__more {
+        margin-top: rem(14px);
+        @include em-line-height($font-size-base, $line-height-md);
+    }
+
+    &__footer {
+        border: 1px solid $gray-200;
+        border-width: 1px 0 0;
+        margin-top: rem($spacer-4);
+        padding-top: rem($spacer-6);
+    }
+
+    &__payment {
+        &-type {
+            margin-bottom: rem($spacer-8);
+            @include font($font-size-lg, 22.01px, $font-weight-medium);
+            color: $accent;
+        }
+
+        &-price {
+            color: $primary-light;
+        }
+
+        &-value {
+            @include font($font-size-h3, $line-height-h3, $headings-font-weight);
+            margin-right: rem(-3px);
+        }
+
+        &-per {
+            @include em-line-height($font-size-base, 19.01px);
+        }
+    }
+
+    &__button {
+        margin-top: rem($spacer-5);
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        padding-left: rem(( $spacer-8 - 1));
+        padding-right: rem(( $spacer-8 - 1));
+
+        &__body {
+            flex: 1;
+        }
+
+        &__header {
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        &__title {
+            margin-right: rem($spacer-2);
+        }
+
+        &__label {
+            order: initial;
+        }
+
+        &__info {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        &__footer {
+            display: flex;
+            flex-direction: column;
+            max-width: rem(243px);
+            flex: 0 0 40%;
+            border-width: 0 0 0 1px;
+            margin-top: 0;
+            padding-top: 0;
+            margin-left: rem($spacer-8);
+            padding-left: rem($spacer-8);
+        }
+
+        &__payment {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            &-price {
+                margin-top: auto;
+            }
+        }
+
+        &__button {
+            margin-top: rem($spacer-6);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+   }
+}

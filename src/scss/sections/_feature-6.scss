@@ -1,0 +1,15 @@
+.feature-6 {
+    padding-bottom: rem($section-offset);
+
+    @include media-breakpoint-up(md) {
+    }
+
+    @include media-breakpoint-up(lg) {
+        .section__object {
+            margin-top: rem(43px);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+    }
+}

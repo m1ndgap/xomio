@@ -1,0 +1,90 @@
+{
+    "src": {
+        "app.css": {
+            "files": [
+                "src/scss/app.scss"
+            ]
+        },
+        "home.css": {
+            "files": [
+                "src/scss/home.scss"
+            ]
+        },
+        "app.js": {
+            "files": [
+                "src/js/*.js",
+                "!src/js/vendor.js",
+                "!src/js/fullpage.scrollHorizontally.min.js"
+            ]
+        },
+        "vendor.css": {
+            "files": [
+                "node_modules/aos/dist/aos.css",
+                "node_modules/dropzone/dist/min/basic.min.css",
+                "node_modules/fullpage.js/dist/fullpage.min.css",
+                "node_modules/select2/dist/css/select2.min.css",
+                "node_modules/slick-carousel/slick/slick.css",
+                "node_modules/slick-carousel/slick/slick-theme.css",
+                "node_modules/tippy.js/dist/backdrop.css",
+                "node_modules/tippy.js/dist/tippy.css"
+            ]
+        },
+        "vendor.js": {
+            "files": [
+                "src/js/vendor.js",
+                "node_modules/jquery/dist/jquery.min.js",
+                "node_modules/@popperjs/core/dist/umd/popper.min.js",
+                "node_modules/animejs/lib/anime.min.js",
+                "node_modules/aos/dist/aos.js",
+                "node_modules/dropzone/dist/min/dropzone.min.js",
+                "src/js/fullpage.scrollHorizontally.min.js",
+                "node_modules/fullpage.js/dist/fullpage.extensions.min.js",
+                "node_modules/inputmask/dist/inputmask.min.js",
+                "node_modules/parsleyjs/dist/parsley.min.js",
+                "node_modules/fullpage.js/vendors/scrolloverflow.min.js",
+                "node_modules/select2/dist/js/select2.full.min.js",
+                "node_modules/slick-carousel/slick/slick.min.js",
+                "node_modules/smooth-scroll/dist/smooth-scroll.min.js",
+                "node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js",
+                "node_modules/tippy.js/dist/tippy-bundle.umd.min.js",
+                "node_modules/typewriter-effect/dist/core.js"
+            ]
+        },
+        "images": {
+            "files": [
+                "src/images/**/*"
+            ]
+        },
+        "video": {
+            "files": [
+                "src/video/**/*"
+            ]
+        },
+        "fonts": {
+            "files": [
+              "src/fonts/**/*"
+            ]
+        },
+        "icons": {
+            "files": [
+              "src/svg-icons/**/*.svg"
+            ]
+        },
+        "templates":{
+            "path": "src/templates",
+            "default": "/*.twig",
+            "data": "src/templates/data.json"
+        }
+    },
+    "dist": "build",
+    "watch": {
+        "icons": ["src/svg-icons/**/*.svg"],
+        "fonts": "src/fonts/**/*",
+        "images": "src/images/**/*",
+        "video": "src/video/**/*",
+        "scripts": "src/js/**/*",
+        "styles": ["src/scss/**/*"],
+        "twig": "src/templates/**/*",
+        "html": "build/*.html"
+    }
+}

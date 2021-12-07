@@ -1,0 +1,7 @@
+{## Generate SVG icon as reference to given icon within gien SVG icons sprite #}
+{% macro icon(icon, classes = null, width = null, height = null) %}
+    {% set url = '#svg-icon-' ~ icon %}
+    <svg class="{% if classes %} {{classes}} {% endif %}" aria-hidden="true" role="img" {% if width %} width="{{width}}" {% endif %} {% if height %} height="{{height}}" {% endif %}>
+        <use href="{{ url }}"></use>
+    </svg>
+{% endmacro %}

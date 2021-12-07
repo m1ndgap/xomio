@@ -1,0 +1,48 @@
+.panel {
+    &__title {
+        position: relative;
+        margin-bottom: 0;
+        padding-right: rem($spacer-7);
+        cursor: pointer;
+        transition: .2s ease-in-out;
+
+        &:after {
+            position: absolute;
+            top: rem($spacer);
+            right: 0;
+            font-size: rem($spacer-6);
+            color: $primary;
+        }
+    }
+
+    &__content {
+        padding-top: rem($spacer-3);
+    }
+
+    &.is-collapsed & {
+        &__content {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        background-color: $white;
+        border: 1px solid $gray-400;
+        border-radius: $border-radius-md;
+        padding: rem(( $spacer-8 - 1) ( $spacer-7 - 1) ( $spacer-8 - 1) ( $spacer-8 - 1));
+
+        &__title {
+            padding-right: rem($spacer-10);
+            @include em-line-height($font-size-h3, $line-height-xl);
+
+            &:after {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &__content {
+            padding-top: rem($spacer-2);
+        }
+    }
+}

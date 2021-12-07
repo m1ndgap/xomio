@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons.eot?ownvgo#iefix') format('embedded-opentype'),
+       url('../fonts/icons.svg?ownvgo') format('svg'),
+       url('../fonts/icons.woff?ownvgo') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"],
+.custom-checkbox .custom-control__indicator:before,
+.dropdown__toggle:after,
+.dropdown__option:after,
+.feature__toggle-link:after,
+.list-check > li:before,
+.list-flake > li:before,
+.collapsible__toggle:before,
+.navbar__lang .dropdown__toggle:before,
+.panel__title:after,
+.select2-selection__arrow:before,
+.select2-search--dropdown:before,
+.select2-results__option:after,
+.slick-arrow:before,
+.fp-controlArrow:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-left:before,
+.tags-popup .slick-prev:before ,
+.fp-prev:before{
+  content: "\e913";
+}
+.icon-arrow-right:before,
+.tags-popup .slick-next:before,
+.fp-next:before {
+  content: "\e916";
+}
+@include media-breakpoint-down(lg) {
+    .tags-popup .slick-prev:before {
+      content: "\e917";
+    }
+    .tags-popup .slick-next:before {
+      content: "\e918";
+    }
+}
+.icon-arrow-left-round:before {
+  content: "\e917";
+}
+.icon-arrow-right-round:before {
+  content: "\e918";
+}
+.icon-attach:before {
+  content: "\e900";
+}
+.icon-caret-left:before,
+.slick-prev:before {
+  content: "\e910";
+}
+.icon-caret-right:before,
+.slick-next:before {
+  content: "\e911";
+}
+.icon-cart:before {
+  content: "\e901";
+}
+.icon-check:before,
+.dropdown__option:after,
+.list-check > li:before,
+.select2-results__option:after {
+  content: "\e902";
+}
+.icon-chevron-down:before,
+.dropdown__toggle:after,
+.feature__toggle-link:after,
+.select2-selection__arrow:before {
+  content: "\e903";
+}
+.icon-close:before {
+  content: "\e90e";
+}
+.icon-facebook:before {
+  content: "\e904";
+}
+.icon-flake:before,
+.list-flake > li:before {
+  content: "\e915";
+}
+.icon-google-plus:before {
+  content: "\e914";
+}
+.icon-instagram:before {
+  content: "\e905";
+}
+.icon-lang:before,
+.navbar__lang .dropdown__toggle:before {
+  content: "\e912";
+}
+.icon-linkedin:before {
+  content: "\e906";
+}
+.icon-minus:before,
+.panel__title:after {
+  content: "\e907";
+}
+.icon-plus:before,
+.collapsible__toggle:before,
+.panel.is-collapsed .panel__title:after {
+  content: "\e908";
+}
+.icon-rocket:before {
+  content: "\e909";
+}
+.icon-search:before,
+.select2-search--dropdown:before {
+  content: "\e90f";
+}
+.icon-star:before {
+  content: "\e90a";
+}
+.icon-trash:before {
+  content: "\e90b";
+}
+.icon-twitter:before {
+  content: "\e90c";
+}
+.icon-youtube:before {
+  content: "\e90d";
+}

@@ -1,0 +1,6 @@
+.select2-container--default {
+    @include font($input-font-size, $input-line-height, $input-font-weight);
+
+    @import "single";
+    @import "dropdown";
+}

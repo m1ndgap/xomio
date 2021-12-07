@@ -1,0 +1,82 @@
+.custom-control {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    user-select: none;
+
+    &__input {
+        position: absolute;
+        z-index: -1; // Put the input behind the label so it doesn't overlay text
+        opacity: 0;
+    }
+
+    &__indicator {
+        position: relative;
+        display: block;
+        align-self: flex-start;
+        @include size(rem($spacer-5));
+        min-width: rem(rem($spacer-5));
+        margin-top: rem(3px);
+        margin-right: rem(11px);
+        user-select: none;
+        pointer-events: none;
+        text-align: center;
+        border-radius: $border-radius;
+        border: 2px solid $base-color;
+        transition: all 0.25s ease-in-out;
+
+        &:before {
+            opacity: 0;
+            position: absolute !important;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    &__input:checked ~ &__indicator,
+    &__input:active ~ &__indicator {
+        border-color: $primary;
+
+        &:before {
+            opacity: 1;
+        }
+    }
+}
+
+// Custom indicator
+//
+// Generates a shadow element to create our makeshift checkbox/radio background.
+
+// Checkboxes
+//
+// Tweak just a few things for checkboxes.
+
+.custom-checkbox {
+    .custom-control__indicator {
+        background-color: $primary;
+
+        &:before {
+            font-size: rem($spacer-3);
+            color: $white;
+        }
+    }
+}
+
+.custom-radio {
+    .custom-control__indicator {
+        @include rounded;
+        border-width: 1px;
+
+        &:before {
+            @include size(rem($spacer-2));
+            @include rounded;
+            @include size(rem(12px));
+            @include rounded;
+            background-color: $primary;
+            content: '';
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.contact-us {
+    @include media-breakpoint-down(lg) {
+        padding-top: rem(56px);
+        padding-bottom: rem(56px);
+
+        &--lg-bottom {
+            padding-bottom: rem(132px);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        &.bd-blue {
+            padding-top: rem($section-offset-bottom);
+        }
+    }
+}

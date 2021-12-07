@@ -1,0 +1,13 @@
+.partners {
+    //padding-top: rem(48px);
+    //padding-bottom: rem(48px);
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+        .section__header {
+            margin-bottom: rem(42px);
+        }
+    }
+}

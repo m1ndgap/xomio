@@ -1,0 +1,11 @@
+.intro-2 {
+    .section__title {
+        margin-bottom: rem($spacer-8);
+    }
+
+    @include media-breakpoint-up(lg) {
+    }
+
+    @include media-breakpoint-up(xl) {
+    }
+}

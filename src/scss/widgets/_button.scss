@@ -1,0 +1,130 @@
+//
+// Base styles
+//
+
+button,
+.button {
+    position:relative;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    background: none;
+    outline: 0;
+    border: 0;
+    padding: 0;
+    transition: all 0.2s ease-in-out;
+
+    @include hover-focus {
+        text-decoration: none;
+        outline: 0;
+    }
+
+    &,
+    &:active,
+    &.active {
+        &:focus,
+        &.focus {
+            @include tab-focus();
+            outline: 0;
+        }
+    }
+    &.focus {
+        text-decoration: none;
+    }
+
+    &:active,
+    &.active {
+        outline: 0;
+    }
+
+    &.disabled,
+    &:disabled {
+        cursor: $cursor-disabled;
+        pointer-events: none;
+    }
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $btn-font-weight;
+    font-family: $btn-font-family;
+    white-space: nowrap;
+    border: $btn-border-width solid;
+    border-radius: $btn-border-radius;
+    height: rem($btn-height);
+    padding: rem(( $btn-height - $btn-border-width * 2 - $btn-line-height) / 2 ($btn-padding-x - $btn-border-width));
+    @include font($btn-font-size, $btn-line-height);
+
+    &__icon {
+        font-size: rem($btn-icon-size);
+        margin-left: rem($btn-icon-offset);
+        margin-right: rem($btn-icon-offset);
+        top: -1px;
+
+        &:first-child {
+            margin-left: 0 !important;
+        }
+
+        &:last-child {
+            margin-right: 0 !important;
+        }
+
+        &:only-child {
+            margin-right: 0 !important;
+        }
+    }
+
+    @include button-sizes();
+
+    @include button-variants();
+
+    &--huge {
+        @include font(50px, 50.01px);
+        height: rem(122px);
+        padding: rem(36px 80px);
+
+        @include media-breakpoint-up(xl) {
+            font-size: rem(56px);
+            height: rem(154px);
+            padding: rem(49px 128px);
+        }
+    }
+
+    &.disabled,
+    &.is-disabled,
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.button.disabled,
+a.button.is-disabled,
+fieldset[disabled] a.button {
+    pointer-events: none;
+}
+
+//
+// Block button
+//
+
+.button--block {
+    width: 100%;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.button_block {
+        width: 100%;
+    }
+}

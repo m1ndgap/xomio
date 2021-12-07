@@ -1,0 +1,127 @@
+$svg-icons-config: (
+    template: svg-icons-template,
+    prefix: 'svg-icon-',
+) !default;
+
+%svg-icons-template {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+
+    &[width] {
+        width: initial;
+    }
+
+    &[height] {
+        height:initial;
+    }
+}
+
+@function parse-svg-icon($icon) {
+    @if (type-of($icon) == map) {
+        // Treat map argument as "already parsed"
+        @return $icon;
+    }
+    $parser-id: svg-icon;
+    @if (not properties-parser-is-registered($parser-id)) {
+        $p: register-properties-parser($parser-id, (
+            parse: (
+                svg-icon-parse-color,
+                svg-icon-parse-size,
+                svg-icon-parse-standalone,
+            ),
+        ), null, (
+            standalone: false,
+        ));
+    }
+    @return parse-properties($parser-id, $icon);
+}
+
+@mixin svg-icon($icon: null) {
+    $src: $icon;
+    $icon: parse-svg-icon($icon);
+    @if (map-has-key($icon, size)) {
+        font-size: map-get($icon, size);
+    }
+    @if (map-has-key($icon, color)) {
+        color: map-get($icon, color);
+    }
+    @if (map-get($icon, standalone)) {
+        display: block;
+    }
+}
+
+@mixin r-svg-icon($key, $options: null) {
+    $defaults: parse-svg-icon($options);
+    @include r-each-if($key) {
+        @include svg-icon(map-merge($defaults, parse-svg-icon(r-get())));
+    }
+}
+
+// Initialize SVG icons module
+//
+// @param map $config           SVG icons configuration, @see $svg-icons-config
+// @param boolean $register     true to register base CSS template for SVG icons
+@mixin svg-icons-init($config: null, $register: true) {
+    @if (type-of($config) == map) {
+        $svg-icons-config: map-merge($svg-icons-config, $config) !global;
+    }
+    @if ($register) {
+        $prefix: map-get($svg-icons-config, prefix);
+        $template: map-get($svg-icons-config, template);
+        [class^="#{$prefix}"], [class*=" #{$prefix}"] {
+            @extend %#{$template};
+        }
+    }
+}
+
+// @param mixed $value
+// @param map $properties
+// @param map $options
+// @return map|null
+// @internal
+@function svg-icon-parse-color($value, $properties, $options) {
+    @if (map-has-key($properties, color)) {
+        @return null;
+    }
+    @if (type-of($value) == color) {
+        @return (color: $value);
+    }
+    @return null;
+}
+
+// @param mixed $value
+// @param map $properties
+// @param map $options
+// @return map|null
+// @internal
+@function svg-icon-parse-size($value, $properties, $options) {
+    @if (map-has-key($properties, size)) {
+        @return null;
+    }
+    @if (type-of($value) != color) {
+        $size: v($value);
+        @if (type-of($size) == number) {
+            @return (size: $size);
+        }
+    }
+    @return null;
+}
+
+// @param mixed $value
+// @param map $properties
+// @param map $options
+// @return map|null
+// @internal
+@function svg-icon-parse-standalone($value, $properties, $options) {
+    @if (map-has-key($properties, standalone)) {
+        @return null;
+    }
+    @if (index(standalone s st, $value)) {
+        @return (standalone: true);
+    }
+    @return null;
+}

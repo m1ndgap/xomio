@@ -1,0 +1,6 @@
+.feature-2 {
+
+    @include media-breakpoint-up(xl) {
+        padding-top: 0;
+    }
+}

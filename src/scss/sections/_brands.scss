@@ -1,0 +1,36 @@
+.brands {
+    text-align: center;
+
+    .section__content {
+        margin-bottom: rem($spacer-6);
+    }
+
+    &__list {
+        @include list-unstyled;
+        margin-bottom: rem(- $spacer-4);
+    }
+
+    &__item {
+        margin-bottom: rem($spacer-4);
+    }
+
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+
+        .section__content {
+            margin-bottom: 0;
+        }
+
+        &__list {
+            margin-left: rem(- $spacer-6);
+            margin-right: rem(- $spacer-6);
+            margin-bottom: rem(-48px);
+        }
+
+        &__item {
+            padding-left: rem($spacer-6);
+            padding-right: rem($spacer-6);
+            margin-bottom: rem(48px);
+        }
+    }
+}

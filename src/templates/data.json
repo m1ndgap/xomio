@@ -1,0 +1,1816 @@
+{
+    "company": {
+        "name": "Xomio",
+        "phones": [
+            {
+                "number": "+1-561-898-0724",
+                "link": "tel:+15618980724"
+            },
+            {
+                "number": "+1-561-898-0724",
+                "link": "tel:+15618980724"
+            }
+        ],
+        "email": "help@xomio.com",
+        "copyright": "©2021 Xomio.com. All rights reserved.",
+        "social": [
+            {
+                "icon": "twitter",
+                "title": "Twitter"
+            },
+            {
+                "icon": "facebook",
+                "title": "Facebook"
+            },
+            {
+                "icon": "google-plus",
+                "title": "Google+"
+            }
+        ]
+    },
+    "nav": [
+        {
+            "name": "How it works",
+            "link": "how-it-works.html",
+            "icon": "service",
+            "theme": "pink"
+        },
+        {
+            "name": "Features",
+            "link": "features.html",
+            "icon": "star",
+            "theme": "orange"
+        },
+        {
+            "name": "IDX",
+            "link": "idx.html",
+            "icon": "home",
+            "theme": "blue"
+        },
+        {
+            "name": "GLEX",
+            "link": "glex.html",
+            "icon": "globe",
+            "theme": "green"
+        },
+        {
+            "name": "Pricing",
+            "link": "pricing.html",
+            "icon": "wallet",
+            "theme": "red"
+        },
+        {
+            "name": "About us",
+            "link": "about-us.html",
+            "icon": "user",
+            "theme": "purple"
+        }
+    ],
+    "footer": {
+        "menu": [
+            {
+                "sections": [
+                    {
+                        "title": "How it works",
+                        "link": "how-it-works.html"
+                    },
+                    {
+                        "title": "Features",
+                        "link": "features.html"
+                    }
+                ]
+            },
+            {
+                "sections": [
+                    {
+                        "title": "IDX",
+                        "link": "idx.html",
+                        "list": [
+                            {
+                                "name": "Become an MLS Partner"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "GLEX",
+                        "link": "glex.html",
+                        "list": [
+                            {
+                                "name": "Partner with us"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "sections": [
+                    {
+                        "title": "Pricing",
+                        "link": "pricing.html",
+                        "list": [
+                            {
+                                "name": "Our products"
+                            },
+                            {
+                                "name": "FAQs"
+                            },
+                            {
+                                "name": "Still have questions?"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "sections": [
+                    {
+                        "title": "About us",
+                        "link": "about-us.html",
+                        "list": [
+                            {
+                                "name": "Work with us"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "links": [
+            "Privacy & Cookies",
+            "Terms & Conditions"
+        ]
+    },
+    "plans": [
+        {
+            "title": "Required option",
+            "list": [
+                {
+                    "title": "Multi language website",
+                    "type": "Required",
+                    "feature": "600 000 potential listings",
+                    "text": "It will cost only $45 per month but you expand your listings inventory by 600,000 new listings. Some other very useful text that describes the product.",
+                    "payment": [
+                        {
+                            "type": "Monthly",
+                            "price": "From $159*",
+                            "per": "/mo"
+                        },
+                        {
+                            "type": "Annually",
+                            "price": "From $1749*",
+                            "per": "/year"
+                        }
+                    ],
+                    "button": {
+                        "icon": "cart",
+                        "text": "Add to the cart"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Listings options",
+            "list": [
+                {
+                    "title": "GLEX",
+                    "feature": "600 000 potential listings",
+                    "text": "It will cost only $45 per month but you expand your listings inventory by 600,000 new listings. Some other very useful text that describes the product.",
+                    "payment": [
+                        {
+                            "type": "Single Purchase",
+                            "price": "From $99*"
+                        }
+                    ],
+                    "button": {
+                        "icon": "trash",
+                        "text": "Remove from cart"
+                    }
+                },
+                {
+                    "title": "IDX",
+                    "feature": "600 000 potential listings",
+                    "text": "It will cost only $45 per month but you expand your listings inventory by 600,000 new listings. Some other very useful text that describes the product.",
+                    "payment": [
+                        {
+                            "type": "Monthly payment",
+                            "price": "From $30*",
+                            "per": "/mo"
+                        }
+                    ],
+                    "button": {
+                        "icon": "cart",
+                        "text": "Add to the cart"
+                    }
+                }
+            ]
+        }
+    ],
+    "pricing": {
+        "list": [
+            "Some content here",
+            "Another description here",
+            "It is simply dummy text of the printing",
+            "Another description here"
+        ],
+        "check": [
+            {
+                "name": "Monthly subscription",
+                "info": "(fixed price)",
+                "price": "$159"
+            },
+            {
+                "name": "Annual subscription",
+                "info": "(other description)",
+                "price": "$99"
+            }
+        ]
+    },
+    "faq": [
+        {
+            "title": "Are there any hidden IDX costs?",
+            "text": "<p>Xomio undergoes constant testing by people with NO web design or coding experience. Every feature is designed to be simple, quick and foolproof to implement. You definitely won’t need a web designer to help. And if you DO get stuck, our user support team are here to help.</p>"
+        },
+        {
+            "title": "Can I show my brand listings on my site?",
+            "text": "<p>Xomio undergoes constant testing by people with NO web design or coding experience. Every feature is designed to be simple, quick and foolproof to implement. You definitely won’t need a web designer to help. And if you DO get stuck, our user support team are here to help.</p>"
+        },
+        {
+            "title": "Is it really possible to make the site myself or will I have to pay for designers or developers?",
+            "text": "<p>Xomio undergoes constant testing by people with NO web design or coding experience. Every feature is designed to be simple, quick and foolproof to implement. You definitely won’t need a web designer to help. And if you DO get stuck, our user support team are here to help.</p>"
+        },
+        {
+            "title": "Can I cancel at anytime?",
+            "text": "<p>Xomio undergoes constant testing by people with NO web design or coding experience. Every feature is designed to be simple, quick and foolproof to implement. You definitely won’t need a web designer to help. And if you DO get stuck, our user support team are here to help.</p>"
+        },
+        {
+            "title": "What are my email limits?",
+            "text": "<p>Xomio undergoes constant testing by people with NO web design or coding experience. Every feature is designed to be simple, quick and foolproof to implement. You definitely won’t need a web designer to help. And if you DO get stuck, our user support team are here to help.</p>"
+        },
+        {
+            "title": "What is the cost for a custom domain?",
+            "text": "<p>Xomio undergoes constant testing by people with NO web design or coding experience. Every feature is designed to be simple, quick and foolproof to implement. You definitely won’t need a web designer to help. And if you DO get stuck, our user support team are here to help.</p>"
+        },
+        {
+            "title": "Can I get a discount if I’m buying multiple websites for agents in my office or larger organisation?",
+            "text": "<p>Xomio undergoes constant testing by people with NO web design or coding experience. Every feature is designed to be simple, quick and foolproof to implement. You definitely won’t need a web designer to help. And if you DO get stuck, our user support team are here to help.</p>"
+        },
+        {
+            "title": "Do I have to pay to have my listings feeds translated?",
+            "text": "<p>Xomio undergoes constant testing by people with NO web design or coding experience. Every feature is designed to be simple, quick and foolproof to implement. You definitely won’t need a web designer to help. And if you DO get stuck, our user support team are here to help.</p>"
+        },
+        {
+            "title": "Do you provide listings in translation as a feed that I can integrate into another website?",
+            "text": "<p>Xomio undergoes constant testing by people with NO web design or coding experience. Every feature is designed to be simple, quick and foolproof to implement. You definitely won’t need a web designer to help. And if you DO get stuck, our user support team are here to help.</p>"
+        },
+        {
+            "title": "Can I use Xomio to get my MLS IDX or brand GLEX listings in translation, on my existing website?",
+            "text": "<p>Xomio undergoes constant testing by people with NO web design or coding experience. Every feature is designed to be simple, quick and foolproof to implement. You definitely won’t need a web designer to help. And if you DO get stuck, our user support team are here to help.</p>"
+        }
+    ],
+    "countries": [ 
+        {"name": "Afghanistan", "code": "AF"},
+        {"name": "Åland Islands", "code": "AX"},
+        {"name": "Albania", "code": "AL"},
+        {"name": "Algeria", "code": "DZ"},
+        {"name": "American Samoa", "code": "AS"},
+        {"name": "AndorrA", "code": "AD"},
+        {"name": "Angola", "code": "AO"},
+        {"name": "Anguilla", "code": "AI"},
+        {"name": "Antarctica", "code": "AQ"},
+        {"name": "Antigua and Barbuda", "code": "AG"},
+        {"name": "Argentina", "code": "AR"},
+        {"name": "Armenia", "code": "AM"},
+        {"name": "Aruba", "code": "AW"},
+        {"name": "Australia", "code": "AU"},
+        {"name": "Austria", "code": "AT"},
+        {"name": "Azerbaijan", "code": "AZ"},
+        {"name": "Bahamas", "code": "BS"},
+        {"name": "Bahrain", "code": "BH"},
+        {"name": "Bangladesh", "code": "BD"},
+        {"name": "Barbados", "code": "BB"},
+        {"name": "Belarus", "code": "BY"},
+        {"name": "Belgium", "code": "BE"},
+        {"name": "Belize", "code": "BZ"},
+        {"name": "Benin", "code": "BJ"},
+        {"name": "Bermuda", "code": "BM"},
+        {"name": "Bhutan", "code": "BT"},
+        {"name": "Bolivia", "code": "BO"},
+        {"name": "Bosnia and Herzegovina", "code": "BA"},
+        {"name": "Botswana", "code": "BW"},
+        {"name": "Bouvet Island", "code": "BV"},
+        {"name": "Brazil", "code": "BR"},
+        {"name": "British Indian Ocean Territory", "code": "IO"},
+        {"name": "Brunei Darussalam", "code": "BN"},
+        {"name": "Bulgaria", "code": "BG"},
+        {"name": "Burkina Faso", "code": "BF"},
+        {"name": "Burundi", "code": "BI"},
+        {"name": "Cambodia", "code": "KH"},
+        {"name": "Cameroon", "code": "CM"},
+        {"name": "Canada", "code": "CA"},
+        {"name": "Cape Verde", "code": "CV"},
+        {"name": "Cayman Islands", "code": "KY"},
+        {"name": "Central African Republic", "code": "CF"},
+        {"name": "Chad", "code": "TD"},
+        {"name": "Chile", "code": "CL"},
+        {"name": "China", "code": "CN"},
+        {"name": "Christmas Island", "code": "CX"},
+        {"name": "Cocos (Keeling) Islands", "code": "CC"},
+        {"name": "Colombia", "code": "CO"},
+        {"name": "Comoros", "code": "KM"},
+        {"name": "Congo", "code": "CG"},
+        {"name": "Congo, The Democratic Republic of the", "code": "CD"},
+        {"name": "Cook Islands", "code": "CK"},
+        {"name": "Costa Rica", "code": "CR"},
+        {"name": "Cote D\"Ivoire", "code": "CI"},
+        {"name": "Croatia", "code": "HR"},
+        {"name": "Cuba", "code": "CU"},
+        {"name": "Cyprus", "code": "CY"},
+        {"name": "Czech Republic", "code": "CZ"},
+        {"name": "Denmark", "code": "DK"},
+        {"name": "Djibouti", "code": "DJ"},
+        {"name": "Dominica", "code": "DM"},
+        {"name": "Dominican Republic", "code": "DO"},
+        {"name": "Ecuador", "code": "EC"},
+        {"name": "Egypt", "code": "EG"},
+        {"name": "El Salvador", "code": "SV"},
+        {"name": "Equatorial Guinea", "code": "GQ"},
+        {"name": "Eritrea", "code": "ER"},
+        {"name": "Estonia", "code": "EE"},
+        {"name": "Ethiopia", "code": "ET"},
+        {"name": "Falkland Islands (Malvinas)", "code": "FK"},
+        {"name": "Faroe Islands", "code": "FO"},
+        {"name": "Fiji", "code": "FJ"},
+        {"name": "Finland", "code": "FI"},
+        {"name": "France", "code": "FR"},
+        {"name": "French Guiana", "code": "GF"},
+        {"name": "French Polynesia", "code": "PF"},
+        {"name": "French Southern Territories", "code": "TF"},
+        {"name": "Gabon", "code": "GA"},
+        {"name": "Gambia", "code": "GM"},
+        {"name": "Georgia", "code": "GE"},
+        {"name": "Germany", "code": "DE"},
+        {"name": "Ghana", "code": "GH"},
+        {"name": "Gibraltar", "code": "GI"},
+        {"name": "Greece", "code": "GR"},
+        {"name": "Greenland", "code": "GL"},
+        {"name": "Grenada", "code": "GD"},
+        {"name": "Guadeloupe", "code": "GP"},
+        {"name": "Guam", "code": "GU"},
+        {"name": "Guatemala", "code": "GT"},
+        {"name": "Guernsey", "code": "GG"},
+        {"name": "Guinea", "code": "GN"},
+        {"name": "Guinea-Bissau", "code": "GW"},
+        {"name": "Guyana", "code": "GY"},
+        {"name": "Haiti", "code": "HT"},
+        {"name": "Heard Island and Mcdonald Islands", "code": "HM"},
+        {"name": "Holy See (Vatican City State)", "code": "VA"},
+        {"name": "Honduras", "code": "HN"},
+        {"name": "Hong Kong", "code": "HK"},
+        {"name": "Hungary", "code": "HU"},
+        {"name": "Iceland", "code": "IS"},
+        {"name": "India", "code": "IN"},
+        {"name": "Indonesia", "code": "ID"},
+        {"name": "Iran, Islamic Republic Of", "code": "IR"},
+        {"name": "Iraq", "code": "IQ"},
+        {"name": "Ireland", "code": "IE"},
+        {"name": "Isle of Man", "code": "IM"},
+        {"name": "Israel", "code": "IL"},
+        {"name": "Italy", "code": "IT"},
+        {"name": "Jamaica", "code": "JM"},
+        {"name": "Japan", "code": "JP"},
+        {"name": "Jersey", "code": "JE"},
+        {"name": "Jordan", "code": "JO"},
+        {"name": "Kazakhstan", "code": "KZ"},
+        {"name": "Kenya", "code": "KE"},
+        {"name": "Kiribati", "code": "KI"},
+        {"name": "Korea, Democratic People\"S Republic of", "code": "KP"},
+        {"name": "Korea, Republic of", "code": "KR"},
+        {"name": "Kuwait", "code": "KW"},
+        {"name": "Kyrgyzstan", "code": "KG"},
+        {"name": "Lao People\"S Democratic Republic", "code": "LA"},
+        {"name": "Latvia", "code": "LV"},
+        {"name": "Lebanon", "code": "LB"},
+        {"name": "Lesotho", "code": "LS"},
+        {"name": "Liberia", "code": "LR"},
+        {"name": "Libyan Arab Jamahiriya", "code": "LY"},
+        {"name": "Liechtenstein", "code": "LI"},
+        {"name": "Lithuania", "code": "LT"},
+        {"name": "Luxembourg", "code": "LU"},
+        {"name": "Macao", "code": "MO"},
+        {"name": "Macedonia, The Former Yugoslav Republic of", "code": "MK"},
+        {"name": "Madagascar", "code": "MG"},
+        {"name": "Malawi", "code": "MW"},
+        {"name": "Malaysia", "code": "MY"},
+        {"name": "Maldives", "code": "MV"},
+        {"name": "Mali", "code": "ML"},
+        {"name": "Malta", "code": "MT"},
+        {"name": "Marshall Islands", "code": "MH"},
+        {"name": "Martinique", "code": "MQ"},
+        {"name": "Mauritania", "code": "MR"},
+        {"name": "Mauritius", "code": "MU"},
+        {"name": "Mayotte", "code": "YT"},
+        {"name": "Mexico", "code": "MX"},
+        {"name": "Micronesia, Federated States of", "code": "FM"},
+        {"name": "Moldova, Republic of", "code": "MD"},
+        {"name": "Monaco", "code": "MC"},
+        {"name": "Mongolia", "code": "MN"},
+        {"name": "Montserrat", "code": "MS"},
+        {"name": "Morocco", "code": "MA"},
+        {"name": "Mozambique", "code": "MZ"},
+        {"name": "Myanmar", "code": "MM"},
+        {"name": "Namibia", "code": "NA"},
+        {"name": "Nauru", "code": "NR"},
+        {"name": "Nepal", "code": "NP"},
+        {"name": "Netherlands", "code": "NL"},
+        {"name": "Netherlands Antilles", "code": "AN"},
+        {"name": "New Caledonia", "code": "NC"},
+        {"name": "New Zealand", "code": "NZ"},
+        {"name": "Nicaragua", "code": "NI"},
+        {"name": "Niger", "code": "NE"},
+        {"name": "Nigeria", "code": "NG"},
+        {"name": "Niue", "code": "NU"},
+        {"name": "Norfolk Island", "code": "NF"},
+        {"name": "Northern Mariana Islands", "code": "MP"},
+        {"name": "Norway", "code": "NO"},
+        {"name": "Oman", "code": "OM"},
+        {"name": "Pakistan", "code": "PK"},
+        {"name": "Palau", "code": "PW"},
+        {"name": "Palestinian Territory, Occupied", "code": "PS"},
+        {"name": "Panama", "code": "PA"},
+        {"name": "Papua New Guinea", "code": "PG"},
+        {"name": "Paraguay", "code": "PY"},
+        {"name": "Peru", "code": "PE"},
+        {"name": "Philippines", "code": "PH"},
+        {"name": "Pitcairn", "code": "PN"},
+        {"name": "Poland", "code": "PL"},
+        {"name": "Portugal", "code": "PT"},
+        {"name": "Puerto Rico", "code": "PR"},
+        {"name": "Qatar", "code": "QA"},
+        {"name": "Reunion", "code": "RE"},
+        {"name": "Romania", "code": "RO"},
+        {"name": "Russian Federation", "code": "RU"},
+        {"name": "RWANDA", "code": "RW"},
+        {"name": "Saint Helena", "code": "SH"},
+        {"name": "Saint Kitts and Nevis", "code": "KN"},
+        {"name": "Saint Lucia", "code": "LC"},
+        {"name": "Saint Pierre and Miquelon", "code": "PM"},
+        {"name": "Saint Vincent and the Grenadines", "code": "VC"},
+        {"name": "Samoa", "code": "WS"},
+        {"name": "San Marino", "code": "SM"},
+        {"name": "Sao Tome and Principe", "code": "ST"},
+        {"name": "Saudi Arabia", "code": "SA"},
+        {"name": "Senegal", "code": "SN"},
+        {"name": "Serbia and Montenegro", "code": "CS"},
+        {"name": "Seychelles", "code": "SC"},
+        {"name": "Sierra Leone", "code": "SL"},
+        {"name": "Singapore", "code": "SG"},
+        {"name": "Slovakia", "code": "SK"},
+        {"name": "Slovenia", "code": "SI"},
+        {"name": "Solomon Islands", "code": "SB"},
+        {"name": "Somalia", "code": "SO"},
+        {"name": "South Africa", "code": "ZA"},
+        {"name": "South Georgia and the South Sandwich Islands", "code": "GS"},
+        {"name": "Spain", "code": "ES"},
+        {"name": "Sri Lanka", "code": "LK"},
+        {"name": "Sudan", "code": "SD"},
+        {"name": "Suriname", "code": "SR"},
+        {"name": "Svalbard and Jan Mayen", "code": "SJ"},
+        {"name": "Swaziland", "code": "SZ"},
+        {"name": "Sweden", "code": "SE"},
+        {"name": "Switzerland", "code": "CH"},
+        {"name": "Syrian Arab Republic", "code": "SY"},
+        {"name": "Taiwan, Province of China", "code": "TW"},
+        {"name": "Tajikistan", "code": "TJ"},
+        {"name": "Tanzania, United Republic of", "code": "TZ"},
+        {"name": "Thailand", "code": "TH"},
+        {"name": "Timor-Leste", "code": "TL"},
+        {"name": "Togo", "code": "TG"},
+        {"name": "Tokelau", "code": "TK"},
+        {"name": "Tonga", "code": "TO"},
+        {"name": "Trinidad and Tobago", "code": "TT"},
+        {"name": "Tunisia", "code": "TN"},
+        {"name": "Turkey", "code": "TR"},
+        {"name": "Turkmenistan", "code": "TM"},
+        {"name": "Turks and Caicos Islands", "code": "TC"},
+        {"name": "Tuvalu", "code": "TV"},
+        {"name": "Uganda", "code": "UG"},
+        {"name": "Ukraine", "code": "UA"},
+        {"name": "United Arab Emirates", "code": "AE"},
+        {"name": "United Kingdom", "code": "GB"},
+        {"name": "United States", "code": "US"},
+        {"name": "United States Minor Outlying Islands", "code": "UM"},
+        {"name": "Uruguay", "code": "UY"},
+        {"name": "Uzbekistan", "code": "UZ"},
+        {"name": "Vanuatu", "code": "VU"},
+        {"name": "Venezuela", "code": "VE"},
+        {"name": "Viet Nam", "code": "VN"},
+        {"name": "Virgin Islands, British", "code": "VG"},
+        {"name": "Virgin Islands, U.S.", "code": "VI"},
+        {"name": "Wallis and Futuna", "code": "WF"},
+        {"name": "Western Sahara", "code": "EH"},
+        {"name": "Yemen", "code": "YE"},
+        {"name": "Zambia", "code": "ZM"},
+        {"name": "Zimbabwe", "code": "ZW"}
+    ],
+    "currency": [
+        "USD",
+        "EUR",
+        "CAD",
+        "JPY",
+        "AUD",
+        "NZD",
+        "MXN",
+        "GBP",
+        "CNY",
+        "UAH",
+        "RUB"
+    ],
+    "langs": [
+        {
+                "name": "English",
+                "code": "Eng"
+        },
+        {
+                "name": "Español",
+                "code": "Esp"
+        },
+        {
+                "name": "Português",
+                "code": "Por"
+        },
+        {
+                "name": "Français",
+                "code": "Fra"
+        },
+        {
+                "name": "Deutsch",
+                "code": "Deu"
+        },
+        {
+                "name": "Nederlands",
+                "code": "Nld"
+        },
+        {
+                "name": "Русский",
+                "code": "Rus"
+        },
+        {
+                "name": "Türkçe",
+                "code": "Eng"
+        },
+        {
+                "name": "한국어",
+                "code": "Kor"
+        },
+        {
+                "name": "中文 -简体",
+                "code": "Zho"
+        }
+    ],
+    "glex": {
+        "brands": [
+            {
+                "image": "century-21",
+                "full": true
+            },
+            {
+                "image": "better-homes-and-gardens"
+            },
+            {
+                "image": "era"
+            }
+        ],
+        "slider": [
+            {
+                "title": "More languages, more listings, more leads",
+                "type": "lg",
+                "list": [
+                    {
+                        "title": "GLEX instantly converts your site into a multi language, global real estate portal",
+                        "text": "No need to worry about inventory, impress your clients with the thousands of international listings on your website, branded to you and there to support you in referral revenue."
+                    },
+                    {
+                        "title": "Every listing from your entire brand global inventory is branded to you, as the website owner",
+                        "text": "Just like IDX, all the global listings on your website will be branded with you, showing your clients the impressive property selection and footprint you have to offer."
+                    },
+                    {
+                        "title": "Anyone viewing any listing on your site, in any market, displayed in any language, can register as a lead in your client area.",
+                        "text": "Show your clients the world and support them as you would a client looking to buy locally. Your website provides you the tools to support your clients easily, whatever their needs."
+                    },
+                    {
+                        "title": "Convert the lead into a referral in your brand network, and start monetizing the global footprint of your brand",
+                        "text": "When you have a client interested in an international purchase, you can easily pass that client through your brand referral network, sign a commission contract and enjoy your new revenue stream"
+                    }
+                ]
+            },
+            {
+                "title": "Global listings, beautifully displayed",
+                "type": "lg",
+                "list": [
+                    {
+                        "title": "The biggest names in real estate rely on us for listings portal design",
+                        "text": "We know how to make listings shine online, and we do it 19 languages, for brokerages with offices on 6 continents. That’s why GLEX is exclusive to Xomio."
+                    },
+                    {
+                        "title": "Choose from a range of beautiful designs with clean, modern listings and photo presentation",
+                        "text": "If you don’t have your own graphics we make sure you have access to everything you need to define your style and customise your xomio website."
+                    },
+                    {
+                        "title": "Listings data is organized on the page thematically, for a clearer consumer experience",
+                        "text": "We make sure to keep your website consistent and high-end so you can enjoy playing with the details."
+                    },
+                    {
+                        "title": "Advanced client features give users the ability to find, save and share their ideal property, all from your site",
+                        "text": "It’s important for clients to easily understand your properties information and we make the most of the listing details you provide and make sure that’s clearly visible and organized."
+                    }
+                ]
+            },
+            {
+                "title": "We speak real estate, in 19 languages",
+                "text": "We’ve been working with listings in 19 languages for 20 years.We know everything there is to know about listings data, and about real estate translation.",
+                "list": [
+                    {
+                        "title": "Every brand listing in 19 languages",
+                        "list": [
+                            "Arabic",
+                            "Chinese (Simplified)",
+                            "Chinese (Traditional)",
+                            "French Canadian",
+                            "French (EU)",
+                            "German",
+                            "Hebrew",
+                            "Italian ",
+                            "Japanese",
+                            "Korean",
+                            "Polish",
+                            "Portuguese (EU)",
+                            "Portuguese (Brazil)",
+                            "Russian",
+                            "Spanish (EU)",
+                            "Spanish (LatAm)",
+                            "Turkish",
+                            "Vietnamese"
+                        ]
+                    },
+                    {
+                        "title": "Metadata for SEO in all languages",
+                        "text": "Your brokerage brand’s listings data is translated to deliver Search Engine Optimization in 19 languages. Now every listing in your brand’s global inventory is working to get your site seen by visitors from around the world."
+                    },
+                    {
+                        "title": "Set up your GLEX feed in 3 clicks",
+                        "text": "We work with our brand partners to standardise and import their listings data from around the world, with feeds from over 60 countries on 6 continents. Integrating all these listings into your site is as easy a clicking a few buttons to validate your brand membership. Turn your Xomio site into a global portal in moments."
+                    },
+                    {
+                        "title": "Choose from a range of display styles",
+                        "text": "Xomio’s customizable blocks let you choose from a range of beautiful listings display options that will look great to visitors in every language."
+                    },
+                    {
+                        "title": "Listings data organized thematically",
+                        "text": "Unlike most real estate platforms, we care about listings data, and we know how its display can affect the consumer experience. That’s why the biggest names in global real estate use us for their global portal design. We categorize and display all listings data thematically, so the presentation makes sense to international visitors."
+                    },
+                    {
+                        "title": "Fully customize the content of your GLEX feed",
+                        "text": "Filter the listings in your GLEX feed to ensure that you show only the properties, locations and price ranges that make sense for the type of leads that you want to generate. Limit the range of available languages to the ones that are most important to your market."
+                    }
+                ]
+            }
+        ],
+        "features": [
+            {
+                "icon": "flag",
+                "theme": "red",
+                "title": "Ready",
+                "text": "Pick your preferred Xomio package and claim your GLEX feed"
+            },
+            {
+                "icon": "attention",
+                "theme": "orange",
+                "title": "Set",
+                "text": "Choose from a range of clean, modern listings search and display templates"
+            },
+            {
+                "icon": "rocket",
+                "theme": "green",
+                "title": "Go!",
+                "text": "Publish your site with a click, and start getting seen by local and international buyers"
+            }
+        ]
+    },
+    "howItWorks": {
+        "features": [
+            {
+                "icon": "design",
+                "theme": "blue",
+                "title": "Set your style and home page",
+                "text": "Pick the perfect foreground image or video, and choose from a range of fonts and styles."
+            },
+            {
+                "icon": "block",
+                "theme": "pink",
+                "title": "Drag and drop blocks",
+                "text": "Blocks are the bricks that your site is made from — drag & drop them to organize your pages"
+            },
+            {
+                "icon": "service",
+                "theme": "green",
+                "title": "Get into the details...or don’t!",
+                "text": "You can pick your own featured listings, and write your own text and headers. Or let our smart selections do it for you!"
+            },
+            {
+                "icon": "publish",
+                "theme": "orange",
+                "title": "Publish internationally!",
+                "text": "Launch your website in 19 languages with a single click."
+            }
+        ],
+        "tabs": [
+            {
+                "name": "For You",
+                "steps": [
+                    {
+                        "title": "Features that deliver engagement",
+                        "description": "Your clients’ dashboard is packed with features that keep them on your site",
+                        "image": "how-it-works/for-you/1"
+                    },
+                    {
+                        "title": "Better experience, better insights",
+                        "description": "Even the registration flow is engaging! Clients sign up using an interactive questionnaire that gives you insight into their needs",
+                        "image": "how-it-works/for-you/2"
+                    },
+                    {
+                        "title": "Collections and saved searches",
+                        "description": "Save them into customizable collections and share them to your social media, or to friends and family",
+                        "image": "how-it-works/for-you/3"
+                    }
+                ]
+            },
+            {
+                "name": "For Clients",
+                "steps": [
+                    {
+                        "title": "CRM with kanban view",
+                        "description": "Stay on top of all your clients and leads",
+                        "image": "how-it-works/for-clients/1"
+                    },
+                    {
+                        "title": "Detailed client profiles",
+                        "description": "See which listings clients have collected or saved and suggest other properties they might like",
+                        "image": "how-it-works/for-clients/2"
+                    },
+                    {
+                        "title": "Customize your IDX or GLEX",
+                        "description": "Only want to show listings in a certain price bracket, or in certain areas? Xomio lets you pick and choose what makes it on to your site.",
+                        "image": "how-it-works/for-clients/3"
+                    }
+                ]
+            }
+        ],
+        "workflow": [
+            {
+                "title": "We import your Brand or MLS listings into our Listings Translation Module",
+                "text": "We import your Brand or MLS listings directly from them, with no data loss. Every term is mapped exactly into the world’s largest translation module for real estate specific terminology."
+            },
+            {
+                "title": "20 years of expertise is applied to deliver listings translation in 19 languages",
+                "text": "We have been translating listings for the biggest names in global real estate for over two decades. Our listings module contains listings from over 60 countries and powers the international presence of many of the biggest international brokerages and brands."
+            },
+            {
+                "title": "Foreign language search engines index your listings and drive consumers to your Xomio site",
+                "text": "Listings data in translation is used to power foreign language SEO. Now your site can be indexed on search engines used by the majority of internet users who don’t speak English - including many American residents."
+            },
+            {
+                "title": "When a foreign language visitor views your Xomio site, listings are displayed in translation",
+                "text": "Visitors are automatically shown the relevant language version of your site, letting them search for homes in the same language they speak at home."
+            },
+            {
+                "title": "Consumers find and view the listings they are interested in, registering and receiving your multi language marketing mails",
+                "text": "Every client facing feature is available in all of our 19 supported languages. And once they become a lead, they will receive all of their listing alerts and other emails in their chosen language too, delivering a more enjoyable client experience."
+            }
+        ]
+    },
+    "idx": {
+        "sections": [
+            {
+                "title": "IDX in 19 Languages",
+                "subtitle": "Setting up your IDX should be simple. <br>With Xomio, it is.",
+                "list": [
+                    "Why do other website builders make it so hard to integrate your IDX?",
+                    "The team behind Xomio have been integrating listings feeds for over 20 years, in 19 languages, and in over 60 countries",
+                    "We know everything there is to know about listings data, so we do all the hard stuff for you",
+                    "Get IDX on your site, beautifully arranged on the page in just a few clicks"
+                ],
+                "video": 2
+            },
+            {
+                "reversed": true,
+                "subtitle": "Design, without the messy bits",
+                "list": [
+                    "Many of the biggest names in real estate rely on us for our web design skills, because we understand how to make listings shine online.",
+                    "Choose from a range of beautiful designs with clean, modern listings presentation.",
+                    "Listings data is organized on the page thematically, for a clearer consumer experience.",
+                    "Advanced features give clients the ability to find, save and share their ideal property, all from your site."
+                ],
+                "video": 9,
+                "objectDecor": "decor--3 decor-shape-7"
+            },
+            {
+                "subtitle": "Listings translation you can rely on",
+                "list": [
+                    "We translate millions of listings per day for the biggest names in real estate",
+                    "Every translation in our listings memory is provided and checked by industry specialist translators.",
+                    "We use listings in translation to create metadata: the information that search engines like Google and its foreign language versions use to index your page.",
+                    "Your business will finally be visible to every potential client, regardless of the language they speak, or what search engine they use."
+                ],
+                "video": "15-77_x2",
+                "objectDecor": "decor--4 decor-complex-9"
+            },
+            {
+                "reversed": true,
+                "subtitle": "More languages, more listings, more leads",
+                "list": [
+                    "Hispanic homebuyers are the fastest growing homeownership demographic in the US",
+                    "22% of American residents speak a language other than English at home",
+                    "Overseas investors and foreign language speakers buy real estate in every price bracket from luxury to affordable first homes",
+                    "More languages? More views, more leads, more deals. It’s that simple."
+                ],
+                "video": 4,
+                "videoClass": "section__video--3",
+                "objectDecor": "decor--5 decor-dots-5"
+            }
+        ],
+        "langs": [
+            {
+                "name": "English"
+            },
+            {
+                "name": "Português"
+            },
+            {
+                "name": "Português EU"
+            },
+            {
+                "name": "العربية",
+                "dir": "rtl"
+            },
+            {
+                "name": "עברית",
+                "dir": "rtl"
+            },
+            {
+                "name": "Türkçe"
+            },
+            {
+                "name": "Русский"
+            },
+            {
+                "name": "Français (CA)"
+            },
+            {
+                "name": "Français"
+            },
+            {
+                "name": "Italiano"
+            },
+            {
+                "name": "日本語"
+            },
+            {
+                "name": "Español EU"
+            },
+            {
+                "name": "Español (Latin America)"
+            },
+            {
+                "name": "한국어"
+            },
+            {
+                "name": "Tiếng Việt"
+            },
+            {
+                "name": "Polski"
+            },
+            {
+                "name": "Nederlands"
+            },
+            {
+                "name": "中文 -简体"
+            },
+            {
+                "name": "中文 -繁體"
+            }
+        ]
+    },
+    "values": [
+        {
+            "icon": "accessibility",
+            "theme": "purple",
+            "title": "Accessibility",
+            "text": "We build technology and websites with inclusivity at the forefront. We enable multi language content and accessibility features that cater to all."
+        },
+        {
+            "icon": "chat",
+            "theme": "blue",
+            "title": "Collaboration",
+            "text": "As a fully remote team across four continents, we walk the walk of global collaboration! We are committed to helping real estate professionals work together and co-market across borders and language barriers."
+        },
+        {
+            "icon": "service",
+            "theme": "pink",
+            "title": "Service",
+            "text": "We are all about excellence in customer service, both for our own clients, and our clients’ clients! Our tools are designed to make it as easy as possible to engage and deliver for the people who matter most to your business."
+        },
+        {
+            "icon": "heart",
+            "theme": "orange",
+            "title": "Family",
+            "text": "We remain family owned and run, after 20 years in the business. This means that we aren’t chasing short term profits at the expense of long term quality and stability, and that our clients are our most important stakeholders."
+        }
+    ],
+    "partners": [
+        {
+            "image": "ntreis",
+            "image2x": true,
+            "order": 3
+        },
+        {
+            "image": "better-homes-and-gardens",
+            "order": 1
+        },
+        {
+            "image": "era",
+            "order": 6
+        },
+        {
+            "image": "beaches-mls",
+            "image2x": true,
+            "order": 4,
+            "class": "col-xs-12 col-md-auto"
+        },
+        {
+            "image": "one-key",
+            "order": 2
+        },
+        {
+            "image": "century-21",
+            "order": 5
+        }
+    ],
+    "teams": [
+        {
+            "icon": "star",
+            "theme": "orange",
+            "title": "QA",
+            "toggle": "Improving user experience",
+            "text": "Every new feature, product or design passes our Quality Assurance process. We are power users who test every Immobel product in every possible way to find flaws that need fixing, and to recommend ways to make user experience better."
+        },
+        {
+            "icon": "desktop",
+            "theme": "purple",
+            "title": "Frontend",
+            "toggle": "Building great products",
+            "text": "In the frontend team, we turn the Design team’s work into reality, hooking it up to all the cool features built by the Backend team. Our goal at all times is to create the best possible User Experience for our users, and for the people who visit the websites that are powered by products like Xomio."
+        },
+        {
+            "icon": "ba",
+            "theme": "green",
+            "title": "BA",
+            "toggle": "Turning ideas into features",
+            "text": "In the Business Analyst team, our goal is to take great ideas for new features, document them, and plan how to build them. We work with every team, coordinating across all the departments to bring a new idea to life."
+        },
+        {
+            "icon": "handshake",
+            "theme": "yellow",
+            "title": "Partnership",
+            "toggle": "Result-oriented",
+            "text": "Successful businesses always depend on successful partnerships. We work closely with the Customer Success team to make sure that our enterprise clients and distribution partners have all the resources they need to successfully roll out our products to their own members and clients"
+        },
+        {
+            "icon": "service-2",
+            "theme": "yellow",
+            "title": "DevOps",
+            "toggle": "Laying the foundations",
+            "text": "In the Business Analyst team, our goal is to take great ideas for new features, document them, and plan how to build them. We work with every team, coordinating across all the departments to bring a new idea to life."
+        },
+        {
+            "icon": "code",
+            "theme": "dark-green",
+            "title": "Backend",
+            "toggle": "Building useful tools",
+            "text": "We are the Backend team! Our job is to build all the technology, systems and microservices under the hood in every single Immobel product. We are a team of software developers spread across the globe, and we are passionate about making highly functional tools that deliver great value to our users."
+        },
+        {
+            "icon": "design-2",
+            "theme": "blue",
+            "title": "Design",
+            "toggle": "Creating the look & feel",
+            "text": "In the Business Analyst team, our goal is to take great ideas for new features, document them, and plan how to build them. We work with every team, coordinating across all the departments to bring a new idea to life."
+        },
+        {
+            "icon": "user",
+            "theme": "red",
+            "title": "Customer Success",
+            "toggle": "Helping users and clients",
+            "text": "We handle everything customer-facing, from onboarding new MLS data, to helping users get the most out of their Xomio website or Referral Network with training, support and documentation."
+        }
+    ],
+    "stats": [
+        {
+            "title": {
+                "main": "1M+"
+            },
+            "text": "listing translated daily"
+        },
+        {
+            "title": {
+                "main": "10",
+                "small": "min"
+            },
+            "text": "for users to publish a multi language website"
+        },
+        {
+            "title": {
+                "main": "20",
+                "small": "years"
+            },
+            "text": "of web design, translation and localization for real estate"
+        },
+        {
+            "title": {
+                "main": "65"
+            },
+            "text": "countries represented in listings data"
+        },
+        {
+            "title": {
+                "main": "19"
+            },
+            "text": "languages"
+        },
+        {
+            "title": {
+                "main": "3K+"
+            },
+            "text": "professionally translated data fields"
+        }
+    ],
+    "home": [
+        {
+            "slides": [
+                {
+                    "title": "You’re a real estate expert. <br> Not a ",
+                    "type": "coder.",
+                    "list": [
+                        {
+                            "title": "Just clicking. No coding.",
+                            "text": "Xomio takes away all the pain and frustration of launching a website. Just select the features you like best, customize in a few clicks, and publish your site.  "
+                        },
+                        {
+                            "title": "Your IDX and Brand listings integrated automatically",
+                            "text": "With Xomio, you don’t need any technical wizardry to add your IDX or Brand listings. We’ve done the work for you, and we’ll get your listings live in a few minutes."
+                        },
+                        {
+                            "title": "Drag and drop to rearrange web pages",
+                            "text": "With Xomio, you don’t need any technical wizardry to add your IDX or Brand listings. We’ve done the work for you, and we’ll get your listings live in a few minutes."
+                        },
+                        {
+                            "title": "Launch your customised website in minutes",
+                            "text": "Take longer with the customization if you want. But if speed and convenience are what you’re after, you can have a sleek, multi-language, IDX website in only 15 minutes. "
+                        }
+                    ],
+                    "video": "1_xomio_h264_cbr.mp4"
+                },
+                {
+                    "title": "You’re a real estate expert. <br> Not a ",
+                    "type": "translator.",
+                    "list": [
+                        {
+                            "title": "All listings translated into 19 languages",
+                            "text": "Translation for real estate is about more than just matching words. Our translators know the right terms to use in every supported language, delivering consistent information to consumers everywhere."
+                        },
+                        {
+                            "title": "Translated by human industry experts",
+                            "text": "All our translations are provided and checked by human translators with real estate expertise."
+                        },
+                        {
+                            "title": "Website sections in 19 languages",
+                            "text": "Every customizable block is available in all supported languages. Your site looks the same to every visitor regardless of the language they speak.."
+                        },
+                        {
+                            "title": "SEO & Meta tagging in all languages",
+                            "text": "Listings data in translation is used to power search engine rankings in foreign languages to reach the majority of internet users who don’t speak English. Something that translation plugins cannot deliver."
+                        },
+                        {
+                            "title": "Currency & measurements conversion",
+                            "text": "It’s about more than just languages. Every visitor can view any listing in the currency and units of measurement that make sense to them."
+                        },
+                        {
+                            "title": "Multi language client interface",
+                            "text": "All our client facing features, from listings collections and saved searches, to automated listings alert emails, are all available in every supported language. More languages, more leads."
+                        }
+                    ],
+                    "video": "2x_10.mp4"
+                },
+                {
+                    "title": "You’re a real estate expert. <br> Not a ",
+                    "type": "web designer.",
+                    "list": [
+                        {
+                            "title": "Beautiful designs straight out of the box",
+                            "text": "With Xomio, you don’t have to choose between a clunky DIY design and paying an expensive designer. Every customized site looks great, in just a few clicks. "
+                        },
+                        {
+                            "title": "Apply consistent styles across your whole site",
+                            "text": "No need to hunt around for text boxes and color blocks. With Xomio, style changes are applied across your entire website in a single click, for a consistent look and feel."
+                        },
+                        {
+                            "title": "Videos and animations deployed with a click",
+                            "text": "You don’t need a $100k budget to have to have high end animations on your website. We make sure you have access to design features that keep visitors visually engaged, and on your site for longer."
+                        },
+                        {
+                            "title": "Fully responsive sites for mobile, tablet and desktop",
+                            "text": "Half of internet usage is now on mobile. Xomio lets you preview how your site looks on any tablet or smartphone. And it looks great."
+                        }
+                    ],
+                    "video": "xomio_2_1.mp4"
+                },
+                {
+                    "title": "You’re a real estate expert. <br> Not a ",
+                    "type": " lawyer.",
+                    "list": [
+                        {
+                            "title": "Compliance, without the headaches",
+                            "text": "Every Xomio site delivers ADA compliance in line with WCAG 2.1 protocols. Straight out of the box, with no effort from you."
+                        },
+                        {
+                            "title": "A website that’s an asset, not a legal liability",
+                            "text": "ADA compliance isn't just taken care of in English. The compliance module supports every one of the 19 languages. You never need to worry about an ADA legal threat again."
+                        },
+                        {
+                            "title": "Accessibility that’s good for business",
+                            "text": "Just like Fair Housing, accessibility and inclusivity aren't just buzzwords. They're good business. More accessibility for a wider range of consumers means more leads for you. It's that simple."
+                        },
+                        {
+                            "title": "Protection for you, security for your clients",
+                            "text": "Xomio's built in CAPTCHA and data privacy modules ensure that your site is secure, and so is your client data."
+                        }
+                    ],
+                    "video": "12@2x.mp4"
+                }
+            ]
+        },
+        {
+            "screens": [
+                "laptop",
+                "mobile",
+                "tablet"
+            ]
+        },
+        {
+            "tags": [
+                {
+                    "id": "client-kanban",
+                    "name": "Client kanban",
+                    "theme": "orange",
+                    "arrowColor": "#388172",
+                    "text": "The easy, interactive, way to track your leads.",
+                    "popup": {
+                        "subtitle": "Leads become deals right before your eyes!",
+                        "list": [
+                            "Our Kanban-style CRM lets you view and update the status of every client in your pipeline at a glance, from inside your Xomio dashboard. Just drag and drop each client contact card from one status to another, as they move from <strong>New Lead</strong>, all the way through to <strong>Sold!</strong>",
+                            "Statuses are fully customizable, so you can adapt the Kanban flow to suit your own needs.",
+                            "Add tags to your client contact cards to create customized views that let you filter down to specific categories of client with a single click.",
+                            "Xomio instantly creates a new contact card at the top of your pipeline whenever someone registers as a client on your site, and you can see all relevant information about their saved searches and collections of listings.",
+                            "Xomio's signup flow also asks new leads to give details about their property search when they register, making the buying experience easier for you and for your clients."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "glex",
+                    "name": "GLEX (Brand listings IDX)",
+                    "theme": "green",
+                    "arrowColor": "#ff8e7b",
+                    "text": "Every listing from your brokerage brand, worldwide. Translated and branded to you, on your Xomio site. More listings, more leads, more referrals.",
+                    "popup": {
+                        "text": [
+                            "Unique to Xomio, GLEX gives you the best way yet to start monetizing your membership of global franchise brokerage brand.",
+                            "GLEX is like IDX, but supercharged: your GLEX feed contains every single listing from your brand colleagues around the world, available for consumer search on your Xomio site.",
+                            "Every GLEX listing is available in all of Xomio's supported languages. Your site is now a multi language global listings portal, attracting visitors searching for properties around the world.",
+                            "Every out-of-market lead generated by GLEX listings on your Xomio site is an opportunity to create a referral for your brand colleagues in the destination market.",
+                            "It's never been easier to get paid for co-marketing your brand's listings, wherever they are. Thanks to GLEX, you get all the benefits of being part of a global powerhouse brokerage, and you help your colleagues in other markets do more business at the same time.",
+                            "<a href=\"glex.html\" class=\"link-stripe\">Click here</a> to learn more, and see the list of brokerage brands offering GLEX listings with Xomio.",
+                            "<a href=\"glex.html#partner-with-us\" class=\"link-stripe\">Contact us</a> here to request that we start working with your brand today!"
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "dynamic-search-filters",
+                    "name": "Dynamic search filters",
+                    "theme": "salmon",
+                    "arrowColor": "#ffc300",
+                    "text": "Property search filters are automatically updated based on the features of the listings avaialble on your Xomio site, for a better search experience.",
+                    "popup": {
+                        "text": [
+                            "It seems so simple, but it's so easy to overlook.",
+                            "Most real estate websites don't update the available filters that a visitor can access, based on the listings that are actually availble to view.",
+                            "For a consumer, this provides a terrible experience: applying filters and conducting a search, only to find that there are no properties matching the criteria.",
+                            "Every Xomio site eliminates this problem, dynamically updating the available search terms based on the listings that are available to view at any point in time.",
+                            "A better client experience, and a better start to their journey with you as a buyer."
+                        ],
+                        "image": true,
+                        "filter": true
+                    }
+                },
+                {
+                    "id": "multi-language-listings-view",
+                    "name": "Multi language listings view",
+                    "theme": "yellow",
+                    "arrowColor": "#388172",
+                    "text": "We translate and localize your listings into 18 languages.",
+                    "popup": {
+                        "subtitle": "Leads become deals right before your eyes!",
+                        "text": [
+                            "In the US, for instance, 1 in 5 residents speaks a language other than English at home. And many foreign language speakers are amongst the fastest growing homeownership demographics.",
+                            "Xomio is powered by Immobel's listings translation engine, which serves the international web presence of some of the biggest powerhouses in global real estate.",
+                            "Every IDX and GLEX listing on your Xomio site benefits from full data translation and localization into 20 languages.",
+                            "Multi language listings data delivers a huge range of benefits to you, to your business, and to your clients:",
+                            "Listings data in translation drives foreign language SEO, finally making your website - and your business - visible to the massive majority of consumers worldwide who don't access the internet in English.",
+                            "Listings can be searched and viewed by your Xomio site's visitors in all supported languages, just as if they were viewing a listing in its original version.",
+                            "Their listings alerts and saved search notifications will all be sent to them in the language that they registered in, creating a more enagaging, comfortable process as they progress with their search.",
+                            "Show sellers that listing their property with you means they get access to truly global visibility. Wherever their perfect buyer is, your Xomio site can reach them.",
+                            "This allows you to better serve the diverse range of buyers interested in properties in your market: from high value foreign investors, to expats, and other local communities.",
+                            "High quality translation by human real estate experts means that listings details are accurate and reliable, whatever language your site visitors are viewing the listing in.",
+                            "Treat your market like a community, with listings translation that lets you reach every potential client in the language of their choice."
+                        ],
+                        "image": "languages",
+                        "imageType": "svg"
+                    }
+                },
+                {
+                    "id": "currency-conversion",
+                    "name": "Currency conversion",
+                    "theme": "orange",
+                    "arrowColor": "#388172",
+                    "text": "A global website needs global features. Users can change their currency preferences and see pricing using up to date exchange rates."
+                },
+                {
+                    "id": "fully-responsive",
+                    "name": "Fully responsive",
+                    "theme": "green",
+                    "arrowColor": "#28695c",
+                    "text": "Size matters... when it comes to responsive design. We make sure no matter the size of your clients' screens, they see your listings perfectly.",
+                    "popup": {
+                        "subtitle": "There’s “it works on mobile”. Then there’s responsive design.",
+                        "text": [
+                            "Too many real estate websites overlook one of the most important trends in consumer behavior: the dominance of mobile devices.",
+                            "We all know that clients are highly likely to first encounter their next purchase in the form of an online property listing on a real estate site. And \"online\", for the majority of consumers, increasingly means on their cell or tablet.",
+                            "Every Xomio site is kept fully responsive across all devices, delivering the same clean, modern design, however visitors are accessing it.",
+                            "Xomio also gives you an easy way to preview how your site will look and perform across mobile and tablet devices, in portrait and landscape modes, so you can see exactly what your visitors' experience will be before you hit publish and take your site live.",
+                            "Most other platforms achieve responsive design (if they even bother trying) by forcing weird layouts, hiding buttons and dropping functionality.",
+                            "Our Xomio QA team constantly checks website layouts on all devices, and in all languages, to makes sure we catch all the details and provide your clients with the best experience possible, no matter their screen size."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "fair-housing-principles",
+                    "name": "Fair housing principles",
+                    "theme": "green",
+                    "arrowColor": "#ff8e7b",
+                    "text": "Xomio helps you deliver on Fair Housing principles, with every site fully &lt;ADA compliant&gt; and accessible for all in &lt;a range of languages&gt;",
+                    "popup": {
+                        "subtitle": "Fair Housing. Because inclusivity and accessibility are more than just buzzwords.",
+                        "text": [
+                            "With a Xomio site, you are truly open for business and accessible to all.",
+                            "All Xomio sites are <a href=\"#\" class=\"link-stripe\">multi language</a> and <a href=\"#\" class=\"link-stripe\">fully ADA compliant</a> out of the box, to deliver a fully inclusive experience that helps you to treat your market like a community."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "https",
+                    "name": "https",
+                    "theme": "salmon",
+                    "arrowColor": "#ffc300",
+                    "text": "The technical stuff! Https delivers fully secure site encryption to protect visitors to every Xomio site, without sacrificing website performance.",
+                    "popup": {
+                        "subtitle": "You're a real estate expert, not a coder.",
+                        "text": [
+                            "Do you really have time to mess around learning what https means, updating SSL Certificates, and making sure your website is securely encrypted?",
+                            "Xomio handles all of this for you, with no effort, no fuss, and no technical skills required. Keeping you, your website and you clients secure."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "no-coding",
+                    "name": "No coding",
+                    "theme": "yellow",
+                    "arrowColor": "#f45d48",
+                    "text": "The only developers you should be speaking to are the ones building homes. No overwhelming settings here: Xomio is all clicks, no code.",
+                    "popup": {
+                        "subtitle": "Just clicks, no code.",
+                        "text": [
+                            "Other real estate website platforms seem to think you have time to learn how to be a web developer, or a web designer.",
+                            "Too often, you're left with a choice: pay someone to build your website for you, in a system that you were sold because it was supposed to be easy to use. Or put up with an end product that doesn't look great on desktop, that's even worse on mobile, with links that lead nowhere, and a broken IDX integration.",
+                            "WIth Xomio, it's easy to build a feature packed, ADA-compliant, multi language, fully responsive site. That's what you get, out of the box. With no coding, no technical integration work, just simple clicks and customizable, drag & drop design blocks.",
+                            "Don't waste your time acquiring skills you shouldn't have to learn. And don't waste your money paying people to do a job that can be handled easily, in a well designed system.",
+                            "Xomio lets you focus on what you do best. Building your business, and selling real estate."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "human-customer-support",
+                    "name": "Human customer support",
+                    "theme": "orange",
+                    "arrowColor": "#d34733",
+                    "text": "You're not on your own. Every Xomio site plan comes with access to real customer support – delivered by actual people.",
+                    "popup": {
+                        "subtitle": "Honestly, we don't think you'll actually NEED to speak to our customer support teams.",
+                        "text": [
+                            "That's because Xomio makes it so easy to get a fully responsive, great looking, feature-packed, multi language, ADA-compliant site live, with no coding, no web design, and no technical skills required.",
+                            "But if you do get stuck, our in-house team of dedicated customer support staff are on hand to help you get the most out of your site.",
+                            "Ask any of our competitors what they offer for customer support. Most will try to sell you a web design package, or additional technical support, to take the process off your hands for a fat fee. Why pay someone more money just to help you use their badly designed platform?",
+                            "With Xomio, you get a packed knowledge base of video explainers and articles that guide you through every simple step of the platform. And, if you need it, a team of real, human customer support staff."
+                        ],
+                        "image": true,
+                        "filter": true
+                    }
+                },
+                {
+                    "id": "idx",
+                    "name": "IDX",
+                    "theme": "orange",
+                    "arrowColor": "#388172",
+                    "text": "IDX, in 19 languages, integrated into your website at the click of a button. With Xomio, it's that simple.",
+                    "popup": {
+                        "subtitle": "Setting up your IDX should be simple. With Xomio, it is.",
+                        "text": [
+                            "Why do other website platforms make it so hard to integrate your IDX?",
+                            "The team behind Xomio have been integrating listings feeds for over 20 years, in 19 languages, and from over 60 countries. We know everything there is to know about handling listings data. And we know how to translate it accurately, and reliably, to get you and your listings more views, to deliver more leads from high value prospects.",
+                            "With Xomio, you get your IDX feed (or more than one if you have multiple MLS memberships) integrated in just a few clicks.",
+                            "Every listing is available in all supported languages automatically, making your Xomio site the perfect tool to win high value listings from sellers who demand maximum visibility.",
+                            "Find out more about our IDX offering <a href=\"idx.html\" class=\"link-stripe\">here.</a>"
+                        ],
+                        "image": "glex"
+                    }
+                },
+                {
+                    "id": "crm",
+                    "name": "CRM with lead management",
+                    "theme": "green",
+                    "arrowColor": "#ffc300",
+                    "text": "Powerful features, simple interface, great ouctomes. Xomio delivers client lead tracking without the fuss.",
+                    "popup": {
+                        "subtitle": "Setting up your IDX should be simple. With Xomio, it is.",
+                        "text": [
+                            "Xomio's CRM lets you view and update the status of every lead in your pipeline in one place, right inside your client dashboard.",
+                            "An intuitive Kanban-style interface allows you to drag and drop each client contact card from one status to another, as they move from New Lead, all the way through to Sold!",
+                            "Statuses in the CRM are fully customizable, so you can adapt the flow to suit your own needs.",
+                            "Add tags to your client contact cards to create customized views that let you filter down to specific categories of client with a single click.",
+                            "Xomio instantly creates a new contact card at the top of your pipeline whenever someone registers as a client on your site, and you can see all relevant information about their saved searches and collections of listings.",
+                            "Xomio's signup flow also asks new leads to give details about their property search when they register, making the buying experience easier for you and for your clients."
+                        ],
+                        "image": "client-kanban"
+                    }
+                },
+                {
+                    "id": "video-background",
+                    "name": "Video background",
+                    "theme": "salmon",
+                    "arrowColor": "#ffc300",
+                    "text": "Xomio sites deliver a more engaging experience for visitors. Choose from our library of real estate clips to add visually rich video backgrounds to your home page."
+                },
+                {
+                    "id": "19-languages",
+                    "name": "19 languages",
+                    "theme": "yellow",
+                    "arrowColor": "#f45d48",
+                    "text": "If you can't reach foreign language speakers, you can't reach your market. With Xomio, you can.",
+                    "popup": {
+                        "subtitle": "Barely a quarter of the world's internet users access websites in English.",
+                        "text": [
+                            "Even within the US, 1 in 5 residents speak a language other than English at home. And many foreign language speakers are amongst the fastest growing homeownership demographics.",
+                            "Xomio is powered by Immobel's listings translation engine, which serves the international web presence of some of the biggest powerhouses in global real estate.",
+                            "Every IDX and GLEX listing on your Xomio site benefits from full data translation and localization into 19 languages.",
+                            "Multi language listings data delivers a huge range of benefits to you, to your business, and to your clients.",
+                            "Listings data in translation drives foreign language SEO, finally making your website - and your business - visible to the massive majority of consumers worldwide who don't access the internet in English.",
+                            "Listings can be searched and viewed by your Xomio site's visitors in all supported languages, just as if they were viewing a listing in its original version. Their listings alerts and saved search notifications will all be sent to them in the language that they registered in, creating a more enagaging, comfortable process as they progress with their search.",
+                            "Show sellers that listing their property with you means they get access to truly global visibility. Wherever their perfect buyer is, your Xomio site can reach them.",
+                            "This allows you to better serve the diverse range of buyers interested in properties in your market: from high value foreign investors, to expats, and other local communities.",
+                            "High quality translation by human real estate experts means that listings details are accurate and reliable, whatever language your site visitors are viewing the listing in.",
+                            "Treat your market like a community, with listings translation that lets you reach every potential client in the language of their choice."
+                        ],
+                        "image": "languages",
+                        "imageType": "svg"
+                    }
+                },
+                {
+                    "id": "multi-language-client-tools",
+                    "name": "Multi language client tools",
+                    "theme": "orange",
+                    "arrowColor": "#d34733",
+                    "text": "Clients can do more than just view your properties in their preferred language, they get the complete experience.",
+                    "popup": {
+                        "subtitle": "Xomio delivers the same great experience for all visitors, in every language.",
+                        "text": [
+                            "It's not just about the listings data translation, or the multi language SEO (although they are pretty cool).",
+                            "Foreign language visitors to your Xomio site get access to the full range of client side features, just as they would in English.",
+                            "Our language browser detection automatically detects when they are accessing your site in a foreign language and shows content accordingly, making them feel at home from the very first click.",
+                            "After viewing listings in translation with their selected currency and units of measurement, vistors go through a sign up flow in the language of their choice, and register for listings alerts and saved search notifications.",
+                            "Saving searches and building Collections of listings all takes place in a language that they are comfortable using.",
+                            "Every email notification they receive will be in their preferred language, creating a more enagaging process as they progress with their search."
+                        ],
+                        "image": "languages",
+                        "imageType": "svg"
+                    }
+                },
+                {
+                    "id": "multi-language-listings-search",
+                    "name": "Multi language listings search",
+                    "theme": "orange",
+                    "arrowColor": "#ffc300",
+                    "text": "Looking for homes in Nueva York?",
+                    "popup": {
+                        "subtitle": "Xomio doesn't just translate your listings. It localizes them.",
+                        "text": [
+                            "We know everything there is about listings translation. And we use that knowledge to deliver the most powerful multi language search for your webiste visitors.",
+                            "Xomio's multi language search functionality is powered by Immobel's translation engine, which has been serving the international web presence of some of the biggest powerhouses in global real estate for decades.",
+                            "Many place names are different when they're rendered in a foreign language. New York becomes Nueva York, London becomes Londres.",
+                            "The translation engine that drives Xomio's listings search and display knows how to handle foreign language search terms, and delivers the right listings to your visitors. Wherever they're searching, and wherever they're searching from."
+                        ],
+                        "image": "languages",
+                        "imageType": "svg"
+                    }
+                },
+                {
+                    "id": "google-analytics",
+                    "name": "Google analytics",
+                    "theme": "green",
+                    "arrowColor": "#ff8e7b",
+                    "text": "Website tracking made easy. Analyze your Xomio site performance with a simple integration to your Google account.."
+                },
+                {
+                    "id": "knowledge-base",
+                    "name": "Knowledge base",
+                    "theme": "salmon",
+                    "arrowColor": "#ffc300",
+                    "text": "Video explainers, articles, FAQs and more. Our knowledge base makes it easy to get the most out of your Xomio site."
+                },
+                {
+                    "id": "wcag-2-0",
+                    "name": "WCAG 2.0",
+                    "nameIcon": "accessibility",
+                    "theme": "yellow",
+                    "arrowColor": "#f45d48",
+                    "text": "This is the standard of ADA compliance of all Xomio websites.",
+                    "popup": {
+                        "text": [
+                            "WCAG is the web design industry's standard set of protocols for determining whether a website offers accessibility options in compliance with the American Disabilities Act.",
+                            "Unique amongst real estate platforms, every Xomio site is compliant with WCAG 2.1"
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "client-saved-collections",
+                    "name": "Client saved collections",
+                    "theme": "orange",
+                    "arrowColor": "#d34733",
+                    "text": "Give your clients a more interactive experience, keeping them active in your website for longer.",
+                    "popup": {
+                        "text": [
+                            "Collections are an exclusive Xomio feature that allow your clients to save listings into thematic mood boards that they can categorize however they want.",
+                            "Whether they're searching in different parts of town, or deciding between penthouses and townhouses, they can set up a Collection for every type of property that interests them.",
+                            "Collections look great, meaning your listings are displayed to their best advantage. And more importantly, this feature makes the home search process more enjoyable and easier to organize for your clients.",
+                            "Another benefit is obvious &mdash; your clients' Collections gives you a unique level of insight into the factors that your clients are considering as they progress in their homebuying journey."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "drip-marketing",
+                    "name": "Drip marketing",
+                    "theme": "orange",
+                    "arrowColor": "#388172",
+                    "text": "In this competitive market, automatically give your clients what they want most: the inside track on the properties that interest them.",
+                    "popup": {
+                        "text": [
+                            "Xomio automatically handles listings alerts, updates to saved searches, and other crucial features for keeping your leads engaged and turning them into clients.",
+                            "All outbound client mails are delivered in the language that they registered in, ensuring that the listings they care about are completely accessible and easy to view."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "client-saved-properties",
+                    "name": "Client saved properties",
+                    "theme": "green",
+                    "arrowColor": "#ff8e7b",
+                    "text": "Clients can save and stay up to date on listings that catch their eye.",
+                    "popup": {
+                        "text": [
+                            "Every client who saves a listing registers through a sign up flow and drops automatically into your Xomio CRM as a lead.",
+                            "You can see their saved listings to help you as you guide them to the property that suits them most."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "client-saved-searches",
+                    "name": "Client saved searches",
+                    "theme": "salmon",
+                    "arrowColor": "#ffc300",
+                    "text": "Set up listing alerts for you clients or they can save their own search and receive updates. Don't worry,the control and insights are shared with you!",
+                    "popup": {
+                        "text": [
+                            "Saved searches allow clients to save filtered listings searches, receiving automated update emails whenever new properties match their criteria.",
+                            "You can also set up searches and alerts on behalf of individual clients.",
+                            "You have complete visibility into your clients' saved searches, giving you insight that will help guide their homebuying experience.",
+                            "All emails are sent in each client's preferred language"
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "clean-urls",
+                    "name": "Clean URLs",
+                    "theme": "yellow",
+                    "arrowColor": "#f45d48",
+                    "text": "We make sure your URLS make sense no .com23tuj4/3#jy used here! We make sure your urls are nice to share and easy to remember!",
+                    "popup": {
+                        "text": [
+                            "The days of messy URLs (web addresses) for your listings are no more! Xomio's URL construction is clean, tidy and tied to the most pertinent data in each listing.",
+                            "This doesn't just make your site look better, with links that are easier and more attractive to share. It also makes for better Search Engine Optimization, because Google and other search engines give better rankings to sites with clearer and more informative URL construction. Relevant logic is applied in all 19 languages to ensure great visibility for your site, wherever your next client is searching from."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "seo-friendly-urls",
+                    "name": "SEO friendly URLs",
+                    "theme": "orange",
+                    "arrowColor": "#388172",
+                    "text": "SEO friendly URLS are an important part of achieving the best rankings in Google searches. We've got you covered!",
+                    "popup": {
+                        "text": [
+                            "Xomio's clean URL construction is critical to achieving organic traffic from search engines.",
+                            "Google and other search engines give better rankings to websites with well organised URLs that contain high quality information about the contents of each page.",
+                            "Our two decades of expertise in listings data translation and website construction for the biggest names in global real estate mean that nobody knows more about how to drive local and foreign language visitors to your site."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "cloud-based",
+                    "name": "Cloud based",
+                    "theme": "orange",
+                    "arrowColor": "#388172",
+                    "text": "Our super high availability cloud servers deliver great website performance from any location, across all mobile and desktop devices"
+                },
+                {
+                    "id": "captcha",
+                    "name": "CAPTCHA",
+                    "theme": "green",
+                    "arrowColor": "#ff8e7b",
+                    "text": "Security is important and no one wants to be spammed. We have a mix of hidden and test CAPTCHA used throught all xomio sites to keep you secure.",
+                    "popup": {
+                        "text": [
+                            "All Xomio sites have embedded CAPTCHA security measures throughout. Some are hidden, while others are visible to site visitors.",
+                            "All serve to keep you, your site and your data safe from malicious bots and other attacks."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "global-seo",
+                    "name": "Global SEO",
+                    "theme": "salmon",
+                    "arrowColor": "#fb634a",
+                    "text": "You have 19 different language websites, each with their own language seo, all prepared to be indexed and searched by search engines globally.",
+                    "popup": {
+                        "text": [
+                            "With two decades of experience in real estate data translation and website construction, we know more than anyone about how to drive visitors to listings organically.",
+                            "The listings data from your IDX and GLEX (brokerage brand listings inventory) is translated and used to create metadata in all 19 languages. This is the data that Google and other search engines hunt for to categorize and rank all the websites they can find.",
+                            "Along with other features like our clean, multi language URL construction, this ensures that you and your business have great visibility within your market, and beyond.",
+                            "With Xomio, languages are no longer barriers. They're tools that drive more traffic, more views, and more leads to your business."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "featured-properties",
+                    "name": "Featured properties",
+                    "theme": "salmon",
+                    "arrowColor": "#ffc300",
+                    "text": "We provide a simple way for you to feature properties on your website from your own listing invetory or the GLEX or IDX feed you have access to.",
+                    "popup": {
+                        "text": [
+                            "The Featured Properties block allows you to shine a spotlight on any combination of listings from your IDX and GLEX (brokerage brand listings) feeds.",
+                            "These listings will be showcased in a customizable block, front and center on your homepage.",
+                            "Every Xomio website makes a great first impression. The Featured Properties block is a simple and effective way to turn that first impression into a lead that closes with a high value sale."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "ssl-certificates",
+                    "name": "SSL certificates",
+                    "theme": "yellow",
+                    "arrowColor": "#f45d48",
+                    "text": "Security and visibility is important, we automatically update your certificates for you so you don't need to worry.",
+                    "popup": {
+                        "text": [
+                            "Without an up-to-date SSL certificate, your website will be inaccessible on many browsers, or will require visitors to click through a scary looking warning about insecure sites that are trying to steal their data. Not a great look for a real estate business.",
+                            "SSL certificates ensure that clients can access your site securely, through an encrypted connection that keeps them safe from malware and malicious actors.",
+                            "Updating them yourself can be a pain, and many real estate platforms don't even let you know that yours is about to expire, so the first you hear of it is when an angry seller wants to know why they can't view their listing on your site without getting a warning about viruses!",
+                            "Xomio doesn't inform you either - but that's because we take care of it ill, behind the scenes, so you don't have to. All part of the service."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "customizable-idx-filters",
+                    "name": "Customizable IDX filters",
+                    "theme": "orange",
+                    "arrowColor": "#ffc300",
+                    "text": "Set filters around property style, price and more so you only display listing from your IDX that match your niche.",
+                    "popup": {
+                        "text": [
+                            "Xomio allows you to pre-filter your IDX feed based on a range of attributes. This means that you get to select the property types, price ranges, and more, for every listing that's displayed on your site.",
+                            "If you only want to work leads that match the profile of your ideal client, Customizing your IDX feed is a great way to pre-screen based on the type of property, and therefore the type of client, that you specialiize in serving."
+                        ],
+                        "image": true
+                    }
+                },
+                {
+                    "id": "ada-compliance",
+                    "name": "ADA compliance",
+                    "theme": "green",
+                    "arrowColor": "#28695c",
+                    "text": "All Xomio websites are built to be fully ADA compliant in all 19 languages. It's important to us that all xomio sites provide equal access to all consumers."
+                },
+                {
+                    "id": "data-protection",
+                    "name": "DATA protection",
+                    "theme": "green",
+                    "arrowColor": "#ff8e7b",
+                    "text": "COPY IS MISSING"
+                },
+                {
+                    "id": "photo-video-library",
+                    "name": "Photo & video library",
+                    "theme": "salmon",
+                    "arrowColor": "#ffc300",
+                    "text": "If you don't have your own marketing assets, we've got you covered with our own curated licensed librarys to support you in customising your site."
+                },
+                {
+                    "id": "custom-favicon",
+                    "name": "Custom favicon",
+                    "theme": "yellow",
+                    "arrowColor": "#f45d48",
+                    "text": "We care about your visibility all the way down to the little details.",
+                    "popup": {
+                        "text": [
+                            "A favicon is an icon at the top of your web browser that provides branding. It is also a convenient way for visitors to locate your page when they have multiple tabs open."
+                        ]
+                    }
+                },
+                {
+                    "id": "gallery-view",
+                    "name": "Gallery view",
+                    "theme": "orange",
+                    "arrowColor": "#f45d48",
+                    "text": "Clients can view listings in the ways their prefer. List view, gallery view or map."
+                },
+                {
+                    "id": "branded-auto-responder",
+                    "name": "Branded auto responder",
+                    "theme": "orange",
+                    "arrowColor": "#388172",
+                    "text": "We support you in smart and nicely designed communication in your clients prefered language."
+                },
+                {
+                    "id": "professional-translation",
+                    "name": "Professional translation",
+                    "theme": "green",
+                    "arrowColor": "#ff8e7b",
+                    "text": "COPY IS MISSING"
+                },
+                {
+                    "id": "custom-website-title",
+                    "name": "Custom website title",
+                    "theme": "salmon",
+                    "arrowColor": "#ffc300",
+                    "text": "COPY IS MISSING"
+                },
+                {
+                    "id": "animation",
+                    "name": "Animation",
+                    "theme": "yellow",
+                    "arrowColor": "#f45d48",
+                    "text": "High end graphics aren't just for the big spenders, we've brought you the latest animation and graphic features to embrace on your website."
+                },
+                {
+                    "id": "units-of-measurement-conversion",
+                    "name": "Units of measurement conversion",
+                    "theme": "orange",
+                    "arrowColor": "#388172",
+                    "text": "We automatically convert and display the correct units of measurement based on your clients location. Or they can set their measurement preferences easily."
+                },
+                {
+                    "id": "advanced-listing-data",
+                    "name": "Advanced listing data",
+                    "theme": "green",
+                    "arrowColor": "#ff8e7b",
+                    "text": "We partner with your MLS or Brand to make sure we're taking full advantage of your listings data, we want to make sure your efforts didn't go to waste!"
+                },
+                {
+                    "id": "client-dashboard",
+                    "name": "Client dashboard",
+                    "theme": "salmon",
+                    "arrowColor": "#ffc300",
+                    "text": "Your clients can login to your custom designed client space. From their dashboard they can access your advanced client tools and provide you with more insights."
+                },
+                {
+                    "id": "guided-onboarding",
+                    "name": "Guided onboarding",
+                    "theme": "yellow",
+                    "arrowColor": "#f45d48",
+                    "text": "We want to make sure we support you every step of your way to provide you with the guidance you need to take full advantage of your new global marketing tools."
+                },
+                {
+                    "id": "multi-language-meta-tagging",
+                    "name": "Multi language Meta Tagging",
+                    "theme": "orange",
+                    "arrowColor": "#388172",
+                    "text": "COPY IS MISSING"
+                },
+                {
+                    "id": "multi-language-social-sharing",
+                    "name": "Multi language social sharing",
+                    "theme": "green",
+                    "arrowColor": "#ff8e7b",
+                    "text": "Both you and your clients can share your property listings socially in 19 languages."
+                },
+                {
+                    "id": "Multi-language-emails",
+                    "name": "Multi language emails",
+                    "theme": "salmon",
+                    "arrowColor": "#f45d48",
+                    "text": "We support you in providing a fully curated and consistent experience to your clients no matter their preferred language."
+                }
+            ]
+        },
+        {
+            "slides": [
+                {
+                    "title": "Take a deeper look",
+                    "subtitle": "A website experience that boosts conversion",
+                    "text": [
+                        "Xomio sites are accessible to clients from any device, in their preferred language, localized according to their preferences.",
+                        "The feature-rich user experience encourages visitors to save searches, create listings mood boards, share properties to their social media, and more.",
+                        "Xomio’s user interface, translated listings, and multi language emails increase conversion and engagement thanks to a more personalized client journey."
+                    ],
+                    "video": "2_ipad_3.mp4",
+                    "videoClass": "section__video--2"
+                },
+                {
+                    "title": "Take a deeper look",
+                    "subtitle": "More languages + more listings <span class=\"text-nowrap\">= more leads</span>",
+                    "text": [
+                        "Listings data drives search engine rankings in every supported language, leading more consumers to your site, and giving them more to see when they arrive.",
+                        "Xomio is the only website platform that allows you to show the listings from your brand AND MLS, all branded to you.",
+                        "Every listing is available in 19 languages, localized by professional translators specializing in real estate."
+                    ],
+                    "video": "19_idx_glex_2x.mp4",
+                    "videoClass": "section__video--2"
+                },
+                {
+                    "title": "Take a deeper look",
+                    "subtitle": "Compliance, without the headaches",
+                    "text": [
+                        "All Xomio sites are ADA-compliant, following WCAG 2.0 standards, delivering accessibility and eliminating costly fines and lawsuits.",
+                        "Multi language listings show your commitment to Fair Housing and diversity, with listings fully accessible to all prospective buyers searching in your market.",
+                        "Data protection, terms & conditions, CAPTCHA security — it’s all been taken care of for you."
+                    ],
+                    "video": "12_ipad@2x.mp4",
+                    "videoClass": "section__video--2"
+                },
+                {
+                    "title": "Take a deeper look",
+                    "subtitle": "Better lead management <span class=\"text-nowrap\">means more <span class=\"text-primary\">sales</span></span>",
+                    "text": [
+                        "Xomio’s Kanban CRM makes it easy to handle leads and follow up with clients.",
+                        "Drag and drop your contacts to track their status, helping you stay on top of your pipeline.",
+                        "Automated drip marketing, multi-language email auto-responses, and saved search alerts keep clients engaged with minimal effort."
+                    ],
+                    "video": "Homepage_ipad@2x.mp4",
+                    "videoClass": "section__video--2"
+                }
+            ]
+        }
+    ]
+}

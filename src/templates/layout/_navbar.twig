@@ -1,0 +1,56 @@
+<div class="navbar" data-component="navbar">
+  <div class="navbar__container container">
+    <a href="./index.html" class="navbar__logo">
+      <img src="./assets/img/xomio-logo.svg" alt="{{ company.name }} logo" class="navbar__logo-img">
+    </a>
+
+    <div class="navbar__body" data-component="menu">
+      <ul class="navbar__nav nav">
+        {% for item in nav %}
+          <li class="nav__item">
+            <a href="{{ item.link }}" class="nav__link">
+              {{ svg.icon(item.icon, 'nav__icon theme-icon-'~item.theme) }}
+              {{ item.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="navbar__lang">
+        <div class="dropdown" data-component="dropdown" data-type="code">
+          <button class="dropdown__toggle text-secondary" data-element="dropdown-toggle" data-template='dropdown-content-lang'>
+            {% for option in langs|slice(0,1) %}
+              <span class="dropdown__toggle-text" data-element="dropdown-toggle-text">
+                <span class="hidden-xl-up">{{ option.name }}</span>
+                <span class="hidden-lg-down">{{ option.code }}</span>
+              </span>
+            {% endfor %}
+          </button>
+
+          <div style="display: none;">
+            <div id="dropdown-content-lang">
+              <div class="navbar__lang-content dropdown__content" data-element="dropdown-content" data-id="dropdown-content-lang">
+                <ul class="dropdown__list">
+                  {% for option in langs %}
+                    <li class="dropdown__option {% if loop.first %}is-selected{% endif %}" data-element="dropdown-option" data-id="{{ option.code }}">{{ option.name }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar__account">
+        <a href="#" class="navbar__button button button--outline-primary">Sign up</a>
+        <a href="#" class="navbar__button button button--primary">Log in</a>
+      </div>
+
+      <div class="navbar__decor decor-lines-11"></div>
+    </div>
+
+    <div class="navbar__mobile-menu-toggle burger" data-element="menu-toggle">
+      <div class="burger__inner"></div>
+    </div>
+  </div>
+</div>

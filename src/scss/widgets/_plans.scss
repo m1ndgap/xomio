@@ -1,0 +1,57 @@
+.plans {
+    &__section {
+        @include margin-bottom(rem(52px));
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: rem($spacer-6);
+    }
+
+    &__title {
+        margin-bottom: 0;
+        margin-right: rem($gutter);
+    }
+
+    &__option {
+        &-label {
+            margin-right: rem(10px);
+        }
+    }
+
+    &__item {
+        @include margin-bottom(rem(38px));
+    }
+
+    &__footnote {
+        margin-top: rem(- $spacer-7);
+        color: $gray-700;
+
+        &:before {
+            content: "* ";
+            color: $primary;
+            font-weight: $font-weight-semibold;
+            font-size: rem($font-size-xl);
+            line-height: 1;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        &__section {
+            margin-bottom: rem($spacer-10);
+        }
+
+        &__item {
+            margin-bottom: rem($spacer-6);
+        }
+
+        &__footnote {
+            margin-top: rem(- $spacer-3);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+   }
+}
